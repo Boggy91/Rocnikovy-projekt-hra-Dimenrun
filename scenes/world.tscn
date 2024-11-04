@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://djw6i35aar6fi"]
+[gd_scene load_steps=24 format=3 uid="uid://djw6i35aar6fi"]
 
 [ext_resource type="Texture2D" uid="uid://bm3w6uglq45qs" path="res://map/pixel-art-stars-clouds-moon-wallpaper-preview.jpg" id="1_ny10b"]
 [ext_resource type="Texture2D" uid="uid://cggu4v5r8t00r" path="res://map/mountains.png" id="1_wic68"]
@@ -202,8 +202,6 @@ texture = ExtResource("5_s6bal")
 [sub_resource type="TileSet" id="TileSet_2ba5l"]
 sources/0 = SubResource("TileSetAtlasSource_vu2nq")
 
-[sub_resource type="Theme" id="Theme_6r5el"]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("10_gh2xm")
 region = Rect2(0, 0, 15, 13)
@@ -369,22 +367,6 @@ position = Vector2(406, 256)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="pausebutton" type="Button" parent="UI"]
-texture_filter = 1
-anchors_preset = -1
-anchor_left = 0.477
-anchor_top = 0.034
-anchor_right = 0.524
-anchor_bottom = 0.094
-offset_left = 0.495972
-offset_top = -7.032
-offset_right = 0.351929
-offset_bottom = 1.088
-grow_horizontal = 2
-theme = SubResource("Theme_6r5el")
-theme_override_font_sizes/font_size = 23
-text = "||"
-
 [node name="Panel" type="Panel" parent="UI"]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 1
@@ -527,6 +509,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Main Menu"
 
-[connection signal="pressed" from="UI/pausebutton" to="game manager" method="_on_pausebutton_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
