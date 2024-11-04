@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djmpb4xatbw2t"
-path="res://.godot/imported/demondeath.png-ca269fbd65bc17ed82dec386020a2891.ctex"
+uid="uid://b8m6fp8n42noa"
+path="res://.godot/imported/Design.png-2ed062fb2e9adfcb424134cb3c523af6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemy/demondeath.png"
-dest_files=["res://.godot/imported/demondeath.png-ca269fbd65bc17ed82dec386020a2891.ctex"]
+source_file="res://pictures/Design.png"
+dest_files=["res://.godot/imported/Design.png-2ed062fb2e9adfcb424134cb3c523af6.ctex"]
 
 [params]
 
