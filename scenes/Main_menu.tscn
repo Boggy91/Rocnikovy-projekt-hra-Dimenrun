@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://rrh4a12jacpf"]
+[gd_scene load_steps=5 format=3 uid="uid://cen2yiieeunyw"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_318of"]
-[ext_resource type="Texture2D" uid="uid://b8m6fp8n42noa" path="res://pictures/Design.png" id="1_yjbsx"]
 [ext_resource type="Texture2D" uid="uid://bw0ff4jjwgvkf" path="res://pictures/cooltext468738736733838.png" id="2_468ug"]
+[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_fvnhj"]
 
 [sub_resource type="Theme" id="Theme_rwwr3"]
 
@@ -21,7 +21,7 @@ offset_bottom = 663.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_yjbsx")
+texture = ExtResource("2_fvnhj")
 
 [node name="Dimenrun" type="TextureRect" parent="."]
 anchors_preset = 8
