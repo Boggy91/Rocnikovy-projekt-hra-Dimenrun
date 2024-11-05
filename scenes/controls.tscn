@@ -1,0 +1,284 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0upjsq52v21"]
+
+[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_3xrby"]
+[ext_resource type="Script" path="res://scenes/controls.gd" id="1_5g8t7"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_5g8t7")
+metadata/_edit_vertical_guides_ = [164.0]
+metadata/_edit_horizontal_guides_ = [1310.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 2382.0
+offset_bottom = 1296.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3xrby")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 390.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = -389.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+
+[node name="Panel" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 1310.0
+offset_right = 1005.0
+offset_bottom = 1435.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 1135.0
+offset_right = 1005.0
+offset_bottom = 1260.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel2"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "RESET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 960.0
+offset_right = 1005.0
+offset_bottom = 1085.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel3"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "DASH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 785.0
+offset_right = 1005.0
+offset_bottom = 910.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel4"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "DOUBLE JUMP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 610.0
+offset_right = 1005.0
+offset_bottom = 735.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel5"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "JUMP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 435.0
+offset_right = 1005.0
+offset_bottom = 560.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel6"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "LEFT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel7" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 260.0
+offset_right = 1005.0
+offset_bottom = 385.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel7"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "RIGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel8" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 1310.0
+offset_right = 1948.0
+offset_bottom = 1435.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel8"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "ESC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel9" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 1135.0
+offset_right = 1948.0
+offset_bottom = 1260.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel9"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel10" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 960.0
+offset_right = 1939.0
+offset_bottom = 1085.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel10"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "SHIFT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel11" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 785.0
+offset_right = 1939.0
+offset_bottom = 910.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel11"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "2xW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel12" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 610.0
+offset_right = 1939.0
+offset_bottom = 735.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel12"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel13" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 435.0
+offset_right = 1939.0
+offset_bottom = 560.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel13"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel14" type="Panel" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 260.0
+offset_right = 1939.0
+offset_bottom = 385.0
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect/Panel14"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 841.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 80
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main_menu" type="Button" parent="."]
+modulate = Color(0.113725, 1, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -70.0
+offset_right = 72.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Main Menu"
+
+[connection signal="pressed" from="main_menu" to="." method="_on_main_menu_pressed"]
