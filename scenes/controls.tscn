@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0upjsq52v21"]
+
+[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_3xrby"]
+[ext_resource type="Script" path="res://scenes/controls.gd" id="1_5g8t7"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_5g8t7")
+metadata/_edit_vertical_guides_ = [164.0]
+metadata/_edit_horizontal_guides_ = [1310.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2550.0
+offset_bottom = 1294.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3xrby")
+
+[node name="Panel14" type="Panel" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 650.0
+offset_top = 82.0
+offset_right = 1820.0
+offset_bottom = 1160.0
+
+[node name="Label" type="Label" parent="TextureRect/Panel14"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -226.0
+offset_top = -112.0
+offset_right = 1416.0
+offset_bottom = 1186.0
+theme_override_font_sizes/font_size = 30
+text = "CREDITS
+------------------------------------------------------------------------
+Hra: Dimenrun
+Žáner: 2D platformer
+Verzia: 1.0
+------------------------------------------------------------------------
+Vývojári:
+Michal Szabari
+Programátor, dizajnér úrovní, grafický dizajn
+
+Bogdan Javier Saenz Smolinska
+Programátor, zvukový dizajn, testovanie
+------------------------------------------------------------------------
+Špeciálne poďakovanie:
+Stredná priemyselná škola elektrotechnická v Košiciach
+Za podporu a možnosť realizovať tento projekt v rámci školského zadania.
+------------------------------------------------------------------------
+Inšpirácia a podpora:
+Učitelia a spolužiaci zo SPŠE Košice
+Rodiny a priatelia za podporu a trpezlivosť
+------------------------------------------------------------------------
+Vyvinuté ako školský projekt v roku 2024
+Všetky práva vyhradené."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main_menu" type="Button" parent="."]
+modulate = Color(0.113725, 1, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -60.0
+offset_right = 110.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Main Menu"
+
+[connection signal="pressed" from="main_menu" to="." method="_on_main_menu_pressed"]

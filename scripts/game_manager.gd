@@ -20,3 +20,6 @@ func add_point():
 	points += 1
 	print(points)
 	points_label.text = "    "+ str(points)
+
+
+	pass # Replace with function body.
