@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0upjsq52v21"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_3xrby"]
-[ext_resource type="Script" path="res://scenes/controls.gd" id="1_5g8t7"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_5g8t7"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_5g8t7")
@@ -63,10 +63,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -60.0
-offset_right = 110.0
-offset_bottom = -24.0
+offset_left = -10.0
+offset_top = -61.0
+offset_right = 98.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Main Menu"

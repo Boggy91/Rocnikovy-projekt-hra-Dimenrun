@@ -89,3 +89,4 @@ theme_override_font_sizes/font_size = 28
 text = "Exit"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
