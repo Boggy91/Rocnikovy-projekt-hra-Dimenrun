@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0upjsq52v21"]
+[gd_scene load_steps=3 format=3 uid="uid://oh4214hnq1cj"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_3xrby"]
 [ext_resource type="Script" path="res://scenes/controls.gd" id="1_5g8t7"]
@@ -10,8 +10,8 @@ metadata/_edit_horizontal_guides_ = [1310.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_right = 2382.0
-offset_bottom = 1296.0
+offset_right = 2362.0
+offset_bottom = 1310.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3xrby")
 
