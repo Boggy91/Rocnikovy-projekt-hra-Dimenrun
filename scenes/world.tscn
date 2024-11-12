@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="10_vga4n"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_23e07"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6r28"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2eibh"]
 texture = ExtResource("2_ynob5")
 6:0/0 = 0
 7:0/0 = 0
@@ -124,9 +124,9 @@ texture = ExtResource("2_ynob5")
 
 [sub_resource type="TileSet" id="TileSet_vqlao"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_x6r28")
+sources/0 = SubResource("TileSetAtlasSource_2eibh")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu2nq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1jni"]
 texture = ExtResource("5_s6bal")
 9:4/0 = 0
 10:4/0 = 0
@@ -200,7 +200,7 @@ texture = ExtResource("5_s6bal")
 19:12/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_2ba5l"]
-sources/0 = SubResource("TileSetAtlasSource_vu2nq")
+sources/0 = SubResource("TileSetAtlasSource_t1jni")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("10_gh2xm")
