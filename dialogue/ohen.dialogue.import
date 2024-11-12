@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://viyok2ahfsdm"
+path="res://.godot/imported/ohen.dialogue-d7e00a40c01a5e9c255a6362233fb2a2.tres"
+
+[deps]
+
+source_file="res://dialogue/ohen.dialogue"
+dest_files=["res://.godot/imported/ohen.dialogue-d7e00a40c01a5e9c255a6362233fb2a2.tres"]
+
+[params]
+
+defaults=true

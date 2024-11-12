@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cen2yiieeunyw"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_318of"]
+[ext_resource type="Script" path="res://dialogue/main_menu.gd" id="1_318of"]
 [ext_resource type="Texture2D" uid="uid://bw0ff4jjwgvkf" path="res://pictures/cooltext468738736733838.png" id="2_468ug"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_fvnhj"]
 
@@ -81,5 +81,6 @@ theme_override_font_sizes/font_size = 28
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

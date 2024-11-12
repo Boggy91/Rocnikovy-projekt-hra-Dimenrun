@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpajrl51tp8mx"]
+
+[ext_resource type="Texture2D" uid="uid://qalw7u8q7nmc" path="res://images/On (16x32).png" id="1_g11do"]
+
+[sub_resource type="GDScript" id="GDScript_eic6d"]
+script/source = "extends StaticBody2D
+
+const Balloon = preload(\"res://dialogue/balloon.tscn\")
+
+@onready var timer: Timer = $Timer
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == \"CharacterBody2D\": 
+		var balloon: Node = Balloon.instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load(\"res://dialogue/ohen.dialogue\"), \"start\")
+		timer.wait_time = 6
+		timer.start()
+	
+func _on_timer_timeout() -> void:
+		var balloon: Node = Balloon.instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load(\"res://dialogue/deshajump.dialogue\"), \"start\")
+		timer.stop()
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86ylk"]
+atlas = ExtResource("1_g11do")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en560"]
+atlas = ExtResource("1_g11do")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea1bi"]
+atlas = ExtResource("1_g11do")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aa10n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86ylk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en560")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea1bi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8w34"]
+size = Vector2(16, 31)
+
+[node name="ohen" type="StaticBody2D"]
+scale = Vector2(3, 3)
+script = SubResource("GDScript_eic6d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_aa10n")
+autoplay = "default"
+frame_progress = 0.40893
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_j8w34")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

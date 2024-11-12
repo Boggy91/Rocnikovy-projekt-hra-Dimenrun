@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cyjr8x0ereknc"
+path="res://.godot/imported/deshajump.dialogue-e5af428759b2f9f18f65fa602d2067fb.tres"
+
+[deps]
+
+source_file="res://dialogue/deshajump.dialogue"
+dest_files=["res://.godot/imported/deshajump.dialogue-e5af428759b2f9f18f65fa602d2067fb.tres"]
+
+[params]
+
+defaults=true

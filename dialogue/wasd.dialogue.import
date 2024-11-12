@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://gxvedf2mj7ib"
+path="res://.godot/imported/wasd.dialogue-06e9897260bbd07214ef8dd0b33c05ac.tres"
+
+[deps]
+
+source_file="res://dialogue/wasd.dialogue"
+dest_files=["res://.godot/imported/wasd.dialogue-06e9897260bbd07214ef8dd0b33c05ac.tres"]
+
+[params]
+
+defaults=true

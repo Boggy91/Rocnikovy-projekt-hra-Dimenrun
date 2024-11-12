@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpncaqhxvv7is"]
+
+[ext_resource type="Texture2D" uid="uid://cmmugro45arvs" path="res://images/End (Idle).png" id="1_phwk5"]
+
+[sub_resource type="GDScript" id="GDScript_knxop"]
+script/source = "extends StaticBody2D
+
+const Balloon = preload(\"res://dialogue/balloon.tscn\")
+
+@onready var timer: Timer = $Timer
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == \"CharacterBody2D\": 
+		var balloon: Node = Balloon.instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load(\"res://dialogue/koniec.dialogue\"), \"start\")
+		timer.wait_time = 5
+		timer.start()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwyis"]
+size = Vector2(21.3333, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fd52"]
+size = Vector2(45.3333, 44.6667)
+
+[node name="trofej" type="StaticBody2D"]
+position = Vector2(37, 257)
+scale = Vector2(2.5, 2.5)
+script = SubResource("GDScript_knxop")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(41.3333, -8)
+texture = ExtResource("1_phwk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41.3333, -2)
+shape = SubResource("RectangleShape2D_dwyis")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(10.6667, -100.667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(30.6667, 102.333)
+shape = SubResource("RectangleShape2D_6fd52")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

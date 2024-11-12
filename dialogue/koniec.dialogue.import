@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://po5g1bh0ejbu"
+path="res://.godot/imported/koniec.dialogue-822ea7ce3c5bf3b3b97573f0baf24974.tres"
+
+[deps]
+
+source_file="res://dialogue/koniec.dialogue"
+dest_files=["res://.godot/imported/koniec.dialogue-822ea7ce3c5bf3b3b97573f0baf24974.tres"]
+
+[params]
+
+defaults=true
