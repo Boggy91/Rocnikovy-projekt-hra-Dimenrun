@@ -68,6 +68,10 @@ func _physics_process(delta: float) -> void:
 	
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+	
+	#Reset
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
 
 
 func _on_timer_timeout() -> void:
