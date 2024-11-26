@@ -493,6 +493,7 @@ position = Vector2(2319, 269)
 position = Vector2(397, 255)
 
 [node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
+z_index = -1
 scroll_scale = Vector2(0.1, 0.1)
 
 [node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
