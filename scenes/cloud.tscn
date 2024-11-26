@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnjpo6rq7e8w1"]
+
+[ext_resource type="Script" path="res://scripts/cloud.gd" id="1_5kgil"]
+[ext_resource type="Texture2D" uid="uid://b2tki41is3x6e" path="res://map/cloud.png" id="1_h6h6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pft34"]
+size = Vector2(28, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qso5a"]
+atlas = ExtResource("1_h6h6p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_it17s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qso5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yymjd"]
+size = Vector2(82, 8.5)
+
+[node name="cloud" type="StaticBody2D"]
+script = ExtResource("1_5kgil")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, 29.5)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_pft34")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(14, -8)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_it17s")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(21, 45)
+shape = SubResource("RectangleShape2D_yymjd")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
