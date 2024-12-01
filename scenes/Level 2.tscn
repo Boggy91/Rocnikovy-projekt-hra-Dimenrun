@@ -411,7 +411,7 @@ texture = ExtResource("10_ahld0")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fw1p6")
 
-[node name="Level 1" type="Node"]
+[node name="Level 2" type="Node"]
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
