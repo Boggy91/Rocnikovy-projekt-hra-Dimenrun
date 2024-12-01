@@ -1,8 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4kdghdlvjtwy"]
+[gd_scene load_steps=6 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
+[ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="5_uo100"]
+
+[sub_resource type="GDScript" id="GDScript_skkmn"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="lvl_menu" type="Node"]
 script = ExtResource("1_d3p8g")
@@ -38,5 +53,40 @@ offset_bottom = 100.0
 texture = ExtResource("3_qmoax")
 expand_mode = 1
 
+[node name="Label" type="Label" parent="lvl1"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 0
+offset_left = 67.0
+offset_top = 38.0
+offset_right = 109.0
+offset_bottom = 62.0
+text = "LVL 1"
+
+[node name="lvl2" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 145.0
+offset_right = 587.0
+offset_bottom = 243.0
+text = "lvl 2"
+script = SubResource("GDScript_skkmn")
+
+[node name="TextureRect" type="TextureRect" parent="lvl2"]
+z_as_relative = false
+layout_mode = 0
+offset_top = -3.0
+offset_right = 178.0
+offset_bottom = 97.0
+texture = ExtResource("5_uo100")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl2"]
+modulate = Color(0, 1, 1, 1)
+offset_left = 67.0
+offset_top = 38.0
+offset_right = 109.0
+offset_bottom = 62.0
+text = "LVL 2"
+
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
