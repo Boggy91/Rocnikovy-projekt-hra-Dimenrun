@@ -5,7 +5,7 @@ extends CanvasLayer
 @export var next_action: StringName = &""
 
 ## The action to use to skip typing the dialogue
-@export var skip_action: StringName = &""
+@export var skip_action: StringName =&""
 
 ## The dialogue resource
 var resource: DialogueResource

@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://oh4214hnq1cj"]
+[gd_scene load_steps=3 format=3 uid="uid://c0upjsq52v21"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_3xrby"]
 [ext_resource type="Script" path="res://scripts/controls.gd" id="1_5g8t7"]
 
-[node name="Node" type="Node"]
+[node name="Node2" type="Node"]
 script = ExtResource("1_5g8t7")
 metadata/_edit_vertical_guides_ = [164.0]
 metadata/_edit_horizontal_guides_ = [1310.0]
@@ -211,7 +211,7 @@ layout_mode = 0
 offset_right = 841.0
 offset_bottom = 125.0
 theme_override_font_sizes/font_size = 80
-text = "2xW"
+text = "2xSPACE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -228,7 +228,7 @@ layout_mode = 0
 offset_right = 841.0
 offset_bottom = 125.0
 theme_override_font_sizes/font_size = 80
-text = "W"
+text = "SPACE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
