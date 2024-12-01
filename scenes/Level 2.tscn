@@ -320,6 +320,9 @@ position = Vector2(836, 543)
 [node name="cloud4" parent="Scene Objects/Clouds" instance=ExtResource("7_okmxw")]
 position = Vector2(611, 469)
 
+[node name="cloud5" parent="Scene Objects/Clouds" instance=ExtResource("7_okmxw")]
+position = Vector2(1081, 383)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
