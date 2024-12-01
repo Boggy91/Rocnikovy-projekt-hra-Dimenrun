@@ -211,7 +211,7 @@ layout_mode = 0
 offset_right = 841.0
 offset_bottom = 125.0
 theme_override_font_sizes/font_size = 80
-text = "2xW"
+text = "2xSPACE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -228,7 +228,7 @@ layout_mode = 0
 offset_right = 841.0
 offset_bottom = 125.0
 theme_override_font_sizes/font_size = 80
-text = "W"
+text = "SPACE"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bq88or2bvvpke"]
+[gd_scene load_steps=20 format=3 uid="uid://r2rt32o1bel8"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
@@ -492,11 +492,11 @@ position = Vector2(2319, 269)
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
 position = Vector2(397, 255)
 
-[node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
+[node name="background" type="Parallax2D" parent="Scene Objects"]
 z_index = -1
 scroll_scale = Vector2(0.1, 0.1)
 
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
+[node name="TextureRect" type="TextureRect" parent="Scene Objects/background"]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
