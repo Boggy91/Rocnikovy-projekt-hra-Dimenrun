@@ -254,6 +254,7 @@ position = Vector2(1080, 289)
 position = Vector2(970, 289)
 
 [node name="finish" parent="Scene Objects" instance=ExtResource("4_m2r5r")]
+visible = false
 position = Vector2(2589, 266)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]

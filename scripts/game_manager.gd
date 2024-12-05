@@ -10,7 +10,7 @@ func decrease_health():
 	print(lives)
 	for h in 3:
 		if (h<lives):
-			hearts[h] .show()
+			hearts[h].show()
 		else:
 			hearts[h].hide()
 	if (lives == 0):
