@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="2_qt1qg"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="3_hehml"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="4_2nu7k"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="5_yxptb"]
-[ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="6_jbf5v"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="5_wnfu2"]
+[ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="6_pa4sp"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_xcss3"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_k7o5s"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_22s5y"]
-[ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/LavaTile set.png" id="10_l2e15"]
+[ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/LavaTile set.png" id="10_ahld0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("7_xcss3")
@@ -62,7 +62,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fw1p6"]
-texture = ExtResource("10_l2e15")
+texture = ExtResource("10_ahld0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -411,7 +411,7 @@ texture = ExtResource("10_l2e15")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fw1p6")
 
-[node name="Level 2 - CAVE" type="Node"]
+[node name="Level 2" type="Node"]
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
@@ -474,22 +474,22 @@ position = Vector2(2595, 242)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("5_yxptb")]
+[node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(601, 351)
 
-[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("5_yxptb")]
+[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(845, 366)
 
-[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("5_yxptb")]
+[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(1459, 387)
 
-[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("5_yxptb")]
+[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(1902, 219)
 
-[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("5_yxptb")]
+[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(2319, 269)
 
-[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("5_yxptb")]
+[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(397, 255)
 
 [node name="background" type="Parallax2D" parent="Scene Objects"]
@@ -507,7 +507,7 @@ offset_right = 3805.0
 offset_bottom = 862.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_jbf5v")
+texture = ExtResource("6_pa4sp")
 expand_mode = 3
 
 [node name="UI" type="CanvasLayer" parent="."]

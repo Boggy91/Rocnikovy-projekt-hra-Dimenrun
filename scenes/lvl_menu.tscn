@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
-[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/sky_backgroundjpg.jpg" id="5_70og6"]
+[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/sky_backgroundjpg.jpg" id="5_qgv4j"]
 [ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="5_uo100"]
 
 [sub_resource type="GDScript" id="GDScript_skkmn"]
@@ -18,22 +18,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-
 "
 
 [node name="lvl_menu" type="Node"]
 script = ExtResource("1_d3p8g")
-metadata/_edit_horizontal_guides_ = [139.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 2449.0
-offset_bottom = 1307.0
+offset_top = 2.0
+offset_right = 2450.0
+offset_bottom = 1310.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hrt6u")
+metadata/_edit_use_anchors_ = true
 
 [node name="main_menu" type="Button" parent="."]
 modulate = Color(1, 0.315719, 0.791177, 1)
@@ -44,10 +40,10 @@ offset_bottom = 78.0
 text = "Main Menu"
 
 [node name="lvl1" type="Button" parent="."]
-offset_left = 173.0
-offset_top = 139.0
-offset_right = 351.0
-offset_bottom = 238.0
+offset_left = 177.0
+offset_top = 143.0
+offset_right = 355.0
+offset_bottom = 242.0
 text = "lvl 1"
 
 [node name="TextureRect" type="TextureRect" parent="lvl1"]
@@ -61,65 +57,64 @@ expand_mode = 1
 [node name="Label" type="Label" parent="lvl1"]
 modulate = Color(0, 1, 1, 1)
 layout_mode = 0
-offset_left = 69.0
-offset_top = 35.0
-offset_right = 111.0
-offset_bottom = 59.0
+offset_left = 67.0
+offset_top = 38.0
+offset_right = 109.0
+offset_bottom = 62.0
 text = "LVL 1"
 
 [node name="lvl2" type="Button" parent="."]
-offset_left = 412.0
-offset_top = 139.0
-offset_right = 590.0
-offset_bottom = 237.0
+offset_left = 409.0
+offset_top = 145.0
+offset_right = 587.0
+offset_bottom = 243.0
 text = "lvl 2"
 script = SubResource("GDScript_skkmn")
 
 [node name="TextureRect" type="TextureRect" parent="lvl2"]
 z_as_relative = false
 layout_mode = 0
+offset_top = -3.0
 offset_right = 178.0
-offset_bottom = 100.0
+offset_bottom = 97.0
 texture = ExtResource("5_uo100")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl2"]
 modulate = Color(0, 1, 1, 1)
-layout_mode = 0
 offset_left = 67.0
-offset_top = 39.0
+offset_top = 38.0
 offset_right = 109.0
-offset_bottom = 63.0
+offset_bottom = 62.0
 text = "LVL 2"
 
 [node name="lvl3" type="Button" parent="."]
-offset_left = 661.0
-offset_top = 141.0
-offset_right = 839.0
-offset_bottom = 239.0
+offset_left = 641.0
+offset_top = 148.0
+offset_right = 819.0
+offset_bottom = 246.0
 text = "lvl 2"
 script = SubResource("GDScript_skkmn")
 
 [node name="TextureRect" type="TextureRect" parent="lvl3"]
 z_as_relative = false
 layout_mode = 0
-offset_left = -1.0
+offset_left = 1.0
 offset_top = -2.0
-offset_right = 177.0
-offset_bottom = 98.0
-texture = ExtResource("5_70og6")
+offset_right = 179.0
+offset_bottom = 95.0
+texture = ExtResource("5_qgv4j")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl3"]
 modulate = Color(0, 1, 1, 1)
-layout_mode = 0
-offset_left = 69.0
-offset_top = 37.0
-offset_right = 111.0
-offset_bottom = 61.0
+offset_left = 67.0
+offset_top = 38.0
+offset_right = 109.0
+offset_bottom = 62.0
 text = "LVL 3"
 
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
-[connection signal="pressed" from="lvl3" to="lvl3" method="_on_lvl_6_pressed"]
+[connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
