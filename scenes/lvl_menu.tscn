@@ -82,6 +82,7 @@ expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl2"]
 modulate = Color(0, 1, 1, 1)
+layout_mode = 0
 offset_left = 67.0
 offset_top = 38.0
 offset_right = 109.0
@@ -108,6 +109,7 @@ expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl3"]
 modulate = Color(0, 1, 1, 1)
+layout_mode = 0
 offset_left = 67.0
 offset_top = 38.0
 offset_right = 109.0
