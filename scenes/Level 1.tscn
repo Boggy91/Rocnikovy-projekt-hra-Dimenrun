@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://r2rt32o1bel8"]
+[gd_scene load_steps=28 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
