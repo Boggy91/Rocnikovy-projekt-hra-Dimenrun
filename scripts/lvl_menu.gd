@@ -12,4 +12,4 @@ func _on_lvl_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Level 2.tscn")
 
 func _on_lvl_6_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Level 2.tscn")
+	get_tree().change_scene_to_file("res://scenes/Level 6.tscn")
