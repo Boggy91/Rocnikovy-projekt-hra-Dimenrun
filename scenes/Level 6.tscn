@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="3_ml4ap"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="4_m2r5r"]
 [ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/sky_backgroundjpg.jpg" id="5_iyvps"]
-[ext_resource type="PackedScene" uid="uid://dnjpo6rq7e8w1" path="res://scenes/cloud.tscn" id="6_r66qg"]
+[ext_resource type="PackedScene" path="res://scenes/cloud.tscn" id="6_r66qg"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_aohn2"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_1vvft"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_xrvma"]
