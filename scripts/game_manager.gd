@@ -14,12 +14,9 @@ func decrease_health():
 		else:
 			hearts[h].hide()
 	if (lives == 0):
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://scenes/you_died.tscn")
 
 func add_point():
 	points += 1
 	print(points)
 	points_label.text = "    "+ str(points)
-
-
-	pass # Replace with function body.

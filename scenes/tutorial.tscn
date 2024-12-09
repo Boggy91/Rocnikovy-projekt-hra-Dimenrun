@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://c06nj7y6crr23"]
+[gd_scene load_steps=42 format=3 uid="uid://c06nj7y6crr23"]
 
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="1_j1jdx"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_u1dfh"]
@@ -12,9 +12,7 @@
 [ext_resource type="Script" path="res://scripts/ohen.gd" id="8_stqhg"]
 [ext_resource type="Texture2D" uid="uid://dxjq3v7h4yhqs" path="res://map/End (Idle).png" id="9_04xn4"]
 [ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="10_sy4i1"]
-[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="11_pqki4"]
-[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="12_hm25d"]
-[ext_resource type="Script" path="res://scripts/pause.gd" id="13_i5sea"]
+[ext_resource type="PackedScene" uid="uid://o786ap3n8dyw" path="res://scenes/ui.tscn" id="12_jqu21"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8vtd"]
 size = Vector2(86, 559.5)
@@ -323,64 +321,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
-atlas = ExtResource("11_pqki4")
-region = Rect2(0, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
-atlas = ExtResource("11_pqki4")
-region = Rect2(15, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
-atlas = ExtResource("11_pqki4")
-region = Rect2(30, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
-atlas = ExtResource("11_pqki4")
-region = Rect2(45, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
-atlas = ExtResource("11_pqki4")
-region = Rect2(60, 0, 15, 13)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_alo2g"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tjg1s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b2yox")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uw3jx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8jc7r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tbl86")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n7vv"]
-bg_color = Color(0.514089, 0.105049, 0.564005, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
 [node name="Tutorial" type="Node"]
 metadata/_edit_horizontal_guides_ = [-193.0, 650.0, -512.0]
 metadata/_edit_vertical_guides_ = [3506.0, 3455.0]
-
-[node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
-unique_name_in_owner = true
-script = ExtResource("1_u1dfh")
-hearts = [null, null, null]
 
 [node name="bariera" type="StaticBody2D" parent="."]
 
@@ -522,155 +465,12 @@ position_smoothing_enabled = true
 
 [node name="reset" type="Node" parent="."]
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" parent="." instance=ExtResource("12_jqu21")]
 
-[node name="Panel" type="Panel" parent="UI"]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -160.0
-offset_bottom = 63.0
-grow_horizontal = 0
-
-[node name="Points Label" type="Label" parent="UI/Panel"]
+[node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -26.0
-offset_top = -20.5
-offset_right = 30.0
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "     0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 14.0
-offset_right = 56.0
-offset_bottom = 54.0
-expand_mode = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Panel/TextureRect"]
-texture_filter = 1
-position = Vector2(21, 19)
-scale = Vector2(2.55, 2.59615)
-sprite_frames = SubResource("SpriteFrames_alo2g")
-autoplay = "default"
-
-[node name="Hearts" type="Panel" parent="UI"]
-self_modulate = Color(1, 1, 1, 0)
-offset_left = 11.0
-offset_top = 2.0
-offset_right = 170.0
-offset_bottom = 62.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.5
-offset_top = -23.0
-offset_right = 76.5
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("12_hm25d")
-expand_mode = 2
-
-[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("12_hm25d")
-expand_mode = 2
-
-[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("12_hm25d")
-expand_mode = 2
-
-[node name="Pause" type="Node" parent="UI"]
-script = ExtResource("13_i5sea")
-
-[node name="PausePanel" type="Panel" parent="UI/Pause"]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="UI/Pause/PausePanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.347
-anchor_top = 0.353
-anchor_right = 0.653
-anchor_bottom = 0.459
-offset_left = 0.908997
-offset_top = 0.196991
-offset_right = 0.0909424
-offset_bottom = 0.190979
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "GAME PAUSED"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.358
-anchor_top = 0.444
-anchor_right = 0.642
-anchor_bottom = 0.556
-offset_left = -4.77402
-offset_top = 42.956
-offset_right = -5.22601
-offset_bottom = 90.044
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 15
-
-[node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_6n7vv")
-text = "Resume"
-
-[node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_6n7vv")
-text = "Restart level"
-
-[node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_6n7vv")
-text = "Main Menu"
+script = ExtResource("1_u1dfh")
+hearts = [null, null, null]
 
 [connection signal="body_entered" from="trofej/Area2D" to="trofej" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="trofej/Area2D" to="trofej/Area2D" method="_on_body_entered"]
@@ -681,6 +481,3 @@ text = "Main Menu"
 [connection signal="timeout" from="ohen/Timer" to="ohen" method="_on_timer_timeout"]
 [connection signal="body_entered" from="start/Area2D" to="start" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="start/Timer" to="start" method="_on_timer_timeout"]
-[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
-[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
-[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=8 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
 [ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/sky_backgroundjpg.jpg" id="5_qgv4j"]
 [ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="5_uo100"]
+[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_y37ui"]
 
 [sub_resource type="GDScript" id="GDScript_skkmn"]
 script/source = "extends Button
@@ -44,7 +45,6 @@ offset_left = 177.0
 offset_top = 143.0
 offset_right = 355.0
 offset_bottom = 242.0
-text = "lvl 1"
 
 [node name="TextureRect" type="TextureRect" parent="lvl1"]
 z_as_relative = false
@@ -55,12 +55,12 @@ texture = ExtResource("3_qmoax")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl1"]
-modulate = Color(0, 1, 1, 1)
 layout_mode = 0
-offset_left = 67.0
-offset_top = 38.0
-offset_right = 109.0
-offset_bottom = 62.0
+offset_left = 51.0
+offset_top = -36.0
+offset_right = 127.0
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 30
 text = "LVL 1"
 
 [node name="lvl2" type="Button" parent="."]
@@ -68,7 +68,6 @@ offset_left = 409.0
 offset_top = 145.0
 offset_right = 587.0
 offset_bottom = 243.0
-text = "lvl 2"
 script = SubResource("GDScript_skkmn")
 
 [node name="TextureRect" type="TextureRect" parent="lvl2"]
@@ -81,42 +80,67 @@ texture = ExtResource("5_uo100")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl2"]
-modulate = Color(0, 1, 1, 1)
 layout_mode = 0
-offset_left = 67.0
-offset_top = 38.0
-offset_right = 109.0
-offset_bottom = 62.0
+offset_left = 52.0
+offset_top = -40.0
+offset_right = 128.0
+offset_bottom = 2.0
+theme_override_font_sizes/font_size = 30
 text = "LVL 2"
 
 [node name="lvl3" type="Button" parent="."]
 offset_left = 641.0
-offset_top = 148.0
+offset_top = 144.0
 offset_right = 819.0
-offset_bottom = 246.0
-text = "lvl 2"
+offset_bottom = 243.0
 script = SubResource("GDScript_skkmn")
 
 [node name="TextureRect" type="TextureRect" parent="lvl3"]
 z_as_relative = false
 layout_mode = 0
-offset_left = 1.0
-offset_top = -2.0
 offset_right = 179.0
-offset_bottom = 95.0
+offset_bottom = 98.0
 texture = ExtResource("5_qgv4j")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="lvl3"]
-modulate = Color(0, 1, 1, 1)
 layout_mode = 0
-offset_left = 67.0
-offset_top = 38.0
-offset_right = 109.0
-offset_bottom = 62.0
+offset_left = 52.0
+offset_top = -38.0
+offset_right = 128.0
+offset_bottom = 4.0
+theme_override_font_sizes/font_size = 30
 text = "LVL 3"
+
+[node name="lvl4" type="Button" parent="."]
+offset_left = 889.0
+offset_top = 144.0
+offset_right = 1067.0
+offset_bottom = 242.0
+script = SubResource("GDScript_skkmn")
+
+[node name="TextureRect" type="TextureRect" parent="lvl4"]
+z_as_relative = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 177.0
+offset_bottom = 98.0
+texture = ExtResource("6_y37ui")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="lvl4"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = -36.0
+offset_right = 129.0
+offset_bottom = 6.0
+theme_override_font_sizes/font_size = 30
+text = "LVL 4"
 
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="lvl4" to="." method="_on_lvl_4_pressed"]
