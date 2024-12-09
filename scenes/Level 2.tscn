@@ -381,7 +381,7 @@ position_smoothing_enabled = true
 [node name="collectables" type="Node" parent="Scene Objects"]
 
 [node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(-5, 7)
+position = Vector2(963, 373)
 
 [node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
 position = Vector2(336, 466)
@@ -390,10 +390,10 @@ position = Vector2(336, 466)
 position = Vector2(227, 241)
 
 [node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(290, 235)
+position = Vector2(290, 239)
 
 [node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(84, 7)
+position = Vector2(1194, 403)
 
 [node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
 position = Vector2(1097, 373)
@@ -444,6 +444,7 @@ z_index = -1
 scroll_scale = Vector2(0.1, 0.1)
 
 [node name="TextureRect" type="TextureRect" parent="Scene Objects/background"]
+visible = false
 texture_filter = 1
 anchors_preset = 10
 anchor_right = 1.0

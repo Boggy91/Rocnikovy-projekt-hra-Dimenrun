@@ -420,10 +420,10 @@ flip_v = true
 [node name="collectables" type="Node" parent="."]
 
 [node name="Collectable" parent="collectables" instance=ExtResource("16_drcy4")]
-position = Vector2(252.558, 165.108)
+position = Vector2(254, 177)
 
 [node name="Collectable2" parent="collectables" instance=ExtResource("16_drcy4")]
-position = Vector2(396.452, 137.756)
+position = Vector2(403, 146)
 
 [node name="Collectable3" parent="collectables" instance=ExtResource("16_drcy4")]
 position = Vector2(557.589, 115.161)

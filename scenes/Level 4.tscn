@@ -369,70 +369,70 @@ position_smoothing_enabled = true
 position = Vector2(0, 4)
 
 [node name="Area2D14" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-460, 257)
+position = Vector2(-563, 435)
 
 [node name="Area2D15" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-709, 335)
+position = Vector2(-994, 504)
 
 [node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-854, 333)
+position = Vector2(-747, 568)
 
 [node name="Area2D17" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-965, 334)
+position = Vector2(-1439, 291)
 
 [node name="Area2D18" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-1069, 122)
+position = Vector2(-1559, 739)
 
 [node name="Area2D19" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-1214, 269)
+position = Vector2(-1189, 467)
 
 [node name="Area2D20" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-1656, 46)
+position = Vector2(-1430, 554)
 
 [node name="Area2D21" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-1620, 328)
+position = Vector2(-1652, 424)
 
 [node name="Area2D22" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-2066, 506)
+position = Vector2(-1943, 563)
 
 [node name="Area2D23" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(-143, 508)
+position = Vector2(-432, 476)
 
 [node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
 position = Vector2(114, 229)
 
 [node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(194, 163)
+position = Vector2(491, 365)
 
 [node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(274, 121)
+position = Vector2(149, 209)
 
 [node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(98, 1)
+position = Vector2(334, 477)
 
 [node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(748, 130)
+position = Vector2(732, 316)
 
 [node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(1719, -147)
+position = Vector2(1957, 108)
 
 [node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(1811, -147)
+position = Vector2(2035, 106)
 
 [node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(1797, 159)
+position = Vector2(1756, 455)
 
 [node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(1890, 217)
+position = Vector2(1918, 377)
 
 [node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(1701, 124)
+position = Vector2(1628, 377)
 
 [node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(2503, 174)
+position = Vector2(2457, 314)
 
 [node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
-position = Vector2(2574, 174)
+position = Vector2(2507, 311)
 
 [node name="finish" parent="Scene Objects" instance=ExtResource("5_m21ua")]
 position = Vector2(3024, 398)
@@ -440,22 +440,22 @@ position = Vector2(3024, 398)
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
 [node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(589, 340)
+position = Vector2(605, 323)
 
 [node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(848, 373)
+position = Vector2(859, 361)
 
 [node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(1459, 387)
+position = Vector2(1460, 372)
 
 [node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(2284, 178)
+position = Vector2(2283, 162)
 
 [node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(2757, 418)
+position = Vector2(2759, 403)
 
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(406, 256)
+position = Vector2(406, 241)
 
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
 texture_filter = 1
@@ -500,6 +500,7 @@ position = Vector2(3129.25, 167.75)
 shape = SubResource("RectangleShape2D_60ch7")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/bariers"]
+position = Vector2(0, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scene Objects/bariers/StaticBody2D3"]
 position = Vector2(-2018, 216.5)
