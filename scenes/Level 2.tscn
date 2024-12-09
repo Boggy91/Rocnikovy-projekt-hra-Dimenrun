@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://orywfxekxeu1"]
+[gd_scene load_steps=23 format=3 uid="uid://orywfxekxeu1"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="2_qt1qg"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="3_hehml"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="4_2nu7k"]
 [ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="5_wnfu2"]
+[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/patrol.tscn" id="6_k0i41"]
 [ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="6_pa4sp"]
 [ext_resource type="Script" path="res://scripts/lava_reset.gd" id="7_mkx73"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_xcss3"]
@@ -383,48 +384,45 @@ position_smoothing_enabled = true
 position = Vector2(-5, 7)
 
 [node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(122, 230)
+position = Vector2(336, 466)
 
 [node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(-106, 339)
+position = Vector2(227, 241)
 
 [node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(281, 132)
+position = Vector2(290, 235)
 
 [node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
 position = Vector2(84, 7)
 
 [node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(745, 135)
+position = Vector2(1097, 373)
 
 [node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(1392, 105)
+position = Vector2(1289, 371)
 
 [node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(1499, 49)
+position = Vector2(1647, 324)
 
 [node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(1783, 49)
+position = Vector2(1774, 260)
 
 [node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(1879, 96)
+position = Vector2(1972, 270)
 
 [node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(2055, 71)
+position = Vector2(2036, 305)
 
 [node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
-position = Vector2(2152, 70)
+position = Vector2(2107, 337)
 
 [node name="finish" parent="Scene Objects" instance=ExtResource("4_2nu7k")]
 position = Vector2(2595, 242)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
-position = Vector2(634, 350)
-
 [node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
-position = Vector2(837, 366)
+position = Vector2(836, 358)
 
 [node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
 position = Vector2(1459, 387)
@@ -433,10 +431,13 @@ position = Vector2(1459, 387)
 position = Vector2(1852, 203)
 
 [node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
-position = Vector2(2315, 270)
+position = Vector2(2314, 266)
 
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
-position = Vector2(397, 255)
+position = Vector2(397, 247)
+
+[node name="patrol" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(560, 363)
 
 [node name="background" type="Parallax2D" parent="Scene Objects"]
 z_index = -1
@@ -444,15 +445,13 @@ scroll_scale = Vector2(0.1, 0.1)
 
 [node name="TextureRect" type="TextureRect" parent="Scene Objects/background"]
 texture_filter = 1
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -540.0
-offset_top = -34.0
-offset_right = 2003.0
-offset_bottom = 762.0
+offset_left = -427.0
+offset_top = -4.0
+offset_right = 2116.0
+offset_bottom = 792.0
 grow_horizontal = 2
-grow_vertical = 2
 texture = ExtResource("6_pa4sp")
 expand_mode = 3
 
