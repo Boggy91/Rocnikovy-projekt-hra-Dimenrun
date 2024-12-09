@@ -377,52 +377,52 @@ position_smoothing_enabled = true
 [node name="collectables" type="Node" parent="Scene Objects"]
 
 [node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(-5, 7)
+position = Vector2(68, 211)
 
 [node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(122, 230)
+position = Vector2(498, 371)
 
 [node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(-106, 339)
+position = Vector2(339, 462)
 
 [node name="Area2D14" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(-154, -29)
+position = Vector2(-32, 211)
 
 [node name="Area2D15" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(122, -147)
+position = Vector2(977, 69)
 
 [node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(180, -150)
+position = Vector2(415, 93)
 
 [node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(281, 132)
+position = Vector2(261, 244)
 
 [node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(84, 7)
+position = Vector2(325, 94)
 
 [node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(745, 135)
+position = Vector2(754, 99)
 
 [node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(1392, 105)
+position = Vector2(1219, 129)
 
 [node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(1600, 3)
+position = Vector2(1757, 271)
 
 [node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(1499, 49)
+position = Vector2(1633, 335)
 
 [node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(1783, 49)
+position = Vector2(1957, 267)
 
 [node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(1879, 96)
+position = Vector2(2080, 329)
 
 [node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(2046, 81)
+position = Vector2(2271, 309)
 
 [node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
-position = Vector2(2160, 79)
+position = Vector2(2368, 304)
 
 [node name="finish" parent="Scene Objects" instance=ExtResource("8_j76uo")]
 position = Vector2(2595, 242)
