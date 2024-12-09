@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://bbuwunnuyrh7i"]
+[gd_scene load_steps=31 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/LavaTile set.png" id="4_cpwb0"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="6_iqkom"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="7_4niip"]
+[ext_resource type="Script" path="res://scripts/lava_reset.gd" id="7_38sj8"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="8_j76uo"]
 [ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="9_id31n"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_f47h5"]
@@ -43,6 +44,9 @@ b = Vector2(-63, 95)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_krdcq"]
 a = Vector2(1, 156)
 b = Vector2(63, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u6mx"]
+size = Vector2(5076, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("10_f47h5")
@@ -434,12 +438,6 @@ position = Vector2(845, 366)
 [node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
 position = Vector2(1459, 387)
 
-[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
-position = Vector2(1902, 219)
-
-[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
-position = Vector2(2319, 269)
-
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
 position = Vector2(397, 255)
 
@@ -490,6 +488,17 @@ shape = SubResource("SegmentShape2D_ivej7")
 
 [node name="PD" type="CollisionShape2D" parent="Scene Objects/maly ostrov"]
 shape = SubResource("SegmentShape2D_krdcq")
+
+[node name="lava_reset" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(-5, 1044)
+script = ExtResource("7_38sj8")
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/lava_reset"]
+position = Vector2(-9, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/lava_reset/Area2D"]
+position = Vector2(1297, -5)
+shape = SubResource("RectangleShape2D_3u6mx")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -652,6 +661,7 @@ layer_0/tile_data = PackedInt32Array(3342369, 0, 0, 3407905, 0, 1, 3473441, 0, 2
 [node name="patrol" parent="." instance=ExtResource("11_x63pv")]
 position = Vector2(613, 60)
 
+[connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
