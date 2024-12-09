@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
 @onready var game_manager: Node = %"game manager"
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 
 var speed = -60
 var facing_right=false
-var killed= false
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -28,6 +27,5 @@ func flip():
 		speed = abs(speed)
 	else:
 		speed = abs(speed)* -1
-
-
+	
 	

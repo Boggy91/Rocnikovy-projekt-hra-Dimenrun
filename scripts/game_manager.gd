@@ -2,6 +2,7 @@ extends Node
 @onready var points_label: Label = %"Points Label"
 @export var hearts : Array[Node]
 
+
 var points = 0
 var lives = 3
 
