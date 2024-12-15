@@ -444,7 +444,6 @@ z_index = -1
 scroll_scale = Vector2(0.1, 0.1)
 
 [node name="TextureRect" type="TextureRect" parent="Scene Objects/background"]
-visible = false
 texture_filter = 1
 anchors_preset = 10
 anchor_right = 1.0
