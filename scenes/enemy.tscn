@@ -136,7 +136,6 @@ texture_filter = 1
 position = Vector2(6, 14)
 scale = Vector2(1.5625, 1.69231)
 sprite_frames = SubResource("SpriteFrames_obgrc")
-animation = &"killed"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
