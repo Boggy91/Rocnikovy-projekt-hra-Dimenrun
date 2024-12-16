@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/ohen.gd" id="8_stqhg"]
 [ext_resource type="Texture2D" uid="uid://dxjq3v7h4yhqs" path="res://map/End (Idle).png" id="9_04xn4"]
 [ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="10_sy4i1"]
-[ext_resource type="Script" path="res://scenes/wall_jump.gd" id="12_qo37v"]
+[ext_resource type="Script" path="res://scripts/wall_jump.gd" id="12_qo37v"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="13_rliv6"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="14_5g2wq"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="15_e785x"]
