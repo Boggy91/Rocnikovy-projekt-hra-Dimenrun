@@ -7,7 +7,7 @@ extends StaticBody2D
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D": 
-		timer.wait_time = 0.15
+		timer.wait_time = 0.05
 		timer.start()
 
 

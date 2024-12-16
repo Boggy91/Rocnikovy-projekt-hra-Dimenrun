@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y36cg"]
-size = Vector2(28, 2.25)
+size = Vector2(30, 2.25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("7_xcss3")
@@ -567,6 +567,666 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 1/StaticBody2D"]
 
+[node name="Bridge 2" type="Node" parent="Scene Objects/Bridges"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
+position = Vector2(516, 386)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
+position = Vector2(547, 386)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2"]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
+position = Vector2(573, 386)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3"]
+texture_filter = 1
+position = Vector2(12, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3"]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
+position = Vector2(595, 386)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4"]
+
+[node name="Bridge 3" type="Node" parent="Scene Objects/Bridges"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-317, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-286, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D2"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D2"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D2"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D2/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D2"]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-260, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D3"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D3"]
+texture_filter = 1
+position = Vector2(12, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D3"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D3/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D3"]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-238, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D4"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D4"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D4"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D4/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D4"]
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-208, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D5"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D5"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D5"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D5/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D5"]
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-177, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D6"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D6"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D6"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D6/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D6"]
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-151, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D7"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D7"]
+texture_filter = 1
+position = Vector2(12, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D7"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D7/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D7"]
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-129, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D8"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D8"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D8"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D8/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D8"]
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
+position = Vector2(-111, 210)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D9"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D9"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D9"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D9/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D9"]
+
+[node name="Bridge 4" type="Node" parent="Scene Objects/Bridges"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(962, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(993, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D2"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D2"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D2"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D2/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D2"]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(1019, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D3"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D3"]
+texture_filter = 1
+position = Vector2(12, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D3"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D3/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D3"]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(1041, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D4"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D4"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D4"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D4/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D4"]
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(1071, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D5"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D5"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D5"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D5/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D5"]
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(1102, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D6"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D6"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D6"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D6/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D6"]
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(1128, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D7"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D7"]
+texture_filter = 1
+position = Vector2(12, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D7"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D7/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D7"]
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
+position = Vector2(1155, -174)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D8"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D8"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D8"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D8/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D8"]
+
+[node name="Bridge 5" type="Node" parent="Scene Objects/Bridges"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 5"]
+position = Vector2(948, 385)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 5/StaticBody2D"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 5/StaticBody2D"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 5/StaticBody2D"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 5/StaticBody2D/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 5/StaticBody2D"]
+
+[node name="Bridge 6" type="Node" parent="Scene Objects/Bridges"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
+position = Vector2(1406, 434)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D/Area2D"]
+position = Vector2(23, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
+position = Vector2(1437, 434)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D2"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D2"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D2"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D2/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D2"]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
+position = Vector2(1463, 434)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D3"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D3"]
+texture_filter = 1
+position = Vector2(12, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D3"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D3/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D3"]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
+position = Vector2(1485, 434)
+script = ExtResource("8_tagg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D4"]
+position = Vector2(16.5, 2.75)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_b6k13")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D4"]
+texture_filter = 1
+position = Vector2(15.5, 8)
+scale = Vector2(2.1875, 1)
+sprite_frames = SubResource("SpriteFrames_0je28")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D4"]
+position = Vector2(-7, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D4/Area2D"]
+position = Vector2(22.5, 19)
+shape = SubResource("RectangleShape2D_y36cg")
+
+[node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D4"]
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -724,16 +1384,14 @@ texture_filter = 1
 position = Vector2(-558, -222)
 tile_set = SubResource("TileSet_thxtk")
 format = 2
-layer_0/tile_data = PackedInt32Array(3342369, 1114113, 8, 3407905, 1310721, 8, 3473441, 1310721, 9, 3538977, 1310721, 9, 3604513, 1310721, 10, 3670049, 1114113, 8, 3342378, 1245185, 8, 3407914, 1310721, 8, 3473450, 1310721, 9, 3538986, 1310721, 9, 3604522, 1310721, 10, 3670058, 1245185, 8, 3342370, 1179649, 8, 3407906, 1179649, 9, 3473442, 1179649, 10, 3538978, 1179649, 9, 3604514, 1179649, 10, 3670050, 1179649, 8, 3342371, 1179649, 8, 3407907, 1245185, 9, 3473443, 1245185, 10, 3538979, 1245185, 9, 3604515, 1245185, 10, 3670051, 1179649, 8, 3342372, 1179649, 8, 3407908, 1114113, 9, 3473444, 1114113, 9, 3538980, 1114113, 9, 3604516, 1114113, 9, 3670052, 1179649, 8, 3342373, 1179649, 8, 3407909, 1179649, 9, 3473445, 1179649, 10, 3538981, 1179649, 9, 3604517, 1179649, 10, 3670053, 1179649, 8, 3342374, 1179649, 8, 3407910, 1245185, 9, 3473446, 1245185, 10, 3538982, 1245185, 9, 3604518, 1245185, 10, 3670054, 1179649, 8, 3342375, 1179649, 8, 3407911, 1114113, 9, 3473447, 1114113, 9, 3538983, 1114113, 9, 3604519, 1114113, 9, 3670055, 1179649, 8, 3342376, 1179649, 8, 3407912, 1179649, 9, 3473448, 1179649, 10, 3538984, 1179649, 9, 3604520, 1179649, 10, 3670056, 1179649, 8, 3342377, 1179649, 8, 3407913, 1245185, 9, 3473449, 1245185, 10, 3538985, 1245185, 9, 3604521, 1245185, 10, 3670057, 1179649, 8, 2883639, 1310721, 8, 3145783, 1310721, 9, 3211319, 1310721, 10, 2883640, 1310721, 8, 3145784, 1310721, 9, 3211320, 1310721, 10, 2490433, 1179649, 9, 2555969, 1179649, 10, 2490434, 1245185, 9, 2555970, 1245185, 10, 2097211, 1179649, 9, 2162747, 1179649, 10, 2097212, 1245185, 9, 2162748, 1245185, 10, 1966128, 1179649, 9, 2031664, 1179649, 10, 1966129, 1245185, 9, 2031665, 1245185, 10, 1966132, 1179649, 9, 2031668, 1179649, 10, 1966133, 1245185, 9, 2031669, 1245185, 10, 2490470, 1114113, 8, 2490471, 1179649, 8, 2687098, 393217, 8, 2752634, 393217, 9, 2818170, 393217, 9, 2883706, 393217, 9, 2949242, 393217, 9, 3014778, 393217, 10, 2687099, 524289, 8, 3014779, 458753, 10, 3014780, 458753, 10, 3014781, 458753, 10, 3014782, 458753, 10, 3014783, 458753, 10, 2490482, 1114113, 8, 2490483, 1179649, 8, 2621548, 1114113, 8, 2621549, 1179649, 8, 2293897, 393217, 8, 2359433, 393217, 9, 2424969, 458753, 9, 2490505, 458753, 9, 2293898, 458753, 8, 2359434, 589825, 8, 2424970, 589825, 9, 2490506, 458753, 9, 2228363, 393217, 8, 2293899, 393217, 9, 2359435, 655361, 8, 2424971, 655361, 9, 2490507, 458753, 9, 2228364, 458753, 8, 2293900, 458753, 9, 2359436, 458753, 9, 2424972, 458753, 9, 2490508, 458753, 9, 2162829, 393217, 8, 2228365, 393217, 9, 2293901, 458753, 9, 2359437, 458753, 9, 2424973, 589825, 8, 2490509, 589825, 9, 2556045, 458753, 9, 2621581, 458753, 9, 2162830, 458753, 8, 2228366, 458753, 9, 2293902, 458753, 9, 2359438, 458753, 9, 2424974, 655361, 8, 2490510, 655361, 9, 2556046, 458753, 9, 2621582, 458753, 9, 2097295, 393217, 8, 2162831, 393217, 9, 2228367, 458753, 9, 2293903, 458753, 9, 2359439, 458753, 9, 2424975, 458753, 9, 2490511, 458753, 9, 2556047, 458753, 9, 2621583, 458753, 9, 2097296, 458753, 8, 2162832, 458753, 9, 2228368, 458753, 9, 2293904, 458753, 9, 2359440, 458753, 9, 2424976, 458753, 9, 2490512, 458753, 9, 2556048, 458753, 9, 2621584, 458753, 9, 2031761, 393217, 8, 2097297, 393217, 9, 2162833, 458753, 9, 2228369, 458753, 9, 2293905, 458753, 9, 2359441, 458753, 9, 2424977, 458753, 9, 2490513, 589825, 8, 2556049, 589825, 9, 2621585, 458753, 9, 2687121, 458753, 9, 2752657, 458753, 9, 2031762, 458753, 8, 2097298, 458753, 9, 2162834, 458753, 9, 2228370, 458753, 9, 2293906, 589825, 8, 2359442, 589825, 9, 2424978, 458753, 9, 2490514, 655361, 8, 2556050, 655361, 9, 2621586, 458753, 9, 2687122, 458753, 9, 2752658, 589825, 8, 1966227, 393217, 8, 2031763, 393217, 9, 2097299, 458753, 9, 2162835, 458753, 9, 2228371, 458753, 9, 2293907, 655361, 8, 2359443, 655361, 9, 2424979, 458753, 9, 2490515, 458753, 9, 2556051, 458753, 9, 2621587, 458753, 9, 2687123, 458753, 9, 2752659, 655361, 8, 1966228, 458753, 8, 2031764, 458753, 9, 2097300, 458753, 9, 2162836, 458753, 9, 2228372, 458753, 9, 2293908, 458753, 9, 2359444, 458753, 9, 2424980, 458753, 9, 2490516, 458753, 9, 2556052, 458753, 9, 2621588, 458753, 9, 2687124, 458753, 9, 2752660, 458753, 9, 1900693, 393217, 8, 1966229, 393217, 9, 2031765, 458753, 9, 2097301, 458753, 9, 2162837, 458753, 9, 2228373, 458753, 9, 2293909, 458753, 9, 2359445, 458753, 9, 2424981, 458753, 9, 2490517, 458753, 9, 2556053, 458753, 9, 2621589, 458753, 9, 2687125, 458753, 9, 2752661, 589825, 8, 2818197, 589825, 9, 2883733, 458753, 9, 1900694, 458753, 8, 1966230, 458753, 9, 2031766, 589825, 8, 2097302, 589825, 9, 2162838, 458753, 9, 2228374, 458753, 9, 2293910, 458753, 9, 2359446, 458753, 9, 2424982, 458753, 9, 2490518, 589825, 8, 2556054, 589825, 9, 2621590, 458753, 9, 2687126, 458753, 9, 2752662, 655361, 8, 2818198, 655361, 9, 2883734, 458753, 9, 1900695, 458753, 8, 1966231, 458753, 9, 2031767, 655361, 8, 2097303, 655361, 9, 2162839, 458753, 9, 2228375, 458753, 9, 2293911, 458753, 9, 2359447, 458753, 9, 2424983, 458753, 9, 2490519, 655361, 8, 2556055, 655361, 9, 2621591, 458753, 9, 2687127, 458753, 9, 2752663, 458753, 9, 2818199, 458753, 9, 2883735, 458753, 9, 1900696, 524289, 8, 1966232, 524289, 9, 2031768, 458753, 9, 2097304, 458753, 9, 2162840, 589825, 8, 2228376, 589825, 9, 2293912, 458753, 9, 2359448, 458753, 9, 2424984, 458753, 9, 2490520, 458753, 9, 2556056, 458753, 9, 2621592, 458753, 9, 2687128, 458753, 9, 2752664, 458753, 9, 2818200, 458753, 9, 2883736, 458753, 9, 1966233, 458753, 8, 2031769, 458753, 9, 2097305, 458753, 9, 2162841, 655361, 8, 2228377, 655361, 9, 2293913, 458753, 9, 2359449, 458753, 9, 2424985, 458753, 9, 2490521, 458753, 9, 2556057, 458753, 9, 2621593, 458753, 9, 2687129, 458753, 9, 2752665, 589825, 8, 2818201, 589825, 9, 2883737, 458753, 9, 1966234, 524289, 8, 2031770, 524289, 9, 2097306, 458753, 9, 2162842, 458753, 9, 2228378, 458753, 9, 2293914, 458753, 9, 2359450, 458753, 9, 2424986, 458753, 9, 2490522, 458753, 9, 2556058, 458753, 9, 2621594, 458753, 9, 2687130, 458753, 9, 2752666, 655361, 8, 2818202, 655361, 9, 2883738, 524289, 9, 2031771, 458753, 8, 2097307, 458753, 9, 2162843, 458753, 9, 2228379, 589825, 8, 2293915, 589825, 9, 2359451, 458753, 9, 2424987, 458753, 9, 2490523, 458753, 9, 2556059, 589825, 8, 2621595, 589825, 9, 2687131, 458753, 9, 2752667, 458753, 9, 2818203, 458753, 9, 2883739, 458753, 10, 2031772, 524289, 8, 2097308, 524289, 9, 2162844, 458753, 9, 2228380, 655361, 8, 2293916, 655361, 9, 2359452, 458753, 9, 2424988, 458753, 9, 2490524, 458753, 9, 2556060, 655361, 8, 2621596, 655361, 9, 2687132, 458753, 9, 2752668, 458753, 9, 2818204, 458753, 9, 2883740, 458753, 10, 2097309, 458753, 8, 2162845, 458753, 9, 2228381, 458753, 9, 2293917, 458753, 9, 2359453, 458753, 9, 2424989, 458753, 9, 2490525, 458753, 9, 2556061, 458753, 9, 2621597, 458753, 9, 2687133, 458753, 9, 2752669, 458753, 9, 2097310, 524289, 8, 2162846, 524289, 9, 2228382, 458753, 9, 2293918, 458753, 9, 2359454, 458753, 9, 2424990, 458753, 9, 2490526, 458753, 9, 2556062, 458753, 9, 2621598, 458753, 9, 2687134, 458753, 9, 2752670, 524289, 9, 2162847, 458753, 8, 2228383, 458753, 9, 2293919, 458753, 9, 2359455, 458753, 9, 2424991, 458753, 9, 2490527, 458753, 9, 2556063, 458753, 9, 2621599, 458753, 9, 2687135, 458753, 9, 2752671, 458753, 10, 2162848, 524289, 8, 2228384, 524289, 9, 2293920, 458753, 9, 2359456, 458753, 9, 2424992, 458753, 9, 2490528, 458753, 9, 2556064, 458753, 9, 2621600, 458753, 9, 2687136, 458753, 9, 2752672, 458753, 10, 2228385, 458753, 8, 2293921, 458753, 9, 2359457, 458753, 9, 2424993, 458753, 9, 2490529, 458753, 9, 2556065, 458753, 9, 2621601, 458753, 9, 2228386, 524289, 8, 2293922, 524289, 9, 2359458, 458753, 9, 2424994, 589825, 8, 2490530, 589825, 9, 2556066, 458753, 9, 2621602, 458753, 9, 2293923, 458753, 8, 2359459, 458753, 9, 2424995, 655361, 8, 2490531, 655361, 9, 2556067, 458753, 9, 2621603, 458753, 10, 2293924, 524289, 8, 2359460, 524289, 9, 2424996, 458753, 9, 2490532, 458753, 9, 2556068, 458753, 9, 2621604, 458753, 10, 2359461, 458753, 8, 2424997, 458753, 9, 2490533, 458753, 9, 2359462, 524289, 8, 2424998, 524289, 9, 2490534, 524289, 9, 2359431, 393217, 8, 2424967, 393217, 9, 2490503, 393217, 9, 2556039, 393217, 9, 2621575, 393217, 10, 2359432, 458753, 8, 2424968, 458753, 9, 2490504, 458753, 9, 2556040, 458753, 9, 2621576, 458753, 10, 2556041, 458753, 9, 2621577, 458753, 10, 2556042, 458753, 9, 2621578, 458753, 10, 2556043, 458753, 9, 2621579, 393217, 9, 2687115, 393217, 9, 2752651, 393217, 10, 2556044, 458753, 9, 2621580, 458753, 9, 2687116, 458753, 9, 2752652, 458753, 10, 2687117, 458753, 9, 2752653, 458753, 10, 2687118, 458753, 9, 2752654, 458753, 10, 2687119, 458753, 9, 2752655, 393217, 9, 2818191, 393217, 9, 2883727, 393217, 10, 2687120, 458753, 9, 2752656, 458753, 9, 2818192, 458753, 9, 2883728, 458753, 10, 2818193, 458753, 9, 2883729, 458753, 10, 2818194, 589825, 9, 2883730, 458753, 10, 2818195, 655361, 9, 2883731, 458753, 9, 2949267, 393217, 9, 3014803, 393217, 10, 2818196, 458753, 9, 2883732, 458753, 9, 2949268, 458753, 9, 3014804, 458753, 10, 2949269, 458753, 9, 3014805, 458753, 10, 2949270, 458753, 9, 3014806, 458753, 10, 2949271, 458753, 9, 3014807, 458753, 10, 2949272, 458753, 9, 3014808, 458753, 10, 2949273, 458753, 9, 3014809, 458753, 10, 2949274, 524289, 9, 3014810, 524289, 10, 2818205, 458753, 9, 2883741, 458753, 10, 2818206, 524289, 9, 2883742, 524289, 10, 2687137, 458753, 9, 2752673, 458753, 10, 2687138, 524289, 9, 2752674, 524289, 10, 2556069, 458753, 9, 2621605, 458753, 10, 2556070, 524289, 9, 2621606, 524289, 10, 2228400, 393217, 8, 2293936, 393217, 9, 2359472, 393217, 9, 2425008, 393217, 9, 2490544, 393217, 10, 2228401, 458753, 8, 2293937, 589825, 8, 2359473, 589825, 9, 2425009, 458753, 9, 2490545, 458753, 10, 2162866, 393217, 8, 2228402, 393217, 9, 2293938, 655361, 8, 2359474, 655361, 9, 2425010, 458753, 9, 2490546, 458753, 10, 2162867, 458753, 8, 2228403, 589825, 8, 2293939, 589825, 9, 2359475, 589825, 8, 2425011, 589825, 9, 2490547, 458753, 10, 2162868, 458753, 8, 2228404, 655361, 8, 2293940, 655361, 9, 2359476, 655361, 8, 2425012, 655361, 9, 2490548, 458753, 10, 2162869, 524289, 8, 2228405, 524289, 9, 2293941, 589825, 8, 2359477, 589825, 9, 2425013, 458753, 9, 2490549, 458753, 10, 2228406, 458753, 8, 2293942, 655361, 8, 2359478, 655361, 9, 2425014, 458753, 9, 2490550, 458753, 10, 2228407, 524289, 8, 2293943, 524289, 9, 2359479, 524289, 9, 2425015, 524289, 9, 2490551, 524289, 10, 2031810, 1114113, 8, 2097346, 1310721, 8, 2162882, 1310721, 9, 2228418, 1310721, 9, 2293954, 1310721, 10, 2031811, 1179649, 8, 2097347, 1114113, 8, 2162883, 1310721, 8, 2228419, 1310721, 10, 2293955, 1114113, 8, 2031812, 1179649, 8, 2097348, 1179649, 8, 2162884, 1179649, 9, 2228420, 1179649, 10, 2293956, 1179649, 8, 2031813, 1179649, 8, 2097349, 1179649, 8, 2162885, 1245185, 9, 2228421, 1245185, 10, 2293957, 1179649, 8, 2031814, 1179649, 8, 2097350, 1245185, 8, 2162886, 1310721, 8, 2228422, 1310721, 10, 2293958, 1245185, 8, 2031815, 1245185, 8, 2097351, 1310721, 8, 2162887, 1310721, 9, 2228423, 1310721, 9, 2293959, 1310721, 10, 2949175, 1310721, 9, 3014711, 1310721, 9, 3080247, 1310721, 9, 2949176, 1310721, 9, 3014712, 1310721, 9, 3080248, 1310721, 9, 2490442, 1179649, 9, 2555978, 1179649, 10, 2490443, 1245185, 9, 2555979, 1245185, 10, 2359490, 1114113, 8, 2359491, 1179649, 8, 2359492, 1179649, 8, 2359493, 1179649, 8, 2359494, 1179649, 8, 2359495, 1245185, 8, 2555990, 393217, 8, 2621526, 393217, 9, 2687062, 393217, 10, 2555991, 458753, 8, 2621527, 458753, 9, 2687063, 458753, 10, 2555992, 524289, 8, 2621528, 524289, 9, 2687064, 524289, 10, 2490472, 1245185, 8, 2621550, 1245185, 8, 2490484, 1245185, 8, 2687104, 393217, 8, 2687105, 524289, 8, 2752641, 524289, 9, 2818177, 524289, 9, 2883713, 524289, 9, 2949249, 524289, 9, 3014785, 524289, 10, 3014784, 458753, 10, 2949245, 458753, 8, 2949246, 458753, 8, 2752635, 524289, 9, 2818171, 524289, 9, 2883707, 524289, 9, 2949243, 524289, 9, 2949244, 393217, 8, 2949247, 524289, 8, 2752640, 393217, 9, 2818176, 393217, 9, 2883712, 393217, 9, 2949248, 393217, 9, 1769485, 1179649, 9, 1835021, 1179649, 10, 1769486, 1245185, 9, 1835022, 1245185, 10, 1769483, 1179649, 9, 1835019, 1179649, 10, 1769484, 1245185, 9, 1835020, 1245185, 10, 1769502, 1179649, 9, 1835038, 1179649, 10, 1769503, 1245185, 9, 1835039, 1245185, 10, 1769504, 1179649, 9, 1835040, 1179649, 10, 1769505, 1245185, 9, 1835041, 1245185, 10, 1900574, 1179649, 9, 1966110, 1179649, 10, 1900575, 1245185, 9, 1966111, 1245185, 10, 1900576, 1179649, 9, 1966112, 1179649, 10, 1900577, 1245185, 9, 1966113, 1245185, 10, 1900555, 1179649, 9, 1966091, 1179649, 10, 1900556, 1245185, 9, 1966092, 1245185, 10, 1900557, 1179649, 9, 1966093, 1179649, 10, 1900558, 1245185, 9, 1966094, 1245185, 10, 1179687, 393217, 8, 1245223, 393217, 9, 1179688, 458753, 8, 1245224, 458753, 9, 1179689, 524289, 8, 1245225, 524289, 9, 1179690, 393217, 8, 1245226, 393217, 9, 1179691, 458753, 8, 1245227, 458753, 9, 1179692, 524289, 8, 1245228, 524289, 9, 1179693, 393217, 8, 1245229, 393217, 9, 1179694, 458753, 8, 1245230, 458753, 9, 1179695, 524289, 8, 1245231, 524289, 9, 1179696, 393217, 8, 1245232, 393217, 9, 1179697, 458753, 8, 1245233, 458753, 9, 1179698, 524289, 8, 1245234, 524289, 9, 1048627, 393217, 8, 1114163, 393217, 9, 1048628, 458753, 8, 1114164, 458753, 9, 1048629, 524289, 8, 1114165, 524289, 9, 1048630, 393217, 8, 1114166, 393217, 9, 1048631, 458753, 8, 1114167, 458753, 9, 1048632, 524289, 8, 1114168, 524289, 9, 1048633, 393217, 8, 1114169, 393217, 9, 1048634, 458753, 8, 1114170, 458753, 9, 1048635, 524289, 8, 1114171, 524289, 9, 1179699, 393217, 9, 1245235, 393217, 10, 1179700, 458753, 9, 1245236, 458753, 10, 1179701, 524289, 9, 1245237, 524289, 10, 1179702, 393217, 9, 1245238, 393217, 10, 1179703, 458753, 9, 1245239, 458753, 10, 1179704, 524289, 9, 1245240, 524289, 10, 1179705, 393217, 9, 1245241, 393217, 10, 1179706, 458753, 9, 1245242, 458753, 10, 1179707, 524289, 9, 1245243, 524289, 10, 524352, 393217, 8, 589888, 393217, 9, 524353, 458753, 8, 589889, 458753, 9, 524354, 524289, 8, 589890, 524289, 9, 524355, 393217, 8, 589891, 393217, 9, 524356, 458753, 8, 589892, 458753, 9, 524357, 524289, 8, 589893, 524289, 9, 524358, 393217, 8, 589894, 393217, 9, 524359, 458753, 8, 589895, 458753, 9, 524360, 524289, 8, 589896, 524289, 9, 524361, 393217, 8, 589897, 393217, 9, 524362, 458753, 8, 589898, 458753, 9, 524363, 524289, 8, 589899, 524289, 9, 524364, 393217, 8, 589900, 393217, 9, 524365, 458753, 8, 589901, 458753, 9, 524366, 524289, 8, 589902, 524289, 9, 196688, 1114113, 8, 196689, 1179649, 8, 196690, 1245185, 8, 196691, 1114113, 8, 196692, 1179649, 8, 196693, 1245185, 8, 196694, 1114113, 8, 196695, 1179649, 8, 196696, 1245185, 8, 196697, 1114113, 8, 196698, 1179649, 8, 196699, 1245185, 8, 196700, 1114113, 8, 196701, 1179649, 8, 196702, 1245185, 8, 196717, 1114113, 8, 196718, 1179649, 8, 196719, 1245185, 8, 196720, 1114113, 8, 196721, 1179649, 8, 196722, 1245185, 8, 196723, 1114113, 8, 196724, 1179649, 8, 196725, 1245185, 8, 327804, 1179649, 9, 393340, 1179649, 10, 327805, 1245185, 9, 393341, 1245185, 10, 65668, 1179649, 9, 131204, 1179649, 10, 65669, 1245185, 9, 131205, 1245185, 10, -196466, 1179649, 9, -130930, 1179649, 10, -196465, 1245185, 9, -130929, 1245185, 10, 150, 1179649, 9, 65686, 1179649, 10, 151, 1245185, 9, 65687, 1245185, 10, 152, 1179649, 9, 65688, 1179649, 10, 153, 1245185, 9, 65689, 1245185, 10, 154, 1179649, 9, 65690, 1179649, 10, 155, 1245185, 9, 65691, 1245185, 10, 2687100, 1179649, 1, 2687101, 1179649, 1, 2687102, 1179649, 1, 2687103, 1179649, 1, 2490435, 1179649, 1, 2490436, 1179649, 1, 2490437, 1179649, 1, 2490438, 1179649, 1, 2490439, 1179649, 1, 2490440, 1179649, 1, 2490441, 1179649, 1, 1769487, 1179649, 1, 1769488, 1179649, 1, 1769489, 1179649, 1, 1769490, 1179649, 1, 1769491, 1179649, 1, 1769492, 1179649, 1, 1769493, 1179649, 1, 1769494, 1179649, 1, 1769495, 1179649, 1, 1769496, 1179649, 1, 1769497, 1179649, 1, 1769498, 1179649, 1, 1769499, 1179649, 1, 1769500, 1179649, 1, 1769501, 1179649, 1, 196703, 1179649, 1, 196704, 1179649, 1, 196705, 1179649, 1, 196706, 1179649, 1, 196707, 1179649, 1, 196708, 1179649, 1, 196709, 1179649, 1, 196710, 1179649, 1, 196711, 1179649, 1, 196712, 1179649, 1, 196713, 1179649, 1, 196714, 1179649, 1, 196715, 1179649, 1, 196716, 1179649, 1)
+layer_0/tile_data = PackedInt32Array(3342369, 1114113, 8, 3407905, 1310721, 8, 3473441, 1310721, 9, 3538977, 1310721, 9, 3604513, 1310721, 10, 3670049, 1114113, 8, 3342378, 1245185, 8, 3407914, 1310721, 8, 3473450, 1310721, 9, 3538986, 1310721, 9, 3604522, 1310721, 10, 3670058, 1245185, 8, 3342370, 1179649, 8, 3407906, 1179649, 9, 3473442, 1179649, 10, 3538978, 1179649, 9, 3604514, 1179649, 10, 3670050, 1179649, 8, 3342371, 1179649, 8, 3407907, 1245185, 9, 3473443, 1245185, 10, 3538979, 1245185, 9, 3604515, 1245185, 10, 3670051, 1179649, 8, 3342372, 1179649, 8, 3407908, 1114113, 9, 3473444, 1114113, 9, 3538980, 1114113, 9, 3604516, 1114113, 9, 3670052, 1179649, 8, 3342373, 1179649, 8, 3407909, 1179649, 9, 3473445, 1179649, 10, 3538981, 1179649, 9, 3604517, 1179649, 10, 3670053, 1179649, 8, 3342374, 1179649, 8, 3407910, 1245185, 9, 3473446, 1245185, 10, 3538982, 1245185, 9, 3604518, 1245185, 10, 3670054, 1179649, 8, 3342375, 1179649, 8, 3407911, 1114113, 9, 3473447, 1114113, 9, 3538983, 1114113, 9, 3604519, 1114113, 9, 3670055, 1179649, 8, 3342376, 1179649, 8, 3407912, 1179649, 9, 3473448, 1179649, 10, 3538984, 1179649, 9, 3604520, 1179649, 10, 3670056, 1179649, 8, 3342377, 1179649, 8, 3407913, 1245185, 9, 3473449, 1245185, 10, 3538985, 1245185, 9, 3604521, 1245185, 10, 3670057, 1179649, 8, 2883639, 1310721, 8, 3145783, 1310721, 9, 3211319, 1310721, 10, 2883640, 1310721, 8, 3145784, 1310721, 9, 3211320, 1310721, 10, 2490433, 1179649, 9, 2555969, 1179649, 10, 2490434, 1245185, 9, 2555970, 1245185, 10, 2097211, 1179649, 9, 2162747, 1179649, 10, 2097212, 1245185, 9, 2162748, 1245185, 10, 1966128, 1179649, 9, 2031664, 1179649, 10, 1966129, 1245185, 9, 2031665, 1245185, 10, 1966132, 1179649, 9, 2031668, 1179649, 10, 1966133, 1245185, 9, 2031669, 1245185, 10, 2490470, 1114113, 8, 2490471, 1179649, 8, 2687098, 393217, 8, 2752634, 393217, 9, 2818170, 393217, 9, 2883706, 393217, 9, 2949242, 393217, 9, 3014778, 393217, 10, 2687099, 524289, 8, 3014779, 458753, 10, 3014780, 458753, 10, 3014781, 458753, 10, 3014782, 458753, 10, 3014783, 458753, 10, 2490482, 1114113, 8, 2490483, 1179649, 8, 2621548, 1114113, 8, 2621549, 1179649, 8, 2293897, 393217, 8, 2359433, 393217, 9, 2424969, 458753, 9, 2490505, 458753, 9, 2293898, 458753, 8, 2359434, 589825, 8, 2424970, 589825, 9, 2490506, 458753, 9, 2228363, 393217, 8, 2293899, 393217, 9, 2359435, 655361, 8, 2424971, 655361, 9, 2490507, 458753, 9, 2228364, 458753, 8, 2293900, 458753, 9, 2359436, 458753, 9, 2424972, 458753, 9, 2490508, 458753, 9, 2162829, 393217, 8, 2228365, 393217, 9, 2293901, 458753, 9, 2359437, 458753, 9, 2424973, 589825, 8, 2490509, 589825, 9, 2556045, 458753, 9, 2621581, 458753, 9, 2162830, 458753, 8, 2228366, 458753, 9, 2293902, 458753, 9, 2359438, 458753, 9, 2424974, 655361, 8, 2490510, 655361, 9, 2556046, 458753, 9, 2621582, 458753, 9, 2097295, 393217, 8, 2162831, 393217, 9, 2228367, 458753, 9, 2293903, 458753, 9, 2359439, 458753, 9, 2424975, 458753, 9, 2490511, 458753, 9, 2556047, 458753, 9, 2621583, 458753, 9, 2097296, 458753, 8, 2162832, 458753, 9, 2228368, 458753, 9, 2293904, 458753, 9, 2359440, 458753, 9, 2424976, 458753, 9, 2490512, 458753, 9, 2556048, 458753, 9, 2621584, 458753, 9, 2031761, 393217, 8, 2097297, 393217, 9, 2162833, 458753, 9, 2228369, 458753, 9, 2293905, 458753, 9, 2359441, 458753, 9, 2424977, 458753, 9, 2490513, 589825, 8, 2556049, 589825, 9, 2621585, 458753, 9, 2687121, 458753, 9, 2752657, 458753, 9, 2031762, 458753, 8, 2097298, 458753, 9, 2162834, 458753, 9, 2228370, 458753, 9, 2293906, 589825, 8, 2359442, 589825, 9, 2424978, 458753, 9, 2490514, 655361, 8, 2556050, 655361, 9, 2621586, 458753, 9, 2687122, 458753, 9, 2752658, 589825, 8, 1966227, 393217, 8, 2031763, 393217, 9, 2097299, 458753, 9, 2162835, 458753, 9, 2228371, 458753, 9, 2293907, 655361, 8, 2359443, 655361, 9, 2424979, 458753, 9, 2490515, 458753, 9, 2556051, 458753, 9, 2621587, 458753, 9, 2687123, 458753, 9, 2752659, 655361, 8, 1966228, 458753, 8, 2031764, 458753, 9, 2097300, 458753, 9, 2162836, 458753, 9, 2228372, 458753, 9, 2293908, 458753, 9, 2359444, 458753, 9, 2424980, 458753, 9, 2490516, 458753, 9, 2556052, 458753, 9, 2621588, 458753, 9, 2687124, 458753, 9, 2752660, 458753, 9, 1900693, 393217, 8, 1966229, 393217, 9, 2031765, 458753, 9, 2097301, 458753, 9, 2162837, 458753, 9, 2228373, 458753, 9, 2293909, 458753, 9, 2359445, 458753, 9, 2424981, 458753, 9, 2490517, 458753, 9, 2556053, 458753, 9, 2621589, 458753, 9, 2687125, 458753, 9, 2752661, 589825, 8, 2818197, 589825, 9, 2883733, 458753, 9, 1900694, 458753, 8, 1966230, 458753, 9, 2031766, 589825, 8, 2097302, 589825, 9, 2162838, 458753, 9, 2228374, 458753, 9, 2293910, 458753, 9, 2359446, 458753, 9, 2424982, 458753, 9, 2490518, 589825, 8, 2556054, 589825, 9, 2621590, 458753, 9, 2687126, 458753, 9, 2752662, 655361, 8, 2818198, 655361, 9, 2883734, 458753, 9, 1900695, 458753, 8, 1966231, 458753, 9, 2031767, 655361, 8, 2097303, 655361, 9, 2162839, 458753, 9, 2228375, 458753, 9, 2293911, 458753, 9, 2359447, 458753, 9, 2424983, 458753, 9, 2490519, 655361, 8, 2556055, 655361, 9, 2621591, 458753, 9, 2687127, 458753, 9, 2752663, 458753, 9, 2818199, 458753, 9, 2883735, 458753, 9, 1900696, 524289, 8, 1966232, 524289, 9, 2031768, 458753, 9, 2097304, 458753, 9, 2162840, 589825, 8, 2228376, 589825, 9, 2293912, 458753, 9, 2359448, 458753, 9, 2424984, 458753, 9, 2490520, 458753, 9, 2556056, 458753, 9, 2621592, 458753, 9, 2687128, 458753, 9, 2752664, 458753, 9, 2818200, 458753, 9, 2883736, 458753, 9, 1966233, 458753, 8, 2031769, 458753, 9, 2097305, 458753, 9, 2162841, 655361, 8, 2228377, 655361, 9, 2293913, 458753, 9, 2359449, 458753, 9, 2424985, 458753, 9, 2490521, 458753, 9, 2556057, 458753, 9, 2621593, 458753, 9, 2687129, 458753, 9, 2752665, 589825, 8, 2818201, 589825, 9, 2883737, 458753, 9, 1966234, 524289, 8, 2031770, 524289, 9, 2097306, 458753, 9, 2162842, 458753, 9, 2228378, 458753, 9, 2293914, 458753, 9, 2359450, 458753, 9, 2424986, 458753, 9, 2490522, 458753, 9, 2556058, 458753, 9, 2621594, 458753, 9, 2687130, 458753, 9, 2752666, 655361, 8, 2818202, 655361, 9, 2883738, 524289, 9, 2031771, 458753, 8, 2097307, 458753, 9, 2162843, 458753, 9, 2228379, 589825, 8, 2293915, 589825, 9, 2359451, 458753, 9, 2424987, 458753, 9, 2490523, 458753, 9, 2556059, 589825, 8, 2621595, 589825, 9, 2687131, 458753, 9, 2752667, 458753, 9, 2818203, 458753, 9, 2883739, 458753, 10, 2031772, 524289, 8, 2097308, 524289, 9, 2162844, 458753, 9, 2228380, 655361, 8, 2293916, 655361, 9, 2359452, 458753, 9, 2424988, 458753, 9, 2490524, 458753, 9, 2556060, 655361, 8, 2621596, 655361, 9, 2687132, 458753, 9, 2752668, 458753, 9, 2818204, 458753, 9, 2883740, 458753, 10, 2097309, 458753, 8, 2162845, 458753, 9, 2228381, 458753, 9, 2293917, 458753, 9, 2359453, 458753, 9, 2424989, 458753, 9, 2490525, 458753, 9, 2556061, 458753, 9, 2621597, 458753, 9, 2687133, 458753, 9, 2752669, 458753, 9, 2097310, 524289, 8, 2162846, 524289, 9, 2228382, 458753, 9, 2293918, 458753, 9, 2359454, 458753, 9, 2424990, 458753, 9, 2490526, 458753, 9, 2556062, 458753, 9, 2621598, 458753, 9, 2687134, 458753, 9, 2752670, 524289, 9, 2162847, 458753, 8, 2228383, 458753, 9, 2293919, 458753, 9, 2359455, 458753, 9, 2424991, 458753, 9, 2490527, 458753, 9, 2556063, 458753, 9, 2621599, 458753, 9, 2687135, 458753, 9, 2752671, 458753, 10, 2162848, 524289, 8, 2228384, 524289, 9, 2293920, 458753, 9, 2359456, 458753, 9, 2424992, 458753, 9, 2490528, 458753, 9, 2556064, 458753, 9, 2621600, 458753, 9, 2687136, 458753, 9, 2752672, 458753, 10, 2228385, 458753, 8, 2293921, 458753, 9, 2359457, 458753, 9, 2424993, 458753, 9, 2490529, 458753, 9, 2556065, 458753, 9, 2621601, 458753, 9, 2228386, 524289, 8, 2293922, 524289, 9, 2359458, 458753, 9, 2424994, 589825, 8, 2490530, 589825, 9, 2556066, 458753, 9, 2621602, 458753, 9, 2293923, 458753, 8, 2359459, 458753, 9, 2424995, 655361, 8, 2490531, 655361, 9, 2556067, 458753, 9, 2621603, 458753, 10, 2293924, 524289, 8, 2359460, 524289, 9, 2424996, 458753, 9, 2490532, 458753, 9, 2556068, 458753, 9, 2621604, 458753, 10, 2359461, 458753, 8, 2424997, 458753, 9, 2490533, 458753, 9, 2359462, 524289, 8, 2424998, 524289, 9, 2490534, 524289, 9, 2359431, 393217, 8, 2424967, 393217, 9, 2490503, 393217, 9, 2556039, 393217, 9, 2621575, 393217, 10, 2359432, 458753, 8, 2424968, 458753, 9, 2490504, 458753, 9, 2556040, 458753, 9, 2621576, 458753, 10, 2556041, 458753, 9, 2621577, 458753, 10, 2556042, 458753, 9, 2621578, 458753, 10, 2556043, 458753, 9, 2621579, 393217, 9, 2687115, 393217, 9, 2752651, 393217, 10, 2556044, 458753, 9, 2621580, 458753, 9, 2687116, 458753, 9, 2752652, 458753, 10, 2687117, 458753, 9, 2752653, 458753, 10, 2687118, 458753, 9, 2752654, 458753, 10, 2687119, 458753, 9, 2752655, 393217, 9, 2818191, 393217, 9, 2883727, 393217, 10, 2687120, 458753, 9, 2752656, 458753, 9, 2818192, 458753, 9, 2883728, 458753, 10, 2818193, 458753, 9, 2883729, 458753, 10, 2818194, 589825, 9, 2883730, 458753, 10, 2818195, 655361, 9, 2883731, 458753, 9, 2949267, 393217, 9, 3014803, 393217, 10, 2818196, 458753, 9, 2883732, 458753, 9, 2949268, 458753, 9, 3014804, 458753, 10, 2949269, 458753, 9, 3014805, 458753, 10, 2949270, 458753, 9, 3014806, 458753, 10, 2949271, 458753, 9, 3014807, 458753, 10, 2949272, 458753, 9, 3014808, 458753, 10, 2949273, 458753, 9, 3014809, 458753, 10, 2949274, 524289, 9, 3014810, 524289, 10, 2818205, 458753, 9, 2883741, 458753, 10, 2818206, 524289, 9, 2883742, 524289, 10, 2687137, 458753, 9, 2752673, 458753, 10, 2687138, 524289, 9, 2752674, 524289, 10, 2556069, 458753, 9, 2621605, 458753, 10, 2556070, 524289, 9, 2621606, 524289, 10, 2228400, 393217, 8, 2293936, 393217, 9, 2359472, 393217, 9, 2425008, 393217, 9, 2490544, 393217, 10, 2228401, 458753, 8, 2293937, 589825, 8, 2359473, 589825, 9, 2425009, 458753, 9, 2490545, 458753, 10, 2162866, 393217, 8, 2228402, 393217, 9, 2293938, 655361, 8, 2359474, 655361, 9, 2425010, 458753, 9, 2490546, 458753, 10, 2162867, 458753, 8, 2228403, 589825, 8, 2293939, 589825, 9, 2359475, 589825, 8, 2425011, 589825, 9, 2490547, 458753, 10, 2162868, 458753, 8, 2228404, 655361, 8, 2293940, 655361, 9, 2359476, 655361, 8, 2425012, 655361, 9, 2490548, 458753, 10, 2162869, 524289, 8, 2228405, 524289, 9, 2293941, 589825, 8, 2359477, 589825, 9, 2425013, 458753, 9, 2490549, 458753, 10, 2228406, 458753, 8, 2293942, 655361, 8, 2359478, 655361, 9, 2425014, 458753, 9, 2490550, 458753, 10, 2228407, 524289, 8, 2293943, 524289, 9, 2359479, 524289, 9, 2425015, 524289, 9, 2490551, 524289, 10, 2031810, 1114113, 8, 2097346, 1310721, 8, 2162882, 1310721, 9, 2228418, 1310721, 9, 2293954, 1310721, 10, 2031811, 1179649, 8, 2097347, 1114113, 8, 2162883, 1310721, 8, 2228419, 1310721, 10, 2293955, 1114113, 8, 2031812, 1179649, 8, 2097348, 1179649, 8, 2162884, 1179649, 9, 2228420, 1179649, 10, 2293956, 1179649, 8, 2031813, 1179649, 8, 2097349, 1179649, 8, 2162885, 1245185, 9, 2228421, 1245185, 10, 2293957, 1179649, 8, 2031814, 1179649, 8, 2097350, 1245185, 8, 2162886, 1310721, 8, 2228422, 1310721, 10, 2293958, 1245185, 8, 2031815, 1245185, 8, 2097351, 1310721, 8, 2162887, 1310721, 9, 2228423, 1310721, 9, 2293959, 1310721, 10, 2949175, 1310721, 9, 3014711, 1310721, 9, 3080247, 1310721, 9, 2949176, 1310721, 9, 3014712, 1310721, 9, 3080248, 1310721, 9, 2490442, 1179649, 9, 2555978, 1179649, 10, 2490443, 1245185, 9, 2555979, 1245185, 10, 2359490, 1114113, 8, 2359491, 1179649, 8, 2359492, 1179649, 8, 2359493, 1179649, 8, 2359494, 1179649, 8, 2359495, 1245185, 8, 2555990, 393217, 8, 2621526, 393217, 9, 2687062, 393217, 10, 2555991, 458753, 8, 2621527, 458753, 9, 2687063, 458753, 10, 2555992, 524289, 8, 2621528, 524289, 9, 2687064, 524289, 10, 2490472, 1245185, 8, 2621550, 1245185, 8, 2490484, 1245185, 8, 2687104, 393217, 8, 2687105, 524289, 8, 2752641, 524289, 9, 2818177, 524289, 9, 2883713, 524289, 9, 2949249, 524289, 9, 3014785, 524289, 10, 3014784, 458753, 10, 2949245, 458753, 8, 2949246, 458753, 8, 2752635, 524289, 9, 2818171, 524289, 9, 2883707, 524289, 9, 2949243, 524289, 9, 2949244, 393217, 8, 2949247, 524289, 8, 2752640, 393217, 9, 2818176, 393217, 9, 2883712, 393217, 9, 2949248, 393217, 9, 1769485, 1179649, 9, 1835021, 1179649, 10, 1769486, 1245185, 9, 1835022, 1245185, 10, 1769483, 1179649, 9, 1835019, 1179649, 10, 1769484, 1245185, 9, 1835020, 1245185, 10, 1769502, 1179649, 9, 1835038, 1179649, 10, 1769503, 1245185, 9, 1835039, 1245185, 10, 1769504, 1179649, 9, 1835040, 1179649, 10, 1769505, 1245185, 9, 1835041, 1245185, 10, 1900574, 1179649, 9, 1966110, 1179649, 10, 1900575, 1245185, 9, 1966111, 1245185, 10, 1900576, 1179649, 9, 1966112, 1179649, 10, 1900577, 1245185, 9, 1966113, 1245185, 10, 1900555, 1179649, 9, 1966091, 1179649, 10, 1900556, 1245185, 9, 1966092, 1245185, 10, 1900557, 1179649, 9, 1966093, 1179649, 10, 1900558, 1245185, 9, 1966094, 1245185, 10, 1179687, 393217, 8, 1245223, 393217, 9, 1179688, 458753, 8, 1245224, 458753, 9, 1179689, 524289, 8, 1245225, 524289, 9, 1179690, 393217, 8, 1245226, 393217, 9, 1179691, 458753, 8, 1245227, 458753, 9, 1179692, 524289, 8, 1245228, 524289, 9, 1179693, 393217, 8, 1245229, 393217, 9, 1179694, 458753, 8, 1245230, 458753, 9, 1179695, 524289, 8, 1245231, 524289, 9, 1179696, 393217, 8, 1245232, 393217, 9, 1179697, 458753, 8, 1245233, 458753, 9, 1179698, 524289, 8, 1245234, 524289, 9, 1048627, 393217, 8, 1114163, 393217, 9, 1048628, 458753, 8, 1114164, 458753, 9, 1048629, 524289, 8, 1114165, 524289, 9, 1048630, 393217, 8, 1114166, 393217, 9, 1048631, 458753, 8, 1114167, 458753, 9, 1048632, 524289, 8, 1114168, 524289, 9, 1048633, 393217, 8, 1114169, 393217, 9, 1048634, 458753, 8, 1114170, 458753, 9, 1048635, 524289, 8, 1114171, 524289, 9, 1179699, 393217, 9, 1245235, 393217, 10, 1179700, 458753, 9, 1245236, 458753, 10, 1179701, 524289, 9, 1245237, 524289, 10, 1179702, 393217, 9, 1245238, 393217, 10, 1179703, 458753, 9, 1245239, 458753, 10, 1179704, 524289, 9, 1245240, 524289, 10, 1179705, 393217, 9, 1245241, 393217, 10, 1179706, 458753, 9, 1245242, 458753, 10, 1179707, 524289, 9, 1245243, 524289, 10, 524352, 393217, 8, 589888, 393217, 9, 524353, 458753, 8, 589889, 458753, 9, 524354, 524289, 8, 589890, 524289, 9, 524355, 393217, 8, 589891, 393217, 9, 524356, 458753, 8, 589892, 458753, 9, 524357, 524289, 8, 589893, 524289, 9, 524358, 393217, 8, 589894, 393217, 9, 524359, 458753, 8, 589895, 458753, 9, 524360, 524289, 8, 589896, 524289, 9, 524361, 393217, 8, 589897, 393217, 9, 524362, 458753, 8, 589898, 458753, 9, 524363, 524289, 8, 589899, 524289, 9, 524364, 393217, 8, 589900, 393217, 9, 524365, 458753, 8, 589901, 458753, 9, 524366, 524289, 8, 589902, 524289, 9, 196688, 1114113, 8, 196689, 1179649, 8, 196690, 1245185, 8, 196691, 1114113, 8, 196692, 1179649, 8, 196693, 1245185, 8, 196694, 1114113, 8, 196695, 1179649, 8, 196696, 1245185, 8, 196697, 1114113, 8, 196698, 1179649, 8, 196699, 1245185, 8, 196700, 1114113, 8, 196701, 1179649, 8, 196702, 1245185, 8, 196717, 1114113, 8, 196718, 1179649, 8, 196719, 1245185, 8, 196720, 1114113, 8, 196721, 1179649, 8, 196722, 1245185, 8, 196723, 1114113, 8, 196724, 1179649, 8, 196725, 1245185, 8, 327804, 1179649, 9, 393340, 1179649, 10, 327805, 1245185, 9, 393341, 1245185, 10, 65668, 1179649, 9, 131204, 1179649, 10, 65669, 1245185, 9, 131205, 1245185, 10, -196466, 1179649, 9, -130930, 1179649, 10, -196465, 1245185, 9, -130929, 1245185, 10, 150, 1179649, 9, 65686, 1179649, 10, 151, 1245185, 9, 65687, 1245185, 10, 152, 1179649, 9, 65688, 1179649, 10, 153, 1245185, 9, 65689, 1245185, 10, 154, 1179649, 9, 65690, 1179649, 10, 155, 1245185, 9, 65691, 1245185, 10)
 
 [node name="background" type="Parallax2D" parent="."]
-visible = false
 z_index = -1
 scroll_scale = Vector2(0.1, 0.1)
 scroll_offset = Vector2(11, 0)
 
 [node name="TextureRect" type="TextureRect" parent="background"]
-visible = false
 texture_filter = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -748,6 +1406,58 @@ expand_mode = 3
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Bridges/Bridge 1/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 1/StaticBody2D" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Scene Objects/Bridges/Bridge 1/StaticBody2D/Timer" to="Scene Objects/Bridges/Bridge 1/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 2/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 2/StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 2/StaticBody2D/Timer" to="Scene Objects/Bridges/Bridge 2/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 2/StaticBody2D2/Area2D" to="Scene Objects/Bridges/Bridge 2/StaticBody2D2" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 2/StaticBody2D2/Timer" to="Scene Objects/Bridges/Bridge 2/StaticBody2D2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 2/StaticBody2D3/Area2D" to="Scene Objects/Bridges/Bridge 2/StaticBody2D3" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 2/StaticBody2D3/Timer" to="Scene Objects/Bridges/Bridge 2/StaticBody2D3" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 2/StaticBody2D4/Area2D" to="Scene Objects/Bridges/Bridge 2/StaticBody2D4" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 2/StaticBody2D4/Timer" to="Scene Objects/Bridges/Bridge 2/StaticBody2D4" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D2/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D2" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D2/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D3/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D3" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D3/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D3" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D4/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D4" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D4/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D4" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D5/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D5" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D5/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D5" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D6/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D6" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D6/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D6" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D7/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D7" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D7/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D7" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D8/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D8" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D8/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D8" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 3/StaticBody2D9/Area2D" to="Scene Objects/Bridges/Bridge 3/StaticBody2D9" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 3/StaticBody2D9/Timer" to="Scene Objects/Bridges/Bridge 3/StaticBody2D9" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D2/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D2" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D2/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D3/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D3" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D3/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D3" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D4/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D4" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D4/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D4" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D5/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D5" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D5/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D5" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D6/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D6" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D6/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D6" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D7/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D7" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D7/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D7" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 4/StaticBody2D8/Area2D" to="Scene Objects/Bridges/Bridge 4/StaticBody2D8" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 4/StaticBody2D8/Timer" to="Scene Objects/Bridges/Bridge 4/StaticBody2D8" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 5/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 5/StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 5/StaticBody2D/Timer" to="Scene Objects/Bridges/Bridge 5/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 6/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 6/StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 6/StaticBody2D/Timer" to="Scene Objects/Bridges/Bridge 6/StaticBody2D" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 6/StaticBody2D2/Area2D" to="Scene Objects/Bridges/Bridge 6/StaticBody2D2" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 6/StaticBody2D2/Timer" to="Scene Objects/Bridges/Bridge 6/StaticBody2D2" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 6/StaticBody2D3/Area2D" to="Scene Objects/Bridges/Bridge 6/StaticBody2D3" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 6/StaticBody2D3/Timer" to="Scene Objects/Bridges/Bridge 6/StaticBody2D3" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/Bridges/Bridge 6/StaticBody2D4/Area2D" to="Scene Objects/Bridges/Bridge 6/StaticBody2D4" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Scene Objects/Bridges/Bridge 6/StaticBody2D4/Timer" to="Scene Objects/Bridges/Bridge 6/StaticBody2D4" method="_on_timer_timeout"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
