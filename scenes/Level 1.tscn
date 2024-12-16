@@ -514,11 +514,15 @@ position = Vector2(370, 93)
 [node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
 position = Vector2(1083, 352)
 
+[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
+position = Vector2(1010, 352)
+
 [node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
 z_index = -1
 scroll_scale = Vector2(0.1, 0.1)
 
 [node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0

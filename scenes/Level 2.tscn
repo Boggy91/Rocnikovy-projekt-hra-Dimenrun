@@ -496,7 +496,6 @@ position = Vector2(560, 363)
 [node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
 position = Vector2(1013, -203)
 
-<<<<<<< HEAD
 [node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
 position = Vector2(1882, -245)
 
@@ -505,19 +504,6 @@ position = Vector2(-175, 182)
 
 [node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
 position = Vector2(595, -116)
-=======
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/background"]
-texture_filter = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -427.0
-offset_top = -4.0
-offset_right = 2116.0
-offset_bottom = 792.0
-grow_horizontal = 2
-texture = ExtResource("6_pa4sp")
-expand_mode = 3
->>>>>>> 1a8ff0180c86a367b2333af4c2425a2e9783f688
 
 [node name="lava_reset" type="StaticBody2D" parent="Scene Objects"]
 position = Vector2(-5, 1044)
