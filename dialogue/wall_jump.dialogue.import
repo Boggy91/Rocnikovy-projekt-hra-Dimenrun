@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b8vvcj8wil3wy"
+path="res://.godot/imported/wall_jump.dialogue-e4f4f5c9abd44c78474bf88bdbccfda4.tres"
+
+[deps]
+
+source_file="res://dialogue/wall_jump.dialogue"
+dest_files=["res://.godot/imported/wall_jump.dialogue-e4f4f5c9abd44c78474bf88bdbccfda4.tres"]
+
+[params]
+
+defaults=true

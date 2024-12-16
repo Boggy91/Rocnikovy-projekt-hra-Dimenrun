@@ -40,21 +40,20 @@ offset_right = 145.0
 offset_bottom = 78.0
 text = "Main Menu"
 
-[node name="lvl1" type="Button" parent="."]
+[node name="LEVEL1" type="TextureRect" parent="."]
+z_as_relative = false
 offset_left = 177.0
 offset_top = 143.0
 offset_right = 355.0
-offset_bottom = 242.0
-
-[node name="TextureRect" type="TextureRect" parent="lvl1"]
-z_as_relative = false
-layout_mode = 0
-offset_right = 178.0
-offset_bottom = 100.0
+offset_bottom = 243.0
 texture = ExtResource("3_qmoax")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="lvl1"]
+[node name="lvl1" type="Button" parent="LEVEL1"]
+offset_right = 178.0
+offset_bottom = 99.0
+
+[node name="Label" type="Label" parent="LEVEL1/lvl1"]
 layout_mode = 0
 offset_left = 51.0
 offset_top = -36.0
@@ -63,23 +62,22 @@ offset_bottom = 6.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 1"
 
-[node name="lvl2" type="Button" parent="."]
-offset_left = 409.0
-offset_top = 145.0
-offset_right = 587.0
-offset_bottom = 243.0
-script = SubResource("GDScript_skkmn")
-
-[node name="TextureRect" type="TextureRect" parent="lvl2"]
+[node name="LEVEL2" type="TextureRect" parent="."]
 z_as_relative = false
-layout_mode = 0
-offset_top = -3.0
-offset_right = 178.0
-offset_bottom = 97.0
+offset_left = 409.0
+offset_top = 142.0
+offset_right = 587.0
+offset_bottom = 242.0
 texture = ExtResource("5_uo100")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="lvl2"]
+[node name="lvl2" type="Button" parent="LEVEL2"]
+offset_top = 3.0
+offset_right = 178.0
+offset_bottom = 101.0
+script = SubResource("GDScript_skkmn")
+
+[node name="Label" type="Label" parent="LEVEL2/lvl2"]
 layout_mode = 0
 offset_left = 52.0
 offset_top = -40.0
@@ -88,22 +86,21 @@ offset_bottom = 2.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 2"
 
-[node name="lvl3" type="Button" parent="."]
+[node name="LEVEL3" type="TextureRect" parent="."]
+z_as_relative = false
 offset_left = 641.0
 offset_top = 144.0
-offset_right = 819.0
-offset_bottom = 243.0
-script = SubResource("GDScript_skkmn")
-
-[node name="TextureRect" type="TextureRect" parent="lvl3"]
-z_as_relative = false
-layout_mode = 0
-offset_right = 179.0
-offset_bottom = 98.0
+offset_right = 820.0
+offset_bottom = 242.0
 texture = ExtResource("5_qgv4j")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="lvl3"]
+[node name="lvl3" type="Button" parent="LEVEL3"]
+offset_right = 178.0
+offset_bottom = 99.0
+script = SubResource("GDScript_skkmn")
+
+[node name="Label" type="Label" parent="LEVEL3/lvl3"]
 layout_mode = 0
 offset_left = 52.0
 offset_top = -38.0
@@ -112,25 +109,24 @@ offset_bottom = 4.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 3"
 
-[node name="lvl4" type="Button" parent="."]
-offset_left = 889.0
-offset_top = 144.0
-offset_right = 1067.0
-offset_bottom = 242.0
-script = SubResource("GDScript_skkmn")
-
-[node name="TextureRect" type="TextureRect" parent="lvl4"]
+[node name="LEVEL4" type="TextureRect" parent="."]
 z_as_relative = false
 texture_filter = 1
-layout_mode = 0
-offset_left = -1.0
-offset_top = 1.0
-offset_right = 177.0
-offset_bottom = 98.0
+offset_left = 888.0
+offset_top = 145.0
+offset_right = 1066.0
+offset_bottom = 242.0
 texture = ExtResource("6_y37ui")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="lvl4"]
+[node name="lvl4" type="Button" parent="LEVEL4"]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 179.0
+offset_bottom = 97.0
+script = SubResource("GDScript_skkmn")
+
+[node name="Label" type="Label" parent="LEVEL4/lvl4"]
 layout_mode = 0
 offset_left = 53.0
 offset_top = -36.0
@@ -140,7 +136,7 @@ theme_override_font_sizes/font_size = 30
 text = "LVL 4"
 
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
-[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
-[connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
-[connection signal="pressed" from="lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="LEVEL1/lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="LEVEL2/lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="LEVEL3/lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="LEVEL4/lvl4" to="." method="_on_lvl_4_pressed"]

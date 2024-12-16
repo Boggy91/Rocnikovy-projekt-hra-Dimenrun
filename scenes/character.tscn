@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cg3bhudehfnxm"]
+[gd_scene load_steps=49 format=3 uid="uid://cg3bhudehfnxm"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_ciblw"]
 [ext_resource type="Texture2D" uid="uid://c3bjgs6bpc6os" path="res://character/Hit (32x32).png" id="2_lpdc4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://byo3j6jprdvsx" path="res://character/Fall_32x32_purple.png" id="4_s3uo5"]
 [ext_resource type="Texture2D" uid="uid://bemx7d3oauqyy" path="res://character/Jump_32x32_purple.png" id="5_mydf0"]
 [ext_resource type="Texture2D" uid="uid://bm52rnlnspqfl" path="res://character/Run_32x32_purple.png" id="6_ldry1"]
+[ext_resource type="Texture2D" uid="uid://d1w6r144p4djh" path="res://character/Wall_Jump_32x32_purple.png" id="8_04i1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxqhr"]
 atlas = ExtResource("2_lpdc4")
@@ -156,6 +157,10 @@ region = Rect2(320, 0, 32, 32)
 atlas = ExtResource("6_ldry1")
 region = Rect2(352, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_aptfx"]
+atlas = ExtResource("8_04i1r")
+region = Rect2(62, 0, 31, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_mb6hq"]
 animations = [{
 "frames": [{
@@ -164,7 +169,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dash",
-"speed": 6.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -314,11 +319,19 @@ animations = [{
 "loop": true,
 "name": &"running",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aptfx")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 20.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h50kp"]
-radius = 44.0
-height = 90.0
+radius = 40.0
+height = 92.0
 
 [node name="Character" type="CharacterBody2D"]
 texture_filter = 1
@@ -329,13 +342,14 @@ script = ExtResource("1_ciblw")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(92, 429)
+position = Vector2(110, 416)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_mb6hq")
+animation = &"dash"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(90, 434)
+position = Vector2(112, 426)
 shape = SubResource("CapsuleShape2D_h50kp")
 
 [node name="Timers" type="Node" parent="."]
@@ -347,6 +361,10 @@ wait_time = 0.2
 
 [node name="djump" type="Timer" parent="Timers"]
 
+[node name="hit_timer" type="Timer" parent="Timers"]
+wait_time = 0.5
+
 [connection signal="timeout" from="Timers/dash_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timers/dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
 [connection signal="timeout" from="Timers/djump" to="." method="_on_djump_timeout"]
+[connection signal="timeout" from="Timers/hit_timer" to="." method="_on_hit_timer_timeout"]
