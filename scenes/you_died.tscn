@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://crmg2exsydjpm"]
+[gd_scene load_steps=4 format=3 uid="uid://crmg2exsydjpm"]
 
-[ext_resource type="Script" path="res://you_died_panel.gd" id="1_tood8"]
+[ext_resource type="Texture2D" uid="uid://c2anvkguq5tpn" path="res://pictures/sammie-cabrera-thumb.jpg" id="1_kwbca"]
+[ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="1_tood8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu87m"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
@@ -10,6 +11,13 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="You died" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 2442.0
+offset_bottom = 1300.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kwbca")
 
 [node name="You died panel" type="Panel" parent="."]
 unique_name_in_owner = true
@@ -54,12 +62,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
 
-[node name="Restart lvl" type="Button" parent="You died panel/VBoxContainer"]
+[node name="LVL Menu" type="Button" parent="You died panel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
-text = "Restart level"
+text = "Level Menu"
 
 [node name="Menu" type="Button" parent="You died panel/VBoxContainer"]
 process_mode = 3
@@ -68,5 +76,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
 text = "Main Menu"
 
-[connection signal="pressed" from="You died panel/VBoxContainer/Restart lvl" to="You died panel" method="_on_restart_lvl_pressed"]
+[connection signal="pressed" from="You died panel/VBoxContainer/LVL Menu" to="You died panel" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="You died panel/VBoxContainer/Menu" to="You died panel" method="_on_menu_pressed"]
