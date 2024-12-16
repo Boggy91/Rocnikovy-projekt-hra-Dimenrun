@@ -50,6 +50,7 @@ texture = ExtResource("3_qmoax")
 expand_mode = 1
 
 [node name="lvl1" type="Button" parent="LEVEL1"]
+layout_mode = 0
 offset_right = 178.0
 offset_bottom = 99.0
 
@@ -72,6 +73,7 @@ texture = ExtResource("5_uo100")
 expand_mode = 1
 
 [node name="lvl2" type="Button" parent="LEVEL2"]
+layout_mode = 0
 offset_top = 3.0
 offset_right = 178.0
 offset_bottom = 101.0
@@ -96,6 +98,7 @@ texture = ExtResource("5_qgv4j")
 expand_mode = 1
 
 [node name="lvl3" type="Button" parent="LEVEL3"]
+layout_mode = 0
 offset_right = 178.0
 offset_bottom = 99.0
 script = SubResource("GDScript_skkmn")
@@ -120,6 +123,7 @@ texture = ExtResource("6_y37ui")
 expand_mode = 1
 
 [node name="lvl4" type="Button" parent="LEVEL4"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = -1.0
 offset_right = 179.0
