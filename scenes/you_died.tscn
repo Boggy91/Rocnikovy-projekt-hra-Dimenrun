@@ -62,7 +62,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
 
-[node name="LVL Menu" type="Button" parent="You died panel/VBoxContainer"]
+[node name="Restart Level" type="Button" parent="You died panel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -76,5 +76,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
 text = "Main Menu"
 
-[connection signal="pressed" from="You died panel/VBoxContainer/LVL Menu" to="You died panel" method="_on_restart_lvl_pressed"]
+[connection signal="pressed" from="You died panel/VBoxContainer/Restart Level" to="You died panel" method="_on_restart_level_pressed"]
 [connection signal="pressed" from="You died panel/VBoxContainer/Menu" to="You died panel" method="_on_menu_pressed"]
