@@ -57,6 +57,8 @@ func _physics_process(delta: float) -> void:
 		
 		SPEED = 500
 		
+		sprite_2d.animation = "default"
+		
 		velocity = god_direction.normalized() * SPEED
 		move_and_slide()
 		set_collision_mask_value(1, false)  # Disable collision with layer 1
