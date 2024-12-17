@@ -23,8 +23,9 @@ func jump():
 	velocity.y = JUMP_VELOCITY
 
 func hit(x):
-	velocity.y = JUMP_VELOCITY
-	velocity.x = x
+	if not is_godmode:  # Ignore hits when in godmode
+		velocity.y = JUMP_VELOCITY
+		velocity.x = x
 
 func _physics_process(delta: float) -> void:
 	# Animations
@@ -40,7 +41,6 @@ func _physics_process(delta: float) -> void:
 			print("Godmode activated")
 		else:
 			print("Godmode deactivated")
-			SPEED = 200
 		velocity = Vector2.ZERO  # Reset velocity when toggling godmode
 	
 	# Godmode logic
@@ -59,7 +59,11 @@ func _physics_process(delta: float) -> void:
 		
 		velocity = god_direction.normalized() * SPEED
 		move_and_slide()
+		set_collision_mask_value(1, false)  # Disable collision with layer 1
 		return  # Skip other physics when in godmode
+	else:
+		set_collision_mask_value(1, true)  # Re-enable collision with layer 1
+		SPEED = 200
 	
 	# Add gravity.
 	if not is_on_floor():
