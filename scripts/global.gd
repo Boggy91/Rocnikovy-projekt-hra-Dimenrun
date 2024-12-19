@@ -3,6 +3,17 @@ extends Node
 var total_time: float = 0.0  # Total time spent across all levels
 var level_time: float = 0.0  # Time spent in the current level
 var is_timer_active: bool = false  # Controls whether the timer is running
+var point: int = 0
+
+
+func reset_points():
+	point = 0
+
+func add_point():
+	point += 1
+
+func write_point() -> int:
+	return point
 
 func start_level_timer():
 	level_time = 0.0  # Reset level time
@@ -18,6 +29,9 @@ func update_timers(delta: float):
 
 func get_total_time_formatted() -> String:
 	return format_time(total_time)
+
+func get_level_time() -> float:
+	return level_time
 
 func get_level_time_formatted() -> String:
 	return format_time(level_time)

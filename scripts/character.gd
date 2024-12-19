@@ -135,6 +135,7 @@ func _physics_process(delta: float) -> void:
 	# Reset
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
+		Global.reset_points()
 
 func _on_timer_timeout() -> void:
 	dashing = false

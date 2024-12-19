@@ -1914,7 +1914,7 @@ sources/0 = SubResource("TileSetAtlasSource_bmkn1")
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_kgubg")
-hearts = [null, null, null]
+hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -2179,7 +2179,7 @@ position = Vector2(2036, 305)
 position = Vector2(2107, 337)
 
 [node name="finish" parent="Scene Objects" instance=ExtResource("4_2nu7k")]
-position = Vector2(2608, 253)
+position = Vector2(2609, 253)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
@@ -2919,64 +2919,39 @@ scroll_scale = Vector2(0.1, 0.1)
 scroll_offset = Vector2(11, 0)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="background"]
-motion_scale = Vector2(0.3, 1)
+motion_scale = Vector2(0, 1)
 
-[node name="TextureRect" type="TextureRect" parent="background/ParallaxLayer"]
-texture_filter = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -484.0
-offset_top = -315.0
-offset_right = 2116.0
-offset_bottom = 792.0
-grow_horizontal = 2
+[node name="Sprite2D" type="Sprite2D" parent="background/ParallaxLayer"]
+position = Vector2(900, 200)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("13_meqc4")
-expand_mode = 3
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="background"]
 motion_scale = Vector2(0.5, 1)
 
-[node name="TextureRect" type="TextureRect" parent="background/ParallaxLayer2"]
+[node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer2"]
 texture_filter = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -484.0
-offset_top = -315.0
-offset_right = 2116.0
-offset_bottom = 792.0
-grow_horizontal = 2
+position = Vector2(900, 200)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("14_jiafs")
-expand_mode = 3
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="background"]
 motion_scale = Vector2(0.7, 1)
 
-[node name="TextureRect" type="TextureRect" parent="background/ParallaxLayer3"]
+[node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer3"]
 texture_filter = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -484.0
-offset_top = -315.0
-offset_right = 2116.0
-offset_bottom = 792.0
-grow_horizontal = 2
+position = Vector2(900, 200)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("15_tdjpu")
-expand_mode = 3
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="background"]
 motion_scale = Vector2(0.9, 1)
 
-[node name="TextureRect" type="TextureRect" parent="background/ParallaxLayer4"]
+[node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer4"]
 texture_filter = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -484.0
-offset_top = -317.0
-offset_right = 2114.0
-offset_bottom = 792.0
-grow_horizontal = 2
+position = Vector2(900, 200)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("17_528g3")
-expand_mode = 3
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1co3w")

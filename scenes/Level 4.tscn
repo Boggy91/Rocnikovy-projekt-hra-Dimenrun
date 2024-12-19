@@ -1,7 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://djw6i35aar6fi"]
+[gd_scene load_steps=26 format=3 uid="uid://djw6i35aar6fi"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bcslq"]
-[ext_resource type="Texture2D" uid="uid://bm3w6uglq45qs" path="res://map/pixel-art-stars-clouds-moon-wallpaper-preview.jpg" id="2_pq0l5"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="3_6g6r6"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="4_qroup"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="5_m21ua"]
@@ -340,20 +339,6 @@ script = ExtResource("1_bcslq")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="Scene Objects" type="Node" parent="."]
-
-[node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
-scroll_scale = Vector2(0.1, 0.1)
-
-[node name="TextureRect2" type="TextureRect" parent="Scene Objects/Parallax2D"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 3125.0
-offset_bottom = 645.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_pq0l5")
 
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("3_6g6r6")]
 position = Vector2(-147, 339)

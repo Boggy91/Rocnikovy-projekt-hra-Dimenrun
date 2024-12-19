@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlsk2h2n8q177"]
+
+[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_la4b4"]
+[ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="2_cjwwc"]
+[ext_resource type="Script" path="res://scripts/time_level_compleated.gd" id="3_tjwog"]
+[ext_resource type="Script" path="res://scenes/points_level.gd" id="4_iu4di"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt186"]
+bg_color = Color(0.514089, 0.105049, 0.564005, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_g26is"]
+outline_size = 7
+outline_color = Color(1, 0.2, 1, 1)
+
+[node name="LEVEL1-COMPLETED" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 2442.0
+offset_bottom = 1300.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_la4b4")
+
+[node name="LEVEL COMPLETED PANEL" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 67.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_cjwwc")
+
+[node name="LEVEL COMPLETED" type="Label" parent="LEVEL COMPLETED PANEL"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.257
+anchor_right = 0.5
+anchor_bottom = 0.257
+offset_left = -175.5
+offset_top = -37.307
+offset_right = 231.5
+offset_bottom = 26.693
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "LEVEL COMPLETED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LEVEL COMPLETED PANEL"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.369
+anchor_top = 0.424
+anchor_right = 0.665
+anchor_bottom = 0.576
+offset_left = -0.811035
+offset_top = 37.976
+offset_right = 0.36499
+offset_bottom = 42.024
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Next Level" type="Button" parent="LEVEL COMPLETED PANEL/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vt186")
+text = "Next Level"
+
+[node name="Menu" type="Button" parent="LEVEL COMPLETED PANEL/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vt186")
+text = "Main Menu"
+
+[node name="Time level compleated" type="Label" parent="LEVEL COMPLETED PANEL"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.444
+anchor_top = 0.343
+anchor_right = 0.585
+anchor_bottom = 0.404
+offset_left = 0.0679626
+offset_top = -0.293015
+offset_right = 0.494934
+offset_bottom = -0.0039978
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+label_settings = SubResource("LabelSettings_g26is")
+script = ExtResource("3_tjwog")
+
+[node name="points level" type="Label" parent="LEVEL COMPLETED PANEL"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.455
+anchor_top = 0.395
+anchor_right = 0.589
+anchor_bottom = 0.452
+offset_left = 0.35498
+offset_top = -0.14502
+offset_right = 0.00897217
+offset_bottom = -0.252014
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+label_settings = SubResource("LabelSettings_g26is")
+script = ExtResource("4_iu4di")
+
+[connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Next Level" to="LEVEL COMPLETED PANEL" method="_on_restart_level_pressed"]
+[connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Menu" to="LEVEL COMPLETED PANEL" method="_on_menu_pressed"]

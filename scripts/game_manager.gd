@@ -1,6 +1,9 @@
 extends Node
 @onready var points_label: Label = %"Points Label"
 @export var hearts : Array[Node]
+@onready var points_level: Label = %"points level"
+
+
 
 
 
@@ -19,13 +22,17 @@ func decrease_health():
 		get_tree().change_scene_to_file("res://scenes/you_died.tscn")
 
 
-
-
-
 func add_point():
 	points += 1
 	print(points)
 	points_label.text = "    "+ str(points)
+	Global.add_point()
+	
+	
+	
+func get_point():
+	print(points)
+	points_level.text = "    "+ str(points)
 	
 	
 func _ready():
@@ -44,5 +51,4 @@ func _on_level_complete():
 	print("Level Time: ", Global.get_level_time_formatted())
 	print("Total Time: ", Global.get_total_time_formatted())
 
-	# Example: Transition to the next level or show a results screen
-	# get_tree().change_scene("res://NextLevel.tscn")
+	

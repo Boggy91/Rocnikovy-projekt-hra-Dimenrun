@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=9 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
 [ext_resource type="Script" path="res://scripts/total_time_lvl_menu.gd" id="2_je0rc"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
-[ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="5_6rwmy"]
 [ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="5_qgv4j"]
-[ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/LEVEL2/alicia-magistrello-basic-cave.jpg" id="5_uo100"]
+[ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_y37ui"]
 
 [sub_resource type="GDScript" id="GDScript_skkmn"]
@@ -74,45 +73,6 @@ offset_bottom = 6.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 1"
 
-[node name="Stars lvl 1" type="Panel" parent="LEVEL 1"]
-self_modulate = Color(1, 1, 1, 0)
-offset_left = 193.0
-offset_top = 232.0
-offset_right = 352.0
-offset_bottom = 292.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 1/Stars lvl 1"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.5
-offset_top = -23.0
-offset_right = 76.5
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="LEVEL 1/Stars lvl 1/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="LEVEL 1/Stars lvl 1/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect3" type="TextureRect" parent="LEVEL 1/Stars lvl 1/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
 [node name="LEVEL 2" type="Node" parent="."]
 
 [node name="LEVEL2" type="TextureRect" parent="LEVEL 2"]
@@ -121,7 +81,7 @@ offset_left = 409.0
 offset_top = 142.0
 offset_right = 587.0
 offset_bottom = 242.0
-texture = ExtResource("5_uo100")
+texture = ExtResource("5_xh4e1")
 expand_mode = 1
 
 [node name="lvl2" type="Button" parent="LEVEL 2/LEVEL2"]
@@ -139,46 +99,6 @@ offset_right = 128.0
 offset_bottom = 2.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 2"
-
-[node name="Stars lvl 2" type="Panel" parent="LEVEL 2/LEVEL2"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 17.0
-offset_top = 90.0
-offset_right = 176.0
-offset_bottom = 150.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 2/LEVEL2/Stars lvl 2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.5
-offset_top = -23.0
-offset_right = 76.5
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="LEVEL 2/LEVEL2/Stars lvl 2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="LEVEL 2/LEVEL2/Stars lvl 2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect3" type="TextureRect" parent="LEVEL 2/LEVEL2/Stars lvl 2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
 
 [node name="LEVEL 3" type="Node" parent="."]
 
@@ -205,46 +125,6 @@ offset_right = 128.0
 offset_bottom = 4.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 3"
-
-[node name="Stars lvl 3" type="Panel" parent="LEVEL 3/LEVEL3"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 17.0
-offset_top = 90.0
-offset_right = 176.0
-offset_bottom = 150.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 3/LEVEL3/Stars lvl 3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.5
-offset_top = -23.0
-offset_right = 76.5
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="LEVEL 3/LEVEL3/Stars lvl 3/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="LEVEL 3/LEVEL3/Stars lvl 3/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect3" type="TextureRect" parent="LEVEL 3/LEVEL3/Stars lvl 3/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
 
 [node name="LEVEL 4" type="Node" parent="."]
 
@@ -274,46 +154,6 @@ offset_right = 129.0
 offset_bottom = 6.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 4"
-
-[node name="Stars lvl 4" type="Panel" parent="LEVEL 4/LEVEL4"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 17.0
-offset_top = 86.0
-offset_right = 176.0
-offset_bottom = 146.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 4/LEVEL4/Stars lvl 4"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.5
-offset_top = -23.0
-offset_right = 76.5
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="LEVEL 4/LEVEL4/Stars lvl 4/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="LEVEL 4/LEVEL4/Stars lvl 4/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
-
-[node name="TextureRect3" type="TextureRect" parent="LEVEL 4/LEVEL4/Stars lvl 4/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("5_6rwmy")
-expand_mode = 2
 
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LEVEL 1/LEVEL1/lvl1" to="." method="_on_lvl_1_pressed"]

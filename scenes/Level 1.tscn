@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bbuwunnuyrh7i"]
+[gd_scene load_steps=34 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/patrol.tscn" id="11_x63pv"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_d18v2"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_vefn5"]
+[ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="14_8u64o"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -750,6 +751,23 @@ offset_bottom = 909.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_ogywp")
+expand_mode = 3
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D"]
+motion_offset = Vector2(500, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D/ParallaxLayer2"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -611.0
+offset_top = -252.0
+offset_right = 3029.0
+offset_bottom = 909.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_8u64o")
 expand_mode = 3
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]

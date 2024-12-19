@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://chmx1t37p04md"]
+[gd_scene load_steps=27 format=3 uid="uid://chmx1t37p04md"]
 
 [ext_resource type="Script" path="res://scripts/patrol.gd" id="1_701id"]
 [ext_resource type="Texture2D" uid="uid://glsgn7p0g6ec" path="res://enemy/dino.png" id="2_ocrhr"]
 [ext_resource type="Texture2D" uid="uid://d1rh1j2bu6rkh" path="res://enemy/dino-idle.png" id="3_ndf78"]
 [ext_resource type="Texture2D" uid="uid://bt8o150de256p" path="res://enemy/Desappearing (96x96).png" id="4_8idmy"]
+[ext_resource type="Texture2D" uid="uid://b6gi7xu5j0rl2" path="res://enemy/demonflying.png" id="4_tfbi8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w76xo"]
 atlas = ExtResource("3_ndf78")
@@ -32,6 +33,22 @@ region = Rect2(480, 0, 96, 96)
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6bf4"]
 atlas = ExtResource("4_8idmy")
 region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61ndi"]
+atlas = ExtResource("4_tfbi8")
+region = Rect2(0, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2pca"]
+atlas = ExtResource("4_tfbi8")
+region = Rect2(81, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncdpy"]
+atlas = ExtResource("4_tfbi8")
+region = Rect2(162, 0, 81, 71)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcr6h"]
+atlas = ExtResource("4_tfbi8")
+region = Rect2(243, 0, 81, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_siss2"]
 atlas = ExtResource("2_ocrhr")
@@ -96,6 +113,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_61ndi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2pca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncdpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcr6h")
+}],
+"loop": true,
+"name": &"running",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_siss2")
 }, {
 "duration": 1.0,
@@ -117,7 +151,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_wf48g")
 }],
 "loop": true,
-"name": &"running",
+"name": &"running-1",
 "speed": 16.0
 }]
 
@@ -134,8 +168,8 @@ script = ExtResource("1_701id")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(1.33333, -4.66667)
-scale = Vector2(0.98611, 1.02564)
+position = Vector2(2, -1.66667)
+scale = Vector2(0.378601, 0.366197)
 sprite_frames = SubResource("SpriteFrames_u2ww1")
 animation = &"running"
 autoplay = "running"
