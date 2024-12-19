@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="1_3cyr5"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="2_wgtyo"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="3_e6n6g"]
-[ext_resource type="Script" path="res://scenes/label_clock.gd" id="4_xly54"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="4_xly54"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("1_3cyr5")

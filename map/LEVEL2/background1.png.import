@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b376qso51kkqo"
-path="res://.godot/imported/cloud_puff-removebg-preview.png-881fcf038ff831fd7f19212b7c0115bd.ctex"
+uid="uid://bet4mpwsrd0tt"
+path="res://.godot/imported/background1.png-b012166e31761a9d2d732f8b533af2de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/cloud_puff-removebg-preview.png"
-dest_files=["res://.godot/imported/cloud_puff-removebg-preview.png-881fcf038ff831fd7f19212b7c0115bd.ctex"]
+source_file="res://map/LEVEL2/background1.png"
+dest_files=["res://.godot/imported/background1.png-b012166e31761a9d2d732f8b533af2de.ctex"]
 
 [params]
 

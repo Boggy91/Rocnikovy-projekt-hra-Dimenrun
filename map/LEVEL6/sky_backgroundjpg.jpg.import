@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0cud1gcqdiys"
-path="res://.godot/imported/lava.png-3bd74a1246c0eb56371ad64168b3a49c.ctex"
+uid="uid://b1071c3pbh3jq"
+path="res://.godot/imported/sky_backgroundjpg.jpg-e2f669a88ae94e0b9e1b803740bfe78c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/lava.png"
-dest_files=["res://.godot/imported/lava.png-3bd74a1246c0eb56371ad64168b3a49c.ctex"]
+source_file="res://map/LEVEL6/sky_backgroundjpg.jpg"
+dest_files=["res://.godot/imported/sky_backgroundjpg.jpg-e2f669a88ae94e0b9e1b803740bfe78c.ctex"]
 
 [params]
 

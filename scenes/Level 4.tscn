@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="5_m21ua"]
 [ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="6_aahif"]
 [ext_resource type="Texture2D" uid="uid://wxuyskm1sfi8" path="res://map/tileset.png" id="7_jpwy3"]
-[ext_resource type="Texture2D" uid="uid://c2jr4ybvqjl1i" path="res://map/all-props.png" id="8_24cxv"]
+[ext_resource type="Texture2D" uid="uid://c2jr4ybvqjl1i" path="res://map/GENERAL/all-props.png" id="8_24cxv"]
 [ext_resource type="Texture2D" uid="uid://cggu4v5r8t00r" path="res://map/mountains.png" id="9_qjain"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_lww3h"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_o6osa"]
@@ -439,11 +439,8 @@ position = Vector2(3024, 398)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(605, 323)
-
 [node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(859, 361)
+position = Vector2(860, 350)
 
 [node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
 position = Vector2(1460, 372)

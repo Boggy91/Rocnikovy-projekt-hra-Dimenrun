@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
-[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
+[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/LavaTile set.png" id="4_cpwb0"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="6_iqkom"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="7_4niip"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_0b8yp"]
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/patrol.tscn" id="11_x63pv"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_d18v2"]
-[ext_resource type="Script" path="res://scenes/label_clock.gd" id="13_vefn5"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_vefn5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -518,24 +518,6 @@ position = Vector2(370, 93)
 [node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
 position = Vector2(1083, 352)
 
-[node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
-z_index = -1
-scroll_scale = Vector2(0.1, 0.1)
-
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -611.0
-offset_top = -252.0
-offset_right = 3029.0
-offset_bottom = 909.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_ogywp")
-expand_mode = 3
-
 [node name="velky ostrov" type="StaticBody2D" parent="Scene Objects"]
 position = Vector2(1854, 186)
 
@@ -749,6 +731,26 @@ offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
 script = ExtResource("13_vefn5")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+z_index = -1
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D/ParallaxLayer"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -611.0
+offset_top = -252.0
+offset_right = 3029.0
+offset_bottom = 909.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ogywp")
+expand_mode = 3
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]

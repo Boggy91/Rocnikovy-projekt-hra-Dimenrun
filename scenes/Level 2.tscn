@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_22s5y"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/LavaTile set.png" id="9_bequ1"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/Terrain (16x16).png" id="10_jpnfi"]
-[ext_resource type="Script" path="res://scenes/label_clock.gd" id="13_badce"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_badce"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(1446, 187)

@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
 [ext_resource type="Script" path="res://scripts/total_time_lvl_menu.gd" id="2_je0rc"]
-[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
+[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="5_6rwmy"]
-[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/sky_backgroundjpg.jpg" id="5_qgv4j"]
-[ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/alicia-magistrello-basic-cave.jpg" id="5_uo100"]
+[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="5_qgv4j"]
+[ext_resource type="Texture2D" uid="uid://bxaycpluswq2y" path="res://map/LEVEL2/alicia-magistrello-basic-cave.jpg" id="5_uo100"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_y37ui"]
 
 [sub_resource type="GDScript" id="GDScript_skkmn"]
@@ -26,13 +26,6 @@ func _process(delta: float) -> void:
 [node name="lvl_menu" type="Node"]
 script = ExtResource("1_d3p8g")
 
-[node name="Total Time lvl menu" type="Label" parent="."]
-offset_left = 537.0
-offset_top = 16.0
-offset_right = 668.0
-offset_bottom = 53.0
-script = ExtResource("2_je0rc")
-
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = 2.0
 offset_right = 2450.0
@@ -40,6 +33,13 @@ offset_bottom = 1310.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hrt6u")
 metadata/_edit_use_anchors_ = true
+
+[node name="Total Time lvl menu" type="Label" parent="."]
+offset_left = 537.0
+offset_top = 16.0
+offset_right = 668.0
+offset_bottom = 53.0
+script = ExtResource("2_je0rc")
 
 [node name="main_menu" type="Button" parent="."]
 modulate = Color(1, 0.315719, 0.791177, 1)
@@ -113,7 +113,9 @@ layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="LEVEL2" type="TextureRect" parent="."]
+[node name="LEVEL 2" type="Node" parent="."]
+
+[node name="LEVEL2" type="TextureRect" parent="LEVEL 2"]
 z_as_relative = false
 offset_left = 409.0
 offset_top = 142.0
@@ -122,14 +124,14 @@ offset_bottom = 242.0
 texture = ExtResource("5_uo100")
 expand_mode = 1
 
-[node name="lvl2" type="Button" parent="LEVEL2"]
+[node name="lvl2" type="Button" parent="LEVEL 2/LEVEL2"]
 layout_mode = 0
 offset_top = 3.0
 offset_right = 178.0
 offset_bottom = 101.0
 script = SubResource("GDScript_skkmn")
 
-[node name="Label" type="Label" parent="LEVEL2/lvl2"]
+[node name="Label" type="Label" parent="LEVEL 2/LEVEL2/lvl2"]
 layout_mode = 0
 offset_left = 52.0
 offset_top = -40.0
@@ -138,7 +140,7 @@ offset_bottom = 2.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 2"
 
-[node name="Stars lvl 2" type="Panel" parent="LEVEL2"]
+[node name="Stars lvl 2" type="Panel" parent="LEVEL 2/LEVEL2"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 17.0
@@ -146,7 +148,7 @@ offset_top = 90.0
 offset_right = 176.0
 offset_bottom = 150.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL2/Stars lvl 2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 2/LEVEL2/Stars lvl 2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -160,25 +162,27 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="LEVEL2/Stars lvl 2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="LEVEL 2/LEVEL2/Stars lvl 2/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="LEVEL2/Stars lvl 2/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="LEVEL 2/LEVEL2/Stars lvl 2/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="LEVEL2/Stars lvl 2/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="LEVEL 2/LEVEL2/Stars lvl 2/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="LEVEL3" type="TextureRect" parent="."]
+[node name="LEVEL 3" type="Node" parent="."]
+
+[node name="LEVEL3" type="TextureRect" parent="LEVEL 3"]
 z_as_relative = false
 offset_left = 641.0
 offset_top = 144.0
@@ -187,13 +191,13 @@ offset_bottom = 242.0
 texture = ExtResource("5_qgv4j")
 expand_mode = 1
 
-[node name="lvl3" type="Button" parent="LEVEL3"]
+[node name="lvl3" type="Button" parent="LEVEL 3/LEVEL3"]
 layout_mode = 0
 offset_right = 178.0
 offset_bottom = 99.0
 script = SubResource("GDScript_skkmn")
 
-[node name="Label" type="Label" parent="LEVEL3/lvl3"]
+[node name="Label" type="Label" parent="LEVEL 3/LEVEL3/lvl3"]
 layout_mode = 0
 offset_left = 52.0
 offset_top = -38.0
@@ -202,7 +206,7 @@ offset_bottom = 4.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 3"
 
-[node name="Stars lvl 3" type="Panel" parent="LEVEL3"]
+[node name="Stars lvl 3" type="Panel" parent="LEVEL 3/LEVEL3"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 17.0
@@ -210,7 +214,7 @@ offset_top = 90.0
 offset_right = 176.0
 offset_bottom = 150.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL3/Stars lvl 3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 3/LEVEL3/Stars lvl 3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -224,25 +228,27 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="LEVEL3/Stars lvl 3/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="LEVEL 3/LEVEL3/Stars lvl 3/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="LEVEL3/Stars lvl 3/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="LEVEL 3/LEVEL3/Stars lvl 3/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="LEVEL3/Stars lvl 3/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="LEVEL 3/LEVEL3/Stars lvl 3/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="LEVEL4" type="TextureRect" parent="."]
+[node name="LEVEL 4" type="Node" parent="."]
+
+[node name="LEVEL4" type="TextureRect" parent="LEVEL 4"]
 z_as_relative = false
 texture_filter = 1
 offset_left = 888.0
@@ -252,7 +258,7 @@ offset_bottom = 242.0
 texture = ExtResource("6_y37ui")
 expand_mode = 1
 
-[node name="lvl4" type="Button" parent="LEVEL4"]
+[node name="lvl4" type="Button" parent="LEVEL 4/LEVEL4"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = -1.0
@@ -260,7 +266,7 @@ offset_right = 179.0
 offset_bottom = 97.0
 script = SubResource("GDScript_skkmn")
 
-[node name="Label" type="Label" parent="LEVEL4/lvl4"]
+[node name="Label" type="Label" parent="LEVEL 4/LEVEL4/lvl4"]
 layout_mode = 0
 offset_left = 53.0
 offset_top = -36.0
@@ -269,7 +275,7 @@ offset_bottom = 6.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 4"
 
-[node name="Stars lvl 4" type="Panel" parent="LEVEL4"]
+[node name="Stars lvl 4" type="Panel" parent="LEVEL 4/LEVEL4"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 17.0
@@ -277,7 +283,7 @@ offset_top = 86.0
 offset_right = 176.0
 offset_bottom = 146.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL4/Stars lvl 4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LEVEL 4/LEVEL4/Stars lvl 4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -291,19 +297,19 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="LEVEL4/Stars lvl 4/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="LEVEL 4/LEVEL4/Stars lvl 4/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="LEVEL4/Stars lvl 4/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="LEVEL 4/LEVEL4/Stars lvl 4/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="LEVEL4/Stars lvl 4/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="LEVEL 4/LEVEL4/Stars lvl 4/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_6rwmy")
@@ -311,6 +317,6 @@ expand_mode = 2
 
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LEVEL 1/LEVEL1/lvl1" to="." method="_on_lvl_1_pressed"]
-[connection signal="pressed" from="LEVEL2/lvl2" to="." method="_on_lvl_2_pressed"]
-[connection signal="pressed" from="LEVEL3/lvl3" to="." method="_on_lvl_3_pressed"]
-[connection signal="pressed" from="LEVEL4/lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="LEVEL 2/LEVEL2/lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="LEVEL 3/LEVEL3/lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="LEVEL 4/LEVEL4/lvl4" to="." method="_on_lvl_4_pressed"]

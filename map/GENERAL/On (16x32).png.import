@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxaycpluswq2y"
-path="res://.godot/imported/alicia-magistrello-basic-cave.jpg-fcd95350bd1e63f1a6f95f03bf829f8d.ctex"
+uid="uid://ba1ufa3qi2kh3"
+path="res://.godot/imported/On (16x32).png-9494b4fd4c17c421f58b87d12f3b7906.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/alicia-magistrello-basic-cave.jpg"
-dest_files=["res://.godot/imported/alicia-magistrello-basic-cave.jpg-fcd95350bd1e63f1a6f95f03bf829f8d.ctex"]
+source_file="res://map/GENERAL/On (16x32).png"
+dest_files=["res://.godot/imported/On (16x32).png-9494b4fd4c17c421f58b87d12f3b7906.ctex"]
 
 [params]
 
