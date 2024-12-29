@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bbuwunnuyrh7i"]
+[gd_scene load_steps=36 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_d18v2"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_vefn5"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="14_8u64o"]
+[ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/FallingSpikes.tscn" id="15_pt0v1"]
+[ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/spikes.tscn" id="16_lvd71"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -369,6 +371,20 @@ corner_radius_bottom_left = 10
 unique_name_in_owner = true
 script = ExtResource("1_f1444")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
+
+[node name="traps" type="Node" parent="."]
+
+[node name="FallingSpikes" parent="traps" instance=ExtResource("15_pt0v1")]
+position = Vector2(65, 82)
+
+[node name="FallingSpikes3" parent="traps" instance=ExtResource("15_pt0v1")]
+position = Vector2(609, 144)
+
+[node name="FallingSpikes4" parent="traps" instance=ExtResource("15_pt0v1")]
+position = Vector2(873, -14)
+
+[node name="FallingSpikes2" parent="traps" instance=ExtResource("15_pt0v1")]
+position = Vector2(2385, 178)
 
 [node name="Scene Objects" type="Node" parent="."]
 
@@ -740,6 +756,7 @@ scroll_scale = Vector2(0.1, 0.1)
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D/ParallaxLayer"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -757,6 +774,7 @@ expand_mode = 3
 motion_offset = Vector2(500, 0)
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D/ParallaxLayer2"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -769,6 +787,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_8u64o")
 expand_mode = 3
+
+[node name="Spikes" parent="." instance=ExtResource("16_lvd71")]
+position = Vector2(1700, -93)
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlsk2h2n8q177"]
 
-[ext_resource type="Script" path="res://scenes/level_completed.gd" id="1_228v3"]
+[ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_228v3"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_bcmjw"]
 [ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="2_08xtg"]
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="6_d06ta"]

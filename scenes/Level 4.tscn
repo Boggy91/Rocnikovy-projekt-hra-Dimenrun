@@ -1,13 +1,15 @@
-[gd_scene load_steps=26 format=3 uid="uid://djw6i35aar6fi"]
+[gd_scene load_steps=28 format=3 uid="uid://djw6i35aar6fi"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bcslq"]
+[ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="1_duvpk"]
+[ext_resource type="Texture2D" uid="uid://biohml03dhc5h" path="res://map/LEVEL4/back.png" id="1_rtnxn"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="3_6g6r6"]
+[ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="3_dkm5t"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="4_qroup"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="5_m21ua"]
 [ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="6_aahif"]
 [ext_resource type="Texture2D" uid="uid://wxuyskm1sfi8" path="res://map/tileset.png" id="7_jpwy3"]
 [ext_resource type="Texture2D" uid="uid://c2jr4ybvqjl1i" path="res://map/GENERAL/all-props.png" id="8_24cxv"]
-[ext_resource type="Texture2D" uid="uid://cggu4v5r8t00r" path="res://map/mountains.png" id="9_qjain"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_lww3h"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_o6osa"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_y1pc2"]
@@ -333,6 +335,89 @@ corner_radius_bottom_left = 10
 
 [node name="Level 4 - CASTLE" type="Node"]
 
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(436, -50)
+repeat_size = Vector2(2, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D2"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(64, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D2/ParallaxLayer"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -485.0
+offset_top = -241.0
+offset_right = 227.0
+offset_bottom = 907.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rtnxn")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Parallax2D2/ParallaxLayer"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 224.0
+offset_top = -241.0
+offset_right = 936.0
+offset_bottom = 907.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rtnxn")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="Parallax2D2/ParallaxLayer"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 933.0
+offset_top = -241.0
+offset_right = 1645.0
+offset_bottom = 907.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rtnxn")
+expand_mode = 3
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D2"]
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D2/ParallaxLayer2"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1733.0
+offset_top = -303.0
+offset_right = 1462.0
+offset_bottom = 889.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_duvpk")
+expand_mode = 3
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax2D2"]
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D2/ParallaxLayer3"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2805.0
+offset_top = -1157.0
+offset_right = 2535.0
+offset_bottom = 1225.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dkm5t")
+expand_mode = 3
+
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_bcslq")
@@ -450,22 +535,6 @@ layer_0/tile_data = PackedInt32Array(2424832, 196608, 3, 2490368, 196608, 4, 255
 tile_set = SubResource("TileSet_2ba5l")
 format = 2
 layer_0/tile_data = PackedInt32Array(983104, 458752, 8, 1048640, 458752, 9, 1114176, 458752, 10, 1179712, 458752, 11, 983105, 524288, 8, 1048641, 524288, 9, 1114177, 524288, 10, 1179713, 524288, 11, 1310784, 655360, 10, 1376320, 655360, 11, 1441856, 655360, 12, 1507392, 65536, 11, 1572928, 65536, 12, 1310785, 131072, 8, 1376321, 131072, 9, 1441857, 131072, 10, 1507393, 131072, 11, 1572929, 131072, 12, 1310786, 196608, 8, 1376322, 196608, 9, 1441858, 196608, 10, 1507394, 196608, 11, 1572930, 196608, 12, 1310787, 262144, 8, 1376323, 262144, 9, 1441859, 262144, 10, 1507395, 262144, 11, 1572931, 262144, 12, 1507396, 327680, 11, 1572932, 327680, 12, 1245252, 655360, 9, 1310788, 655360, 10, 1376324, 655360, 11, 1441860, 655360, 12, 1245248, 655360, 9, 786432, 917504, 12, 524289, 983040, 8, 589825, 983040, 9, 655361, 983040, 10, 720897, 983040, 11, 786433, 983040, 12, 524290, 1048576, 8, 589826, 1048576, 9, 655362, 1048576, 10, 720898, 1048576, 11, 786434, 1048576, 12, 524291, 1114112, 8, 589827, 1114112, 9, 655363, 1114112, 10, 720899, 1114112, 11, 786435, 1114112, 12, 524292, 1179648, 8, 589828, 1179648, 9, 655364, 1179648, 10, 720900, 1179648, 11, 786436, 1179648, 12, 720901, 1245184, 11, 786437, 1245184, 12, 2162671, 983040, 8, 2228207, 983040, 9, 2293743, 983040, 10, 2359279, 983040, 11, 2424815, 983040, 12, 2162672, 1048576, 8, 2228208, 1048576, 9, 2293744, 1048576, 10, 2359280, 1048576, 11, 2424816, 1048576, 12, 2162673, 1114112, 8, 2228209, 1114112, 9, 2293745, 1114112, 10, 2359281, 1114112, 11, 2424817, 1114112, 12, 2162674, 1179648, 8, 2228210, 1179648, 9, 2293746, 1179648, 10, 2359282, 1179648, 11, 2424818, 1179648, 12, 2228160, 655360, 4, 2293696, 655360, 5, 2359232, 655360, 6, 2424768, 655360, 7, 2228161, 720896, 4, 2293697, 720896, 5, 2359233, 720896, 6, 2424769, 720896, 7, 2228162, 589824, 4, 2293698, 589824, 5, 2359234, 589824, 6, 2424770, 589824, 7, 2228159, 589824, 4, 2293695, 589824, 5, 2359231, 589824, 6, 2424767, 589824, 7, 2228163, 655360, 4, 2293699, 655360, 5, 2359235, 655360, 6, 2424771, 655360, 7, 2228164, 720896, 4, 2293700, 720896, 5, 2359236, 720896, 6, 2424772, 720896, 7, 2162636, 65536, 8, 2228172, 65536, 9, 2293708, 65536, 10, 2359244, 65536, 11, 2424780, 65536, 12, 2162637, 131072, 8, 2228173, 131072, 9, 2293709, 131072, 10, 2359245, 131072, 11, 2424781, 131072, 12, 2162638, 196608, 8, 2228174, 196608, 9, 2293710, 196608, 10, 2359246, 196608, 11, 2424782, 196608, 12, 2162639, 262144, 8, 2228175, 262144, 9, 2293711, 262144, 10, 2359247, 262144, 11, 2424783, 262144, 12)
-
-[node name="Parallax2D2" type="Parallax2D" parent="Scene Objects"]
-scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(436, -50)
-
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D2"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.0
-offset_right = 1968.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_qjain")
-expand_mode = 3
 
 [node name="bariers" type="Node" parent="Scene Objects"]
 

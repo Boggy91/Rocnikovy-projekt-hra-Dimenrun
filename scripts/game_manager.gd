@@ -4,9 +4,6 @@ extends Node
 @onready var points_level: Label = %"points level"
 
 
-
-
-
 var points = 0
 var lives = 3
 

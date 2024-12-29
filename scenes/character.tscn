@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bm52rnlnspqfl" path="res://character/Run_32x32_purple.png" id="6_ldry1"]
 [ext_resource type="Texture2D" uid="uid://d1w6r144p4djh" path="res://character/Wall_Jump_32x32_purple.png" id="8_04i1r"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5o7r"]
+atlas = ExtResource("2_lpdc4")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxqhr"]
 atlas = ExtResource("2_lpdc4")
 region = Rect2(0, 0, 32, 32)
@@ -81,10 +85,6 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("4_0b42a")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5o7r"]
-atlas = ExtResource("2_lpdc4")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpida"]
 atlas = ExtResource("6_ldry1")
 region = Rect2(0, 0, 32, 32)
@@ -139,6 +139,14 @@ region = Rect2(62, 0, 31, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mb6hq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5o7r")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yxqhr")
@@ -223,14 +231,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q5o7r")
-}],
-"loop": true,
-"name": &"hit",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("5_mydf0")
 }],
 "loop": true,
@@ -303,7 +303,6 @@ texture_filter = 1
 position = Vector2(110, 416)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_mb6hq")
-animation = &"hit"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

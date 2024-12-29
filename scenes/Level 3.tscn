@@ -2196,7 +2196,7 @@ position = Vector2(1851, 173)
 position = Vector2(2320, 237)
 
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
-position = Vector2(405, 240)
+position = Vector2(418, 244)
 
 [node name="patrol" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
 position = Vector2(560, 363)
