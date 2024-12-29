@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6vsosw5dsgn"
-path="res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"
+uid="uid://q8x63clojhd0"
+path="res://.godot/imported/Skyscraper_Buildings _pack_OldNinjaCat_v1.png-908475b43272b48a8f93f9d7c6769688.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collectable/Wall_Jump_32x32_purple.png"
-dest_files=["res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"]
+source_file="res://map/GENERAL/Skyscraper_Buildings _pack_OldNinjaCat_v1.png"
+dest_files=["res://.godot/imported/Skyscraper_Buildings _pack_OldNinjaCat_v1.png-908475b43272b48a8f93f9d7c6769688.ctex"]
 
 [params]
 

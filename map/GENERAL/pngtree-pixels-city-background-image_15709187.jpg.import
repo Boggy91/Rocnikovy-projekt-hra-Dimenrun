@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6vsosw5dsgn"
-path="res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"
+uid="uid://ba8vnkv06e57a"
+path="res://.godot/imported/pngtree-pixels-city-background-image_15709187.jpg-b042c33e9ac6d680d5234d8c6a03b8a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collectable/Wall_Jump_32x32_purple.png"
-dest_files=["res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"]
+source_file="res://map/GENERAL/pngtree-pixels-city-background-image_15709187.jpg"
+dest_files=["res://.godot/imported/pngtree-pixels-city-background-image_15709187.jpg-b042c33e9ac6d680d5234d8c6a03b8a7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6vsosw5dsgn"
-path="res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"
+uid="uid://ckh20ll2rgh2a"
+path="res://.godot/imported/Terrain (16x16).png-cab7dda36eff05e3d686a487cfb9affb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collectable/Wall_Jump_32x32_purple.png"
-dest_files=["res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"]
+source_file="res://map/GENERAL/Terrain (16x16).png"
+dest_files=["res://.godot/imported/Terrain (16x16).png-cab7dda36eff05e3d686a487cfb9affb.ctex"]
 
 [params]
 

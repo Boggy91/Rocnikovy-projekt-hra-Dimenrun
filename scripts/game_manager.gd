@@ -4,9 +4,6 @@ extends Node
 @onready var points_level: Label = %"points level"
 
 
-
-
-
 var points = 0
 var lives = 3
 
@@ -19,7 +16,8 @@ func decrease_health():
 		else:
 			hearts[h].hide()
 	if (lives == 0):
-		get_tree().change_scene_to_file("res://scenes/you_died.tscn")
+		print("YOU DIED")
+		SceneManager.switch_scene("res://scenes/GAME/you_died.tscn")
 
 
 func add_point():

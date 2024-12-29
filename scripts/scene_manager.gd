@@ -1,28 +1,22 @@
+# SceneManager.gd
 extends Node
 
-var scene_history: Array = []  # Stack to store paths of visited scenes
+var previous_scene_path: String = ""  # Path of the previous scene
+var current_scene_path: String = ""  # Path of the current scene
 
-# Change to a new scene and add the current scene to the history
-func change_scene(new_scene_path: String):
-	# Check if the current scene exists and add it to the history stack
-	var current_scene = get_tree().current_scene
-	if current_scene and current_scene.filename != "":
-		var current_scene_path = current_scene.filename
-		scene_history.append(current_scene_path)
-		print("Added to history: ", current_scene_path)
+# Function to switch scenes and track the previous one
+func switch_scene(new_scene_path: String):
+	if current_scene_path != "":
+		previous_scene_path = current_scene_path
+	current_scene_path = new_scene_path
+	get_tree().change_scene_to_file(new_scene_path)
 
-	# Load the new scene
-	var error = get_tree().change_scene(new_scene_path)
-	if error != OK:
-		print("Error changing to scene: ", new_scene_path)
-
-# Go back to the last scene in history
+# Function to go back to the previous scene
 func go_back():
-	if scene_history.size() > 0:
-		var previous_scene_path = scene_history.pop_back()
-		print("Going back to: ", previous_scene_path)
-		var error = get_tree().change_scene(previous_scene_path)
-		if error != OK:
-			print("Error going back to scene: ", previous_scene_path)
+	if previous_scene_path != "":
+		var temp = current_scene_path
+		get_tree().change_scene_to_file(previous_scene_path)
+		current_scene_path = previous_scene_path
+		previous_scene_path = temp
 	else:
-		print("No previous scene to go back to.")
+		print("No previous scene to go back to!")

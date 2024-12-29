@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6vsosw5dsgn"
-path="res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"
+uid="uid://cggu4v5r8t00r"
+path="res://.godot/imported/mountains.png-45735c7ef32d06e941f3b8b036efdd48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collectable/Wall_Jump_32x32_purple.png"
-dest_files=["res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"]
+source_file="res://map/GENERAL/mountains.png"
+dest_files=["res://.godot/imported/mountains.png-45735c7ef32d06e941f3b8b036efdd48.ctex"]
 
 [params]
 

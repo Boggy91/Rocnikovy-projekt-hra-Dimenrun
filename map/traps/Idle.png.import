@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6vsosw5dsgn"
-path="res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"
+uid="uid://bwuhj2kwu3db3"
+path="res://.godot/imported/Idle.png-2843d6b79a500b21d18dc20853fd712d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collectable/Wall_Jump_32x32_purple.png"
-dest_files=["res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"]
+source_file="res://map/traps/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-2843d6b79a500b21d18dc20853fd712d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh6vsosw5dsgn"
-path="res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"
+uid="uid://bm3w6uglq45qs"
+path="res://.godot/imported/pixel-art-stars-clouds-moon-wallpaper-preview.jpg-973e3b314a9fb32d14aedbd8846bf92b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://collectable/Wall_Jump_32x32_purple.png"
-dest_files=["res://.godot/imported/Wall_Jump_32x32_purple.png-e78b06f9e7b9f59f0a65e6215a0b8228.ctex"]
+source_file="res://map/GENERAL/pixel-art-stars-clouds-moon-wallpaper-preview.jpg"
+dest_files=["res://.godot/imported/pixel-art-stars-clouds-moon-wallpaper-preview.jpg-973e3b314a9fb32d14aedbd8846bf92b.ctex"]
 
 [params]
 
