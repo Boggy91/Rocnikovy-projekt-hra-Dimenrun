@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bihqdgd84fcoi"
-path="res://.godot/imported/Idle.png-738ddd83c9bce8109f38a0a0cb94fd26.ctex"
+uid="uid://cvcpx0iku36da"
+path="res://.godot/imported/vectoraith_16x16_modular_building_mediterranean_gable_1.png-07789ab940705c1b40a660868cda96e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-738ddd83c9bce8109f38a0a0cb94fd26.ctex"]
+source_file="res://map/GENERAL/vectoraith_16x16_modular_building_mediterranean_gable_1.png"
+dest_files=["res://.godot/imported/vectoraith_16x16_modular_building_mediterranean_gable_1.png-07789ab940705c1b40a660868cda96e8.ctex"]
 
 [params]
 

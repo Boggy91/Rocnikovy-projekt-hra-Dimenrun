@@ -1,15 +1,15 @@
 [gd_scene load_steps=20 format=3 uid="uid://db1p7103tx1nh"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_cg8dq"]
-[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="2_n4w6a"]
-[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="3_ml4ap"]
-[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="4_m2r5r"]
+[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_n4w6a"]
+[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="3_ml4ap"]
+[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="4_m2r5r"]
 [ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="5_iyvps"]
-[ext_resource type="PackedScene" uid="uid://dnjpo6rq7e8w1" path="res://scenes/cloud.tscn" id="6_r66qg"]
+[ext_resource type="PackedScene" uid="uid://dnjpo6rq7e8w1" path="res://scenes/OBJECTS/cloud.tscn" id="6_r66qg"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_aohn2"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_1vvft"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_xrvma"]
-[ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/Terrain (16x16).png" id="10_fo7it"]
+[ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="10_fo7it"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("7_aohn2")

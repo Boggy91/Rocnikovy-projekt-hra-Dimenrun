@@ -16,5 +16,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 		timer.stop()
-		get_tree().change_scene_to_file("res://scenes/Main_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/GAME/Main_menu.tscn")
 		

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlsk2h2n8q177"]
 
-[ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_228v3"]
-[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_bcmjw"]
-[ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="2_08xtg"]
-[ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="6_d06ta"]
+[ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_idi4q"]
+[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_4lt5e"]
+[ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="3_4qmyt"]
+[ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="4_5ia3o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt186"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
@@ -17,7 +17,7 @@ outline_size = 7
 outline_color = Color(1, 0.2, 1, 1)
 
 [node name="LEVEL-COMPLETED" type="Node" node_paths=PackedStringArray("STARS")]
-script = ExtResource("1_228v3")
+script = ExtResource("1_idi4q")
 STARS = [NodePath("STARS/HBoxContainer/star"), NodePath("STARS/HBoxContainer/star2"), NodePath("STARS/HBoxContainer/star3")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -25,7 +25,7 @@ texture_filter = 1
 offset_right = 2442.0
 offset_bottom = 1300.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_bcmjw")
+texture = ExtResource("2_4lt5e")
 
 [node name="LEVEL COMPLETED PANEL" type="Panel" parent="."]
 anchors_preset = 15
@@ -35,7 +35,7 @@ offset_right = 67.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_08xtg")
+script = ExtResource("3_4qmyt")
 
 [node name="LEVEL COMPLETED" type="Label" parent="LEVEL COMPLETED PANEL"]
 layout_mode = 1
@@ -141,19 +141,19 @@ alignment = 1
 [node name="star" type="TextureRect" parent="STARS/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_d06ta")
+texture = ExtResource("4_5ia3o")
 expand_mode = 2
 
 [node name="star2" type="TextureRect" parent="STARS/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_d06ta")
+texture = ExtResource("4_5ia3o")
 expand_mode = 2
 
 [node name="star3" type="TextureRect" parent="STARS/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_d06ta")
+texture = ExtResource("4_5ia3o")
 expand_mode = 2
 
 [connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Next Level" to="LEVEL COMPLETED PANEL" method="_on_restart_level_pressed"]

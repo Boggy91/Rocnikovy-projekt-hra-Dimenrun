@@ -1,17 +1,21 @@
-[gd_scene load_steps=43 format=3 uid="uid://cg3bhudehfnxm"]
+[gd_scene load_steps=38 format=3 uid="uid://cg3bhudehfnxm"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_ciblw"]
+[ext_resource type="Texture2D" uid="uid://txso5idsc1ow" path="res://character/Appearing (96x96).png" id="2_bltcb"]
 [ext_resource type="Texture2D" uid="uid://c3bjgs6bpc6os" path="res://character/Hit (32x32).png" id="2_lpdc4"]
 [ext_resource type="Texture2D" uid="uid://dlyf6rk0kls2e" path="res://character/Idle_32x32_purple.png" id="3_ppq1y"]
-[ext_resource type="Texture2D" uid="uid://dxj4v22xtj0sc" path="res://character/Double Jump (32x32).png" id="4_0b42a"]
 [ext_resource type="Texture2D" uid="uid://byo3j6jprdvsx" path="res://character/Fall_32x32_purple.png" id="4_s3uo5"]
 [ext_resource type="Texture2D" uid="uid://bemx7d3oauqyy" path="res://character/Jump_32x32_purple.png" id="5_mydf0"]
 [ext_resource type="Texture2D" uid="uid://bm52rnlnspqfl" path="res://character/Run_32x32_purple.png" id="6_ldry1"]
 [ext_resource type="Texture2D" uid="uid://d1w6r144p4djh" path="res://character/Wall_Jump_32x32_purple.png" id="8_04i1r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q5o7r"]
-atlas = ExtResource("2_lpdc4")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
+atlas = ExtResource("2_bltcb")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar2yb"]
+atlas = ExtResource("2_bltcb")
+region = Rect2(576, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxqhr"]
 atlas = ExtResource("2_lpdc4")
@@ -60,30 +64,6 @@ region = Rect2(288, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_57hr4"]
 atlas = ExtResource("3_ppq1y")
 region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w867v"]
-atlas = ExtResource("4_0b42a")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w0707"]
-atlas = ExtResource("4_0b42a")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c3gsm"]
-atlas = ExtResource("4_0b42a")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6ykr"]
-atlas = ExtResource("4_0b42a")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5oyu8"]
-atlas = ExtResource("4_0b42a")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aq8ui"]
-atlas = ExtResource("4_0b42a")
-region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpida"]
 atlas = ExtResource("6_ldry1")
@@ -141,11 +121,14 @@ region = Rect2(62, 0, 31, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q5o7r")
+"texture": SubResource("AtlasTexture_5auph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar2yb")
 }],
 "loop": true,
 "name": &"damage",
-"speed": 20.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -192,34 +175,6 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 20.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"dissapearing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w867v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w0707")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c3gsm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r6ykr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5oyu8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aq8ui")
-}],
-"loop": true,
-"name": &"djump",
-"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -304,6 +259,7 @@ position = Vector2(110, 416)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_mb6hq")
 autoplay = "default"
+frame_progress = 0.624521
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(112, 426)
@@ -319,7 +275,7 @@ wait_time = 0.2
 [node name="djump" type="Timer" parent="Timers"]
 
 [node name="hit_timer" type="Timer" parent="Timers"]
-wait_time = 0.5
+wait_time = 0.2
 
 [connection signal="timeout" from="Timers/dash_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timers/dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

@@ -18,18 +18,32 @@ var last_wall_side = 0  # Tracks which wall was last jumped from (-1 for left, 1
 var is_godmode = false  # Godmode toggle
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var hit_timer: Timer = $Timers/hit_timer
 
 func jump():
 	velocity.y = JUMP_VELOCITY
 
 func hit(x):
-	if not is_godmode:  # Ignore hits when in godmode
-		velocity.y = JUMP_VELOCITY
-		velocity.x = x
+	if not is_hit: # Prevent multiple hits at the same time
+		hit_timer.start()  # Start timer to reset the hit state
+		is_hit = true
+		sprite_2d.animation = "damage"
+		if not is_godmode:
+			velocity.y = JUMP_VELOCITY
+			velocity.x = x
+		 
+
+func _on_hit_timer_timeout() -> void:
+	is_hit = false  # Reset hit state
+	
 
 func _physics_process(delta: float) -> void:
 	# Animations
-	if (velocity.x > 1 || velocity.x < -1):
+	if is_hit:
+		# While hit, keep "damage" animation
+		return
+	
+	if (velocity.x > 1 or velocity.x < -1):
 		sprite_2d.animation = "running"
 	else:
 		sprite_2d.animation = "default"
@@ -142,6 +156,3 @@ func _on_timer_timeout() -> void:
 
 func _on_dash_again_timer_timeout() -> void:
 	can_dash = true
-
-func _on_hit_timer_timeout() -> void:
-	is_hit = false

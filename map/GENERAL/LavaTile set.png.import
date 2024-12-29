@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvcpx0iku36da"
-path="res://.godot/imported/vectoraith_16x16_modular_building_mediterranean_gable_1.png-0078e5b2e736cc0d91d147f52fe32e6e.ctex"
+uid="uid://b1vs6b6ts2506"
+path="res://.godot/imported/LavaTile set.png-ab3f22979e9ac22663c099c73d93e75d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/vectoraith_16x16_modular_building_mediterranean_gable_1.png"
-dest_files=["res://.godot/imported/vectoraith_16x16_modular_building_mediterranean_gable_1.png-0078e5b2e736cc0d91d147f52fe32e6e.ctex"]
+source_file="res://map/GENERAL/LavaTile set.png"
+dest_files=["res://.godot/imported/LavaTile set.png-ab3f22979e9ac22663c099c73d93e75d.ctex"]
 
 [params]
 

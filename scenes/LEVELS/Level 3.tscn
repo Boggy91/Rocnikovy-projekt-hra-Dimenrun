@@ -1,42 +1,42 @@
 [gd_scene load_steps=33 format=3 uid="uid://orywfxekxeu1"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
-[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="2_qt1qg"]
-[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="3_hehml"]
-[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="4_2nu7k"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="5_wnfu2"]
-[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/patrol.tscn" id="6_k0i41"]
-[ext_resource type="Script" path="res://scripts/lava_reset.gd" id="7_mkx73"]
-[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_xcss3"]
-[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_k7o5s"]
-[ext_resource type="Script" path="res://scripts/bridge_dissapear.gd" id="8_tagg1"]
-[ext_resource type="Script" path="res://scripts/pause.gd" id="9_22s5y"]
-[ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/Terrain (16x16).png" id="10_jpnfi"]
-[ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_8ean2"]
-[ext_resource type="Texture2D" uid="uid://bet4mpwsrd0tt" path="res://map/LEVEL2/background1.png" id="13_meqc4"]
-[ext_resource type="Texture2D" uid="uid://bdh1cksmiq7rg" path="res://map/LEVEL2/background2.png" id="14_jiafs"]
-[ext_resource type="Texture2D" uid="uid://cv0cgc3tuclp5" path="res://map/LEVEL2/background3.png" id="15_tdjpu"]
-[ext_resource type="Texture2D" uid="uid://bf728uywur01q" path="res://map/LEVEL2/background4b.png" id="17_528g3"]
-[ext_resource type="Texture2D" uid="uid://cpe2j8lmnb68y" path="res://map/GENERAL/mainlev_build.png" id="17_eveaw"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kimpe"]
+[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="2_g56yk"]
+[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="3_in1sm"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="4_itcdi"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="5_jt5nf"]
+[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="6_2dncf"]
+[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="7_jk38k"]
+[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="8_e24wy"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/enemy.tscn" id="9_m6qiq"]
+[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="10_po0qu"]
+[ext_resource type="Script" path="res://scripts/lava_reset.gd" id="12_whldn"]
+[ext_resource type="Script" path="res://scripts/bridge_dissapear.gd" id="13_tu65f"]
+[ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="14_v0m46"]
+[ext_resource type="Texture2D" uid="uid://bet4mpwsrd0tt" path="res://map/LEVEL2/background1.png" id="15_kcpk6"]
+[ext_resource type="Texture2D" uid="uid://bdh1cksmiq7rg" path="res://map/LEVEL2/background2.png" id="16_bly0e"]
+[ext_resource type="Texture2D" uid="uid://cv0cgc3tuclp5" path="res://map/LEVEL2/background3.png" id="17_nk7ee"]
+[ext_resource type="Texture2D" uid="uid://bf728uywur01q" path="res://map/LEVEL2/background4b.png" id="18_bb7g4"]
+[ext_resource type="Texture2D" uid="uid://cpe2j8lmnb68y" path="res://map/GENERAL/mainlev_build.png" id="19_idnf6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
-atlas = ExtResource("7_xcss3")
+atlas = ExtResource("2_g56yk")
 region = Rect2(0, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
-atlas = ExtResource("7_xcss3")
+atlas = ExtResource("2_g56yk")
 region = Rect2(15, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
-atlas = ExtResource("7_xcss3")
+atlas = ExtResource("2_g56yk")
 region = Rect2(30, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
-atlas = ExtResource("7_xcss3")
+atlas = ExtResource("2_g56yk")
 region = Rect2(45, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
-atlas = ExtResource("7_xcss3")
+atlas = ExtResource("2_g56yk")
 region = Rect2(60, 0, 15, 13)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u6sgn"]
@@ -76,7 +76,7 @@ size = Vector2(5076, 20)
 size = Vector2(11, 1.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0j6x8"]
-atlas = ExtResource("10_jpnfi")
+atlas = ExtResource("14_v0m46")
 region = Rect2(288, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0je28"]
@@ -94,7 +94,7 @@ animations = [{
 size = Vector2(30, 2.25)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bmkn1"]
-texture = ExtResource("17_eveaw")
+texture = ExtResource("19_idnf6")
 6:1/0 = 0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:1/0 = 0
@@ -1913,7 +1913,7 @@ sources/0 = SubResource("TileSetAtlasSource_bmkn1")
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
-script = ExtResource("1_kgubg")
+script = ExtResource("1_kimpe")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -1985,23 +1985,23 @@ grow_vertical = 2
 [node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("8_k7o5s")
+texture = ExtResource("3_in1sm")
 expand_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("8_k7o5s")
+texture = ExtResource("3_in1sm")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("8_k7o5s")
+texture = ExtResource("3_in1sm")
 expand_mode = 2
 
 [node name="Pause" type="Node" parent="UI"]
-script = ExtResource("9_22s5y")
+script = ExtResource("4_itcdi")
 
 [node name="PausePanel" type="Panel" parent="UI/Pause"]
 unique_name_in_owner = true
@@ -2074,11 +2074,11 @@ offset_top = 7.0
 offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
-script = ExtResource("13_8ean2")
+script = ExtResource("5_jt5nf")
 
 [node name="Scene Objects" type="Node" parent="."]
 
-[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("2_qt1qg")]
+[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("6_2dncf")]
 position = Vector2(-20, 340)
 
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
@@ -2088,134 +2088,131 @@ position_smoothing_enabled = true
 
 [node name="collectables" type="Node" parent="Scene Objects"]
 
-[node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(963, 373)
 
-[node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(336, 466)
 
-[node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(227, 241)
 
-[node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(-344, 197)
 
-[node name="Area2D14" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D14" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(-296, 195)
 
-[node name="Area2D17" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D17" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(-239, 195)
 
-[node name="Area2D18" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D18" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(-174, 193)
 
-[node name="Area2D15" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D15" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(-107, 193)
 
-[node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(-54, 192)
 
-[node name="Area2D22" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D22" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(307, 17)
 
-[node name="Area2D23" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D23" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(367, 16)
 
-[node name="Area2D24" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D24" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(767, -193)
 
-[node name="Area2D25" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D25" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(838, -193)
 
-[node name="Area2D26" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D26" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(909, -194)
 
-[node name="Area2D27" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D27" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(981, -198)
 
-[node name="Area2D28" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D28" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1066, -198)
 
-[node name="Area2D29" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D29" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1124, -197)
 
-[node name="Area2D30" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D30" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1206, -197)
 
-[node name="Area2D21" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D21" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(217, 48)
 
-[node name="Area2D19" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D19" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(107, 44)
 
-[node name="Area2D20" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D20" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(107, 44)
 
-[node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(290, 239)
 
-[node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1201, 402)
 
-[node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1088, 371)
 
-[node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1296, 372)
 
-[node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1647, 324)
 
-[node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1774, 260)
 
-[node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(1972, 270)
 
-[node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(2036, 305)
 
-[node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
+[node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
 position = Vector2(2107, 337)
 
-[node name="finish" parent="Scene Objects" instance=ExtResource("4_2nu7k")]
+[node name="finish" parent="Scene Objects" instance=ExtResource("8_e24wy")]
 position = Vector2(2609, 253)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
+[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("9_m6qiq")]
 position = Vector2(836, 358)
 
-[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
+[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("9_m6qiq")]
 position = Vector2(1453, 459)
 
-[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
+[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("9_m6qiq")]
 position = Vector2(1851, 173)
 
-[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
+[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("9_m6qiq")]
 position = Vector2(2320, 237)
 
-[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("5_wnfu2")]
+[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("9_m6qiq")]
 position = Vector2(418, 244)
 
-[node name="patrol" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(560, 363)
-
-[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
 position = Vector2(1013, -203)
 
-[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
 position = Vector2(1882, -245)
 
-[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
 position = Vector2(-175, 182)
 
-[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
 position = Vector2(595, -116)
 
 [node name="lava_reset" type="StaticBody2D" parent="Scene Objects"]
 position = Vector2(-5, 1044)
-script = ExtResource("7_mkx73")
+script = ExtResource("12_whldn")
 
 [node name="Area2D" type="Area2D" parent="Scene Objects/lava_reset"]
 position = Vector2(-9, 3)
@@ -2230,7 +2227,7 @@ shape = SubResource("RectangleShape2D_7i4ag")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 1"]
 position = Vector2(242, 258)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 1/StaticBody2D"]
 position = Vector2(16.5, 2.75)
@@ -2257,7 +2254,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
 position = Vector2(516, 386)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
 position = Vector2(16.5, 2.75)
@@ -2282,7 +2279,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
 position = Vector2(547, 386)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2"]
 position = Vector2(16.5, 2.75)
@@ -2307,7 +2304,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
 position = Vector2(573, 386)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3"]
 position = Vector2(16.5, 2.75)
@@ -2332,7 +2329,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 2"]
 position = Vector2(595, 386)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4"]
 position = Vector2(16.5, 2.75)
@@ -2359,7 +2356,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-317, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D"]
 position = Vector2(16.5, 2.75)
@@ -2384,7 +2381,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-286, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D2"]
 position = Vector2(16.5, 2.75)
@@ -2409,7 +2406,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-260, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D3"]
 position = Vector2(16.5, 2.75)
@@ -2434,7 +2431,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-238, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D4"]
 position = Vector2(16.5, 2.75)
@@ -2459,7 +2456,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-208, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D5"]
 position = Vector2(16.5, 2.75)
@@ -2484,7 +2481,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-177, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D6"]
 position = Vector2(16.5, 2.75)
@@ -2509,7 +2506,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-151, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D7"]
 position = Vector2(16.5, 2.75)
@@ -2534,7 +2531,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-129, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D8"]
 position = Vector2(16.5, 2.75)
@@ -2559,7 +2556,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 3"]
 position = Vector2(-111, 210)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 3/StaticBody2D9"]
 position = Vector2(16.5, 2.75)
@@ -2586,7 +2583,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(962, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D"]
 position = Vector2(16.5, 2.75)
@@ -2611,7 +2608,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(993, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D2"]
 position = Vector2(16.5, 2.75)
@@ -2636,7 +2633,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(1019, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D3"]
 position = Vector2(16.5, 2.75)
@@ -2661,7 +2658,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(1041, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D4"]
 position = Vector2(16.5, 2.75)
@@ -2686,7 +2683,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(1071, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D5"]
 position = Vector2(16.5, 2.75)
@@ -2711,7 +2708,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(1102, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D6"]
 position = Vector2(16.5, 2.75)
@@ -2736,7 +2733,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(1128, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D7"]
 position = Vector2(16.5, 2.75)
@@ -2761,7 +2758,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 4"]
 position = Vector2(1155, -174)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 4/StaticBody2D8"]
 position = Vector2(16.5, 2.75)
@@ -2788,7 +2785,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 5"]
 position = Vector2(948, 385)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 5/StaticBody2D"]
 position = Vector2(16.5, 2.75)
@@ -2815,7 +2812,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
 position = Vector2(1406, 434)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D"]
 position = Vector2(16.5, 2.75)
@@ -2840,7 +2837,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
 position = Vector2(1437, 434)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D2"]
 position = Vector2(16.5, 2.75)
@@ -2865,7 +2862,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
 position = Vector2(1463, 434)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D3"]
 position = Vector2(16.5, 2.75)
@@ -2890,7 +2887,7 @@ shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Scene Objects/Bridges/Bridge 6"]
 position = Vector2(1485, 434)
-script = ExtResource("8_tagg1")
+script = ExtResource("13_tu65f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 6/StaticBody2D4"]
 position = Vector2(16.5, 2.75)
@@ -2922,36 +2919,40 @@ scroll_offset = Vector2(11, 0)
 motion_scale = Vector2(0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="background/ParallaxLayer"]
+visible = false
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("13_meqc4")
+texture = ExtResource("15_kcpk6")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="background"]
 motion_scale = Vector2(0.5, 1)
 
 [node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer2"]
+visible = false
 texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("14_jiafs")
+texture = ExtResource("16_bly0e")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="background"]
 motion_scale = Vector2(0.7, 1)
 
 [node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer3"]
+visible = false
 texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("15_tdjpu")
+texture = ExtResource("17_nk7ee")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="background"]
 motion_scale = Vector2(0.9, 1)
 
 [node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer4"]
+visible = false
 texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("17_528g3")
+texture = ExtResource("18_bb7g4")
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1co3w")

@@ -67,7 +67,7 @@ process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
-text = "Level Menu"
+text = "Restart Level"
 
 [node name="Menu" type="Button" parent="You died panel/VBoxContainer"]
 process_mode = 3

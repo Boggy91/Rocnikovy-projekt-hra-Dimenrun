@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm3w6uglq45qs"
-path="res://.godot/imported/pixel-art-stars-clouds-moon-wallpaper-preview.jpg-5e885a50d3e8ce6c5309098670e7eea2.ctex"
+uid="uid://ckh20ll2rgh2a"
+path="res://.godot/imported/Terrain (16x16).png-cab7dda36eff05e3d686a487cfb9affb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/pixel-art-stars-clouds-moon-wallpaper-preview.jpg"
-dest_files=["res://.godot/imported/pixel-art-stars-clouds-moon-wallpaper-preview.jpg-5e885a50d3e8ce6c5309098670e7eea2.ctex"]
+source_file="res://map/GENERAL/Terrain (16x16).png"
+dest_files=["res://.godot/imported/Terrain (16x16).png-cab7dda36eff05e3d686a487cfb9affb.ctex"]
 
 [params]
 

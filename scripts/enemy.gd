@@ -22,7 +22,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		else:
 			print("Decrease player health")
 			game_manager.decrease_health()
-			if(x_delta > 0):
+			if(x_delta >= 0):
 				body.hit(300)
 			else:
 				body.hit(-300)

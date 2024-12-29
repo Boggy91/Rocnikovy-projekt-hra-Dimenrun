@@ -1,21 +1,21 @@
 [gd_scene load_steps=36 format=3 uid="uid://bbuwunnuyrh7i"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_f1444"]
-[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="2_ogywp"]
-[ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/LavaTile set.png" id="4_cpwb0"]
-[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/character.tscn" id="6_iqkom"]
-[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/collectable.tscn" id="7_4niip"]
-[ext_resource type="Script" path="res://scripts/lava_reset.gd" id="7_38sj8"]
-[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/finish.tscn" id="8_j76uo"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/enemy.tscn" id="9_id31n"]
-[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_f47h5"]
-[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_0b8yp"]
-[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/patrol.tscn" id="11_x63pv"]
-[ext_resource type="Script" path="res://scripts/pause.gd" id="12_d18v2"]
-[ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_vefn5"]
-[ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="14_8u64o"]
-[ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/FallingSpikes.tscn" id="15_pt0v1"]
-[ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/spikes.tscn" id="16_lvd71"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ikuo0"]
+[ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/OBJECTS/FallingSpikes.tscn" id="2_xyq1m"]
+[ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/OBJECTS/spikes.tscn" id="3_jodjv"]
+[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="4_wxe12"]
+[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="5_7p2i8"]
+[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="6_fpprp"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/enemy.tscn" id="7_j3rnp"]
+[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="8_jwebe"]
+[ext_resource type="Script" path="res://scripts/lava_reset.gd" id="9_t17fx"]
+[ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="10_jn3ui"]
+[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="11_pt5no"]
+[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="12_d4cv8"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="13_fmkl8"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="14_16m3n"]
+[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="15_dtrq3"]
+[ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="16_5pp78"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -53,7 +53,7 @@ b = Vector2(63, 94)
 size = Vector2(5076, 20)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_652d0"]
-texture = ExtResource("4_cpwb0")
+texture = ExtResource("10_jn3ui")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -316,23 +316,23 @@ a = Vector2(0, -3)
 b = Vector2(66, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
-atlas = ExtResource("10_f47h5")
+atlas = ExtResource("11_pt5no")
 region = Rect2(0, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
-atlas = ExtResource("10_f47h5")
+atlas = ExtResource("11_pt5no")
 region = Rect2(15, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
-atlas = ExtResource("10_f47h5")
+atlas = ExtResource("11_pt5no")
 region = Rect2(30, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
-atlas = ExtResource("10_f47h5")
+atlas = ExtResource("11_pt5no")
 region = Rect2(45, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
-atlas = ExtResource("10_f47h5")
+atlas = ExtResource("11_pt5no")
 region = Rect2(60, 0, 15, 13)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqclg"]
@@ -369,26 +369,29 @@ corner_radius_bottom_left = 10
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
-script = ExtResource("1_f1444")
+script = ExtResource("1_ikuo0")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="traps" type="Node" parent="."]
 
-[node name="FallingSpikes" parent="traps" instance=ExtResource("15_pt0v1")]
+[node name="FallingSpikes" parent="traps" instance=ExtResource("2_xyq1m")]
 position = Vector2(65, 82)
 
-[node name="FallingSpikes3" parent="traps" instance=ExtResource("15_pt0v1")]
+[node name="FallingSpikes3" parent="traps" instance=ExtResource("2_xyq1m")]
 position = Vector2(609, 144)
 
-[node name="FallingSpikes4" parent="traps" instance=ExtResource("15_pt0v1")]
+[node name="FallingSpikes4" parent="traps" instance=ExtResource("2_xyq1m")]
 position = Vector2(873, -14)
 
-[node name="FallingSpikes2" parent="traps" instance=ExtResource("15_pt0v1")]
+[node name="FallingSpikes2" parent="traps" instance=ExtResource("2_xyq1m")]
 position = Vector2(2385, 178)
+
+[node name="Spikes" parent="traps" instance=ExtResource("3_jodjv")]
+position = Vector2(1700, -93)
 
 [node name="Scene Objects" type="Node" parent="."]
 
-[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("6_iqkom")]
+[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("4_wxe12")]
 position = Vector2(-40, 352)
 
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
@@ -398,141 +401,141 @@ position_smoothing_enabled = true
 
 [node name="collectables" type="Node" parent="Scene Objects"]
 
-[node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(68, 211)
 
-[node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D2" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(498, 371)
 
-[node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D3" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(339, 462)
 
-[node name="Area2D14" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D14" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(-32, 211)
 
-[node name="Area2D15" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D15" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(977, 69)
 
-[node name="Area2D17" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D17" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1744, -94)
 
-[node name="Area2D18" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D18" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1496, -16)
 
-[node name="Area2D19" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D19" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(958, -71)
 
-[node name="Area2D22" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D22" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(166, -401)
 
-[node name="Area2D23" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D23" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(242, -401)
 
-[node name="Area2D24" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D24" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(331, -405)
 
-[node name="Area2D25" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D25" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(415, -404)
 
-[node name="Area2D26" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D26" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(630, -408)
 
-[node name="Area2D27" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D27" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(541, -408)
 
-[node name="Area2D21" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D21" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1015, -75)
 
-[node name="Area2D20" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D20" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1068, -75)
 
-[node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(415, 93)
 
-[node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D4" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(261, 244)
 
-[node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D5" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(325, 94)
 
-[node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(754, 99)
 
-[node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1219, 129)
 
-[node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1757, 271)
 
-[node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1633, 335)
 
-[node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(1957, 267)
 
-[node name="Area2D28" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D28" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2731, 17)
 
-[node name="Area2D29" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D29" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2763, 17)
 
-[node name="Area2D30" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D30" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2489, -76)
 
-[node name="Area2D31" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D31" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2385, -189)
 
-[node name="Area2D32" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D32" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2633, -78)
 
-[node name="Area2D33" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D33" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2557, -78)
 
-[node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2080, 329)
 
-[node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2271, 309)
 
-[node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("7_4niip")]
+[node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(2368, 304)
 
-[node name="finish" parent="Scene Objects" instance=ExtResource("8_j76uo")]
+[node name="finish" parent="Scene Objects" instance=ExtResource("6_fpprp")]
 position = Vector2(2595, 242)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
+[node name="enemy" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
 position = Vector2(601, 351)
 
-[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
+[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
 position = Vector2(845, 366)
 
-[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
+[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
 position = Vector2(1459, 387)
 
-[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
+[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
 position = Vector2(397, 255)
 
-[node name="patrol" parent="Scene Objects/Enemies" instance=ExtResource("11_x63pv")]
+[node name="patrol" parent="Scene Objects/Enemies" instance=ExtResource("8_jwebe")]
 position = Vector2(836, -89)
 
-[node name="patrol6" parent="Scene Objects/Enemies" instance=ExtResource("11_x63pv")]
+[node name="patrol6" parent="Scene Objects/Enemies" instance=ExtResource("8_jwebe")]
 position = Vector2(2550, -86)
 
-[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("11_x63pv")]
+[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("8_jwebe")]
 position = Vector2(431, -410)
 
-[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("11_x63pv")]
+[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("8_jwebe")]
 position = Vector2(1555, -22)
 
-[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("11_x63pv")]
+[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("8_jwebe")]
 position = Vector2(2651, 58)
 
-[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("11_x63pv")]
+[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("8_jwebe")]
 position = Vector2(370, 93)
 
-[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("9_id31n")]
+[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
 position = Vector2(1083, 352)
 
 [node name="velky ostrov" type="StaticBody2D" parent="Scene Objects"]
@@ -567,7 +570,7 @@ shape = SubResource("SegmentShape2D_krdcq")
 
 [node name="lava_reset" type="StaticBody2D" parent="Scene Objects"]
 position = Vector2(-5, 1044)
-script = ExtResource("7_38sj8")
+script = ExtResource("9_t17fx")
 
 [node name="Area2D" type="Area2D" parent="Scene Objects/lava_reset"]
 position = Vector2(-9, 3)
@@ -658,23 +661,23 @@ grow_vertical = 2
 [node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("11_0b8yp")
+texture = ExtResource("12_d4cv8")
 expand_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("11_0b8yp")
+texture = ExtResource("12_d4cv8")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("11_0b8yp")
+texture = ExtResource("12_d4cv8")
 expand_mode = 2
 
 [node name="Pause" type="Node" parent="UI"]
-script = ExtResource("12_d18v2")
+script = ExtResource("13_fmkl8")
 
 [node name="PausePanel" type="Panel" parent="UI/Pause"]
 unique_name_in_owner = true
@@ -747,7 +750,7 @@ offset_top = 7.0
 offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
-script = ExtResource("13_vefn5")
+script = ExtResource("14_16m3n")
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 z_index = -1
@@ -756,7 +759,6 @@ scroll_scale = Vector2(0.1, 0.1)
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D/ParallaxLayer"]
-visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -767,14 +769,13 @@ offset_right = 3029.0
 offset_bottom = 909.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ogywp")
+texture = ExtResource("15_dtrq3")
 expand_mode = 3
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D"]
 motion_offset = Vector2(500, 0)
 
 [node name="TextureRect" type="TextureRect" parent="Parallax2D/ParallaxLayer2"]
-visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -785,11 +786,8 @@ offset_right = 3029.0
 offset_bottom = 909.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("14_8u64o")
+texture = ExtResource("16_5pp78")
 expand_mode = 3
-
-[node name="Spikes" parent="." instance=ExtResource("16_lvd71")]
-position = Vector2(1700, -93)
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
