@@ -1,0 +1,98 @@
+[gd_scene load_steps=13 format=3 uid="uid://dvsm4k18dq2dy"]
+
+[ext_resource type="Texture2D" uid="uid://bt8o150de256p" path="res://enemy/Desappearing (96x96).png" id="1_1iimi"]
+[ext_resource type="Texture2D" uid="uid://clhl0d3q1hy1j" path="res://enemy/vulture.png" id="2_wp3x0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6fpp"]
+atlas = ExtResource("1_1iimi")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tm2p"]
+atlas = ExtResource("1_1iimi")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6bf4"]
+atlas = ExtResource("1_1iimi")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1qcq"]
+atlas = ExtResource("2_wp3x0")
+region = Rect2(0, 0, 39, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdmsw"]
+atlas = ExtResource("2_wp3x0")
+region = Rect2(39, 0, 39, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2p1w"]
+atlas = ExtResource("2_wp3x0")
+region = Rect2(78, 0, 39, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgo2b"]
+atlas = ExtResource("2_wp3x0")
+region = Rect2(117, 0, 39, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efvn6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6fpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tm2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6bf4")
+}],
+"loop": true,
+"name": &"killed",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1qcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdmsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2p1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgo2b")
+}],
+"loop": true,
+"name": &"running",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i1sa1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnpk0"]
+radius = 12.1655
+
+[node name="patrol_volture" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(1, -1)
+scale = Vector2(0.9, 0.869)
+sprite_frames = SubResource("SpriteFrames_efvn6")
+animation = &"running"
+autoplay = "running"
+frame_progress = 0.362893
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i1sa1")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_mnpk0")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-12.6667, -0.666667)
+target_position = Vector2(0, 17)
+
+[node name="killed_timer" type="Timer" parent="."]
+wait_time = 0.2

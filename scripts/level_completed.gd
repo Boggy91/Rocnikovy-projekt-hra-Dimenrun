@@ -28,3 +28,11 @@ func display_stars(star_count: int) -> void:
 	# Loop through the STARS array and make stars visible based on the count
 	for i in range(STARS.size()):
 		STARS[i].visible = i < star_count
+
+
+func _on_next_level_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/GAME/lvl_menu.tscn")

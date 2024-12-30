@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="3_omapb"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="4_yjfrh"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="5_q7cmb"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/enemy.tscn" id="6_iptyq"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="6_iptyq"]
 [ext_resource type="Texture2D" uid="uid://q8x63clojhd0" path="res://map/GENERAL/Skyscraper_Buildings _pack_OldNinjaCat_v1.png" id="7_4oqxe"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_rm8et"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_ta2op"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qt1qg"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="3_hehml"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="4_2nu7k"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/enemy.tscn" id="5_wnfu2"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="5_wnfu2"]
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="6_k0i41"]
 [ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="7_u61sl"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_xcss3"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="9_bequ1"]
 [ext_resource type="Texture2D" uid="uid://dkqf1rtq40hd1" path="res://map/dungeon_background_4.jpg" id="10_cr1dh"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="10_jpnfi"]
-[ext_resource type="PackedScene" uid="uid://xuarqignmg6w" path="res://scenes/turret.tscn" id="10_u2gag"]
+[ext_resource type="PackedScene" uid="uid://xuarqignmg6w" path="res://scenes/OBJECTS/turret.tscn" id="10_u2gag"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_badce"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]

@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_ciblw"]
 [ext_resource type="Texture2D" uid="uid://txso5idsc1ow" path="res://character/Appearing (96x96).png" id="2_bltcb"]
 [ext_resource type="Texture2D" uid="uid://c3bjgs6bpc6os" path="res://character/Hit (32x32).png" id="2_lpdc4"]
-[ext_resource type="Texture2D" uid="uid://dlyf6rk0kls2e" path="res://character/Idle_32x32_purple.png" id="3_ppq1y"]
-[ext_resource type="Texture2D" uid="uid://byo3j6jprdvsx" path="res://character/Fall_32x32_purple.png" id="4_s3uo5"]
-[ext_resource type="Texture2D" uid="uid://bemx7d3oauqyy" path="res://character/Jump_32x32_purple.png" id="5_mydf0"]
-[ext_resource type="Texture2D" uid="uid://bm52rnlnspqfl" path="res://character/Run_32x32_purple.png" id="6_ldry1"]
-[ext_resource type="Texture2D" uid="uid://d1w6r144p4djh" path="res://character/Wall_Jump_32x32_purple.png" id="8_04i1r"]
+[ext_resource type="Texture2D" uid="uid://bi4ru58tfqso7" path="res://character/Idle_32x32_purple.png" id="3_ppq1y"]
+[ext_resource type="Texture2D" uid="uid://rko1x5ofnp1j" path="res://character/Fall_32x32_purple.png" id="4_s3uo5"]
+[ext_resource type="Texture2D" uid="uid://c4x63mi7o2lfr" path="res://character/Jump_32x32_purple.png" id="5_mydf0"]
+[ext_resource type="Texture2D" uid="uid://cxbja306rf6uo" path="res://character/Run_32x32_purple.png" id="6_ldry1"]
+[ext_resource type="Texture2D" uid="uid://dh6vsosw5dsgn" path="res://character/Wall_Jump_32x32_purple.png" id="8_04i1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
 atlas = ExtResource("2_bltcb")
@@ -255,7 +255,7 @@ script = ExtResource("1_ciblw")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(110, 416)
+position = Vector2(112, 422)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_mb6hq")
 autoplay = "default"
@@ -275,7 +275,7 @@ wait_time = 0.2
 [node name="djump" type="Timer" parent="Timers"]
 
 [node name="hit_timer" type="Timer" parent="Timers"]
-wait_time = 0.2
+wait_time = 0.3
 
 [connection signal="timeout" from="Timers/dash_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timers/dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
