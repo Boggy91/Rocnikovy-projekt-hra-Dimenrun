@@ -1,5 +1,8 @@
 extends Node
 
+func _on_scoreboard_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/GAME/scoreboard.tscn")
+
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GAME/Main_menu.tscn")
 

@@ -99,6 +99,6 @@ position = Vector2(613, 207)
 scale = Vector2(8.875, 7.15323)
 sprite_frames = SubResource("SpriteFrames_pfsov")
 autoplay = "default"
-frame_progress = 0.80322
+frame_progress = 0.528488
 
 [connection signal="pressed" from="LevelMenu" to="." method="_on_level_menu_pressed"]

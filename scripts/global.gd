@@ -6,16 +6,17 @@ var is_timer_active: bool = false  # Controls whether the timer is running
 var point: int = 0
 var levels = [
 	"res://scenes/LEVELS/Level 1.tscn",
-	 "res://scenes/LEVELS/Level 2.tscn", 
-	"res://scenes/LEVELS/Level 3.tscn", 
-	"res://scenes/LEVELS/Level 4.tscn", 
-	"res://scenes/LEVELS/Level 5.tscn", 
-	"res://scenes/LEVELS/Level 6.tscn", 
-	"res://scenes/LEVELS/Level 7.tscn"]
-	
-	
+	"res://scenes/LEVELS/Level 2.tscn",
+	"res://scenes/LEVELS/Level 3.tscn",
+	"res://scenes/LEVELS/Level 4.tscn",
+	"res://scenes/LEVELS/Level 5.tscn",
+	"res://scenes/LEVELS/Level 6.tscn",
+	"res://scenes/LEVELS/Level 7.tscn",
+	"res://scenes/LEVELS/Level 8.tscn",
+]
+
 var current_level_index = 0
-var scoreboard: Array = []  # Stores the scores and times for each level
+var best_scores: Array = []  # Stores the best scores and times for each level
 
 # Reset the points for the current level
 func reset_points():
@@ -79,19 +80,31 @@ func set_current_level(level_index: int) -> void:
 	if level_index < levels.size() and is_level_unlocked(level_index):
 		current_level_index = level_index
 
-
-# Save the score and time for the current level
+# Save the score and time for the current level (only if the score is better)
 func save_level_score(points: int, time: float):
-	var level_data = {
-		"level": current_level_index + 1,
-		"points": points,
-		"time": format_time(time)
-	}
-	scoreboard.append(level_data)
+	var level_index = current_level_index
+	# Initialize best score if empty
+	if best_scores.size() <= level_index:
+		best_scores.resize(level_index + 1)
+	
+	var existing_best = best_scores[level_index]
+	# If this score is better than the stored best score (either higher points or lower time), update it
+	if existing_best == null or points > existing_best["points"] or (points == existing_best["points"] and time < existing_best["time"]):
+		best_scores[level_index] = {
+			"level": level_index + 1,
+			"points": points,
+			"time": format_time(time)
+		}
 
-# Get the scoreboard data
+# Get the best score for a level
+func get_best_score(level_index: int) -> Dictionary:
+	if level_index < best_scores.size():
+		return best_scores[level_index]
+	return {}  # No score yet
+
+# Get the scoreboard data (best scores)
 func get_scoreboard() -> Array:
-	return scoreboard
+	return best_scores
 
 # Reset game progress (for restarting or starting fresh)
 func reset_game():
@@ -100,4 +113,4 @@ func reset_game():
 	is_timer_active = false
 	point = 0
 	current_level_index = 0
-	scoreboard.clear()
+	best_scores.clear()  # Clear best scores instead of scoreboard
