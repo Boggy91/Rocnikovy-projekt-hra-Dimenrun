@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://4hb0jrpcp0gy"]
+[gd_scene load_steps=45 format=3 uid="uid://4hb0jrpcp0gy"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qt1qg"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="10_jpnfi"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_badce"]
 [ext_resource type="Script" path="res://scripts/bridge_dissapear.gd" id="13_w7rnm"]
+[ext_resource type="PackedScene" uid="uid://dh5obcnddkcct" path="res://scenes/OBJECTS/Turret.tscn" id="14_vayph"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(1446, 187)
@@ -1041,6 +1042,9 @@ shape = SubResource("RectangleShape2D_s8kco")
 [node name="Timer" type="Timer" parent="Scene Objects/Bridge 1/StaticBody2D6"]
 
 [node name="Turrets" type="Node" parent="Scene Objects"]
+
+[node name="Turret" parent="Scene Objects/Turrets" instance=ExtResource("14_vayph")]
+position = Vector2(-352, 341)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

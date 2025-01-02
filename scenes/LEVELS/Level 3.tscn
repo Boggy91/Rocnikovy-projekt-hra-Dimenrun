@@ -2919,7 +2919,6 @@ scroll_offset = Vector2(11, 0)
 motion_scale = Vector2(0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="background/ParallaxLayer"]
-visible = false
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("15_kcpk6")
@@ -2928,7 +2927,6 @@ texture = ExtResource("15_kcpk6")
 motion_scale = Vector2(0.5, 1)
 
 [node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer2"]
-visible = false
 texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
@@ -2938,7 +2936,6 @@ texture = ExtResource("16_bly0e")
 motion_scale = Vector2(0.7, 1)
 
 [node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer3"]
-visible = false
 texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
@@ -2948,7 +2945,6 @@ texture = ExtResource("17_nk7ee")
 motion_scale = Vector2(0.9, 1)
 
 [node name="TextureRect" type="Sprite2D" parent="background/ParallaxLayer4"]
-visible = false
 texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
