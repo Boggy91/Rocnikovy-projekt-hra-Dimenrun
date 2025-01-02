@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cthimk0ad7t7k"
-path="res://.godot/imported/dungeon_background_2.jpg-3ed3e696f7d83dd0bb6fd5f93121a1c9.ctex"
+uid="uid://dllov3rnw36a5"
+path="res://.godot/imported/Hefty Padlock - GOLD - Spritesheet.png-a7f8e3bb5cffd8898dabfa5379239cd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/dungeon_background_2.jpg"
-dest_files=["res://.godot/imported/dungeon_background_2.jpg-3ed3e696f7d83dd0bb6fd5f93121a1c9.ctex"]
+source_file="res://pictures/Hefty Padlock - GOLD - Spritesheet.png"
+dest_files=["res://.godot/imported/Hefty Padlock - GOLD - Spritesheet.png-a7f8e3bb5cffd8898dabfa5379239cd4.ctex"]
 
 [params]
 

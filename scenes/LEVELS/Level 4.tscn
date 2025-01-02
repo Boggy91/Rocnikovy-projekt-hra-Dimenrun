@@ -1,8 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://djw6i35aar6fi"]
+[gd_scene load_steps=29 format=3 uid="uid://djw6i35aar6fi"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bcslq"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="1_duvpk"]
-[ext_resource type="Texture2D" uid="uid://biohml03dhc5h" path="res://map/LEVEL4/back.png" id="1_rtnxn"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="3_6g6r6"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="3_dkm5t"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="4_qroup"]
@@ -337,60 +336,15 @@ corner_radius_bottom_left = 10
 
 [node name="Level 4 - CASTLE" type="Node"]
 
-[node name="Parallax2D2" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 0.5)
+[node name="Background" type="Node" parent="."]
+
+[node name="Parallax2D2" type="ParallaxBackground" parent="Background"]
 scroll_offset = Vector2(436, -50)
-repeat_size = Vector2(2, 0)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D2"]
-motion_scale = Vector2(0.5, 1)
-motion_mirroring = Vector2(64, 0)
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/Parallax2D2"]
+motion_scale = Vector2(0.2, 0.2)
 
-[node name="TextureRect" type="TextureRect" parent="Parallax2D2/ParallaxLayer"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -485.0
-offset_top = -241.0
-offset_right = 227.0
-offset_bottom = 907.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_rtnxn")
-expand_mode = 3
-
-[node name="TextureRect2" type="TextureRect" parent="Parallax2D2/ParallaxLayer"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 224.0
-offset_top = -241.0
-offset_right = 936.0
-offset_bottom = 907.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_rtnxn")
-expand_mode = 3
-
-[node name="TextureRect3" type="TextureRect" parent="Parallax2D2/ParallaxLayer"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 933.0
-offset_top = -241.0
-offset_right = 1645.0
-offset_bottom = 907.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_rtnxn")
-expand_mode = 3
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D2"]
-
-[node name="TextureRect" type="TextureRect" parent="Parallax2D2/ParallaxLayer2"]
+[node name="TextureRect" type="TextureRect" parent="Background/Parallax2D2/ParallaxLayer2"]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -404,17 +358,18 @@ grow_vertical = 2
 texture = ExtResource("1_duvpk")
 expand_mode = 3
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax2D2"]
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/Parallax2D2"]
+motion_scale = Vector2(0.4, 0.4)
 
-[node name="TextureRect" type="TextureRect" parent="Parallax2D2/ParallaxLayer3"]
+[node name="TextureRect" type="TextureRect" parent="Background/Parallax2D2/ParallaxLayer3"]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2805.0
-offset_top = -1157.0
-offset_right = 2535.0
-offset_bottom = 1225.0
+offset_left = -3327.0
+offset_top = -859.0
+offset_right = 3614.0
+offset_bottom = 1161.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_dkm5t")
@@ -515,10 +470,10 @@ position = Vector2(-87, 633)
 [node name="Spikes" type="Node" parent="Scene Objects/Traps"]
 
 [node name="Spikes2" parent="Scene Objects/Traps/Spikes" instance=ExtResource("6_ywaeq")]
-position = Vector2(-1290, 768)
+position = Vector2(-1289, 774)
 
 [node name="Spikes3" parent="Scene Objects/Traps/Spikes" instance=ExtResource("6_ywaeq")]
-position = Vector2(-759, 770)
+position = Vector2(-759, 775)
 
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("3_6g6r6")]
 position = Vector2(-147, 339)

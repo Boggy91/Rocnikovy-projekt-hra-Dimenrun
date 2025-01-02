@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8w20lnx2dt7j"]
+[gd_scene load_steps=14 format=3 uid="uid://c8w20lnx2dt7j"]
 
+[ext_resource type="Script" path="res://scripts/patrol_snake.gd" id="1_tchrl"]
 [ext_resource type="Texture2D" uid="uid://bt8o150de256p" path="res://enemy/Desappearing (96x96).png" id="1_x10ly"]
 [ext_resource type="Texture2D" uid="uid://bisksos3sxonx" path="res://enemy/walk.png" id="2_l0x6n"]
 
@@ -72,6 +73,7 @@ radius = 12.0104
 radius = 13.537
 
 [node name="patrol_snake" type="CharacterBody2D"]
+script = ExtResource("1_tchrl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
