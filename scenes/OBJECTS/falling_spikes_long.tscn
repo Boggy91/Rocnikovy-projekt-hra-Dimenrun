@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dexngxam5daj5"]
+
+[ext_resource type="Texture2D" uid="uid://bwuhj2kwu3db3" path="res://map/traps/Idle.png" id="1_bac5e"]
+[ext_resource type="Script" path="res://scripts/falling_spikes_long.gd" id="1_sibgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crfjp"]
+size = Vector2(61, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kni2v"]
+size = Vector2(62, 516)
+
+[node name="FallingSpikesLong" type="Node2D"]
+script = ExtResource("1_sibgt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, 16)
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_bac5e")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 16)
+rotation = 3.14159
+scale = Vector2(2, 2)
+texture = ExtResource("1_bac5e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 11)
+shape = SubResource("RectangleShape2D_crfjp")
+
+[node name="Player detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player detect"]
+position = Vector2(1, 277)
+shape = SubResource("RectangleShape2D_kni2v")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Player detect" to="." method="_on_player_detect_body_entered"]

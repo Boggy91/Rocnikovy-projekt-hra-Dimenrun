@@ -14,4 +14,4 @@ func _on_controls_pressed() -> void:
 
 
 func _on_tutorial_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/GAME/tutorial.tscn")
+	SceneManager.switch_scene("res://scenes/GAME/tutorial.tscn")

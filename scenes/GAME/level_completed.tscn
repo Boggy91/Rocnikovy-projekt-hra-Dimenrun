@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlsk2h2n8q177"]
+[gd_scene load_steps=6 format=3 uid="uid://dlsk2h2n8q177"]
 
 [ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_idi4q"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_4lt5e"]
-[ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="3_4qmyt"]
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="4_5ia3o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt186"]
@@ -35,7 +34,6 @@ offset_right = 67.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_4qmyt")
 
 [node name="LEVEL COMPLETED" type="Label" parent="LEVEL COMPLETED PANEL"]
 layout_mode = 1
@@ -80,7 +78,7 @@ process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vt186")
-text = "Main Menu"
+text = "Level Menu"
 
 [node name="Time level compleated" type="Label" parent="LEVEL COMPLETED PANEL"]
 unique_name_in_owner = true
@@ -156,5 +154,5 @@ layout_mode = 2
 texture = ExtResource("4_5ia3o")
 expand_mode = 2
 
-[connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Next Level" to="LEVEL COMPLETED PANEL" method="_on_restart_level_pressed"]
-[connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Menu" to="LEVEL COMPLETED PANEL" method="_on_menu_pressed"]
+[connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Next Level" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Menu" to="." method="_on_menu_pressed"]

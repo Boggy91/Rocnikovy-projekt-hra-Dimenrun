@@ -1,15 +1,15 @@
-[gd_scene load_steps=33 format=3 uid="uid://orywfxekxeu1"]
+[gd_scene load_steps=34 format=3 uid="uid://orywfxekxeu1"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kimpe"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="2_g56yk"]
+[ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="2_gr2ft"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="3_in1sm"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="4_itcdi"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="5_jt5nf"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="6_2dncf"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="7_jk38k"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="8_e24wy"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/enemy.tscn" id="9_m6qiq"]
-[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="10_po0qu"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="9_m6qiq"]
 [ext_resource type="Script" path="res://scripts/lava_reset.gd" id="12_whldn"]
 [ext_resource type="Script" path="res://scripts/bridge_dissapear.gd" id="13_tu65f"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="14_v0m46"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cv0cgc3tuclp5" path="res://map/LEVEL2/background3.png" id="17_nk7ee"]
 [ext_resource type="Texture2D" uid="uid://bf728uywur01q" path="res://map/LEVEL2/background4b.png" id="18_bb7g4"]
 [ext_resource type="Texture2D" uid="uid://cpe2j8lmnb68y" path="res://map/GENERAL/mainlev_build.png" id="19_idnf6"]
+[ext_resource type="PackedScene" uid="uid://bc6nebo2rg446" path="res://scenes/CHARACTERS/patrol_dog.tscn" id="20_mxxy5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("2_g56yk")
@@ -1916,6 +1917,20 @@ unique_name_in_owner = true
 script = ExtResource("1_kimpe")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
+[node name="Traps" type="Node" parent="."]
+
+[node name="FallingSpikesLong" parent="Traps" instance=ExtResource("2_gr2ft")]
+position = Vector2(1410, -109)
+
+[node name="FallingSpikesLong2" parent="Traps" instance=ExtResource("2_gr2ft")]
+position = Vector2(1211, -110)
+
+[node name="FallingSpikesLong3" parent="Traps" instance=ExtResource("2_gr2ft")]
+position = Vector2(2042, -176)
+
+[node name="FallingSpikesLong4" parent="Traps" instance=ExtResource("2_gr2ft")]
+position = Vector2(1785, -175)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -2198,17 +2213,20 @@ position = Vector2(2320, 237)
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("9_m6qiq")]
 position = Vector2(418, 244)
 
-[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
-position = Vector2(1013, -203)
+[node name="patrol-dog" parent="Scene Objects/Enemies" instance=ExtResource("20_mxxy5")]
+position = Vector2(638, 359)
 
-[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
-position = Vector2(1882, -245)
+[node name="patrol-dog2" parent="Scene Objects/Enemies" instance=ExtResource("20_mxxy5")]
+position = Vector2(-26, 181)
 
-[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
-position = Vector2(-175, 182)
+[node name="patrol-dog3" parent="Scene Objects/Enemies" instance=ExtResource("20_mxxy5")]
+position = Vector2(1449, -206)
 
-[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("10_po0qu")]
-position = Vector2(595, -116)
+[node name="patrol-dog5" parent="Scene Objects/Enemies" instance=ExtResource("20_mxxy5")]
+position = Vector2(685, -113)
+
+[node name="patrol-dog4" parent="Scene Objects/Enemies" instance=ExtResource("20_mxxy5")]
+position = Vector2(1960, -245)
 
 [node name="lava_reset" type="StaticBody2D" parent="Scene Objects"]
 position = Vector2(-5, 1044)
@@ -2263,7 +2281,7 @@ shape = SubResource("RectangleShape2D_b6k13")
 
 [node name="Cloud" type="AnimatedSprite2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
 texture_filter = 1
-position = Vector2(15.5, 8)
+position = Vector2(14, 8)
 scale = Vector2(2.1875, 1)
 sprite_frames = SubResource("SpriteFrames_0je28")
 autoplay = "default"
@@ -2272,7 +2290,7 @@ autoplay = "default"
 position = Vector2(-7, -19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D/Area2D"]
-position = Vector2(23, 19)
+position = Vector2(17, 19)
 shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D"]
@@ -2297,7 +2315,7 @@ autoplay = "default"
 position = Vector2(-7, -19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2/Area2D"]
-position = Vector2(22.5, 19)
+position = Vector2(17, 19)
 shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D2"]
@@ -2322,7 +2340,7 @@ autoplay = "default"
 position = Vector2(-7, -19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3/Area2D"]
-position = Vector2(22.5, 19)
+position = Vector2(21, 19)
 shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D3"]
@@ -2347,7 +2365,7 @@ autoplay = "default"
 position = Vector2(-7, -19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4/Area2D"]
-position = Vector2(22.5, 19)
+position = Vector2(21, 19)
 shape = SubResource("RectangleShape2D_y36cg")
 
 [node name="Timer" type="Timer" parent="Scene Objects/Bridges/Bridge 2/StaticBody2D4"]

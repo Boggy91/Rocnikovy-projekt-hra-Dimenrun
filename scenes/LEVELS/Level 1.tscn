@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="4_wxe12"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="5_7p2i8"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="6_fpprp"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/enemy.tscn" id="7_j3rnp"]
+[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="7_j3rnp"]
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="8_jwebe"]
 [ext_resource type="Script" path="res://scripts/lava_reset.gd" id="9_t17fx"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="10_jn3ui"]
@@ -372,23 +372,6 @@ unique_name_in_owner = true
 script = ExtResource("1_ikuo0")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
-[node name="traps" type="Node" parent="."]
-
-[node name="FallingSpikes" parent="traps" instance=ExtResource("2_xyq1m")]
-position = Vector2(65, 82)
-
-[node name="FallingSpikes3" parent="traps" instance=ExtResource("2_xyq1m")]
-position = Vector2(609, 144)
-
-[node name="FallingSpikes4" parent="traps" instance=ExtResource("2_xyq1m")]
-position = Vector2(873, -14)
-
-[node name="FallingSpikes2" parent="traps" instance=ExtResource("2_xyq1m")]
-position = Vector2(2385, 178)
-
-[node name="Spikes" parent="traps" instance=ExtResource("3_jodjv")]
-position = Vector2(1700, -93)
-
 [node name="Scene Objects" type="Node" parent="."]
 
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("4_wxe12")]
@@ -423,7 +406,7 @@ position = Vector2(1744, -94)
 position = Vector2(1496, -16)
 
 [node name="Area2D19" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
-position = Vector2(958, -71)
+position = Vector2(948, -112)
 
 [node name="Area2D22" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(166, -401)
@@ -444,10 +427,10 @@ position = Vector2(630, -408)
 position = Vector2(541, -408)
 
 [node name="Area2D21" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
-position = Vector2(1015, -75)
+position = Vector2(1005, -113)
 
 [node name="Area2D20" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
-position = Vector2(1068, -75)
+position = Vector2(1057, -113)
 
 [node name="Area2D16" parent="Scene Objects/collectables" instance=ExtResource("5_7p2i8")]
 position = Vector2(415, 93)
@@ -591,6 +574,40 @@ position = Vector2(2481, 306)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Bariera"]
 shape = SubResource("SegmentShape2D_mxtuk")
+
+[node name="traps" type="Node" parent="Scene Objects"]
+
+[node name="Spikes2" type="Node" parent="Scene Objects/traps"]
+
+[node name="Spikes" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+position = Vector2(1700, -93)
+
+[node name="Spikes2" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+position = Vector2(1700, -93)
+
+[node name="Spikes3" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+position = Vector2(959, -62)
+
+[node name="Spikes4" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+position = Vector2(1021, -62)
+
+[node name="Spikes5" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+position = Vector2(1083, -62)
+
+[node name="FallingSpikes" type="Node" parent="Scene Objects/traps"]
+
+[node name="FallingSpikes" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
+position = Vector2(65, 82)
+
+[node name="FallingSpikes3" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
+position = Vector2(609, 144)
+
+[node name="FallingSpikes4" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
+position = Vector2(873, -14)
+
+[node name="FallingSpikes2" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
+position = Vector2(2385, 178)
+scale = Vector2(0.5, 0.5)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
