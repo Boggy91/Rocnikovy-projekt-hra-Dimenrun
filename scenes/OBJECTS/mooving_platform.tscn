@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bihqdgd84fcoi" path="res://map/GENERAL/Idle.png" id="2_kr041"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cks5o"]
-size = Vector2(23, 11)
+size = Vector2(46, 22)
 
 [sub_resource type="Animation" id="Animation_6bwba"]
 resource_name = "move"
@@ -48,6 +48,7 @@ _data = {
 script = ExtResource("1_rtt2i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
 remote_path = NodePath("../../AnimatableBody2D")
@@ -56,10 +57,11 @@ remote_path = NodePath("../../AnimatableBody2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
 texture_filter = 1
+scale = Vector2(2, 2)
 texture = ExtResource("2_kr041")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(-0.5, 8.5)
+position = Vector2(-1, 17)
 shape = SubResource("RectangleShape2D_cks5o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
