@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kaia1opx6s3o"
-path="res://.godot/imported/dungeon_background_3.jpg-71216f8e87e9a6d3f18caf291e0d0f81.ctex"
+uid="uid://dp2c8rl1ren63"
+path="res://.godot/imported/lock.png-111b66b46be24a5ee2397c35ecc199bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/dungeon_background_3.jpg"
-dest_files=["res://.godot/imported/dungeon_background_3.jpg-71216f8e87e9a6d3f18caf291e0d0f81.ctex"]
+source_file="res://pictures/lock.png"
+dest_files=["res://.godot/imported/lock.png-111b66b46be24a5ee2397c35ecc199bd.ctex"]
 
 [params]
 

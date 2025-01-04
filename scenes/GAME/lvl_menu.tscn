@@ -155,8 +155,17 @@ offset_bottom = 6.0
 theme_override_font_sizes/font_size = 30
 text = "LVL 4"
 
+[node name="Scoreboard" type="Button" parent="."]
+modulate = Color(1, 0.317647, 0.792157, 1)
+offset_left = 1009.0
+offset_top = 32.0
+offset_right = 1133.0
+offset_bottom = 74.0
+text = "Scoreboard"
+
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LEVEL 1/LEVEL1/lvl1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="LEVEL 2/LEVEL2/lvl2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="LEVEL 3/LEVEL3/lvl3" to="." method="_on_lvl_3_pressed"]
 [connection signal="pressed" from="LEVEL 4/LEVEL4/lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="Scoreboard" to="." method="_on_scoreboard_pressed"]

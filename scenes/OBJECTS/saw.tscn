@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://de5q57l5rqj1k"]
+
+[ext_resource type="Script" path="res://scripts/saw.gd" id="1_msri7"]
+[ext_resource type="Texture2D" uid="uid://bp18gucsc2k4c" path="res://map/traps/On (38x38).png" id="2_asoys"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyd2q"]
+atlas = ExtResource("2_asoys")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjd7y"]
+atlas = ExtResource("2_asoys")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rydtk"]
+atlas = ExtResource("2_asoys")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4pgf"]
+atlas = ExtResource("2_asoys")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqcq8"]
+atlas = ExtResource("2_asoys")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sb34"]
+atlas = ExtResource("2_asoys")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ale6a"]
+atlas = ExtResource("2_asoys")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ajyg"]
+atlas = ExtResource("2_asoys")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_faoal"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyd2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjd7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rydtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4pgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqcq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sb34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ale6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ajyg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 27.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hfv85"]
+radius = 50.636
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xr51h"]
+radius = 30.7002
+
+[node name="Saw" type="RigidBody2D"]
+script = ExtResource("1_msri7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(0, 1.90735e-06)
+scale = Vector2(3.125, 3.29757)
+sprite_frames = SubResource("SpriteFrames_faoal")
+autoplay = "default"
+frame_progress = 0.656119
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hfv85")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xr51h")
+
+[node name="killed_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
