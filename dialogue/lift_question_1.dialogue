@@ -1,0 +1,14 @@
+~ start
+Dimenrun 2D Platform: V tejto časti si overíme tvoju myseľ. [klik]
+~ znova
+Dimenrun 2D Platform: Ak sú dnes dva dni pred pondelkom, aký deň bude o tri dni?
+- a) Štvrtok
+	Dimenrun 2D Platform: Vybral si zle. [klik] => znova
+- b) Sobota
+	Dimenrun 2D Platform: Skvelé, postupuj ďalej. [klik]
+- c) Piatok
+	Dimenrun 2D Platform: Vybral si zle. [klik] => znova
+- d) Nedeľa
+	Dimenrun 2D Platform: Vybral si zle. [klik] => znova
+
+=> END

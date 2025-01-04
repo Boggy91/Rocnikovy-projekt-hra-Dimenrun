@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://xh3kxjmb6ibp"
+path="res://.godot/imported/lift_question_1.dialogue-1c67e299c4a7a50238cc21101485ff9c.tres"
+
+[deps]
+
+source_file="res://dialogue/lift_question_1.dialogue"
+dest_files=["res://.godot/imported/lift_question_1.dialogue-1c67e299c4a7a50238cc21101485ff9c.tres"]
+
+[params]
+
+defaults=true
