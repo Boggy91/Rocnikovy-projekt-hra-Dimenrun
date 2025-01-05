@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlsk2h2n8q177"]
+[gd_scene load_steps=7 format=3 uid="uid://dlsk2h2n8q177"]
 
 [ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_idi4q"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_4lt5e"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_5i7ok"]
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="4_5ia3o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt186"]
@@ -48,6 +49,7 @@ offset_right = 211.5
 offset_bottom = 27.693
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_5i7ok")
 theme_override_font_sizes/font_size = 45
 text = "LEVEL COMPLETED"
 
@@ -69,6 +71,7 @@ theme_override_constants/separation = 15
 [node name="Next Level" type="Button" parent="LEVEL COMPLETED PANEL/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5i7ok")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vt186")
 text = "Next Level"
@@ -76,6 +79,7 @@ text = "Next Level"
 [node name="Menu" type="Button" parent="LEVEL COMPLETED PANEL/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5i7ok")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vt186")
 text = "Level Menu"

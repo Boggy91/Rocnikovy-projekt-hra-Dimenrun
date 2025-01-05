@@ -10,13 +10,17 @@ func _on_lvl_1_pressed() -> void:
 	access_level(0, "res://scenes/LEVELS/Level 1.tscn")
 
 func _on_lvl_2_pressed() -> void:
-	access_level(1, "res://scenes/LEVELS/Level 3.tscn")
+	access_level(1, "res://scenes/LEVELS/Level 2.tscn")
 
 func _on_lvl_3_pressed() -> void:
-	access_level(2, "res://scenes/LEVELS/Level 6.tscn")
+	access_level(2, "res://scenes/LEVELS/Level 3.tscn")
 
 func _on_lvl_4_pressed() -> void:
 	access_level(3, "res://scenes/LEVELS/Level 4.tscn")
+	
+
+func _on_lvl_5_pressed()-> void:
+	access_level(4, "res://scenes/LEVELS/Level 5.tscn")
 
 func access_level(level_index: int, level_path: String) -> void:
 	if Global.is_level_unlocked(level_index):

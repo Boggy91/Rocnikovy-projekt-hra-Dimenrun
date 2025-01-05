@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://djw6i35aar6fi"]
+[gd_scene load_steps=30 format=3 uid="uid://djw6i35aar6fi"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bcslq"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="1_duvpk"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c2jr4ybvqjl1i" path="res://map/GENERAL/all-props.png" id="8_24cxv"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_lww3h"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_o6osa"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_btnhr"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_y1pc2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6r28"]
@@ -668,6 +669,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_btnhr")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -755,6 +757,7 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_btnhr")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
 
@@ -776,6 +779,7 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_btnhr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Resume"
@@ -783,6 +787,7 @@ text = "Resume"
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_btnhr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Restart level"
@@ -790,6 +795,7 @@ text = "Restart level"
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_btnhr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Main Menu"

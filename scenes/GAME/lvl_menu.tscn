@@ -1,12 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=14 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="2_g471l"]
 [ext_resource type="Script" path="res://scripts/total_time_lvl_menu.gd" id="2_je0rc"]
-[ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="3_qmoax"]
-[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="5_qgv4j"]
+[ext_resource type="Texture2D" uid="uid://cyo54f6tq5yre" path="res://pictures/Captura de pantalla 2025-01-05 195908.jpg" id="4_h85ai"]
+[ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="5_1kugh"]
 [ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_y37ui"]
+
+[sub_resource type="FontVariation" id="FontVariation_hl0uu"]
+base_font = ExtResource("2_g471l")
+
+[sub_resource type="FontVariation" id="FontVariation_0be5u"]
+base_font = ExtResource("2_g471l")
+
+[sub_resource type="FontVariation" id="FontVariation_kllfe"]
+base_font = ExtResource("2_g471l")
+
+[sub_resource type="FontVariation" id="FontVariation_i57og"]
+base_font = ExtResource("2_g471l")
 
 [sub_resource type="GDScript" id="GDScript_skkmn"]
 script/source = "extends Button
@@ -33,43 +46,61 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hrt6u")
 metadata/_edit_use_anchors_ = true
 
+[node name="Scoreboard" type="Button" parent="."]
+modulate = Color(1, 0.317647, 0.792157, 1)
+offset_left = 1009.0
+offset_top = 32.0
+offset_right = 1133.0
+offset_bottom = 74.0
+theme_override_fonts/font = SubResource("FontVariation_hl0uu")
+text = "Scoreboard"
+
 [node name="Total Time lvl menu" type="Label" parent="."]
 offset_left = 537.0
 offset_top = 16.0
 offset_right = 668.0
 offset_bottom = 53.0
+theme_override_fonts/font = SubResource("FontVariation_0be5u")
 script = ExtResource("2_je0rc")
 
 [node name="main_menu" type="Button" parent="."]
 modulate = Color(1, 0.315719, 0.791177, 1)
-offset_left = 39.0
-offset_top = 33.0
-offset_right = 145.0
-offset_bottom = 78.0
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.0173611
+anchor_top = 0.058642
+anchor_right = 0.105903
+anchor_bottom = 0.126543
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("FontVariation_kllfe")
 text = "Main Menu"
+metadata/_edit_use_anchors_ = true
 
 [node name="LEVEL 1" type="Node" parent="."]
 
 [node name="LEVEL1" type="TextureRect" parent="LEVEL 1"]
 z_as_relative = false
 offset_left = 177.0
-offset_top = 143.0
-offset_right = 355.0
-offset_bottom = 243.0
-texture = ExtResource("3_qmoax")
+offset_top = 147.0
+offset_right = 357.0
+offset_bottom = 247.0
+texture = ExtResource("4_h85ai")
 expand_mode = 1
 
 [node name="lvl1" type="Button" parent="LEVEL 1/LEVEL1"]
 layout_mode = 0
-offset_right = 178.0
-offset_bottom = 99.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 180.0
+offset_bottom = 98.0
 
 [node name="Label" type="Label" parent="LEVEL 1/LEVEL1/lvl1"]
 layout_mode = 0
-offset_left = 51.0
+offset_left = 41.0
 offset_top = -36.0
-offset_right = 127.0
+offset_right = 133.0
 offset_bottom = 6.0
+theme_override_fonts/font = SubResource("FontVariation_i57og")
 theme_override_font_sizes/font_size = 30
 text = "LVL 1"
 
@@ -77,26 +108,27 @@ text = "LVL 1"
 
 [node name="LEVEL2" type="TextureRect" parent="LEVEL 2"]
 z_as_relative = false
-offset_left = 409.0
-offset_top = 142.0
-offset_right = 587.0
-offset_bottom = 242.0
-texture = ExtResource("5_xh4e1")
+offset_left = 420.0
+offset_top = 144.0
+offset_right = 593.0
+offset_bottom = 246.0
+texture = ExtResource("5_1kugh")
 expand_mode = 1
 
 [node name="lvl2" type="Button" parent="LEVEL 2/LEVEL2"]
 layout_mode = 0
-offset_top = 3.0
-offset_right = 178.0
+offset_left = -2.0
+offset_right = 176.0
 offset_bottom = 101.0
 script = SubResource("GDScript_skkmn")
 
 [node name="Label" type="Label" parent="LEVEL 2/LEVEL2/lvl2"]
 layout_mode = 0
-offset_left = 52.0
+offset_left = 39.0
 offset_top = -40.0
-offset_right = 128.0
+offset_right = 135.0
 offset_bottom = 2.0
+theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 30
 text = "LVL 2"
 
@@ -104,11 +136,11 @@ text = "LVL 2"
 
 [node name="LEVEL3" type="TextureRect" parent="LEVEL 3"]
 z_as_relative = false
-offset_left = 641.0
-offset_top = 144.0
-offset_right = 820.0
-offset_bottom = 242.0
-texture = ExtResource("5_qgv4j")
+offset_left = 648.0
+offset_top = 145.0
+offset_right = 827.0
+offset_bottom = 243.0
+texture = ExtResource("5_xh4e1")
 expand_mode = 1
 
 [node name="lvl3" type="Button" parent="LEVEL 3/LEVEL3"]
@@ -119,10 +151,11 @@ script = SubResource("GDScript_skkmn")
 
 [node name="Label" type="Label" parent="LEVEL 3/LEVEL3/lvl3"]
 layout_mode = 0
-offset_left = 52.0
+offset_left = 44.0
 offset_top = -38.0
-offset_right = 128.0
+offset_right = 133.0
 offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 30
 text = "LVL 3"
 
@@ -148,24 +181,47 @@ script = SubResource("GDScript_skkmn")
 
 [node name="Label" type="Label" parent="LEVEL 4/LEVEL4/lvl4"]
 layout_mode = 0
-offset_left = 53.0
-offset_top = -36.0
+offset_left = 40.0
+offset_top = -39.0
 offset_right = 129.0
-offset_bottom = 6.0
+offset_bottom = 3.0
+theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 30
 text = "LVL 4"
 
-[node name="Scoreboard" type="Button" parent="."]
-modulate = Color(1, 0.317647, 0.792157, 1)
-offset_left = 1009.0
-offset_top = 32.0
-offset_right = 1133.0
-offset_bottom = 74.0
-text = "Scoreboard"
+[node name="LEVEL 5" type="Node" parent="."]
 
+[node name="LEVEL5" type="TextureRect" parent="LEVEL 5"]
+z_as_relative = false
+texture_filter = 1
+offset_left = 176.0
+offset_top = 307.0
+offset_right = 354.0
+offset_bottom = 404.0
+texture = ExtResource("6_y37ui")
+expand_mode = 1
+
+[node name="lvl5" type="Button" parent="LEVEL 5/LEVEL5"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 178.0
+offset_bottom = 96.0
+script = SubResource("GDScript_skkmn")
+
+[node name="Label" type="Label" parent="LEVEL 5/LEVEL5/lvl5"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -35.0
+offset_right = 127.0
+offset_bottom = 7.0
+theme_override_fonts/font = ExtResource("2_g471l")
+theme_override_font_sizes/font_size = 30
+text = "LVL 5"
+
+[connection signal="pressed" from="Scoreboard" to="." method="_on_scoreboard_pressed"]
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LEVEL 1/LEVEL1/lvl1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="LEVEL 2/LEVEL2/lvl2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="LEVEL 3/LEVEL3/lvl3" to="." method="_on_lvl_3_pressed"]
 [connection signal="pressed" from="LEVEL 4/LEVEL4/lvl4" to="." method="_on_lvl_4_pressed"]
-[connection signal="pressed" from="Scoreboard" to="." method="_on_scoreboard_pressed"]
+[connection signal="pressed" from="LEVEL 5/LEVEL5/lvl5" to="." method="_on_lvl_4_pressed"]

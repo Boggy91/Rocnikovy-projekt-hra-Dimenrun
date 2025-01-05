@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxbab7fxcbve7"]
+[gd_scene load_steps=4 format=3 uid="uid://dxbab7fxcbve7"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_eekoe"]
 [ext_resource type="Script" path="res://scripts/scoreboard.gd" id="1_xgx1e"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_c64cs"]
 
 [node name="Scoreboard" type="Node"]
 script = ExtResource("1_xgx1e")
@@ -13,30 +14,31 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_eekoe")
 
 [node name="Panel" type="Panel" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -145.0
-offset_top = 30.0
-offset_right = 150.0
-offset_bottom = 100.0
+anchors_preset = -1
+anchor_left = 0.374132
+anchor_top = 0.0462963
+anchor_right = 0.630208
+anchor_bottom = 0.154321
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -94.5
-offset_top = -4.0
-offset_right = 98.5
-offset_bottom = 78.0
+anchors_preset = -1
+anchor_left = 0.171186
+anchor_top = -0.0571429
+anchor_right = 0.842373
+anchor_bottom = 1.11429
+offset_left = 2.5
+offset_right = -2.5
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0, 0.968627, 1)
+theme_override_fonts/font = ExtResource("3_c64cs")
 theme_override_font_sizes/font_size = 29
 text = "SCOREBOARD"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 offset_left = 460.0
@@ -51,17 +53,14 @@ alignment = 1
 
 [node name="LevelMenu" type="Button" parent="."]
 modulate = Color(0.113725, 1, 1, 1)
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -85.0
-offset_top = -75.0
-offset_right = 92.0
-offset_bottom = -22.0
+offset_top = -36.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_c64cs")
 theme_override_font_sizes/font_size = 24
 text = "Level Menu"
 
