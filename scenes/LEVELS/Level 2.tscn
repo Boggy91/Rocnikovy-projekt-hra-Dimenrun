@@ -855,6 +855,7 @@ position = Vector2(-392, 747)
 position = Vector2(-304, 747)
 
 [node name="1" type="TextureRect" parent="Scene Objects"]
+visible = false
 z_index = -2
 texture_filter = 1
 anchors_preset = 15
@@ -870,6 +871,7 @@ texture = ExtResource("7_u61sl")
 expand_mode = 3
 
 [node name="2" type="TextureRect" parent="Scene Objects"]
+visible = false
 z_index = -2
 texture_filter = 1
 anchors_preset = 15
@@ -885,6 +887,7 @@ texture = ExtResource("8_rmil0")
 expand_mode = 3
 
 [node name="3" type="TextureRect" parent="Scene Objects"]
+visible = false
 z_index = -2
 texture_filter = 1
 anchors_preset = 15
