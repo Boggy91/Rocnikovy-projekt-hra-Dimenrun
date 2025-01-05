@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crmg2exsydjpm"]
+[gd_scene load_steps=5 format=3 uid="uid://crmg2exsydjpm"]
 
 [ext_resource type="Texture2D" uid="uid://c2anvkguq5tpn" path="res://pictures/sammie-cabrera-thumb.jpg" id="1_kwbca"]
 [ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="1_tood8"]
+[ext_resource type="AudioStream" uid="uid://dgi6buv1pmv14" path="res://music/SEPAR - VYJEBALA RESPEKT feat. Matej Straka (prod. Infinit).mp3" id="3_0njlb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu87m"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
@@ -75,6 +76,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
 text = "Level Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0njlb")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="pressed" from="You died panel/VBoxContainer/Restart Level" to="You died panel" method="_on_restart_level_pressed"]
 [connection signal="pressed" from="You died panel/VBoxContainer/Menu" to="You died panel" method="_on_menu_pressed"]
