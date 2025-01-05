@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-
-# Called when the node enters the scene tree for the first time.
 const Balloon = preload("res://dialogue/balloon.tscn")
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
@@ -12,14 +10,12 @@ const Balloon = preload("res://dialogue/balloon.tscn")
 @onready var block: CollisionShape2D = $Block
 
 
-
-func _question_entered(body: Node2D) -> void:
+func _on_question(body: Node2D) -> void:
 	if body.name == "CharacterBody2D": 
 		var balloon: Node = Balloon.instantiate()
 		get_tree().current_scene.add_child(balloon)
-		balloon.start(load("res://dialogue/lift_question_1.dialogue"), "start")
+		balloon.start(load("res://dialogue/lift_question_2.dialogue"), "start")
 		question.position = Vector2(10000,500000)
-
 
 func _on_answer_a(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
@@ -29,23 +25,22 @@ func _on_answer_a(body: Node2D) -> void:
 		game_manager.decrease_health()
 		body.hit(300)
 
-
 func _on_answer_b(body: Node2D) -> void:
-	if body.name == "CharacterBody2D":
-		platform.position = Vector2(-100,-240)
-		block.position = Vector2(10000, 10000)
-		var balloon: Node = Balloon.instantiate()
-		get_tree().current_scene.add_child(balloon)
-		balloon.start(load("res://dialogue/correct answer.dialogue"), "start")
-
-
-func _on_answer_c(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		var balloon: Node = Balloon.instantiate()
 		get_tree().current_scene.add_child(balloon)
 		balloon.start(load("res://dialogue/wrong answer.dialogue"), "start")
 		game_manager.decrease_health()
 		body.hit(300)
+
+func _on_answer_c(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		platform.position = Vector2(480,140)
+		block.position = Vector2(10000, 10000)
+		var balloon: Node = Balloon.instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load("res://dialogue/correct answer.dialogue"), "start")
+
 
 func _on_answer_d(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":

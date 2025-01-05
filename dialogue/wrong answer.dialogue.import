@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c7k4e4o8kmutf"
+path="res://.godot/imported/wrong answer.dialogue-bd30d275ee35fdd4ca6e6e95494b8a52.tres"
+
+[deps]
+
+source_file="res://dialogue/wrong answer.dialogue"
+dest_files=["res://.godot/imported/wrong answer.dialogue-bd30d275ee35fdd4ca6e6e95494b8a52.tres"]
+
+[params]
+
+defaults=true

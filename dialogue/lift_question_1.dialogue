@@ -1,14 +1,8 @@
 ~ start
 Dimenrun 2D Platform: V tejto časti si overíme tvoju myseľ. [klik]
-~ znova
-Dimenrun 2D Platform: Ak sú dnes dva dni pred pondelkom, aký deň bude o tri dni?
-- a) Štvrtok
-	Dimenrun 2D Platform: Vybral si zle. [klik] => znova
-- b) Sobota
-	Dimenrun 2D Platform: Skvelé, postupuj ďalej. [klik]
-- c) Piatok
-	Dimenrun 2D Platform: Vybral si zle. [klik] => znova
-- d) Nedeľa
-	Dimenrun 2D Platform: Vybral si zle. [klik] => znova
+
+Dimenrun 2D Platform: Loď je v jazere. Ak z lode vyhodíš kotvu do vody, čo sa stane s hladinou jazera? [klik]
+
+Loď je v jazere. Ak z lode vyhodíš kotvu do vody, čo sa stane s hladinou jazera?: a) Stúpne     b) Klesne     c) Zostane rovnaká     d) Závisí od hmotnosti kotvy     ---> skoč do správneho písmena
 
 => END

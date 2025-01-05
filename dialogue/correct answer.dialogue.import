@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c310kxmiui1vw"
+path="res://.godot/imported/correct answer.dialogue-d926abaeaa47bdf732f0609a6d91ff4e.tres"
+
+[deps]
+
+source_file="res://dialogue/correct answer.dialogue"
+dest_files=["res://.godot/imported/correct answer.dialogue-d926abaeaa47bdf732f0609a6d91ff4e.tres"]
+
+[params]
+
+defaults=true

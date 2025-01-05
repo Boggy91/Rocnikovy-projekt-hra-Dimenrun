@@ -50,3 +50,7 @@ func _on_level_complete():
 	print("Total Time: ", Global.get_total_time_formatted())
 
 	
+
+
+func _on_answer_d(body: Node2D) -> void:
+	pass # Replace with function body.
