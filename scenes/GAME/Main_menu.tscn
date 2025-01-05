@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cen2yiieeunyw"]
+[gd_scene load_steps=6 format=3 uid="uid://cen2yiieeunyw"]
 
 [ext_resource type="Script" path="res://dialogue/main_menu.gd" id="1_318of"]
 [ext_resource type="Texture2D" uid="uid://bw0ff4jjwgvkf" path="res://pictures/cooltext468738736733838.png" id="2_468ug"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_fvnhj"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://music/Menu.mp3" id="4_ee7v3"]
 
 [sub_resource type="Theme" id="Theme_rwwr3"]
 
@@ -79,6 +80,11 @@ layout_mode = 2
 theme = SubResource("Theme_rwwr3")
 theme_override_font_sizes/font_size = 28
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ee7v3")
+volume_db = -23.424
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
