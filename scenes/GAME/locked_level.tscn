@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://mku8yyg6kebt"]
+[gd_scene load_steps=11 format=3 uid="uid://mku8yyg6kebt"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_qu2u7"]
 [ext_resource type="Script" path="res://scripts/locked_level.gd" id="1_ydp0w"]
 [ext_resource type="Texture2D" uid="uid://dllov3rnw36a5" path="res://pictures/Hefty Padlock - GOLD - Spritesheet.png" id="2_5s8yg"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_udd3q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86er1"]
 atlas = ExtResource("2_5s8yg")
@@ -65,14 +66,14 @@ offset_right = 2558.0
 offset_bottom = 1300.0
 
 [node name="Label" type="Label" parent="TextureRect/Panel14"]
-texture_filter = 1
 layout_mode = 0
-offset_left = 274.0
-offset_top = 628.0
-offset_right = 2175.0
-offset_bottom = 972.0
+offset_left = -130.0
+offset_top = 648.0
+offset_right = 2461.0
+offset_bottom = 992.0
 theme_override_colors/font_color = Color(1, 1, 0.909804, 1)
-theme_override_font_sizes/font_size = 61
+theme_override_fonts/font = ExtResource("3_udd3q")
+theme_override_font_sizes/font_size = 45
 text = "Tento Level nie je ešte dostupný. Dokončí najprv predchádzajucí "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -90,12 +91,13 @@ offset_right = 139.0
 offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_udd3q")
 theme_override_font_sizes/font_size = 37
 text = "Level Menu"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(613, 207)
+position = Vector2(598, 208)
 scale = Vector2(8.875, 7.15323)
 sprite_frames = SubResource("SpriteFrames_pfsov")
 autoplay = "default"

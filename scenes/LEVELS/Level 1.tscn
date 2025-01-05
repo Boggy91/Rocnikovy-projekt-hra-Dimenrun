@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bbuwunnuyrh7i"]
+[gd_scene load_steps=38 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ikuo0"]
 [ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/OBJECTS/FallingSpikes.tscn" id="2_xyq1m"]
@@ -10,12 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="8_jwebe"]
 [ext_resource type="Script" path="res://scripts/lava_reset.gd" id="9_t17fx"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="10_jn3ui"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="11_e2ag0"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="11_pt5no"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="12_d4cv8"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="13_fmkl8"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="14_16m3n"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="15_dtrq3"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="16_5pp78"]
+[ext_resource type="AudioStream" uid="uid://doiepb1lqyo2l" path="res://music/Level 1.mp3" id="17_xl4ku"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -635,6 +637,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -721,8 +724,10 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 50
-text = "GAME PAUSED"
+text = "DIMENRUN"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
 layout_mode = 1
@@ -742,6 +747,7 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Resume"
@@ -749,6 +755,7 @@ text = "Resume"
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Restart level"
@@ -756,6 +763,7 @@ text = "Restart level"
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Main Menu"
@@ -768,6 +776,7 @@ offset_top = 7.0
 offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("11_e2ag0")
 script = ExtResource("14_16m3n")
 
 [node name="Background" type="Node" parent="."]
@@ -800,6 +809,11 @@ texture_filter = 1
 position = Vector2(900, 200)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("16_5pp78")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_xl4ku")
+volume_db = -20.0
+autoplay = true
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]

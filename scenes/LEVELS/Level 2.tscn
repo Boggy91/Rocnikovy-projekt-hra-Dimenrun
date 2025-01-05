@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://4hb0jrpcp0gy"]
+[gd_scene load_steps=62 format=3 uid="uid://4hb0jrpcp0gy"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qt1qg"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://biwumfhea1f8v" path="res://pictures/Brown Off.png" id="14_x35nt"]
 [ext_resource type="Script" path="res://scripts/lift_question_2.gd" id="16_pymul"]
 [ext_resource type="Script" path="res://scripts/lift_question_3.gd" id="17_4dhtd"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="21_xf35q"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rfioa"]
 a = Vector2(4, 68)
@@ -855,21 +856,23 @@ position = Vector2(-392, 747)
 position = Vector2(-304, 747)
 
 [node name="1" type="TextureRect" parent="Scene Objects"]
+visible = false
 z_index = -2
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -558.0
-offset_top = 139.0
-offset_right = -107.0
-offset_bottom = 177.0
+offset_left = -682.0
+offset_top = 122.0
+offset_right = -5.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_u61sl")
 expand_mode = 3
 
 [node name="2" type="TextureRect" parent="Scene Objects"]
+visible = false
 z_index = -2
 texture_filter = 1
 anchors_preset = 15
@@ -885,6 +888,7 @@ texture = ExtResource("8_rmil0")
 expand_mode = 3
 
 [node name="3" type="TextureRect" parent="Scene Objects"]
+visible = false
 z_index = -2
 texture_filter = 1
 anchors_preset = 15
@@ -1361,6 +1365,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_xf35q")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -1447,8 +1452,10 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_xf35q")
 theme_override_font_sizes/font_size = 50
-text = "GAME PAUSED"
+text = "DIMENRUN"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
 layout_mode = 1
@@ -1468,6 +1475,7 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("21_xf35q")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Resume"
@@ -1475,6 +1483,7 @@ text = "Resume"
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("21_xf35q")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Restart level"
@@ -1482,6 +1491,7 @@ text = "Restart level"
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("21_xf35q")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Main Menu"
@@ -1494,6 +1504,7 @@ offset_top = 7.0
 offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("21_xf35q")
 script = ExtResource("13_badce")
 
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_1/Question" to="Scene Objects/Lifts/Lift_question_1" method="_question_entered"]
