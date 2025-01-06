@@ -1502,7 +1502,12 @@ offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("21_xf35q")
+theme_override_font_sizes/font_size = 40
 script = ExtResource("13_badce")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
+bus = &"Music"
 
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_1/Question" to="Scene Objects/Lifts/Lift_question_1" method="_question_entered"]
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_1/Answer_A" to="Scene Objects/Lifts/Lift_question_1" method="_on_answer_a"]

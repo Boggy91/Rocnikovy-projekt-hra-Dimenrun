@@ -19,7 +19,7 @@
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="14_16m3n"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="15_dtrq3"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="16_5pp78"]
-[ext_resource type="AudioStream" uid="uid://b7snvuau3yurx" path="res://music/Level 1 (mp3cut.net) (1).mp3" id="18_0ths7"]
+[ext_resource type="AudioStream" uid="uid://b7snvuau3yurx" path="res://audio/music/Level 1 (mp3cut.net) (1).mp3" id="18_0ths7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -807,6 +807,7 @@ offset_bottom = 59.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("11_e2ag0")
+theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("14_16m3n")
@@ -847,6 +848,7 @@ texture = ExtResource("16_5pp78")
 stream = ExtResource("18_0ths7")
 volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]

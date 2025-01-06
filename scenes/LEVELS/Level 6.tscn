@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://db1p7103tx1nh"]
+[gd_scene load_steps=23 format=3 uid="uid://db1p7103tx1nh"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_cg8dq"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_n4w6a"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://dnjpo6rq7e8w1" path="res://scenes/OBJECTS/cloud.tscn" id="6_r66qg"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_aohn2"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_1vvft"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="9_iqkir"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_xrvma"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="10_fo7it"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="10_xc3bi"]
+[ext_resource type="AudioStream" uid="uid://oipuxk8hikq5" path="res://audio/music/Level 5.mp3" id="11_hb8f5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("7_aohn2")
@@ -499,6 +502,23 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Main Menu"
 
+[node name="Clock" type="Node2D" parent="UI"]
+
+[node name="Label" type="Label" parent="UI/Clock"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 960.0
+offset_right = 1093.0
+offset_bottom = 59.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("9_iqkir")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_xc3bi")
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 position = Vector2(-558, -222)
@@ -509,6 +529,12 @@ layer_0/tile_data = PackedInt32Array(2752537, 2, 4, 2818073, 2, 5, 2883609, 2, 5
 
 [node name="finish" parent="." instance=ExtResource("4_m2r5r")]
 position = Vector2(6687, -222)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_hb8f5")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]

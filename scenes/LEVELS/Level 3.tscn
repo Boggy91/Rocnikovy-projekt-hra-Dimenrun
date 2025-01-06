@@ -2982,7 +2982,11 @@ offset_right = 659.0
 offset_bottom = 66.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("16_3uqxu")
+theme_override_font_sizes/font_size = 40
 script = ExtResource("5_jt5nf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Bridges/Bridge 1/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 1/StaticBody2D" method="_on_area_2d_body_entered"]

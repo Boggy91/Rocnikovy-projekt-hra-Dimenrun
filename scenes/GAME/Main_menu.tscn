@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw0ff4jjwgvkf" path="res://pictures/cooltext468738736733838.png" id="2_468ug"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_fvnhj"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="4_b46iw"]
-[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://music/Menu.mp3" id="4_ee7v3"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="4_ee7v3"]
 
 [sub_resource type="Theme" id="Theme_rwwr3"]
 
@@ -84,13 +84,13 @@ theme_override_fonts/font = ExtResource("4_b46iw")
 theme_override_font_sizes/font_size = 28
 text = "Tutorial"
 
-[node name="Controls" type="Button" parent="Control2/VBoxContainer"]
+[node name="Settings" type="Button" parent="Control2/VBoxContainer"]
 modulate = Color(1, 0.312067, 0.993202, 1)
 layout_mode = 2
 theme = SubResource("Theme_rwwr3")
 theme_override_fonts/font = ExtResource("4_b46iw")
 theme_override_font_sizes/font_size = 28
-text = "Controls"
+text = "Settings"
 
 [node name="exit" type="Button" parent="Control2/VBoxContainer"]
 modulate = Color(0, 0.740789, 0.862487, 1)
@@ -107,5 +107,5 @@ autoplay = true
 
 [connection signal="pressed" from="Control2/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control2/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
-[connection signal="pressed" from="Control2/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Settings" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="Control2/VBoxContainer/exit" to="." method="_on_exit_pressed"]

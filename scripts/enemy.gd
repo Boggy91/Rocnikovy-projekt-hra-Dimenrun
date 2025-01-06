@@ -2,6 +2,8 @@ extends RigidBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 @onready var game_manager: Node = %"game manager"
+@onready var sfx_hit: AudioStreamPlayer = $SFX_hit
+@onready var sfx_kill: AudioStreamPlayer = $SFX_kill
 
 
 
@@ -14,13 +16,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		print(y_delta)
 		if (y_delta > 225):
 			print("Destroy enemy")
+			sfx_kill.play()
 			killed= true
 			if killed:
 				animated_sprite_2d.animation="killed"
 				$killed_timer.start()
 				body.jump()
+				
 		else:
 			print("Decrease player health")
+			sfx_hit.play()
 			game_manager.decrease_health()
 			if(x_delta >= 0):
 				body.hit(300)

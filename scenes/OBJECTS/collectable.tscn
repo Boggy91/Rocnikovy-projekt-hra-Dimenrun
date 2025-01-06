@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://c7t3uy4gfjvym"]
+[gd_scene load_steps=14 format=3 uid="uid://c7t3uy4gfjvym"]
 
 [ext_resource type="Script" path="res://scripts/collectable.gd" id="1_yu5cn"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="1_yxxcn"]
 [ext_resource type="Texture2D" uid="uid://bt8o150de256p" path="res://enemy/Desappearing (96x96).png" id="2_mbdc0"]
+[ext_resource type="AudioStream" uid="uid://o4k8qwmrmjuo" path="res://audio/SFX/pickupCoin.wav" id="4_pihxd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4pehq"]
 atlas = ExtResource("2_mbdc0")
@@ -86,6 +87,10 @@ shape = SubResource("CircleShape2D_kajki")
 
 [node name="collected" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pihxd")
+volume_db = -20.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="collected" to="." method="_on_collected_timeout"]

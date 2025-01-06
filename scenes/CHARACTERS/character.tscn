@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cg3bhudehfnxm"]
+[gd_scene load_steps=39 format=3 uid="uid://cg3bhudehfnxm"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_ciblw"]
 [ext_resource type="Texture2D" uid="uid://txso5idsc1ow" path="res://character/Appearing (96x96).png" id="2_bltcb"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c4x63mi7o2lfr" path="res://character/Jump_32x32_purple.png" id="5_mydf0"]
 [ext_resource type="Texture2D" uid="uid://cxbja306rf6uo" path="res://character/Run_32x32_purple.png" id="6_ldry1"]
 [ext_resource type="Texture2D" uid="uid://dh6vsosw5dsgn" path="res://character/Wall_Jump_32x32_purple.png" id="8_04i1r"]
+[ext_resource type="AudioStream" uid="uid://ipmlg4mo7ou4" path="res://audio/SFX/jump_3.wav" id="9_ethho"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
 atlas = ExtResource("2_bltcb")
@@ -276,6 +277,10 @@ wait_time = 0.2
 
 [node name="hit_timer" type="Timer" parent="Timers"]
 wait_time = 0.3
+
+[node name="SFX_jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ethho")
+volume_db = -20.0
 
 [connection signal="timeout" from="Timers/dash_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timers/dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://dvwu74mu3if8y"]
+[gd_scene load_steps=24 format=3 uid="uid://dvwu74mu3if8y"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_yxfup"]
 [ext_resource type="Texture2D" uid="uid://bt8o150de256p" path="res://enemy/Desappearing (96x96).png" id="2_8i8f0"]
 [ext_resource type="Texture2D" uid="uid://d1rh1j2bu6rkh" path="res://enemy/dino-idle.png" id="3_07nd4"]
 [ext_resource type="Texture2D" uid="uid://glsgn7p0g6ec" path="res://enemy/dino.png" id="4_yk54q"]
+[ext_resource type="AudioStream" uid="uid://v76gnkus4rxj" path="res://audio/SFX/hurt_1.wav" id="5_8mo7g"]
+[ext_resource type="AudioStream" uid="uid://ccu53ktaug6i8" path="res://audio/SFX/boom_1.wav" id="6_gvkmp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w76xo"]
 atlas = ExtResource("3_07nd4")
@@ -150,6 +152,15 @@ shape = SubResource("CircleShape2D_sb70c")
 
 [node name="killed_timer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="SFX_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8mo7g")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="SFX_kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_gvkmp")
+volume_db = -20.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="killed_timer" to="." method="_on_killed_timer_timeout"]

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="5_1kugh"]
 [ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_y37ui"]
-[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://music/Menu.mp3" id="9_de4s6"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="9_de4s6"]
 
 [sub_resource type="FontVariation" id="FontVariation_hl0uu"]
 base_font = ExtResource("2_g471l")

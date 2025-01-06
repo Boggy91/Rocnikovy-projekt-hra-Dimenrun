@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c2anvkguq5tpn" path="res://pictures/sammie-cabrera-thumb.jpg" id="1_kwbca"]
 [ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="1_tood8"]
-[ext_resource type="AudioStream" uid="uid://dgi6buv1pmv14" path="res://music/SEPAR - VYJEBALA RESPEKT feat. Matej Straka (prod. Infinit).mp3" id="3_0njlb"]
+[ext_resource type="AudioStream" uid="uid://dgi6buv1pmv14" path="res://audio/music/SEPAR - VYJEBALA RESPEKT feat. Matej Straka (prod. Infinit).mp3" id="3_0njlb"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_lhd75"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu87m"]

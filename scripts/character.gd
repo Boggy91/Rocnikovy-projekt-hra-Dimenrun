@@ -19,10 +19,13 @@ var is_godmode = false  # Godmode toggle
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var hit_timer: Timer = $Timers/hit_timer
+@onready var sfx_jump: AudioStreamPlayer = $SFX_jump
+
 
 func jump():
 	velocity.y = JUMP_VELOCITY
-
+	
+	
 func hit(x):
 	if not is_hit: # Prevent multiple hits at the same time
 		hit_timer.start()  # Start timer to reset the hit state
@@ -120,6 +123,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and jump_count < max_jump and not is_wall_sliding:
 		velocity.y = JUMP_VELOCITY
 		jump_count += 1
+		sfx_jump.play()
 	
 	# Dashing
 	if Input.is_action_just_pressed("dash") and can_dash:
