@@ -240,6 +240,7 @@ position = Vector2(-20, 340)
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
 position = Vector2(90, 286)
 scale = Vector2(2, 2)
+zoom = Vector2(1.6, 1.6)
 position_smoothing_enabled = true
 
 [node name="collectables" type="Node" parent="Scene Objects"]
@@ -282,10 +283,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -885.0
-offset_top = -1154.0
-offset_right = 2570.0
-offset_bottom = 820.0
+offset_left = -883.0
+offset_top = -1026.0
+offset_right = 2572.0
+offset_bottom = 948.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_iyvps")

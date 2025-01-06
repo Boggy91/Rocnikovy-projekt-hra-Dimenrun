@@ -46,6 +46,7 @@ offset_right = 1924.0
 offset_bottom = 1081.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_top = 2.0
 offset_right = 1920.0
 offset_bottom = 1082.0
@@ -97,7 +98,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LEVEL1" type="TextureRect" parent="LEVEL 1"]
 z_as_relative = false
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 180.0
