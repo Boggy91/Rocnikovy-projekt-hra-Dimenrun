@@ -252,6 +252,7 @@ script = SubResource("GDScript_skkmn")
 stream = ExtResource("9_de4s6")
 volume_db = -23.424
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Scoreboard" to="." method="_on_scoreboard_pressed"]
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]

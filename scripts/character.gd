@@ -113,6 +113,7 @@ func _physics_process(delta: float) -> void:
 	# Handle wall jump
 	if Input.is_action_just_pressed("jump") and is_wall_sliding:
 		if wall_jump_direction != last_wall_side:
+			sfx_jump.play()
 			velocity.y = JUMP_VELOCITY
 			velocity.x = wall_jump_direction * SPEED
 			is_wall_sliding = false

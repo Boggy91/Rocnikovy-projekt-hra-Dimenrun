@@ -104,6 +104,7 @@ text = "Exit"
 stream = ExtResource("4_ee7v3")
 volume_db = -23.424
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Control2/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control2/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
