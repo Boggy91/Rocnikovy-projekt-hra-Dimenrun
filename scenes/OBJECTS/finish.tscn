@@ -1,7 +1,28 @@
-[gd_scene load_steps=13 format=3 uid="uid://gj5ew8632cl6"]
+[gd_scene load_steps=19 format=3 uid="uid://gj5ew8632cl6"]
 
 [ext_resource type="Texture2D" uid="uid://k0r8uo8pyg3p" path="res://collectable/End (Pressed) (64x64).png" id="1_147et"]
 [ext_resource type="Script" path="res://scripts/finish.gd" id="1_haedr"]
+[ext_resource type="Texture2D" uid="uid://txso5idsc1ow" path="res://character/Appearing (96x96).png" id="2_rviqq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotml"]
+atlas = ExtResource("2_rviqq")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ohfd"]
+atlas = ExtResource("2_rviqq")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yliuh"]
+atlas = ExtResource("2_rviqq")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ugxm"]
+atlas = ExtResource("2_rviqq")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krdw5"]
+atlas = ExtResource("2_rviqq")
+region = Rect2(0, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00cf7"]
 atlas = ExtResource("1_147et")
@@ -37,6 +58,26 @@ region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8g63d"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iotml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ohfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yliuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ugxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krdw5")
+}],
+"loop": true,
+"name": &"Finished",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_00cf7")
@@ -76,11 +117,16 @@ script = ExtResource("1_haedr")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_8g63d")
+animation = &"Finished"
 autoplay = "default"
-frame_progress = 0.108403
+frame_progress = 0.0680437
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_hcc8e")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

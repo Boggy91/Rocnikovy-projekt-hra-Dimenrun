@@ -12,8 +12,8 @@ func _ready() -> void:
 	add_items()
 
 	# Set sliders to saved positions
-	var music_slider = $GridContainer/MusicSlider
-	var sfx_slider = $GridContainer/SFXSlider
+	var music_slider = $Volume/MusicSlider
+	var sfx_slider = $Volume/SFXSlider
 
 	if not music_slider:
 		print("Error: MusicSlider node not found.")

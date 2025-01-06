@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://mku8yyg6kebt"]
+[gd_scene load_steps=12 format=3 uid="uid://mku8yyg6kebt"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_qu2u7"]
 [ext_resource type="Script" path="res://scripts/locked_level.gd" id="1_ydp0w"]
 [ext_resource type="Texture2D" uid="uid://dllov3rnw36a5" path="res://pictures/Hefty Padlock - GOLD - Spritesheet.png" id="2_5s8yg"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_udd3q"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="5_2bf8y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86er1"]
 atlas = ExtResource("2_5s8yg")
@@ -100,5 +101,11 @@ scale = Vector2(15, 12.09)
 sprite_frames = SubResource("SpriteFrames_pfsov")
 autoplay = "default"
 frame_progress = 0.528488
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2bf8y")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="LevelMenu" to="." method="_on_level_menu_pressed"]

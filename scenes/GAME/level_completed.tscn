@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlsk2h2n8q177"]
+[gd_scene load_steps=8 format=3 uid="uid://dlsk2h2n8q177"]
 
 [ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_idi4q"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_4lt5e"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_5i7ok"]
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="4_5ia3o"]
+[ext_resource type="AudioStream" uid="uid://bln28t4immdd4" path="res://audio/SFX/success-music-moody-fanfare-gfx-sounds-1-00-06.mp3" id="5_mh13w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vt186"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
@@ -156,6 +157,12 @@ layout_mode = 2
 size_flags_horizontal = 8
 texture = ExtResource("4_5ia3o")
 expand_mode = 2
+
+[node name="SFX_Finish" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mh13w")
+volume_db = -20.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Next Level" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="LEVEL COMPLETED PANEL/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
