@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://crmg2exsydjpm"]
+[gd_scene load_steps=6 format=3 uid="uid://c21e4hfsgdv8w"]
 
 [ext_resource type="Texture2D" uid="uid://c2anvkguq5tpn" path="res://pictures/sammie-cabrera-thumb.jpg" id="1_kwbca"]
 [ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="1_tood8"]
 [ext_resource type="AudioStream" uid="uid://dgi6buv1pmv14" path="res://music/SEPAR - VYJEBALA RESPEKT feat. Matej Straka (prod. Infinit).mp3" id="3_0njlb"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_lhd75"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu87m"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
@@ -13,20 +14,24 @@ corner_radius_bottom_left = 10
 
 [node name="You died" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
 texture_filter = 1
-offset_right = 2442.0
-offset_bottom = 1300.0
-scale = Vector2(0.5, 0.5)
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_kwbca")
+expand_mode = 1
 
 [node name="You died panel" type="Panel" parent="."]
 unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1.0
-offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tood8")
@@ -35,52 +40,65 @@ script = ExtResource("1_tood8")
 modulate = Color(1, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.347
-anchor_top = 0.353
-anchor_right = 0.653
-anchor_bottom = 0.459
-offset_left = 0.908997
-offset_top = 0.196991
-offset_right = 0.0909424
-offset_bottom = 0.190979
+anchor_left = 0.301042
+anchor_top = 0.276852
+anchor_right = 0.70625
+anchor_bottom = 0.560185
+offset_right = -389.0
+offset_bottom = -130.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("3_lhd75")
 theme_override_font_sizes/font_size = 50
-text = "   YOU DIED :("
+text = "YOU DIED"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="You died panel"]
+[node name="Control2" type="Control" parent="You died panel"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 960.0
+offset_bottom = 544.0
+scale = Vector2(2, 2)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="You died panel/Control2"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.358
-anchor_top = 0.444
-anchor_right = 0.642
-anchor_bottom = 0.556
-offset_left = -4.77402
-offset_top = 42.956
-offset_right = -5.22601
-offset_bottom = 90.044
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = 8.5
+offset_right = 233.5
+offset_bottom = 110.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 theme_override_constants/separation = 15
 
-[node name="Restart Level" type="Button" parent="You died panel/VBoxContainer"]
+[node name="Restart Level" type="Button" parent="You died panel/Control2/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lhd75")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
 text = "Restart Level"
 
-[node name="Menu" type="Button" parent="You died panel/VBoxContainer"]
+[node name="Menu" type="Button" parent="You died panel/Control2/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lhd75")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
-text = "Level Menu"
+text = "Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0njlb")
 volume_db = -20.0
 autoplay = true
 
-[connection signal="pressed" from="You died panel/VBoxContainer/Restart Level" to="You died panel" method="_on_restart_level_pressed"]
-[connection signal="pressed" from="You died panel/VBoxContainer/Menu" to="You died panel" method="_on_menu_pressed"]
+[connection signal="pressed" from="You died panel/Control2/VBoxContainer/Restart Level" to="You died panel" method="_on_restart_level_pressed"]
+[connection signal="pressed" from="You died panel/Control2/VBoxContainer/Menu" to="You died panel" method="_on_menu_pressed"]

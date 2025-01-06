@@ -12,6 +12,9 @@ func _on_area_2d_body_entered(body: Node):
 		print("YOU DIED")
 		SceneManager.switch_scene("res://scenes/GAME/you_died.tscn")
 		queue_free()
+		
+	else:
+		queue_free()
 
 
 func _on_player_detect_body_entered(body: Node2D) -> void:

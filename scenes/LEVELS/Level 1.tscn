@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bbuwunnuyrh7i"]
+[gd_scene load_steps=41 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ikuo0"]
 [ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/OBJECTS/FallingSpikes.tscn" id="2_xyq1m"]
@@ -10,13 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="8_jwebe"]
 [ext_resource type="Script" path="res://scripts/lava_reset.gd" id="9_t17fx"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="10_jn3ui"]
+[ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="11_006gw"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="11_e2ag0"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="11_pt5no"]
+[ext_resource type="PackedScene" uid="uid://bvssenegee40u" path="res://scenes/OBJECTS/mooving_platform.tscn" id="12_7ei8j"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="12_d4cv8"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="13_fmkl8"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="14_16m3n"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="15_dtrq3"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="16_5pp78"]
-[ext_resource type="AudioStream" uid="uid://doiepb1lqyo2l" path="res://music/Level 1.mp3" id="17_xl4ku"]
+[ext_resource type="AudioStream" uid="uid://b7snvuau3yurx" path="res://music/Level 1 (mp3cut.net) (1).mp3" id="18_0ths7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]
 a = Vector2(4, 56)
@@ -316,6 +319,12 @@ sources/0 = SubResource("TileSetAtlasSource_652d0")
 a = Vector2(0, -3)
 b = Vector2(66, 58)
 
+[sub_resource type="Curve2D" id="Curve2D_wfvjb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 2, 0, 0, 0, 0, 302, -261)
+}
+point_count = 2
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("11_pt5no")
 region = Rect2(0, 0, 15, 13)
@@ -381,6 +390,7 @@ position = Vector2(-40, 352)
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
 position = Vector2(90, 286)
 scale = Vector2(2, 2)
+zoom = Vector2(1.6, 1.6)
 position_smoothing_enabled = true
 
 [node name="collectables" type="Node" parent="Scene Objects"]
@@ -578,30 +588,32 @@ shape = SubResource("SegmentShape2D_mxtuk")
 
 [node name="traps" type="Node" parent="Scene Objects"]
 
-[node name="Spikes2" type="Node" parent="Scene Objects/traps"]
+[node name="Spikes" type="Node" parent="Scene Objects/traps"]
 
-[node name="Spikes" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+[node name="Spikes" parent="Scene Objects/traps/Spikes" instance=ExtResource("3_jodjv")]
 position = Vector2(1700, -93)
 
-[node name="Spikes2" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+[node name="Spikes2" parent="Scene Objects/traps/Spikes" instance=ExtResource("3_jodjv")]
 position = Vector2(1700, -93)
 
-[node name="Spikes3" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+[node name="Spikes3" parent="Scene Objects/traps/Spikes" instance=ExtResource("3_jodjv")]
 position = Vector2(959, -62)
 
-[node name="Spikes4" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+[node name="Spikes4" parent="Scene Objects/traps/Spikes" instance=ExtResource("3_jodjv")]
 position = Vector2(1021, -62)
 
-[node name="Spikes5" parent="Scene Objects/traps/Spikes2" instance=ExtResource("3_jodjv")]
+[node name="Spikes5" parent="Scene Objects/traps/Spikes" instance=ExtResource("3_jodjv")]
 position = Vector2(1083, -62)
 
 [node name="FallingSpikes" type="Node" parent="Scene Objects/traps"]
 
 [node name="FallingSpikes" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
 position = Vector2(65, 82)
+scale = Vector2(0.8, 0.8)
 
 [node name="FallingSpikes3" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
 position = Vector2(609, 144)
+scale = Vector2(0.8, 0.8)
 
 [node name="FallingSpikes4" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
 position = Vector2(873, -14)
@@ -610,6 +622,21 @@ scale = Vector2(0.8, 0.8)
 [node name="FallingSpikes2" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("2_xyq1m")]
 position = Vector2(2385, 178)
 scale = Vector2(0.5, 0.5)
+
+[node name="FallingSpikesLong" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("11_006gw")]
+position = Vector2(305, -367)
+scale = Vector2(0.9, 0.9)
+
+[node name="FallingSpikesLong2" parent="Scene Objects/traps/FallingSpikes" instance=ExtResource("11_006gw")]
+position = Vector2(373, -367)
+scale = Vector2(0.9, 0.9)
+
+[node name="mooving platforms" type="Node" parent="Scene Objects"]
+
+[node name="Path2D" parent="Scene Objects/mooving platforms" instance=ExtResource("12_7ei8j")]
+position = Vector2(749, -395)
+curve = SubResource("Curve2D_wfvjb")
+loop = false
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -636,6 +663,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -722,8 +750,11 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
 layout_mode = 1
@@ -743,6 +774,7 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Resume"
@@ -750,6 +782,7 @@ text = "Resume"
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Restart level"
@@ -757,6 +790,7 @@ text = "Restart level"
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("11_e2ag0")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_08rtw")
 text = "Main Menu"
@@ -764,11 +798,17 @@ text = "Main Menu"
 [node name="Clock" type="Node2D" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
-offset_left = 526.0
-offset_top = 7.0
-offset_right = 659.0
-offset_bottom = 66.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 960.0
+offset_right = 1093.0
+offset_bottom = 59.0
+grow_horizontal = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("11_e2ag0")
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("14_16m3n")
 
 [node name="Background" type="Node" parent="."]
@@ -777,6 +817,7 @@ script = ExtResource("14_16m3n")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Parallax2D"]
 motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(3500, 0)
 
 [node name="TextureRect" type="TextureRect" parent="Background/Parallax2D/ParallaxLayer"]
 texture_filter = 1
@@ -803,7 +844,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("16_5pp78")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("17_xl4ku")
+stream = ExtResource("18_0ths7")
 volume_db = -20.0
 autoplay = true
 

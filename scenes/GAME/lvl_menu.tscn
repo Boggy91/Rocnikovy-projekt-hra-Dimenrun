@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=15 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="5_1kugh"]
 [ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_y37ui"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://music/Menu.mp3" id="9_de4s6"]
 
 [sub_resource type="FontVariation" id="FontVariation_hl0uu"]
 base_font = ExtResource("2_g471l")
@@ -38,28 +39,44 @@ func _process(delta: float) -> void:
 [node name="lvl_menu" type="Node"]
 script = ExtResource("1_d3p8g")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1924.0
+offset_bottom = 1081.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
 offset_top = 2.0
-offset_right = 2450.0
-offset_bottom = 1310.0
-scale = Vector2(0.5, 0.5)
+offset_right = 1920.0
+offset_bottom = 1082.0
 texture = ExtResource("1_hrt6u")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Scoreboard" type="Button" parent="."]
 modulate = Color(1, 0.317647, 0.792157, 1)
-offset_left = 1009.0
-offset_top = 32.0
-offset_right = 1133.0
-offset_bottom = 74.0
+anchors_preset = -1
+anchor_left = 0.918
+anchor_top = 0.055
+anchor_right = 0.982
+anchor_bottom = 0.094
+offset_left = -0.560059
+offset_top = -0.400005
+offset_right = 0.559937
+offset_bottom = -0.520004
+grow_horizontal = 0
 theme_override_fonts/font = SubResource("FontVariation_hl0uu")
 text = "Scoreboard"
 
 [node name="Total Time lvl menu" type="Label" parent="."]
-offset_left = 537.0
-offset_top = 16.0
-offset_right = 668.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_top = 22.0
+offset_right = 66.0
 offset_bottom = 53.0
+grow_horizontal = 2
 theme_override_fonts/font = SubResource("FontVariation_0be5u")
 script = ExtResource("2_je0rc")
 
@@ -67,10 +84,10 @@ script = ExtResource("2_je0rc")
 modulate = Color(1, 0.315719, 0.791177, 1)
 texture_filter = 1
 anchors_preset = -1
-anchor_left = 0.0173611
-anchor_top = 0.058642
-anchor_right = 0.105903
-anchor_bottom = 0.126543
+anchor_left = 0.0171875
+anchor_top = 0.0583333
+anchor_right = 0.0817708
+anchor_bottom = 0.10463
 size_flags_horizontal = 0
 theme_override_fonts/font = SubResource("FontVariation_kllfe")
 text = "Main Menu"
@@ -80,148 +97,165 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LEVEL1" type="TextureRect" parent="LEVEL 1"]
 z_as_relative = false
-offset_left = 177.0
-offset_top = 147.0
-offset_right = 357.0
-offset_bottom = 247.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 180.0
+offset_top = 150.0
+offset_right = -1560.0
+offset_bottom = -830.0
+scale = Vector2(2, 2)
 texture = ExtResource("4_h85ai")
 expand_mode = 1
 
-[node name="lvl1" type="Button" parent="LEVEL 1/LEVEL1"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 180.0
-offset_bottom = 98.0
+[node name="lvl1" type="Button" parent="LEVEL 1"]
+offset_left = 180.0
+offset_top = 150.0
+offset_right = 360.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
 
-[node name="Label" type="Label" parent="LEVEL 1/LEVEL1/lvl1"]
-layout_mode = 0
-offset_left = 41.0
-offset_top = -36.0
-offset_right = 133.0
-offset_bottom = 6.0
+[node name="Label" type="Label" parent="LEVEL 1"]
+offset_left = 260.0
+offset_top = 80.0
+offset_right = 350.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
 theme_override_fonts/font = SubResource("FontVariation_i57og")
 theme_override_font_sizes/font_size = 30
 text = "LVL 1"
 
 [node name="LEVEL 2" type="Node" parent="."]
 
-[node name="LEVEL2" type="TextureRect" parent="LEVEL 2"]
-z_as_relative = false
-offset_left = 420.0
-offset_top = 144.0
-offset_right = 593.0
-offset_bottom = 246.0
-texture = ExtResource("5_1kugh")
-expand_mode = 1
-
-[node name="lvl2" type="Button" parent="LEVEL 2/LEVEL2"]
-layout_mode = 0
-offset_left = -2.0
-offset_right = 176.0
-offset_bottom = 101.0
-script = SubResource("GDScript_skkmn")
-
-[node name="Label" type="Label" parent="LEVEL 2/LEVEL2/lvl2"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = -40.0
-offset_right = 135.0
-offset_bottom = 2.0
+[node name="Label" type="Label" parent="LEVEL 2"]
+offset_left = 660.0
+offset_top = 80.0
+offset_right = 750.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 30
 text = "LVL 2"
 
-[node name="LEVEL 3" type="Node" parent="."]
-
-[node name="LEVEL3" type="TextureRect" parent="LEVEL 3"]
+[node name="LEVEL2" type="TextureRect" parent="LEVEL 2"]
 z_as_relative = false
-offset_left = 648.0
-offset_top = 145.0
-offset_right = 827.0
-offset_bottom = 243.0
-texture = ExtResource("5_xh4e1")
+offset_left = 580.0
+offset_top = 150.0
+offset_right = 760.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
+texture = ExtResource("5_1kugh")
 expand_mode = 1
 
-[node name="lvl3" type="Button" parent="LEVEL 3/LEVEL3"]
-layout_mode = 0
-offset_right = 178.0
-offset_bottom = 99.0
+[node name="lvl2" type="Button" parent="LEVEL 2"]
+offset_left = 580.0
+offset_top = 150.0
+offset_right = 760.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
 
-[node name="Label" type="Label" parent="LEVEL 3/LEVEL3/lvl3"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = -38.0
-offset_right = 133.0
-offset_bottom = 4.0
+[node name="LEVEL 3" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="LEVEL 3"]
+offset_left = 1060.0
+offset_top = 80.0
+offset_right = 1150.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 30
 text = "LVL 3"
 
+[node name="LEVEL3" type="TextureRect" parent="LEVEL 3"]
+z_as_relative = false
+offset_left = 980.0
+offset_top = 150.0
+offset_right = 1160.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
+texture = ExtResource("5_xh4e1")
+expand_mode = 1
+
+[node name="lvl3" type="Button" parent="LEVEL 3"]
+offset_left = 980.0
+offset_top = 150.0
+offset_right = 1160.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
+script = SubResource("GDScript_skkmn")
+
 [node name="LEVEL 4" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="LEVEL 4"]
+offset_left = 1460.0
+offset_top = 80.0
+offset_right = 1550.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_g471l")
+theme_override_font_sizes/font_size = 30
+text = "LVL 4"
 
 [node name="LEVEL4" type="TextureRect" parent="LEVEL 4"]
 z_as_relative = false
 texture_filter = 1
-offset_left = 888.0
-offset_top = 145.0
-offset_right = 1066.0
-offset_bottom = 242.0
+offset_left = 1380.0
+offset_top = 150.0
+offset_right = 1560.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
 texture = ExtResource("6_y37ui")
 expand_mode = 1
 
-[node name="lvl4" type="Button" parent="LEVEL 4/LEVEL4"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 179.0
-offset_bottom = 97.0
+[node name="lvl4" type="Button" parent="LEVEL 4"]
+offset_left = 1380.0
+offset_top = 150.0
+offset_right = 1560.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
-
-[node name="Label" type="Label" parent="LEVEL 4/LEVEL4/lvl4"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = -39.0
-offset_right = 129.0
-offset_bottom = 3.0
-theme_override_fonts/font = ExtResource("2_g471l")
-theme_override_font_sizes/font_size = 30
-text = "LVL 4"
 
 [node name="LEVEL 5" type="Node" parent="."]
 
 [node name="LEVEL5" type="TextureRect" parent="LEVEL 5"]
 z_as_relative = false
 texture_filter = 1
-offset_left = 176.0
-offset_top = 307.0
-offset_right = 354.0
-offset_bottom = 404.0
+offset_left = 180.0
+offset_top = 500.0
+offset_right = 360.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
 texture = ExtResource("6_y37ui")
 expand_mode = 1
 
-[node name="lvl5" type="Button" parent="LEVEL 5/LEVEL5"]
-layout_mode = 0
-offset_top = -2.0
-offset_right = 178.0
-offset_bottom = 96.0
-script = SubResource("GDScript_skkmn")
-
-[node name="Label" type="Label" parent="LEVEL 5/LEVEL5/lvl5"]
-layout_mode = 0
-offset_left = 38.0
-offset_top = -35.0
-offset_right = 127.0
-offset_bottom = 7.0
+[node name="Label" type="Label" parent="LEVEL 5"]
+offset_left = 260.0
+offset_top = 430.0
+offset_right = 350.0
+offset_bottom = 470.0
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 30
 text = "LVL 5"
 
+[node name="lvl5" type="Button" parent="LEVEL 5"]
+offset_left = 180.0
+offset_top = 500.0
+offset_right = 360.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
+script = SubResource("GDScript_skkmn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_de4s6")
+volume_db = -23.424
+autoplay = true
+
 [connection signal="pressed" from="Scoreboard" to="." method="_on_scoreboard_pressed"]
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="LEVEL 1/LEVEL1/lvl1" to="." method="_on_lvl_1_pressed"]
-[connection signal="pressed" from="LEVEL 2/LEVEL2/lvl2" to="." method="_on_lvl_2_pressed"]
-[connection signal="pressed" from="LEVEL 3/LEVEL3/lvl3" to="." method="_on_lvl_3_pressed"]
-[connection signal="pressed" from="LEVEL 4/LEVEL4/lvl4" to="." method="_on_lvl_4_pressed"]
-[connection signal="pressed" from="LEVEL 5/LEVEL5/lvl5" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="LEVEL 1/lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="LEVEL 2/lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="LEVEL 3/lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="LEVEL 4/lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="LEVEL 5/lvl5" to="." method="_on_lvl_4_pressed"]

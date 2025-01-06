@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cen2yiieeunyw"]
+[gd_scene load_steps=7 format=3 uid="uid://57oqg1a4ngda"]
 
 [ext_resource type="Script" path="res://dialogue/main_menu.gd" id="1_318of"]
 [ext_resource type="Texture2D" uid="uid://bw0ff4jjwgvkf" path="res://pictures/cooltext468738736733838.png" id="2_468ug"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_fvnhj"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="4_b46iw"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://music/Menu.mp3" id="4_ee7v3"]
 
 [sub_resource type="Theme" id="Theme_rwwr3"]
@@ -10,19 +11,24 @@
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_318of")
 
-[node name="bg" type="TextureRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1926.0
+offset_bottom = 1073.0
+
+[node name="bg" type="TextureRect" parent="Control"]
 texture_filter = 1
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 1230.0
-offset_bottom = 663.0
+offset_right = -6.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_fvnhj")
+expand_mode = 1
 
 [node name="Dimenrun" type="TextureRect" parent="."]
 anchors_preset = 8
@@ -30,54 +36,67 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -301.0
-offset_top = -206.0
-offset_right = 301.0
-offset_bottom = -64.0
+offset_left = -461.0
+offset_top = -266.0
+offset_right = 141.0
+offset_bottom = -124.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_468ug")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = -1
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1083.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.654
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.654
-offset_left = -153.0
-offset_top = -123.792
-offset_right = 163.0
-offset_bottom = 85.208
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -38.5
+offset_right = 82.0
+offset_bottom = 164.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 13
 
-[node name="play" type="Button" parent="VBoxContainer"]
+[node name="play" type="Button" parent="Control2/VBoxContainer"]
 modulate = Color(0.0132258, 0.728973, 0.953487, 1)
 layout_mode = 2
 theme = SubResource("Theme_rwwr3")
+theme_override_fonts/font = ExtResource("4_b46iw")
 theme_override_font_sizes/font_size = 28
 text = "PLAY"
 
-[node name="tutorial" type="Button" parent="VBoxContainer"]
+[node name="tutorial" type="Button" parent="Control2/VBoxContainer"]
 modulate = Color(1, 0.312067, 0.993202, 1)
 layout_mode = 2
 theme = SubResource("Theme_rwwr3")
+theme_override_fonts/font = ExtResource("4_b46iw")
 theme_override_font_sizes/font_size = 28
 text = "Tutorial"
 
-[node name="Controls" type="Button" parent="VBoxContainer"]
+[node name="Controls" type="Button" parent="Control2/VBoxContainer"]
 modulate = Color(1, 0.312067, 0.993202, 1)
 layout_mode = 2
 theme = SubResource("Theme_rwwr3")
+theme_override_fonts/font = ExtResource("4_b46iw")
 theme_override_font_sizes/font_size = 28
 text = "Controls"
 
-[node name="exit" type="Button" parent="VBoxContainer"]
+[node name="exit" type="Button" parent="Control2/VBoxContainer"]
 modulate = Color(0, 0.740789, 0.862487, 1)
 layout_mode = 2
 theme = SubResource("Theme_rwwr3")
+theme_override_fonts/font = ExtResource("4_b46iw")
 theme_override_font_sizes/font_size = 28
 text = "Exit"
 
@@ -86,7 +105,7 @@ stream = ExtResource("4_ee7v3")
 volume_db = -23.424
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
-[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
-[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/exit" to="." method="_on_exit_pressed"]

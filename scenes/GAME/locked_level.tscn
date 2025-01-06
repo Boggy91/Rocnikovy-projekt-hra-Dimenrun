@@ -52,25 +52,23 @@ animations = [{
 script = ExtResource("1_ydp0w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 2550.0
-offset_bottom = 1294.0
-scale = Vector2(0.5, 0.5)
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_qu2u7")
+expand_mode = 1
 
 [node name="Panel14" type="Panel" parent="TextureRect"]
 texture_filter = 1
 layout_mode = 0
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 2558.0
-offset_bottom = 1300.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="Label" type="Label" parent="TextureRect/Panel14"]
 layout_mode = 0
-offset_left = -130.0
-offset_top = 648.0
-offset_right = 2461.0
-offset_bottom = 992.0
+offset_left = -3.0
+offset_top = 538.0
+offset_right = 1921.0
+offset_bottom = 805.0
 theme_override_colors/font_color = Color(1, 1, 0.909804, 1)
 theme_override_fonts/font = ExtResource("3_udd3q")
 theme_override_font_sizes/font_size = 45
@@ -97,8 +95,8 @@ text = "Level Menu"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(598, 208)
-scale = Vector2(8.875, 7.15323)
+position = Vector2(960, 300)
+scale = Vector2(15, 12.09)
 sprite_frames = SubResource("SpriteFrames_pfsov")
 autoplay = "default"
 frame_progress = 0.528488

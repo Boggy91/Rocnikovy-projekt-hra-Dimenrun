@@ -10,25 +10,25 @@ metadata/_edit_vertical_guides_ = [164.0]
 metadata/_edit_horizontal_guides_ = [1310.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 2550.0
-offset_bottom = 1294.0
-scale = Vector2(0.5, 0.5)
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_3xrby")
+expand_mode = 1
 
 [node name="Panel14" type="Panel" parent="TextureRect"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 650.0
-offset_top = 82.0
-offset_right = 1820.0
-offset_bottom = 1160.0
+offset_left = 371.0
+offset_top = 33.0
+offset_right = 1541.0
+offset_bottom = 982.0
 
 [node name="Label" type="Label" parent="TextureRect/Panel14"]
 texture_filter = 1
 layout_mode = 0
 offset_left = -226.0
-offset_top = -112.0
-offset_right = 1416.0
+offset_top = -219.0
+offset_right = 1396.0
 offset_bottom = 1186.0
 theme_override_fonts/font = ExtResource("3_klp7k")
 theme_override_font_sizes/font_size = 30
@@ -60,17 +60,19 @@ vertical_alignment = 1
 
 [node name="main_menu" type="Button" parent="."]
 modulate = Color(0.113725, 1, 1, 1)
+texture_filter = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -61.0
-offset_right = 98.0
-offset_bottom = -25.0
+offset_left = -107.0
+offset_top = -84.0
+offset_right = 1.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("3_klp7k")
 text = "Main Menu"
 

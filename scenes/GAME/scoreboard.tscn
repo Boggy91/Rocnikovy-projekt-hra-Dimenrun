@@ -8,10 +8,10 @@
 script = ExtResource("1_xgx1e")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 2550.0
-offset_bottom = 1294.0
-scale = Vector2(0.5, 0.5)
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_eekoe")
+expand_mode = 1
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = -1
@@ -34,7 +34,7 @@ offset_right = -2.5
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0, 0.968627, 1)
 theme_override_fonts/font = ExtResource("3_c64cs")
-theme_override_font_sizes/font_size = 29
+theme_override_font_sizes/font_size = 50
 text = "SCOREBOARD"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -61,7 +61,7 @@ offset_top = -36.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_c64cs")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 31
 text = "Level Menu"
 
 [connection signal="pressed" from="LevelMenu" to="." method="_on_level_menu_pressed"]

@@ -344,6 +344,7 @@ scroll_offset = Vector2(436, -50)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/Parallax2D2"]
 motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(3190, 0)
 
 [node name="TextureRect" type="TextureRect" parent="Background/Parallax2D2/ParallaxLayer2"]
 texture_filter = 1
