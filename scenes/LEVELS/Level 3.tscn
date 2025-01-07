@@ -1940,6 +1940,7 @@ position = Vector2(-20, 340)
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
 position = Vector2(90, 286)
 scale = Vector2(2, 2)
+zoom = Vector2(1.6, 1.6)
 position_smoothing_enabled = true
 
 [node name="collectables" type="Node" parent="Scene Objects"]
@@ -2809,7 +2810,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("17_nk7ee")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/background"]
-motion_scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0.6, 0.5)
 motion_mirroring = Vector2(2400, 0)
 
 [node name="TextureRect" type="Sprite2D" parent="Background/background/ParallaxLayer4"]
