@@ -758,6 +758,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_sy85j")
 expand_mode = 3
+flip_h = true
 
 [node name="TextureRect3" type="TextureRect" parent="Background"]
 texture_filter = 1
@@ -772,6 +773,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_sy85j")
 expand_mode = 3
+flip_h = true
 
 [node name="TextureRect4" type="TextureRect" parent="Background"]
 texture_filter = 1
@@ -800,6 +802,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_sy85j")
 expand_mode = 3
+flip_h = true
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
