@@ -18,10 +18,12 @@ func _on_lvl_3_pressed() -> void:
 func _on_lvl_4_pressed() -> void:
 	access_level(3, "res://scenes/LEVELS/Level 4.tscn")
 	
-
 func _on_lvl_5_pressed()-> void:
 	access_level(4, "res://scenes/LEVELS/Level 5.tscn")
 
+func _on_lvl_6_pressed() -> void:
+	access_level(4, "res://scenes/LEVELS/Level 6.tscn")
+	
 func access_level(level_index: int, level_path: String) -> void:
 	if Global.is_level_unlocked(level_index):
 		Global.set_current_level(level_index)

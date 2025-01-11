@@ -1,0 +1,145 @@
+[gd_scene load_steps=17 format=3 uid="uid://kd306nm1y02x"]
+
+[ext_resource type="Texture2D" uid="uid://bp18gucsc2k4c" path="res://map/traps/On (38x38).png" id="1_otneo"]
+[ext_resource type="Script" path="res://scripts/mooving_saw.gd" id="1_svju2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id0q7"]
+atlas = ExtResource("1_otneo")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgurf"]
+atlas = ExtResource("1_otneo")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx8ta"]
+atlas = ExtResource("1_otneo")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yse70"]
+atlas = ExtResource("1_otneo")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gunq5"]
+atlas = ExtResource("1_otneo")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhxas"]
+atlas = ExtResource("1_otneo")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcphi"]
+atlas = ExtResource("1_otneo")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl1dt"]
+atlas = ExtResource("1_otneo")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uky5d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id0q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgurf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx8ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yse70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gunq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhxas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcphi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl1dt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 27.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tb4wh"]
+radius = 39.0128
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gdkww"]
+radius = 39.0128
+
+[sub_resource type="Animation" id="Animation_hdab1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6bwba"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.55, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g732g"]
+_data = {
+"RESET": SubResource("Animation_hdab1"),
+"move": SubResource("Animation_6bwba")
+}
+
+[node name="Path2D" type="Path2D"]
+script = ExtResource("1_svju2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_uky5d")
+autoplay = "default"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("CircleShape2D_tb4wh")
+
+[node name="Area2D" type="Area2D" parent="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D/Area2D"]
+shape = SubResource("CircleShape2D_gdkww")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_g732g")
+}
+
+[connection signal="body_entered" from="AnimatableBody2D/Area2D" to="." method="_on_area_2d_body_entered"]

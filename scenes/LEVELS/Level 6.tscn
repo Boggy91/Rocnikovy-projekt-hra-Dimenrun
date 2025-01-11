@@ -294,6 +294,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_iyvps")
 expand_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Clouds" type="Node" parent="Scene Objects"]
 
