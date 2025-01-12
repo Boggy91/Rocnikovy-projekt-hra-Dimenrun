@@ -39,7 +39,7 @@ func save_level_stats(points: int, time: float) -> void:
 func _on_next_level_pressed() -> void:
 	var next_level_path = Global.get_next_level()
 	if next_level_path != "":
-		get_tree().change_scene_to_file(next_level_path)
+		SceneManager.switch_scene(next_level_path)
 	else:
 		print("No more levels available!")
 

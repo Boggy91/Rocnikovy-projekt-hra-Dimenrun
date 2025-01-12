@@ -927,7 +927,6 @@ layer_0/tile_data = PackedInt32Array(4325372, 196610, 9, 4259836, 131074, 9, 419
 position = Vector2(55, 542)
 curve = SubResource("Curve2D_eedae")
 loop = false
-speed = 1.5
 speed_scale = 0.8
 
 [node name="Path2D2" parent="Scene Objects/Platforms" instance=ExtResource("13_2owxd")]

@@ -115,6 +115,7 @@ _data = {
 script = ExtResource("1_svju2")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
+visible = false
 rotates = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
