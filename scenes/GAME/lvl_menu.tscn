@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=25 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" path="res://scripts/total_time_lvl_menu.gd" id="2_je0rc"]
 [ext_resource type="Texture2D" uid="uid://cyo54f6tq5yre" path="res://pictures/Captura de pantalla 2025-01-05 195908.jpg" id="4_h85ai"]
 [ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="5_1kugh"]
+[ext_resource type="Script" path="res://scripts/total_points_lvl_menu.gd" id="5_3tm0a"]
 [ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
+[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_6crv7"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="8_hot5b"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="9_de4s6"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="9_t8edb"]
@@ -17,6 +19,49 @@ base_font = ExtResource("2_g471l")
 
 [sub_resource type="FontVariation" id="FontVariation_0be5u"]
 base_font = ExtResource("2_g471l")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
+atlas = ExtResource("6_6crv7")
+region = Rect2(0, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
+atlas = ExtResource("6_6crv7")
+region = Rect2(15, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
+atlas = ExtResource("6_6crv7")
+region = Rect2(30, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
+atlas = ExtResource("6_6crv7")
+region = Rect2(45, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
+atlas = ExtResource("6_6crv7")
+region = Rect2(60, 0, 15, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uyv1n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjg1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2yox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw3jx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jc7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbl86")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="FontVariation" id="FontVariation_kllfe"]
 base_font = ExtResource("2_g471l")
@@ -75,13 +120,31 @@ text = "Scoreboard"
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -65.0
-offset_top = 22.0
-offset_right = 66.0
-offset_bottom = 53.0
+offset_left = -186.0
+offset_top = 26.0
+offset_right = -55.0
+offset_bottom = 57.0
 grow_horizontal = 2
 theme_override_fonts/font = SubResource("FontVariation_0be5u")
 script = ExtResource("2_je0rc")
+
+[node name="Total Points lvl menu" type="Label" parent="."]
+offset_left = 1002.0
+offset_top = 18.0
+offset_right = 1169.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("2_g471l")
+theme_override_font_sizes/font_size = 29
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("5_3tm0a")
+
+[node name="points" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1037, 35)
+scale = Vector2(2.55, 2.59615)
+sprite_frames = SubResource("SpriteFrames_uyv1n")
+autoplay = "default"
 
 [node name="main_menu" type="Button" parent="."]
 modulate = Color(1, 0.315719, 0.791177, 1)

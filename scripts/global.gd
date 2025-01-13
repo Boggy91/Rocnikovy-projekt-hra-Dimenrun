@@ -3,7 +3,8 @@ extends Node
 var total_time: float = 0.0  # Total time spent across all levels
 var level_time: float = 0.0  # Time spent in the current level
 var is_timer_active: bool = false  # Controls whether the timer is running
-var point: int = 0
+var point: int = 0  # Points for the current level
+var total_points: int = 0  # Total points across all levels
 var levels = [
 	"res://scenes/LEVELS/Level 1.tscn",
 	"res://scenes/LEVELS/Level 2.tscn",
@@ -22,13 +23,21 @@ var best_scores: Array = []  # Stores the best scores and times for each level
 func reset_points():
 	point = 0
 
-# Add a point for the current level
+# Add points to the total and for the current level
 func add_point():
 	point += 1
 
 # Get the current points
 func get_point() -> int:
 	return point
+
+# Add the current level's points to the total
+func add_to_total_points(points: int) -> void:
+	total_points += points
+
+# Get the total points across all levels
+func get_total_points():
+	return total_points
 
 # Start the timer for the level
 func start_level_timer():
@@ -83,6 +92,8 @@ func set_current_level(level_index: int) -> void:
 # Save the score and time for the current level (only if the score is better)
 func save_level_score(points: int, time: float):
 	var level_index = current_level_index
+	add_to_total_points(points)  # Add current level's points to the total
+
 	# Initialize best score if empty
 	if best_scores.size() <= level_index:
 		best_scores.resize(level_index + 1)
@@ -112,5 +123,6 @@ func reset_game():
 	level_time = 0.0
 	is_timer_active = false
 	point = 0
+	total_points = 0  # Reset total points
 	current_level_index = 0
 	best_scores.clear()  # Clear best scores instead of scoreboard

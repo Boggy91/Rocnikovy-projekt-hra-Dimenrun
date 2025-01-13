@@ -20,6 +20,7 @@ var is_godmode = false  # Godmode toggle
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var hit_timer: Timer = $Timers/hit_timer
 @onready var sfx_jump: AudioStreamPlayer = $SFX_jump
+@onready var sfx_hit: AudioStreamPlayer = $SFX_hit
 
 
 func jump():
@@ -27,14 +28,14 @@ func jump():
 	
 	
 func hit(x):
-	if not is_hit: # Prevent multiple hits at the same time
+	if not is_hit|| not is_godmode: # Prevent multiple hits at the same time
 		hit_timer.start()  # Start timer to reset the hit state
 		is_hit = true
 		sprite_2d.animation = "damage"
-		if not is_godmode:
-			velocity.y = JUMP_VELOCITY
-			velocity.x = x
-		 
+		velocity.y = JUMP_VELOCITY
+		velocity.x = x
+		sfx_hit.play()
+
 
 func _on_hit_timer_timeout() -> void:
 	is_hit = false  # Reset hit state

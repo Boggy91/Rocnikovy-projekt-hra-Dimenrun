@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxbab7fxcbve7"]
+[gd_scene load_steps=5 format=3 uid="uid://dxbab7fxcbve7"]
 
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_eekoe"]
 [ext_resource type="Script" path="res://scripts/scoreboard.gd" id="1_xgx1e"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_c64cs"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="4_ji1b5"]
 
 [node name="Scoreboard" type="Node"]
 script = ExtResource("1_xgx1e")
@@ -46,12 +47,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -195.5
+offset_left = -352.0
 offset_top = -310.0
-offset_right = 195.5
-offset_bottom = 310.0
+offset_right = 13.0
+offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 modulate = Color(0, 0, 0, 1)
@@ -70,5 +72,11 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_c64cs")
 theme_override_font_sizes/font_size = 31
 text = "Level Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ji1b5")
+volume_db = -23.424
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="LevelMenu" to="." method="_on_level_menu_pressed"]

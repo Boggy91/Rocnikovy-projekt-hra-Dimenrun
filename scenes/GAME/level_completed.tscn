@@ -103,29 +103,35 @@ text = "Level Menu"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="LEVEL COMPLETED PANEL"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.502
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.502
-offset_left = -92.5
-offset_top = 114.198
-offset_right = 92.5
-offset_bottom = 215.198
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = 134.0
+offset_right = 6.0
+offset_bottom = 215.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/separation = 20
 
 [node name="points level" type="Label" parent="LEVEL COMPLETED PANEL/VBoxContainer2"]
 unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_5i7ok")
+theme_override_font_sizes/font_size = 46
 label_settings = SubResource("LabelSettings_g26is")
 horizontal_alignment = 1
 
 [node name="Time level completed" type="Label" parent="LEVEL COMPLETED PANEL/VBoxContainer2"]
 unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_5i7ok")
+theme_override_font_sizes/font_size = 46
 label_settings = SubResource("LabelSettings_g26is")
 horizontal_alignment = 1
 
