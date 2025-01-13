@@ -15,6 +15,8 @@ var is_wall_sliding = false
 var wall_jump_direction = 0
 var last_wall_side = 0  # Tracks which wall was last jumped from (-1 for left, 1 for right)
 
+var push_force = 80.0
+
 var is_godmode = false  # Godmode toggle
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
@@ -150,8 +152,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, 12)
 
+			
 	move_and_slide()
 	
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
+			
 	# Reset
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()

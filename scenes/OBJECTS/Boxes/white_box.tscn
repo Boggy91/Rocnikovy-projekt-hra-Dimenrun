@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bixcvxsletlne"]
+
+[ext_resource type="Texture2D" uid="uid://cdfo3vd73svi2" path="res://map/GENERAL/white_box.png" id="1_udsmr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34pyi"]
+size = Vector2(32, 32)
+
+[node name="White_box" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_udsmr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_34pyi")
