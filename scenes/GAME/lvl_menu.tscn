@@ -156,7 +156,7 @@ sprite_frames = SubResource("SpriteFrames_uyv1n")
 autoplay = "default"
 
 [node name="Game Saved_Reseted" type="Label" parent="."]
-offset_left = 1750.0
+offset_left = 1809.0
 offset_top = 861.0
 offset_right = 1908.0
 offset_bottom = 884.0
