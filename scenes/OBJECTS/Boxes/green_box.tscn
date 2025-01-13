@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dytkft3dd81ko"]
+
+[ext_resource type="Texture2D" uid="uid://bldeaajk83v4p" path="res://map/GENERAL/green_box.png" id="1_31un1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4iqd"]
+size = Vector2(32, 32)
+
+[node name="Green_box" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_31un1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v4iqd")
