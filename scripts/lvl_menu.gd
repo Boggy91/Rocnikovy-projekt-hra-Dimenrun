@@ -6,6 +6,8 @@ extends Node
 @export var STARSLVL4: Array[Node]
 @export var STARSLVL5: Array[Node]
 @export var STARSLVL6: Array[Node]
+@onready var game_saved_reseted: Label = $"Game Saved_Reseted"
+
 
 func _ready() -> void:
 	# Display the star ratings for each level when the menu is loaded
@@ -15,6 +17,19 @@ func _ready() -> void:
 	display_level_stars(3, STARSLVL4)
 	display_level_stars(4, STARSLVL5)
 	display_level_stars(5, STARSLVL6)
+
+func _on_reset_game_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/GAME/reset_game.tscn")
+	
+
+func _on_save_game_pressed() -> void:
+	Global.save_game()
+	game_saved_reseted.text = "Game Saved"
+	$"Game Saved_Reseted/Game Saved Timer".start()
+	
+func _on_game_saved_timer_timeout() -> void:
+	game_saved_reseted.text = " "
+
 
 func _on_scoreboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GAME/scoreboard.tscn")

@@ -14,6 +14,10 @@ config/name="Hra rocnikovy projekt"
 run/main_scene="res://scenes/GAME/Main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 
+[audio]
+
+buses/default_bus_layout="res://audio/default_bus_layout.tres"
+
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"

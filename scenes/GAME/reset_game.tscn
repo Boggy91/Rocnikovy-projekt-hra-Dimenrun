@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://kihjutswk7nm"]
+
+[ext_resource type="Script" path="res://scripts/reset_game.gd" id="1_cyf38"]
+[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_tyw3k"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_oiif1"]
+[ext_resource type="Texture2D" uid="uid://c8w8w0k1uncj1" path="res://pictures/descargar.png" id="4_jwl28"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="5_83hep"]
+
+[node name="reset_game" type="Node"]
+script = ExtResource("1_cyf38")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_tyw3k")
+expand_mode = 1
+
+[node name="Panel14" type="Panel" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="TextureRect/Panel14"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 538.0
+offset_right = 1921.0
+offset_bottom = 805.0
+theme_override_colors/font_color = Color(1, 1, 0.909804, 1)
+theme_override_fonts/font = ExtResource("3_oiif1")
+theme_override_font_sizes/font_size = 45
+text = "Do you really wish to reset your game?
+All progress will be lost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NO" type="Button" parent="."]
+modulate = Color(1, 0, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -140.0
+offset_right = 139.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_oiif1")
+theme_override_font_sizes/font_size = 37
+text = "NO"
+
+[node name="YES" type="Button" parent="."]
+modulate = Color(0.113725, 1, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -298.0
+offset_right = 137.0
+offset_bottom = -215.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_oiif1")
+theme_override_font_sizes/font_size = 37
+text = "YES"
+
+[node name="AnimatedSprite2D" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 693.0
+offset_top = 125.0
+offset_right = 697.0
+offset_bottom = 129.0
+scale = Vector2(120.5, 111.045)
+texture = ExtResource("4_jwl28")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_83hep")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="NO" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="YES" to="." method="_on_yes_pressed"]

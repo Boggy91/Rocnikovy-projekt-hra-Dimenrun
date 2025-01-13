@@ -18,7 +18,7 @@
 [ext_resource type="Script" path="res://scripts/pause.gd" id="13_fmkl8"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="14_16m3n"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="15_dtrq3"]
-[ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL2/background4a.png" id="16_5pp78"]
+[ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL3/background4a.png" id="16_5pp78"]
 [ext_resource type="AudioStream" uid="uid://b7snvuau3yurx" path="res://audio/music/Level 1 (mp3cut.net) (1).mp3" id="18_0ths7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_no5i0"]

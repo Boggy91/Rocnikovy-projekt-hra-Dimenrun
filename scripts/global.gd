@@ -95,7 +95,7 @@ func save_level_score(points: int, time: float, star_count: int):
 	# Initialize best score if empty
 	if best_scores.size() <= level_index:
 		best_scores.resize(level_index + 1)
-	
+
 	var existing_best = best_scores[level_index]
 	# If this score is better than the stored best score (either higher points or lower time), update it
 	if existing_best == null or points > existing_best["points"] or (points == existing_best["points"] and time < existing_best["time"]):
@@ -136,3 +136,24 @@ func reset_game():
 	current_level_index = 0
 	best_scores.clear()  # Clear best scores
 	level_star_ratings.clear()  # Clear level star ratings
+
+# Save the game state to a file
+func save_game():
+	var save_data = {
+		"total_time": total_time,
+		"level_time": level_time,
+		"is_timer_active": is_timer_active,
+		"point": point,
+		"total_points": total_points,
+		"current_level_index": current_level_index,
+		"best_scores": best_scores,  # Ensure this is an array of dictionaries
+		"level_star_ratings": level_star_ratings  # Ensure this is an array
+	}
+
+	var file = FileAccess.open("res://save_game.json", FileAccess.ModeFlags.WRITE)
+	if file:
+		file.store_string(JSON.new().stringify(save_data))  # Serialize dictionary to JSON string
+		file.close()
+		print("Game saved successfully!")
+	else:
+		print("Failed to save the game.")

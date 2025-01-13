@@ -1,16 +1,16 @@
-[gd_scene load_steps=62 format=3 uid="uid://4hb0jrpcp0gy"]
+[gd_scene load_steps=63 format=3 uid="uid://4hb0jrpcp0gy"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qt1qg"]
+[ext_resource type="Texture2D" uid="uid://d3s0pa1y8uc4m" path="res://map/LEVEL2/background 1/4.png" id="3_4nj8v"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="3_hehml"]
+[ext_resource type="Texture2D" uid="uid://bdh1cksmiq7rg" path="res://map/LEVEL3/background2.png" id="3_vqelv"]
+[ext_resource type="Texture2D" uid="uid://cv0cgc3tuclp5" path="res://map/LEVEL3/background3.png" id="3_xnbt0"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="4_2nu7k"]
 [ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="6_k0i41"]
-[ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="7_u61sl"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_xcss3"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_k7o5s"]
-[ext_resource type="Texture2D" uid="uid://cthimk0ad7t7k" path="res://map/GENERAL/dungeon_background_2.jpg" id="8_rmil0"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_22s5y"]
-[ext_resource type="Texture2D" uid="uid://kaia1opx6s3o" path="res://map/GENERAL/dungeon_background_3.jpg" id="9_84ofy"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="9_bequ1"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="10_jpnfi"]
 [ext_resource type="PackedScene" uid="uid://bvssenegee40u" path="res://scenes/OBJECTS/mooving_platform.tscn" id="13_2owxd"]
@@ -21,19 +21,173 @@
 [ext_resource type="Texture2D" uid="uid://biwumfhea1f8v" path="res://pictures/Brown Off.png" id="14_x35nt"]
 [ext_resource type="Script" path="res://scripts/lift_question_2.gd" id="16_pymul"]
 [ext_resource type="Script" path="res://scripts/lift_question_3.gd" id="17_4dhtd"]
+[ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="18_hkaa5"]
+[ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="19_cada0"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="21_xf35q"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_rfioa"]
-a = Vector2(4, 68)
-b = Vector2(429, 68)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m26gp"]
+texture = ExtResource("10_jpnfi")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:9/0 = 0
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+0:10/0 = 0
+0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:10/0 = 0
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:10/0 = 0
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_x10w8"]
-a = Vector2(-238, 194)
-b = Vector2(5, 181)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_wofb8"]
-a = Vector2(-859, 511)
-b = Vector2(-760, 513)
+[sub_resource type="TileSet" id="TileSet_1hwq5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_m26gp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_652d0"]
 texture = ExtResource("9_bequ1")
@@ -746,6 +900,95 @@ position = Vector2(90, 286)
 zoom = Vector2(1.6, 1.6)
 position_smoothing_enabled = true
 
+[node name="Background" type="Node" parent="Scene Objects"]
+
+[node name="bg" type="Node" parent="Scene Objects/Background"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Scene Objects/Background/bg"]
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Scene Objects/Background/bg/ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1726, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Scene Objects/Background/bg/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+offset_left = -550.0
+offset_top = 140.0
+offset_right = 1180.0
+offset_bottom = 930.0
+texture = ExtResource("3_vqelv")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Scene Objects/Background/bg/ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1726, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Scene Objects/Background/bg/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+offset_left = -550.0
+offset_top = 140.0
+offset_right = 1180.0
+offset_bottom = 930.0
+texture = ExtResource("3_xnbt0")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Scene Objects/Background/bg/ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1726, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Scene Objects/Background/bg/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+offset_left = -550.0
+offset_top = 140.0
+offset_right = 1180.0
+offset_bottom = 930.0
+texture = ExtResource("3_4nj8v")
+
+[node name="Tiles collision" type="TileMap" parent="Scene Objects/Background"]
+texture_filter = 1
+tile_set = SubResource("TileSet_1hwq5")
+format = 2
+layer_0/tile_data = PackedInt32Array(2555866, 65536, 8, 2555867, 65536, 8, 2555868, 65536, 8, 2555869, 65536, 8, 2555870, 65536, 8, 2555871, 65536, 8, 2555872, 65536, 8, 2555873, 65536, 8, 2555874, 65536, 8, 2555875, 65536, 8, 2555876, 65536, 8, 2555877, 65536, 8, 2555878, 65536, 8, 2555879, 65536, 8, 2555880, 65536, 8, 2555881, 65536, 8, 2555882, 65536, 8, 2555883, 65536, 8, 2555884, 65536, 8, 2555885, 65536, 8, 2621402, 196608, 8, 2686938, 196608, 9, 2621403, 262144, 8, 2686939, 262144, 9, 2621404, 196608, 8, 2686940, 196608, 9, 2621405, 262144, 8, 2686941, 262144, 9, 2621406, 196608, 8, 2686942, 196608, 9, 2621407, 262144, 8, 2686943, 262144, 9, 2621408, 196608, 8, 2686944, 196608, 9, 2621409, 262144, 8, 2686945, 262144, 9, 2621410, 196608, 8, 2686946, 196608, 9, 2621411, 262144, 8, 2686947, 262144, 9, 2621412, 196608, 8, 2686948, 196608, 9, 2621413, 262144, 8, 2686949, 262144, 9, 2621414, 196608, 8, 2686950, 196608, 9, 2621415, 262144, 8, 2686951, 262144, 9, 2621416, 196608, 8, 2686952, 196608, 9, 2621417, 262144, 8, 2686953, 262144, 9, 2621418, 196608, 8, 2686954, 196608, 9, 2621419, 262144, 8, 2686955, 262144, 9, 2621420, 196608, 8, 2686956, 196608, 9, 2621421, 262144, 8, 2686957, 262144, 9, 2555886, 65536, 8, 2621422, 65536, 9, 2555887, 131072, 8, 2621423, 131072, 9, 2686958, 65536, 9, 2686959, 131072, 9, 2818115, 65536, 8, 2818114, 65536, 8, 2818113, 65536, 8, 2818112, 65536, 8, 2818111, 0, 8, 1966147, 65536, 8, 1966146, 65536, 8, 1966145, 65536, 8, 1966144, 65536, 8, 1966143, 65536, 8, 1966142, 65536, 8, 1966141, 65536, 8, 1966140, 65536, 8, 1966139, 65536, 8, 1966138, 0, 8, 2031674, 0, 9, 2097210, 0, 9, 2162746, 0, 9, 2228282, 0, 9, 2293818, 0, 10, 2228283, 65536, 9, 2162747, 65536, 9, 2097211, 65536, 9, 2031675, 65536, 9, 2031676, 65536, 9, 2097212, 196608, 8, 2162748, 196608, 9, 2031678, 262144, 8, 2031677, 65536, 9, 2097213, 65536, 9, 2097214, 65536, 9, 2162750, 196608, 8, 2162749, 65536, 9, 2097219, 196608, 9, 1966148, 65536, 9, 2031683, 65536, 9, 2031681, 65536, 9, 2031682, 65536, 9, 2031680, 196608, 8, 2228285, 196608, 8, 2228288, 196608, 9, 2228289, 262144, 9, 2228284, 65536, 9, 2228286, 65536, 9, 2228287, 65536, 9, 2162751, 65536, 9, 2162752, 65536, 9, 2162753, 65536, 9, 2162754, 196608, 8, 2228290, 196608, 9, 2162755, 262144, 8, 2228291, 262144, 9, 2293819, 65536, 10, 2293820, 65536, 10, 2293821, 65536, 10, 2293822, 65536, 10, 2293823, 65536, 10, 2293824, 65536, 10, 2293825, 65536, 10, 2293826, 65536, 10, 2293827, 65536, 10, 2031679, 65536, 9, 2097215, 65536, 9, 2097217, 196608, 8, 2097218, 65536, 9, 2097216, 65536, 9)
+
+[node name="Enemies" type="Node" parent="Scene Objects"]
+
+[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(479, 748)
+
+[node name="patrol11" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(628, 746)
+
+[node name="patrol12" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(769, 750)
+
+[node name="patrol13" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(872, 747)
+
+[node name="patrol14" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(1010, 744)
+
+[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(252, 745)
+
+[node name="patrol10" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(322, 750)
+
+[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(-136, 746)
+
+[node name="patrol8" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(-14, 744)
+
+[node name="patrol9" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(91, 746)
+
+[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(-548, 745)
+
+[node name="patrol6" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(-392, 747)
+
+[node name="patrol7" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
+position = Vector2(-304, 747)
+
 [node name="collectables" type="Node" parent="Scene Objects"]
 
 [node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("3_hehml")]
@@ -814,106 +1057,6 @@ position = Vector2(298, 767)
 [node name="finish" parent="Scene Objects" instance=ExtResource("4_2nu7k")]
 position = Vector2(6036, 432)
 
-[node name="Enemies" type="Node" parent="Scene Objects"]
-
-[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(479, 748)
-
-[node name="patrol11" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(628, 746)
-
-[node name="patrol12" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(769, 750)
-
-[node name="patrol13" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(872, 747)
-
-[node name="patrol14" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(1010, 744)
-
-[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(252, 745)
-
-[node name="patrol10" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(322, 750)
-
-[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-136, 746)
-
-[node name="patrol8" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-14, 744)
-
-[node name="patrol9" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(91, 746)
-
-[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-548, 745)
-
-[node name="patrol6" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-392, 747)
-
-[node name="patrol7" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-304, 747)
-
-[node name="1" type="TextureRect" parent="Scene Objects"]
-z_index = -2
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -628.0
-offset_top = 131.0
-offset_right = -810.0
-offset_bottom = -230.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_u61sl")
-expand_mode = 1
-
-[node name="2" type="TextureRect" parent="Scene Objects"]
-z_index = -2
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1794.0
-offset_top = 139.0
-offset_right = 1457.0
-offset_bottom = -262.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_rmil0")
-expand_mode = 1
-
-[node name="3" type="TextureRect" parent="Scene Objects"]
-z_index = -2
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4071.0
-offset_top = 139.0
-offset_right = 3756.0
-offset_bottom = -262.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_84ofy")
-expand_mode = 1
-
-[node name="mapa" type="StaticBody2D" parent="Scene Objects"]
-position = Vector2(1854, 186)
-
-[node name="lavy_ostrov" type="CollisionShape2D" parent="Scene Objects/mapa"]
-position = Vector2(-2464, 356)
-shape = SubResource("SegmentShape2D_rfioa")
-
-[node name="pravy_ostrov" type="CollisionShape2D" parent="Scene Objects/mapa"]
-position = Vector2(-763, 104)
-shape = SubResource("SegmentShape2D_x10w8")
-
-[node name="maly_ostrov" type="CollisionShape2D" parent="Scene Objects/mapa"]
-shape = SubResource("SegmentShape2D_wofb8")
-
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
 texture_filter = 1
 position = Vector2(-558, -222)
@@ -950,8 +1093,6 @@ scale = Vector2(0.997506, 1.30769)
 curve = SubResource("Curve2D_0wj4y")
 loop = false
 speed = 3.0
-
-[node name="Turrets" type="Node" parent="Scene Objects"]
 
 [node name="Bridges" type="Node" parent="Scene Objects"]
 
@@ -1336,6 +1477,91 @@ text = "D"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Saws" type="Node" parent="Scene Objects"]
+
+[node name="Saw" parent="Scene Objects/Saws" instance=ExtResource("18_hkaa5")]
+position = Vector2(2085, 245)
+
+[node name="Saw2" parent="Scene Objects/Saws" instance=ExtResource("18_hkaa5")]
+position = Vector2(3052, 242)
+
+[node name="Falling Spikes" type="Node" parent="Scene Objects"]
+
+[node name="FallingSpikesLong" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-575, 140)
+
+[node name="FallingSpikesLong2" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-345, 141)
+
+[node name="FallingSpikesLong6" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-270, 141)
+
+[node name="FallingSpikesLong7" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-199, 141)
+
+[node name="FallingSpikesLong8" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-134, 142)
+
+[node name="FallingSpikesLong9" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-69, 142)
+
+[node name="FallingSpikesLong10" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-5, 142)
+
+[node name="FallingSpikesLong11" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(58, 142)
+
+[node name="FallingSpikesLong12" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(123, 141)
+
+[node name="FallingSpikesLong13" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(189, 141)
+
+[node name="FallingSpikesLong14" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(257, 141)
+
+[node name="FallingSpikesLong15" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(324, 141)
+
+[node name="FallingSpikesLong16" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(390, 141)
+
+[node name="FallingSpikesLong17" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(456, 141)
+
+[node name="FallingSpikesLong18" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(526, 141)
+
+[node name="FallingSpikesLong19" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(593, 141)
+
+[node name="FallingSpikesLong20" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(659, 142)
+
+[node name="FallingSpikesLong21" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(726, 142)
+
+[node name="FallingSpikesLong22" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(794, 144)
+
+[node name="FallingSpikesLong23" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(861, 144)
+
+[node name="FallingSpikesLong24" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(927, 143)
+
+[node name="FallingSpikesLong25" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(995, 143)
+
+[node name="FallingSpikesLong26" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(1061, 143)
+
+[node name="FallingSpikesLong3" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-426, 140)
+
+[node name="FallingSpikesLong4" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
+position = Vector2(-502, 140)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -1495,10 +1721,13 @@ text = "Main Menu"
 [node name="Clock" type="Node2D" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
-offset_left = 526.0
-offset_top = 7.0
-offset_right = 659.0
-offset_bottom = 66.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 834.0
+offset_right = 1179.0
+offset_bottom = 59.0
+grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("21_xf35q")
 theme_override_font_sizes/font_size = 40
