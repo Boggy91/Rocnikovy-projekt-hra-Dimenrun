@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=26 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/total_points_lvl_menu.gd" id="5_3tm0a"]
 [ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_6crv7"]
+[ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="8_0fx3x"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="8_hot5b"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="9_de4s6"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="9_t8edb"]
@@ -83,8 +84,14 @@ func _process(delta: float) -> void:
 	pass
 "
 
-[node name="lvl_menu" type="Node"]
+[node name="lvl_menu" type="Node" node_paths=PackedStringArray("STARSLVL1", "STARSLVL2", "STARSLVL3", "STARSLVL4", "STARSLVL5", "STARSLVL6")]
 script = ExtResource("1_d3p8g")
+STARSLVL1 = [NodePath("LEVEL 1/Stars lvl 1/star"), NodePath("LEVEL 1/Stars lvl 1/star2"), NodePath("LEVEL 1/Stars lvl 1/star3")]
+STARSLVL2 = [NodePath("LEVEL 2/Stars lvl 2/star"), NodePath("LEVEL 2/Stars lvl 2/star2"), NodePath("LEVEL 2/Stars lvl 2/star3")]
+STARSLVL3 = [NodePath("LEVEL 3/Stars lvl 3/star"), NodePath("LEVEL 3/Stars lvl 3/star2"), NodePath("LEVEL 3/Stars lvl 3/star3")]
+STARSLVL4 = [NodePath("LEVEL 4/Stars lvl 4/star"), NodePath("LEVEL 4/Stars lvl 4/star2"), NodePath("LEVEL 4/Stars lvl 4/star3")]
+STARSLVL5 = [NodePath("LEVEL 5/Stars lvl 5/star"), NodePath("LEVEL 5/Stars lvl 5/star2"), NodePath("LEVEL 5/Stars lvl 5/star3")]
+STARSLVL6 = [NodePath("LEVEL 6/Stars lvl 6/star"), NodePath("LEVEL 6/Stars lvl 6/star2"), NodePath("LEVEL 6/Stars lvl 6/star3")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -191,6 +198,34 @@ theme_override_fonts/font = SubResource("FontVariation_i57og")
 theme_override_font_sizes/font_size = 30
 text = "LVL 1"
 
+[node name="Stars lvl 1" type="HBoxContainer" parent="LEVEL 1"]
+offset_left = 180.0
+offset_top = 350.0
+offset_right = 540.0
+offset_bottom = 420.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 1/Stars lvl 1"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 1/Stars lvl 1"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 1/Stars lvl 1"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
 [node name="LEVEL 2" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="LEVEL 2"]
@@ -221,6 +256,34 @@ offset_bottom = 250.0
 scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
 
+[node name="Stars lvl 2" type="HBoxContainer" parent="LEVEL 2"]
+offset_left = 580.0
+offset_top = 350.0
+offset_right = 940.0
+offset_bottom = 420.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 2/Stars lvl 2"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 2/Stars lvl 2"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 2/Stars lvl 2"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
 [node name="LEVEL 3" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="LEVEL 3"]
@@ -250,6 +313,34 @@ offset_right = 1160.0
 offset_bottom = 250.0
 scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
+
+[node name="Stars lvl 3" type="HBoxContainer" parent="LEVEL 3"]
+offset_left = 980.0
+offset_top = 350.0
+offset_right = 1340.0
+offset_bottom = 420.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 3/Stars lvl 3"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 3/Stars lvl 3"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 3/Stars lvl 3"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
 
 [node name="LEVEL 4" type="Node" parent="."]
 
@@ -282,6 +373,34 @@ offset_bottom = 250.0
 scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
 
+[node name="Stars lvl 4" type="HBoxContainer" parent="LEVEL 4"]
+offset_left = 1380.0
+offset_top = 350.0
+offset_right = 1740.0
+offset_bottom = 420.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 4/Stars lvl 4"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 4/Stars lvl 4"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 4/Stars lvl 4"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
 [node name="LEVEL 5" type="Node" parent="."]
 
 [node name="LEVEL5" type="TextureRect" parent="LEVEL 5"]
@@ -313,6 +432,34 @@ offset_bottom = 600.0
 scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
 
+[node name="Stars lvl 5" type="HBoxContainer" parent="LEVEL 5"]
+offset_left = 180.0
+offset_top = 700.0
+offset_right = 540.0
+offset_bottom = 770.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 5/Stars lvl 5"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 5/Stars lvl 5"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 5/Stars lvl 5"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
 [node name="LEVEL 6" type="Node" parent="."]
 
 [node name="LEVEL6" type="TextureRect" parent="LEVEL 6"]
@@ -343,6 +490,34 @@ offset_right = 760.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
 script = SubResource("GDScript_skkmn")
+
+[node name="Stars lvl 6" type="HBoxContainer" parent="LEVEL 6"]
+offset_left = 580.0
+offset_top = 700.0
+offset_right = 940.0
+offset_bottom = 770.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 6/Stars lvl 6"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 6/Stars lvl 6"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 6/Stars lvl 6"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_de4s6")

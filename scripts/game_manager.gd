@@ -17,6 +17,7 @@ func decrease_health():
 			hearts[h].hide()
 	if (lives == 0):
 		print("YOU DIED")
+		Global.reset_points()
 		SceneManager.switch_scene("res://scenes/GAME/you_died.tscn")
 
 

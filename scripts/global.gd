@@ -18,6 +18,7 @@ var levels = [
 
 var current_level_index = 0
 var best_scores: Array = []  # Stores the best scores and times for each level
+var level_star_ratings: Array = []  # Stores the star rating for each level
 
 # Reset the points for the current level
 func reset_points():
@@ -74,13 +75,10 @@ func format_time(seconds_input: float) -> String:
 
 # Get the next level's path
 func get_next_level() -> String:
-	print("Current level index before increment:", current_level_index)
 	if current_level_index + 1 < levels.size():
 		current_level_index += 1
-		print("Next level index:", current_level_index)
 		return levels[current_level_index]
-	print("No more levels available!")
-	return ""
+	return ""  # No more levels available!
 
 func is_level_unlocked(level_index: int) -> bool:
 	return level_index <= current_level_index
@@ -90,7 +88,7 @@ func set_current_level(level_index: int) -> void:
 		current_level_index = level_index
 
 # Save the score and time for the current level (only if the score is better)
-func save_level_score(points: int, time: float):
+func save_level_score(points: int, time: float, star_count: int):
 	var level_index = current_level_index
 	add_to_total_points(points)  # Add current level's points to the total
 
@@ -107,15 +105,26 @@ func save_level_score(points: int, time: float):
 			"time": format_time(time)
 		}
 
+	# Save the star rating for the current level
+	if level_star_ratings.size() <= level_index:
+		level_star_ratings.resize(level_index + 1)
+	level_star_ratings[level_index] = star_count
+
 # Get the best score for a level
 func get_best_score(level_index: int) -> Dictionary:
 	if level_index < best_scores.size():
 		return best_scores[level_index]
 	return {}  # No score yet
 
-# Get the scoreboard data (best scores)
+# Get the scoreboard data (best scores) for all levels
 func get_scoreboard() -> Array:
 	return best_scores
+
+# Get the star rating for a level
+func get_level_star_rating(level_index: int) -> int:
+	if level_index < level_star_ratings.size():
+		return level_star_ratings[level_index]
+	return 0  # Default to 0 stars if no rating
 
 # Reset game progress (for restarting or starting fresh)
 func reset_game():
@@ -125,4 +134,5 @@ func reset_game():
 	point = 0
 	total_points = 0  # Reset total points
 	current_level_index = 0
-	best_scores.clear()  # Clear best scores instead of scoreboard
+	best_scores.clear()  # Clear best scores
+	level_star_ratings.clear()  # Clear level star ratings

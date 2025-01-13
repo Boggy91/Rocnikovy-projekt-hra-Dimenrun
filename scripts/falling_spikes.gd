@@ -10,6 +10,7 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body: Node):
 	if (body.name == "CharacterBody2D"):
 		print("YOU DIED")
+		Global.reset_points()
 		SceneManager.switch_scene("res://scenes/GAME/you_died.tscn")
 		queue_free()
 		

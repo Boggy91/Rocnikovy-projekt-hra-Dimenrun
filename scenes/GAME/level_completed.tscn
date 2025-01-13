@@ -110,11 +110,10 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -208.0
 offset_top = 134.0
-offset_right = 6.0
-offset_bottom = 215.0
+offset_right = 212.0
+offset_bottom = 234.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
 theme_override_constants/separation = 20
 
 [node name="points level" type="Label" parent="LEVEL COMPLETED PANEL/VBoxContainer2"]
