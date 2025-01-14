@@ -1,20 +1,29 @@
-[gd_scene load_steps=35 format=3 uid="uid://dn4hkh32wp4y7"]
+[gd_scene load_steps=78 format=3 uid="uid://dn4hkh32wp4y7"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_dk6k2"]
-[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_r123j"]
+[ext_resource type="Script" path="res://scripts/character.gd" id="2_keg6q"]
+[ext_resource type="Texture2D" uid="uid://txso5idsc1ow" path="res://character/Appearing (96x96).png" id="3_2arft"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="3_qy5fv"]
+[ext_resource type="Texture2D" uid="uid://c3bjgs6bpc6os" path="res://character/Hit (32x32).png" id="4_f34jk"]
 [ext_resource type="PackedScene" uid="uid://dnjpo6rq7e8w1" path="res://scenes/OBJECTS/cloud.tscn" id="5_kcomv"]
 [ext_resource type="PackedScene" uid="uid://c2jxsejn7b0wd" path="res://scenes/OBJECTS/jumppad.tscn" id="5_l4m6x"]
+[ext_resource type="Texture2D" uid="uid://bi4ru58tfqso7" path="res://character/Idle_32x32_purple.png" id="5_yx6e4"]
+[ext_resource type="Texture2D" uid="uid://rko1x5ofnp1j" path="res://character/Fall_32x32_purple.png" id="6_3pjou"]
 [ext_resource type="PackedScene" uid="uid://dytkft3dd81ko" path="res://scenes/OBJECTS/Boxes/green_box.tscn" id="6_k1df0"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_s2jkk"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="7_25dws"]
 [ext_resource type="PackedScene" uid="uid://ulrnbf1m6w5v" path="res://scenes/OBJECTS/Boxes/orange_box.tscn" id="7_g24ka"]
+[ext_resource type="Texture2D" uid="uid://c4x63mi7o2lfr" path="res://character/Jump_32x32_purple.png" id="7_k3qxc"]
 [ext_resource type="PackedScene" uid="uid://byp44jvkfj7vr" path="res://scenes/OBJECTS/Boxes/blue_box.tscn" id="8_gdkls"]
+[ext_resource type="Texture2D" uid="uid://cxbja306rf6uo" path="res://character/Run_32x32_purple.png" id="8_q2fx0"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="8_w1ngt"]
+[ext_resource type="Texture2D" uid="uid://dh6vsosw5dsgn" path="res://character/Wall_Jump_32x32_purple.png" id="9_l1x1v"]
 [ext_resource type="PackedScene" uid="uid://dqo7nfl7l117j" path="res://scenes/OBJECTS/Boxes/red_box.tscn" id="9_ndm7a"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="9_nqfye"]
+[ext_resource type="AudioStream" uid="uid://ipmlg4mo7ou4" path="res://audio/SFX/jump_3.wav" id="10_dbm44"]
 [ext_resource type="PackedScene" uid="uid://bixcvxsletlne" path="res://scenes/OBJECTS/Boxes/white_box.tscn" id="10_e5oty"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="10_ibk4w"]
+[ext_resource type="AudioStream" uid="uid://v76gnkus4rxj" path="res://audio/SFX/hurt_1.wav" id="11_4wtxq"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="11_cdv84"]
 [ext_resource type="Script" path="res://scripts/white_floor.gd" id="11_e273s"]
 [ext_resource type="PackedScene" uid="uid://271agtk40t3w" path="res://scenes/OBJECTS/Boxes/yellow_box.tscn" id="11_lv7jk"]
@@ -23,6 +32,247 @@
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="12_ps0dp"]
 [ext_resource type="Texture2D" uid="uid://bbrvju821bhvj" path="res://map/GENERAL/red_box.png" id="14_6kmkr"]
 [ext_resource type="Texture2D" uid="uid://uft28ce75bmt" path="res://map/GENERAL/sign.png" id="15_kmwni"]
+[ext_resource type="AudioStream" uid="uid://cmjl0clgbqri2" path="res://audio/music/Level 8.mp3" id="24_8a2ug"]
+[ext_resource type="Texture2D" uid="uid://ctmgsedr7xf0i" path="res://map/GENERAL/yellow_box.png" id="24_7874a"]
+[ext_resource type="Texture2D" uid="uid://cnwik4vg6iaob" path="res://map/GENERAL/blue_box.png" id="26_3fwxm"]
+[ext_resource type="Texture2D" uid="uid://bldeaajk83v4p" path="res://map/GENERAL/green_box.png" id="27_sol8y"]
+[ext_resource type="Texture2D" uid="uid://5g3c1l8dvrnh" path="res://map/GENERAL/orange_box.png" id="28_chkqp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
+atlas = ExtResource("3_2arft")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar2yb"]
+atlas = ExtResource("3_2arft")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxqhr"]
+atlas = ExtResource("4_f34jk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgshx"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6f16"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntxdl"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6qor"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m40ss"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4t0j"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bketc"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byyay"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtxcp"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg1kn"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57hr4"]
+atlas = ExtResource("5_yx6e4")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpida"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeeiu"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwqyf"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgtsm"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lao2f"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jik4"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vptx"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3fc7"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1c705"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn8rm"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8ubg"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpf4i"]
+atlas = ExtResource("8_q2fx0")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aptfx"]
+atlas = ExtResource("9_l1x1v")
+region = Rect2(62, 0, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mb6hq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5auph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar2yb")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxqhr")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgshx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6f16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntxdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6qor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m40ss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4t0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bketc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byyay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtxcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg1kn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57hr4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_3pjou")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k3qxc")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpida")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeeiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwqyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgtsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lao2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jik4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vptx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3fc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1c705")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn8rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8ubg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpf4i")
+}],
+"loop": true,
+"name": &"running",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aptfx")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr8sw"]
+size = Vector2(66, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6mno"]
 size = Vector2(58, 4)
@@ -266,10 +516,48 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 
 [node name="Scene Objects" type="Node" parent="."]
 
-[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("2_r123j")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Scene Objects"]
+texture_filter = 1
 position = Vector2(439, 524)
+scale = Vector2(0.5, 0.5)
 collision_layer = 7
 collision_mask = 7
+script = ExtResource("2_keg6q")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Scene Objects/CharacterBody2D"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(112, 422)
+scale = Vector2(3.28125, 3.15625)
+sprite_frames = SubResource("SpriteFrames_mb6hq")
+autoplay = "default"
+frame_progress = 0.624521
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/CharacterBody2D"]
+position = Vector2(115, 434)
+shape = SubResource("RectangleShape2D_dr8sw")
+
+[node name="Timers" type="Node" parent="Scene Objects/CharacterBody2D"]
+
+[node name="dash_timer" type="Timer" parent="Scene Objects/CharacterBody2D/Timers"]
+wait_time = 0.2
+
+[node name="dash_again_timer" type="Timer" parent="Scene Objects/CharacterBody2D/Timers"]
+
+[node name="djump" type="Timer" parent="Scene Objects/CharacterBody2D/Timers"]
+
+[node name="hit_timer" type="Timer" parent="Scene Objects/CharacterBody2D/Timers"]
+wait_time = 0.3
+
+[node name="SFX_jump" type="AudioStreamPlayer" parent="Scene Objects/CharacterBody2D"]
+stream = ExtResource("10_dbm44")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="SFX_hit" type="AudioStreamPlayer" parent="Scene Objects/CharacterBody2D"]
+stream = ExtResource("11_4wtxq")
+volume_db = -20.0
+bus = &"SFX"
 
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
 position = Vector2(90, 286)
@@ -280,28 +568,9 @@ position_smoothing_enabled = true
 [node name="collectables" type="Node" parent="Scene Objects"]
 
 [node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
-position = Vector2(-573, 272)
+position = Vector2(-558, 265)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
-
-[node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
-z_index = -2
-scroll_scale = Vector2(0.1, 0.1)
-
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
-visible = false
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1243.0
-offset_top = -1179.0
-offset_right = 2212.0
-offset_bottom = 795.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Clouds" type="Node" parent="Scene Objects"]
 
@@ -346,11 +615,6 @@ position = Vector2(911, 527)
 position = Vector2(110, 1150)
 script = ExtResource("11_e273s")
 
-[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Floors/White Floor"]
-texture_filter = 1
-position = Vector2(-82, 43)
-texture = ExtResource("11_npyxh")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Floors/White Floor"]
 position = Vector2(532, -602)
 shape = SubResource("RectangleShape2D_q6mno")
@@ -368,14 +632,14 @@ position = Vector2(-6, 16)
 position = Vector2(-76, 27)
 shape = SubResource("RectangleShape2D_8whw6")
 
+[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Floors/White Floor/Point"]
+texture_filter = 1
+position = Vector2(-76, 27)
+texture = ExtResource("11_npyxh")
+
 [node name="Red Floor" type="StaticBody2D" parent="Scene Objects/Floors"]
 position = Vector2(858, 410)
 script = ExtResource("11_e273s")
-
-[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Floors/Red Floor"]
-texture_filter = 1
-position = Vector2(-82, 43)
-texture = ExtResource("14_6kmkr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Floors/Red Floor"]
 position = Vector2(-82, 138)
@@ -394,6 +658,37 @@ position = Vector2(-6, 16)
 position = Vector2(-76, 27)
 shape = SubResource("RectangleShape2D_8whw6")
 
+[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Floors/Red Floor/Point"]
+texture_filter = 1
+position = Vector2(-76, 27)
+texture = ExtResource("14_6kmkr")
+
+[node name="Yellow Floor" type="StaticBody2D" parent="Scene Objects/Floors"]
+position = Vector2(993, 410)
+script = ExtResource("11_e273s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Floors/Yellow Floor"]
+position = Vector2(-82, 138)
+shape = SubResource("RectangleShape2D_q6mno")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Floors/Yellow Floor/CollisionShape2D"]
+texture_filter = 1
+position = Vector2(0.999981, 0)
+scale = Vector2(1.9375, 1)
+texture = ExtResource("12_k32kq")
+
+[node name="Point" type="Area2D" parent="Scene Objects/Floors/Yellow Floor"]
+position = Vector2(-6, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Floors/Yellow Floor/Point"]
+position = Vector2(-76, 27)
+shape = SubResource("RectangleShape2D_8whw6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Floors/Yellow Floor/Point"]
+texture_filter = 1
+position = Vector2(-76, 27)
+texture = ExtResource("24_7874a")
+
 [node name="Signs" type="Node" parent="Scene Objects"]
 
 [node name="White" type="Sprite2D" parent="Scene Objects/Signs"]
@@ -402,92 +697,65 @@ scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
 [node name="BOX" type="Sprite2D" parent="Scene Objects/Signs/White"]
+texture_filter = 1
+position = Vector2(-8.01086e-05, -132.537)
+scale = Vector2(5.01831, 5.01831)
+texture = ExtResource("11_npyxh")
 
 [node name="Red" type="Sprite2D" parent="Scene Objects/Signs"]
 position = Vector2(1865, 875)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
-[node name="Label" type="Label" parent="Scene Objects/Signs/Red"]
-offset_left = -193.0
-offset_top = -217.0
-offset_right = 193.0
-offset_bottom = -60.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("9_nqfye")
-theme_override_font_sizes/font_size = 100
-text = "RED"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Label" type="Sprite2D" parent="Scene Objects/Signs/Red"]
+texture_filter = 1
+position = Vector2(-0.000297546, -132.537)
+scale = Vector2(4.95661, 4.95661)
+texture = ExtResource("14_6kmkr")
 
 [node name="Yellow" type="Sprite2D" parent="Scene Objects/Signs"]
 position = Vector2(1999, 877)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
-[node name="Label" type="Label" parent="Scene Objects/Signs/Yellow"]
-offset_left = -193.0
-offset_top = -217.0
-offset_right = 193.0
-offset_bottom = -60.0
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_fonts/font = ExtResource("9_nqfye")
-theme_override_font_sizes/font_size = 100
-text = "YELLOW"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Label" type="Sprite2D" parent="Scene Objects/Signs/Yellow"]
+texture_filter = 1
+position = Vector2(-6.29425e-05, -132.537)
+scale = Vector2(5.39484, 5.39484)
+texture = ExtResource("24_7874a")
 
 [node name="Blue" type="Sprite2D" parent="Scene Objects/Signs"]
 position = Vector2(2133, 877)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
-[node name="Label" type="Label" parent="Scene Objects/Signs/Blue"]
-offset_left = -193.0
-offset_top = -217.0
-offset_right = 193.0
-offset_bottom = -60.0
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_fonts/font = ExtResource("9_nqfye")
-theme_override_font_sizes/font_size = 100
-text = "BLUE"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Label" type="Sprite2D" parent="Scene Objects/Signs/Blue"]
+texture_filter = 1
+position = Vector2(0.00141251, -132.537)
+scale = Vector2(5.39484, 5.39484)
+texture = ExtResource("26_3fwxm")
 
 [node name="Green" type="Sprite2D" parent="Scene Objects/Signs"]
 position = Vector2(2267, 880)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
-[node name="Label" type="Label" parent="Scene Objects/Signs/Green"]
-offset_left = -193.0
-offset_top = -217.0
-offset_right = 193.0
-offset_bottom = -60.0
-theme_override_colors/font_color = Color(0, 0.670588, 0, 1)
-theme_override_fonts/font = ExtResource("9_nqfye")
-theme_override_font_sizes/font_size = 100
-text = "GREEN"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Label" type="Sprite2D" parent="Scene Objects/Signs/Green"]
+texture_filter = 1
+position = Vector2(0.000410557, -132.537)
+scale = Vector2(5.01825, 5.01825)
+texture = ExtResource("27_sol8y")
 
 [node name="Orange" type="Sprite2D" parent="Scene Objects/Signs"]
 position = Vector2(362, 873)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
-[node name="Label" type="Label" parent="Scene Objects/Signs/Orange"]
-offset_left = -193.0
-offset_top = -217.0
-offset_right = 193.0
-offset_bottom = -60.0
-theme_override_colors/font_color = Color(1, 0.670588, 0, 1)
-theme_override_fonts/font = ExtResource("9_nqfye")
-theme_override_font_sizes/font_size = 100
-text = "ORANGE
-"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Label" type="Sprite2D" parent="Scene Objects/Signs/Orange"]
+texture_filter = 1
+position = Vector2(6.10352e-05, -132.537)
+scale = Vector2(5.39482, 5.39482)
+texture = ExtResource("28_chkqp")
 
 [node name="Jumppad" parent="Scene Objects" instance=ExtResource("5_l4m6x")]
 position = Vector2(1468, 798)
@@ -673,12 +941,18 @@ layer_0/tile_data = PackedInt32Array(2621514, 131074, 6, 2621513, 2, 6, 2555977,
 position = Vector2(-461, 260)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_8a2ug")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"
 
+[connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/dash_timer" to="Scene Objects/CharacterBody2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/dash_again_timer" to="Scene Objects/CharacterBody2D" method="_on_dash_again_timer_timeout"]
+[connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/djump" to="Scene Objects/CharacterBody2D" method="_on_djump_timeout"]
+[connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/hit_timer" to="Scene Objects/CharacterBody2D" method="_on_hit_timer_timeout"]
 [connection signal="body_entered" from="Scene Objects/Floors/White Floor/Point" to="Scene Objects/Floors/White Floor" method="_on_point_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Floors/Red Floor/Point" to="Scene Objects/Floors/Red Floor" method="_on_point_body_entered"]
+[connection signal="body_entered" from="Scene Objects/Floors/Yellow Floor/Point" to="Scene Objects/Floors/Yellow Floor" method="_on_point_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
