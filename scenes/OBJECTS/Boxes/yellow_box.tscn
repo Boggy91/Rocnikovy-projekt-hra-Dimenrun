@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ctmgsedr7xf0i" path="res://map/GENERAL/yellow_box.png" id="1_0femx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_34pyi"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpam1"]
 size = Vector2(32, 32)
 
 [node name="Yellow_box" type="RigidBody2D"]
@@ -12,4 +12,4 @@ texture_filter = 1
 texture = ExtResource("1_0femx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_34pyi")
+shape = SubResource("RectangleShape2D_lpam1")

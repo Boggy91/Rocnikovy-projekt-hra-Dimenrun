@@ -401,16 +401,7 @@ position = Vector2(1726, 873)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
 
-[node name="Label" type="Label" parent="Scene Objects/Signs/White"]
-offset_left = -193.0
-offset_top = -217.0
-offset_right = 193.0
-offset_bottom = -60.0
-theme_override_fonts/font = ExtResource("9_nqfye")
-theme_override_font_sizes/font_size = 100
-text = "WHITE"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="BOX" type="Sprite2D" parent="Scene Objects/Signs/White"]
 
 [node name="Red" type="Sprite2D" parent="Scene Objects/Signs"]
 position = Vector2(1865, 875)
