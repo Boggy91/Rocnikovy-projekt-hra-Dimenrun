@@ -152,8 +152,43 @@ func save_game():
 
 	var file = FileAccess.open("res://save_game.json", FileAccess.ModeFlags.WRITE)
 	if file:
-		file.store_string(JSON.new().stringify(save_data))  # Serialize dictionary to JSON string
+		# Use the `pretty_print` parameter to format the JSON with indentation
+		file.store_string(JSON.stringify(save_data, "\t", true))  # "\t" adds tab-based indentation
 		file.close()
 		print("Game saved successfully!")
 	else:
 		print("Failed to save the game.")
+
+
+# Load the game state from a file
+func load_game():
+	var file = FileAccess.open("res://save_game.json", FileAccess.ModeFlags.READ)
+	if file:
+		var content = file.get_as_text()
+		file.close()
+		
+		# Parse the JSON string
+		var parse_result = JSON.parse_string(content)
+		
+		# Check for parsing success
+		if parse_result.error == 0:  # 0 is the success code for JSON.parse_string
+			var data = parse_result.data
+			
+			# Ensure the parsed data is a dictionary
+			if typeof(data) == TYPE_DICTIONARY:
+				# Restore game state from the loaded data
+				total_time = data.get("total_time", 0.0)
+				level_time = data.get("level_time", 0.0)
+				is_timer_active = data.get("is_timer_active", false)
+				point = data.get("point", 0)
+				total_points = data.get("total_points", 0)
+				current_level_index = data.get("current_level_index", 0)
+				best_scores = data.get("best_scores", [])
+				level_star_ratings = data.get("level_star_ratings", [])
+				print("Game loaded successfully!")
+			else:
+				print("Parsed data is not a dictionary.")
+		else:
+			print("Failed to parse save data. Error code: ", parse_result.error)
+	else:
+		print("Save file not found.")

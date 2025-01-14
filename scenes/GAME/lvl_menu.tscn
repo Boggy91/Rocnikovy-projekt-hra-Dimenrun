@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
-[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_hrt6u"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_fh3fb"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="2_g471l"]
 [ext_resource type="Script" path="res://scripts/total_time_lvl_menu.gd" id="2_je0rc"]
 [ext_resource type="Texture2D" uid="uid://cyo54f6tq5yre" path="res://pictures/Captura de pantalla 2025-01-05 195908.jpg" id="4_h85ai"]
@@ -106,7 +106,7 @@ layout_mode = 0
 offset_top = 2.0
 offset_right = 1920.0
 offset_bottom = 1082.0
-texture = ExtResource("1_hrt6u")
+texture = ExtResource("2_fh3fb")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 

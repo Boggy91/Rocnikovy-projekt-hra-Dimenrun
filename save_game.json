@@ -1,1 +1,30 @@
-{"best_scores":[{"level":1,"points":0,"time":"00:07"},{"level":2,"points":1,"time":"00:15"},{"level":3,"points":2,"time":"00:07"},{"level":4,"points":2,"time":"00:08"}],"current_level_index":4,"is_timer_active":true,"level_star_ratings":[1,1,1,1],"level_time":28.849939000002,"point":0,"total_points":5,"total_time":68.0435614444482}
+{
+	"best_scores": [
+		{
+			"level": 1,
+			"points": 16,
+			"time": "00:15"
+		},
+		{
+			"level": 2,
+			"points": 6,
+			"time": "00:18"
+		},
+		{
+			"level": 3,
+			"points": 22,
+			"time": "00:16"
+		}
+	],
+	"current_level_index": 3,
+	"is_timer_active": true,
+	"level_star_ratings": [
+		2,
+		1,
+		2
+	],
+	"level_time": 16.4660200000003,
+	"point": 0,
+	"total_points": 44,
+	"total_time": 50.4131766666663
+}

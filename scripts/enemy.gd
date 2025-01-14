@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 @onready var game_manager: Node = %"game manager"
@@ -28,9 +28,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			sfx_hit.play()
 			game_manager.decrease_health()
 			if(x_delta >= 0):
-				body.hit(300)
+				body.hit(200)
 			else:
-				body.hit(-300)
+				body.hit(-200)
 
 
 

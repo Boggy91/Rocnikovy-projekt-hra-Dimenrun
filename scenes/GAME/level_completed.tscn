@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dlsk2h2n8q177"]
 
 [ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_idi4q"]
-[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_4lt5e"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_1pspv"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_5i7ok"]
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="4_5ia3o"]
 [ext_resource type="AudioStream" uid="uid://bln28t4immdd4" path="res://audio/SFX/success-music-moody-fanfare-gfx-sounds-1-00-06.mp3" id="5_mh13w"]
@@ -43,7 +43,7 @@ offset_bottom = 1080.0
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_4lt5e")
+texture = ExtResource("2_1pspv")
 
 [node name="LEVEL COMPLETED PANEL" type="Panel" parent="."]
 anchors_preset = 15

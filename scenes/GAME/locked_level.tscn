@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://mku8yyg6kebt"]
 
-[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="1_qu2u7"]
 [ext_resource type="Script" path="res://scripts/locked_level.gd" id="1_ydp0w"]
 [ext_resource type="Texture2D" uid="uid://dllov3rnw36a5" path="res://pictures/Hefty Padlock - GOLD - Spritesheet.png" id="2_5s8yg"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_c5amy"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_udd3q"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="5_2bf8y"]
 
@@ -55,7 +55,7 @@ script = ExtResource("1_ydp0w")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_qu2u7")
+texture = ExtResource("2_c5amy")
 expand_mode = 1
 
 [node name="Panel14" type="Panel" parent="TextureRect"]

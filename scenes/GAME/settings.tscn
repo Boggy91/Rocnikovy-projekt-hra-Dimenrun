@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://eq5c8c4cmbrs"]
 
 [ext_resource type="Script" path="res://scripts/settings.gd" id="1_xys7u"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_8bsc6"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="2_jtts2"]
-[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_wjk00"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="3_u06ri"]
 
 [node name="Settings" type="Node"]
@@ -12,7 +12,7 @@ script = ExtResource("1_xys7u")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource("2_wjk00")
+texture = ExtResource("2_8bsc6")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
