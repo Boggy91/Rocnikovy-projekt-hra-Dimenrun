@@ -2977,10 +2977,13 @@ text = "Main Menu"
 [node name="Clock" type="Node2D" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
-offset_left = 526.0
-offset_top = 7.0
-offset_right = 659.0
-offset_bottom = 66.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 922.0
+offset_right = 1269.0
+offset_bottom = 59.0
+grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("16_3uqxu")
 theme_override_font_sizes/font_size = 40

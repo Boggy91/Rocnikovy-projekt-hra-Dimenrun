@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://dn4hkh32wp4y7"]
+[gd_scene load_steps=80 format=3 uid="uid://dn4hkh32wp4y7"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_dk6k2"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_keg6q"]
@@ -28,10 +28,12 @@
 [ext_resource type="Script" path="res://scripts/white_floor.gd" id="11_e273s"]
 [ext_resource type="PackedScene" uid="uid://271agtk40t3w" path="res://scenes/OBJECTS/Boxes/yellow_box.tscn" id="11_lv7jk"]
 [ext_resource type="Texture2D" uid="uid://cdfo3vd73svi2" path="res://map/GENERAL/white_box.png" id="11_npyxh"]
+[ext_resource type="AudioStream" uid="uid://dkfbbj3rbijlq" path="res://audio/SFX/SFX_dash.mp3" id="12_2opk2"]
 [ext_resource type="Texture2D" uid="uid://biwumfhea1f8v" path="res://pictures/Brown Off.png" id="12_k32kq"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="12_ps0dp"]
 [ext_resource type="Texture2D" uid="uid://bbrvju821bhvj" path="res://map/GENERAL/red_box.png" id="14_6kmkr"]
 [ext_resource type="Texture2D" uid="uid://uft28ce75bmt" path="res://map/GENERAL/sign.png" id="15_kmwni"]
+[ext_resource type="Script" path="res://scripts/red_floor.gd" id="23_m0byv"]
 [ext_resource type="AudioStream" uid="uid://cmjl0clgbqri2" path="res://audio/music/Level 8.mp3" id="24_8a2ug"]
 [ext_resource type="Texture2D" uid="uid://ctmgsedr7xf0i" path="res://map/GENERAL/yellow_box.png" id="24_7874a"]
 [ext_resource type="Texture2D" uid="uid://cnwik4vg6iaob" path="res://map/GENERAL/blue_box.png" id="26_3fwxm"]
@@ -559,6 +561,10 @@ stream = ExtResource("11_4wtxq")
 volume_db = -20.0
 bus = &"SFX"
 
+[node name="SFX_dash" type="AudioStreamPlayer" parent="Scene Objects/CharacterBody2D"]
+stream = ExtResource("12_2opk2")
+volume_db = -5.0
+
 [node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
 position = Vector2(90, 286)
 scale = Vector2(2, 2)
@@ -592,13 +598,13 @@ position = Vector2(14, 1190)
 [node name="Boxes" type="Node" parent="Scene Objects"]
 
 [node name="Green_box" parent="Scene Objects/Boxes" instance=ExtResource("6_k1df0")]
-position = Vector2(1178, 527)
+position = Vector2(2267, 828)
 
 [node name="Orange_box" parent="Scene Objects/Boxes" instance=ExtResource("7_g24ka")]
-position = Vector2(1315, 527)
+position = Vector2(361, 828)
 
 [node name="Blue_box" parent="Scene Objects/Boxes" instance=ExtResource("8_gdkls")]
-position = Vector2(1045, 527)
+position = Vector2(2132, 828)
 
 [node name="Red_box" parent="Scene Objects/Boxes" instance=ExtResource("9_ndm7a")]
 position = Vector2(777, 527)
@@ -639,7 +645,7 @@ texture = ExtResource("11_npyxh")
 
 [node name="Red Floor" type="StaticBody2D" parent="Scene Objects/Floors"]
 position = Vector2(858, 410)
-script = ExtResource("11_e273s")
+script = ExtResource("23_m0byv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Floors/Red Floor"]
 position = Vector2(-82, 138)
@@ -678,7 +684,7 @@ scale = Vector2(1.9375, 1)
 texture = ExtResource("12_k32kq")
 
 [node name="Point" type="Area2D" parent="Scene Objects/Floors/Yellow Floor"]
-position = Vector2(-6, 16)
+position = Vector2(1079, 399)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Floors/Yellow Floor/Point"]
 position = Vector2(-76, 27)
@@ -692,6 +698,7 @@ texture = ExtResource("24_7874a")
 [node name="Signs" type="Node" parent="Scene Objects"]
 
 [node name="White" type="Sprite2D" parent="Scene Objects/Signs"]
+z_index = -2
 position = Vector2(1726, 873)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
@@ -703,6 +710,7 @@ scale = Vector2(5.01831, 5.01831)
 texture = ExtResource("11_npyxh")
 
 [node name="Red" type="Sprite2D" parent="Scene Objects/Signs"]
+z_index = -2
 position = Vector2(1865, 875)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
@@ -714,6 +722,7 @@ scale = Vector2(4.95661, 4.95661)
 texture = ExtResource("14_6kmkr")
 
 [node name="Yellow" type="Sprite2D" parent="Scene Objects/Signs"]
+z_index = -2
 position = Vector2(1999, 877)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
@@ -725,6 +734,7 @@ scale = Vector2(5.39484, 5.39484)
 texture = ExtResource("24_7874a")
 
 [node name="Blue" type="Sprite2D" parent="Scene Objects/Signs"]
+z_index = -2
 position = Vector2(2133, 877)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
@@ -736,6 +746,7 @@ scale = Vector2(5.39484, 5.39484)
 texture = ExtResource("26_3fwxm")
 
 [node name="Green" type="Sprite2D" parent="Scene Objects/Signs"]
+z_index = -2
 position = Vector2(2267, 880)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")
@@ -747,6 +758,7 @@ scale = Vector2(5.01825, 5.01825)
 texture = ExtResource("27_sol8y")
 
 [node name="Orange" type="Sprite2D" parent="Scene Objects/Signs"]
+z_index = -2
 position = Vector2(362, 873)
 scale = Vector2(0.0829959, 0.0829959)
 texture = ExtResource("15_kmwni")

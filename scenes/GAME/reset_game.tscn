@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://kihjutswk7nm"]
+[gd_scene load_steps=6 format=3 uid="uid://cwlaqk2cw3dme"]
 
 [ext_resource type="Script" path="res://scripts/reset_game.gd" id="1_cyf38"]
-[ext_resource type="Texture2D" uid="uid://cylc0jeuu8lgd" path="res://pictures/bg.webp" id="2_tyw3k"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_ah1im"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_oiif1"]
 [ext_resource type="Texture2D" uid="uid://c8w8w0k1uncj1" path="res://pictures/descargar.png" id="4_jwl28"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="5_83hep"]
@@ -12,7 +12,7 @@ script = ExtResource("1_cyf38")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_tyw3k")
+texture = ExtResource("2_ah1im")
 expand_mode = 1
 
 [node name="Panel14" type="Panel" parent="TextureRect"]

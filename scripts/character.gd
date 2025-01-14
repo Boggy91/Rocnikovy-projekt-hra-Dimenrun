@@ -23,6 +23,7 @@ var is_godmode = false  # Godmode toggle
 @onready var hit_timer: Timer = $Timers/hit_timer
 @onready var sfx_jump: AudioStreamPlayer = $SFX_jump
 @onready var sfx_hit: AudioStreamPlayer = $SFX_hit
+@onready var sfx_dash: AudioStreamPlayer = $SFX_dash
 
 
 func jump():
@@ -131,6 +132,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Dashing
 	if Input.is_action_just_pressed("dash") and can_dash:
+		sfx_dash.play()
 		dashing = true
 		can_dash = false
 		$Timers/dash_timer.start()
