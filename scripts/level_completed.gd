@@ -22,6 +22,7 @@ func _ready() -> void:
 	
 	# Reset points for the next level
 	Global.reset_points()
+	Global.save_game()
 
 func calculate_star_rating(points: int, time: float) -> int:
 	if points > 30 and time < 60:
@@ -41,12 +42,16 @@ func save_level_stats(points: int, time: float, star_count: int) -> void:
 	Global.save_level_score(points, time, star_count)
 
 func _on_next_level_pressed() -> void:
-	# Move to the next level
-	var next_level_path = Global.get_next_level()
-	if next_level_path != "":
-		SceneManager.switch_scene(next_level_path)
+	var star_count = calculate_star_rating(Global.get_point(), Global.get_level_time())
+	if star_count == 2:
+		var next_level_path = Global.get_next_level()
+		if next_level_path != "":
+			SceneManager.switch_scene(next_level_path)
+		else:
+			print("No more levels available!")
 	else:
-		print("No more levels available!")
+		var next_level_path = Global.get_next_level()
+		get_tree().change_scene_to_file("res://scenes/GAME/locket_level_stars.tscn")
 
 func _on_menu_pressed() -> void:
 	# Go back to the level menu

@@ -8,7 +8,6 @@ extends Node
 @export var STARSLVL6: Array[Node]
 @onready var game_saved_reseted: Label = $"Game Saved_Reseted"
 
-
 func _ready() -> void:
 	# Display the star ratings for each level when the menu is loaded
 	display_level_stars(0, STARSLVL1)
@@ -56,9 +55,13 @@ func _on_lvl_6_pressed() -> void:
 	access_level(5, "res://scenes/LEVELS/Level 6.tscn")
 	
 func access_level(level_index: int, level_path: String) -> void:
+	# Check if the level is unlocked and the previous level has 3 stars
 	if Global.is_level_unlocked(level_index):
-		Global.set_current_level(level_index)
-		SceneManager.switch_scene(level_path)
+		if level_index == 0 or Global.get_level_star_rating(level_index - 1) == 3:
+			Global.set_current_level(level_index)
+			SceneManager.switch_scene(level_path)
+		else: 
+			get_tree().change_scene_to_file("res://scenes/GAME/locket_level_stars.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/GAME/locked_level.tscn")
 

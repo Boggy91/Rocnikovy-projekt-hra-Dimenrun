@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxq5r2thppd2e"]
+
+[ext_resource type="Script" path="res://scripts/locket_level_stars.gd" id="1_ljr5q"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="1_sf7bu"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="2_g1jtu"]
+[ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="4_mmnpo"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="4_turbu"]
+[ext_resource type="Texture2D" uid="uid://dji33y58jpoek" path="res://pictures/descargar (3).png" id="5_hdfv3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4h686"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mmnpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hdfv3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="locket_level_stars" type="Node"]
+script = ExtResource("1_ljr5q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_sf7bu")
+expand_mode = 1
+
+[node name="Panel14" type="Panel" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="TextureRect/Panel14"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 538.0
+offset_right = 1921.0
+offset_bottom = 805.0
+theme_override_colors/font_color = Color(1, 1, 0.909804, 1)
+theme_override_fonts/font = ExtResource("2_g1jtu")
+theme_override_font_sizes/font_size = 45
+text = "This level is locked, to unlock it
+ complete the last one with atleast a rating of 2 stars"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelMenu" type="Button" parent="."]
+modulate = Color(0.113725, 1, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -140.0
+offset_right = 139.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_g1jtu")
+theme_override_font_sizes/font_size = 37
+text = "Level Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_turbu")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(460, 300)
+scale = Vector2(0.962121, 0.873106)
+texture = ExtResource("4_mmnpo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 300)
+scale = Vector2(1, 0.806)
+sprite_frames = SubResource("SpriteFrames_4h686")
+autoplay = "default"
+frame_progress = 0.359404
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1460, 300)
+scale = Vector2(1, 0.806)
+sprite_frames = SubResource("SpriteFrames_4h686")
+autoplay = "default"
+frame_progress = 0.359404
+
+[connection signal="pressed" from="LevelMenu" to="." method="_on_level_menu_pressed"]
