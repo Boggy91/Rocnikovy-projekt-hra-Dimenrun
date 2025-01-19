@@ -24,6 +24,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 SceneManager="*res://scripts/scene_manager.gd"
 SettingsManager="*res://scripts/SettingsManager.gd"
 Global="*res://scripts/global.gd"
+SaveManager="*res://scripts/SaveManager.gd"
 
 [display]
 

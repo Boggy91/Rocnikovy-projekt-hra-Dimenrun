@@ -7,6 +7,7 @@ func _ready() -> void:
 	# Load and apply settings as soon as the main menu is ready
 	SettingsManager.load_settings()
 	apply_settings()
+	Global.load_game()
 	
 
 func apply_settings():
