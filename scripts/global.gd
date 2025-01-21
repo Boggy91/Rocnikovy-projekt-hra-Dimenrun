@@ -17,6 +17,7 @@ var levels = [
 ]
 
 var current_level_index = 0
+var highest_unlocked_level: int = 0  
 var best_scores: Array = []
 var level_star_ratings: Array = []
 
@@ -64,15 +65,17 @@ func format_time(seconds_input: float) -> String:
 func get_next_level() -> String:
 	if current_level_index + 1 < levels.size():
 		current_level_index += 1
+		highest_unlocked_level = max(highest_unlocked_level, current_level_index)
 		return levels[current_level_index]
 	return ""
 
 func is_level_unlocked(level_index: int) -> bool:
-	return level_index <= current_level_index
+	return level_index <= highest_unlocked_level
 
 func set_current_level(level_index: int) -> void:
-	if level_index < levels.size() and is_level_unlocked(level_index):
+	if level_index < levels.size():
 		current_level_index = level_index
+		highest_unlocked_level = max(highest_unlocked_level, current_level_index)
 
 func save_level_score(points: int, time: float, star_count: int):
 	var level_index = current_level_index
@@ -80,11 +83,12 @@ func save_level_score(points: int, time: float, star_count: int):
 	if best_scores.size() <= level_index:
 		best_scores.resize(level_index + 1)
 	var existing_best = best_scores[level_index]
-	if existing_best == null or points > existing_best["points"] or (points == existing_best["points"] and time < existing_best["time"]):
+	if existing_best == null or points > existing_best["points"] or (points == existing_best["points"] and time < existing_best["raw_time"]):
 		best_scores[level_index] = {
 			"level": level_index + 1,
 			"points": points,
-			"time": format_time(time)
+			"raw_time": time, # Store raw time for comparisons
+			"time": format_time(time) # Store formatted time for display
 		}
 	if level_star_ratings.size() <= level_index:
 		level_star_ratings.resize(level_index + 1)
@@ -110,6 +114,7 @@ func reset_game():
 	point = 0
 	total_points = 0
 	current_level_index = 0
+	highest_unlocked_level = 0
 	best_scores.clear()
 	level_star_ratings.clear()
 	var save_data = {
@@ -119,6 +124,7 @@ func reset_game():
 		"point": point,
 		"total_points": total_points,
 		"current_level_index": current_level_index,
+		"highest_unlocked_level": highest_unlocked_level,
 		"best_scores": best_scores,
 		"level_star_ratings": level_star_ratings
 	}
@@ -132,6 +138,7 @@ func save_game():
 		"point": point,
 		"total_points": total_points,
 		"current_level_index": current_level_index,
+		"highest_unlocked_level": highest_unlocked_level,
 		"best_scores": best_scores,
 		"level_star_ratings": level_star_ratings
 	}
@@ -146,5 +153,6 @@ func load_game():
 		point = save_data.get("point", 0)
 		total_points = save_data.get("total_points", 0)
 		current_level_index = save_data.get("current_level_index", 0)
+		highest_unlocked_level = save_data.get("highest_unlocked_level", 0)
 		best_scores = save_data.get("best_scores", [])
 		level_star_ratings = save_data.get("level_star_ratings", [])

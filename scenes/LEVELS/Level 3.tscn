@@ -2934,6 +2934,8 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("16_3uqxu")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
 layout_mode = 1
@@ -2972,7 +2974,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("16_3uqxu")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_timid")
-text = "Main Menu"
+text = "Level Menu"
 
 [node name="Clock" type="Node2D" parent="UI"]
 
