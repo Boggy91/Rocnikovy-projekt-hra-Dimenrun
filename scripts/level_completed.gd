@@ -10,7 +10,7 @@ func _ready() -> void:
 		points_level.text = "Points: " + str(Global.get_point())  # Use Global to get points
 	else:
 		print("Error: points_level is not assigned in the scene.")
-		
+	
 	time_level_completed.text = "Your Time: " + Global.get_level_time_formatted()
 
 	# Calculate and display the star rating
@@ -42,15 +42,18 @@ func save_level_stats(points: int, time: float, star_count: int) -> void:
 	Global.save_level_score(points, time, star_count)
 
 func _on_next_level_pressed() -> void:
-	var star_count = calculate_star_rating(Global.get_point(), Global.get_level_time())
-	if star_count == 2:
+	# Retrieve the star count for the current level
+	var current_level_index = Global.current_level_index
+	var star_count = Global.get_level_star_rating(current_level_index)
+	
+	if star_count > 1:  # At least 2 stars required
 		var next_level_path = Global.get_next_level()
 		if next_level_path != "":
 			SceneManager.switch_scene(next_level_path)
 		else:
 			print("No more levels available!")
 	else:
-		var next_level_path = Global.get_next_level()
+		# Show the locked level message
 		get_tree().change_scene_to_file("res://scenes/GAME/locket_level_stars.tscn")
 
 func _on_menu_pressed() -> void:

@@ -1163,7 +1163,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("12_xkiyr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
-text = "Main Menu"
+text = "Level Menu"
 
 [node name="Clock" type="Node2D" parent="UI"]
 
