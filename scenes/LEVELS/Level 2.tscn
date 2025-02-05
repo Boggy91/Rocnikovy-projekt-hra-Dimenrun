@@ -1610,9 +1610,9 @@ autoplay = "default"
 
 [node name="Hearts" type="Panel" parent="UI"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 11.0
+offset_left = 25.0
 offset_top = 2.0
-offset_right = 170.0
+offset_right = 184.0
 offset_bottom = 62.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
@@ -1642,6 +1642,12 @@ texture = ExtResource("8_k7o5s")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_k7o5s")
+expand_mode = 2
+
+[node name="Heart4" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("8_k7o5s")
