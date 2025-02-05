@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://dn4hkh32wp4y7"]
+[gd_scene load_steps=95 format=3 uid="uid://dn4hkh32wp4y7"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_dk6k2"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_keg6q"]
@@ -40,6 +40,9 @@
 [ext_resource type="Texture2D" uid="uid://bldeaajk83v4p" path="res://map/GENERAL/green_box.png" id="27_sol8y"]
 [ext_resource type="Texture2D" uid="uid://5g3c1l8dvrnh" path="res://map/GENERAL/orange_box.png" id="28_chkqp"]
 [ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="33_ogwfm"]
+[ext_resource type="Script" path="res://scripts/spawn_teleport.gd" id="34_f0fho"]
+[ext_resource type="Texture2D" uid="uid://b4yn12n43rb7i" path="res://map/LEVEL7/portal6_spritesheet.png" id="35_w2kah"]
+[ext_resource type="Script" path="res://scripts/hole_floor.gd" id="36_qlj3b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
 atlas = ExtResource("3_2arft")
@@ -283,6 +286,72 @@ size = Vector2(58, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8whw6"]
 size = Vector2(32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yoa7"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf8s0"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utkdb"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq2p1"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpgpc"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgjob"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2tpj"]
+atlas = ExtResource("35_w2kah")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ost7h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yoa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf8s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utkdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq2p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpgpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgjob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2tpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a701y"]
+radius = 7.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgxxp"]
+size = Vector2(78, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8g2w"]
+size = Vector2(78, 12)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("6_s2jkk")
 region = Rect2(0, 0, 15, 13)
@@ -522,7 +591,7 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Scene Objects"]
 texture_filter = 1
-position = Vector2(439, 524)
+position = Vector2(451, 543)
 scale = Vector2(0.5, 0.5)
 collision_layer = 7
 collision_mask = 7
@@ -849,11 +918,13 @@ position = Vector2(6.10352e-05, -132.537)
 scale = Vector2(5.39482, 5.39482)
 texture = ExtResource("28_chkqp")
 
-[node name="Jumppad" parent="Scene Objects" instance=ExtResource("5_l4m6x")]
+[node name="Jumppads" type="Node" parent="Scene Objects"]
+
+[node name="Jumppad" parent="Scene Objects/Jumppads" instance=ExtResource("5_l4m6x")]
 position = Vector2(1468, 798)
 force = -500
 
-[node name="Jumppad2" parent="Scene Objects" instance=ExtResource("5_l4m6x")]
+[node name="Jumppad2" parent="Scene Objects/Jumppads" instance=ExtResource("5_l4m6x")]
 position = Vector2(590, 453)
 force = -2500
 
@@ -878,9 +949,9 @@ anchors_preset = -1
 anchor_top = 0.005
 anchor_bottom = 0.005
 offset_left = -1156.0
-offset_top = 1266.6
+offset_top = 1237.6
 offset_right = -1045.0
-offset_bottom = 1296.6
+offset_bottom = 1267.6
 theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 20
 text = "TELEPORT
@@ -899,6 +970,49 @@ position = Vector2(-802, 2029)
 
 [node name="Saw2" parent="Scene Objects/Saws" instance=ExtResource("33_ogwfm")]
 position = Vector2(-706, 1209)
+
+[node name="Teleports" type="Node" parent="Scene Objects"]
+
+[node name="Spawn" type="StaticBody2D" parent="Scene Objects/Teleports"]
+position = Vector2(-1101, 1199)
+scale = Vector2(2, 2)
+script = ExtResource("34_f0fho")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Scene Objects/Teleports/Spawn"]
+texture_filter = 1
+position = Vector2(0, 60)
+sprite_frames = SubResource("SpriteFrames_ost7h")
+autoplay = "default"
+frame_progress = 0.797247
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Teleports/Spawn"]
+position = Vector2(0, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Teleports/Spawn/Area2D"]
+shape = SubResource("CircleShape2D_a701y")
+
+[node name="Hole_floors" type="Node" parent="Scene Objects"]
+
+[node name="White_hole" type="StaticBody2D" parent="Scene Objects/Hole_floors"]
+position = Vector2(1729, 873)
+script = ExtResource("36_qlj3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Hole_floors/White_hole"]
+position = Vector2(-2, 15)
+shape = SubResource("RectangleShape2D_mgxxp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Scene Objects/Hole_floors/White_hole"]
+texture_filter = 1
+position = Vector2(-1.99997, 14)
+scale = Vector2(2.59375, 1)
+texture = ExtResource("12_k32kq")
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/Hole_floors/White_hole"]
+position = Vector2(2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Hole_floors/White_hole/Area2D"]
+position = Vector2(-4, 5)
+shape = SubResource("RectangleShape2D_m8g2w")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -1052,6 +1166,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Main Menu"
 
 [node name="Clock" type="Node2D" parent="UI"]
+position = Vector2(0, 9)
 
 [node name="Label" type="Label" parent="UI/Clock"]
 anchors_preset = 5
@@ -1095,6 +1210,8 @@ bus = &"Music"
 [connection signal="body_entered" from="Scene Objects/Floors/Blue Floor/Point" to="Scene Objects/Floors/Blue Floor" method="_on_point_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Floors/Green Floor/Point" to="Scene Objects/Floors/Green Floor" method="_on_point_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Floors/Orange Floor/Point" to="Scene Objects/Floors/Orange Floor" method="_on_point_body_entered"]
+[connection signal="body_entered" from="Scene Objects/Teleports/Spawn/Area2D" to="Scene Objects/Teleports/Spawn" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Scene Objects/Hole_floors/White_hole/Area2D" to="Scene Objects/Hole_floors/White_hole" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
