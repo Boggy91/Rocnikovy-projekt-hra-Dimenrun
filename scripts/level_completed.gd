@@ -43,11 +43,11 @@ func save_level_stats(points: int, time: float, star_count: int) -> void:
 
 func _on_next_level_pressed() -> void:
 	# Retrieve the star count for the current level
-	var next_level_path = Global.get_next_level()
 	var current_level_index = Global.current_level_index
 	var star_count = Global.get_level_star_rating(current_level_index)
 	
-	if star_count > 1:
+	if star_count > 1:  # At least 2 stars required
+		var next_level_path = Global.get_next_level()
 		if next_level_path != "":
 			SceneManager.switch_scene(next_level_path)
 		else:

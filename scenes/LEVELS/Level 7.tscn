@@ -585,7 +585,7 @@ metadata/_edit_vertical_guides_ = [590.0]
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_dk6k2")
-hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
+hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3"), NodePath("../UI/Hearts/HBoxContainer/Heart4")]
 
 [node name="Scene Objects" type="Node" parent="."]
 
@@ -1064,7 +1064,7 @@ frame_progress = 0.852189
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 11.0
 offset_top = 2.0
-offset_right = 170.0
+offset_right = 229.0
 offset_bottom = 62.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
@@ -1094,6 +1094,12 @@ texture = ExtResource("7_25dws")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("7_25dws")
+expand_mode = 2
+
+[node name="Heart4" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("7_25dws")

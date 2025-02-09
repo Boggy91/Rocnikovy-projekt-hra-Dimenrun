@@ -1916,7 +1916,7 @@ corner_radius_bottom_left = 10
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_kimpe")
-hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
+hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3"), NodePath("../UI/Hearts/HBoxContainer/Heart4")]
 
 [node name="Traps" type="Node" parent="."]
 
@@ -2869,7 +2869,7 @@ autoplay = "default"
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 11.0
 offset_top = 2.0
-offset_right = 170.0
+offset_right = 198.0
 offset_bottom = 62.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
@@ -2899,6 +2899,12 @@ texture = ExtResource("3_in1sm")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_in1sm")
+expand_mode = 2
+
+[node name="Heart4" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("3_in1sm")
