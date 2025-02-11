@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=28 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_fh3fb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cyo54f6tq5yre" path="res://pictures/Captura de pantalla 2025-01-05 195908.jpg" id="4_h85ai"]
 [ext_resource type="Texture2D" uid="uid://buqdlsb1ycqtu" path="res://map/GENERAL/dungeon_background.jpg" id="5_1kugh"]
 [ext_resource type="Script" path="res://scripts/total_points_lvl_menu.gd" id="5_3tm0a"]
+[ext_resource type="Script" path="res://scripts/difficulty_label.gd" id="5_bwjxg"]
 [ext_resource type="Texture2D" uid="uid://bxfxdyyieyg1o" path="res://pictures/Captura de pantalla 2024-12-19 214319.jpg" id="5_xh4e1"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="6_6crv7"]
 [ext_resource type="Texture2D" uid="uid://nri4dweq5rg0" path="res://pictures/Restart.png" id="7_ctwft"]
@@ -85,7 +86,7 @@ func _process(delta: float) -> void:
 	pass
 "
 
-[node name="lvl_menu" type="Node" node_paths=PackedStringArray("STARSLVL1", "STARSLVL2", "STARSLVL3", "STARSLVL4", "STARSLVL5", "STARSLVL6")]
+[node name="lvl_menu" type="Node" node_paths=PackedStringArray("STARSLVL1", "STARSLVL2", "STARSLVL3", "STARSLVL4", "STARSLVL5", "STARSLVL6", "STARSLVL7", "STARSLVL8")]
 script = ExtResource("1_d3p8g")
 STARSLVL1 = [NodePath("LEVEL 1/Stars lvl 1/star"), NodePath("LEVEL 1/Stars lvl 1/star2"), NodePath("LEVEL 1/Stars lvl 1/star3")]
 STARSLVL2 = [NodePath("LEVEL 2/Stars lvl 2/star"), NodePath("LEVEL 2/Stars lvl 2/star2"), NodePath("LEVEL 2/Stars lvl 2/star3")]
@@ -93,6 +94,8 @@ STARSLVL3 = [NodePath("LEVEL 3/Stars lvl 3/star"), NodePath("LEVEL 3/Stars lvl 3
 STARSLVL4 = [NodePath("LEVEL 4/Stars lvl 4/star"), NodePath("LEVEL 4/Stars lvl 4/star2"), NodePath("LEVEL 4/Stars lvl 4/star3")]
 STARSLVL5 = [NodePath("LEVEL 5/Stars lvl 5/star"), NodePath("LEVEL 5/Stars lvl 5/star2"), NodePath("LEVEL 5/Stars lvl 5/star3")]
 STARSLVL6 = [NodePath("LEVEL 6/Stars lvl 6/star"), NodePath("LEVEL 6/Stars lvl 6/star2"), NodePath("LEVEL 6/Stars lvl 6/star3")]
+STARSLVL7 = [NodePath("LEVEL 7/Stars lvl 7/star"), NodePath("LEVEL 7/Stars lvl 7/star2"), NodePath("LEVEL 7/Stars lvl 7/star3")]
+STARSLVL8 = [NodePath("LEVEL 8/Stars lvl 8/star"), NodePath("LEVEL 8/Stars lvl 8/star2"), NodePath("LEVEL 8/Stars lvl 8/star3")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -128,18 +131,32 @@ text = "Scoreboard"
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -186.0
+offset_left = -260.0
 offset_top = 26.0
-offset_right = -55.0
+offset_right = -129.0
 offset_bottom = 57.0
 grow_horizontal = 2
 theme_override_fonts/font = SubResource("FontVariation_0be5u")
 script = ExtResource("2_je0rc")
 
+[node name="Difficulty" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 26.0
+offset_right = 71.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("FontVariation_0be5u")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+script = ExtResource("5_bwjxg")
+
 [node name="Total Points lvl menu" type="Label" parent="."]
-offset_left = 1002.0
+offset_left = 1100.0
 offset_top = 18.0
-offset_right = 1169.0
+offset_right = 1267.0
 offset_bottom = 59.0
 theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 29
@@ -149,7 +166,7 @@ script = ExtResource("5_3tm0a")
 
 [node name="points" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1037, 35)
+position = Vector2(1137, 35)
 scale = Vector2(2.55, 2.59615)
 sprite_frames = SubResource("SpriteFrames_uyv1n")
 autoplay = "default"
@@ -546,6 +563,155 @@ size_flags_horizontal = 8
 texture = ExtResource("8_0fx3x")
 expand_mode = 2
 
+[node name="LEVEL 7" type="Node" parent="."]
+
+[node name="LEVEL7" type="TextureRect" parent="LEVEL 7"]
+z_as_relative = false
+texture_filter = 1
+offset_left = 980.0
+offset_top = 500.0
+offset_right = 1160.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
+texture = ExtResource("10_mxdkc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="LEVEL 7"]
+offset_left = 1060.0
+offset_top = 430.0
+offset_right = 1150.0
+offset_bottom = 470.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_g471l")
+theme_override_font_sizes/font_size = 30
+text = "LVL 7"
+
+[node name="lvl7" type="Button" parent="LEVEL 7"]
+offset_left = 980.0
+offset_top = 500.0
+offset_right = 1160.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
+script = SubResource("GDScript_skkmn")
+
+[node name="Stars lvl 7" type="HBoxContainer" parent="LEVEL 7"]
+offset_left = 980.0
+offset_top = 700.0
+offset_right = 1340.0
+offset_bottom = 770.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 7/Stars lvl 7"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 7/Stars lvl 7"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 7/Stars lvl 7"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="LEVEL 8" type="Node" parent="."]
+
+[node name="LEVEL8" type="TextureRect" parent="LEVEL 8"]
+z_as_relative = false
+texture_filter = 1
+offset_left = 1380.0
+offset_top = 500.0
+offset_right = 1560.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
+texture = ExtResource("10_mxdkc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="LEVEL 8"]
+offset_left = 1460.0
+offset_top = 430.0
+offset_right = 1550.0
+offset_bottom = 470.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_g471l")
+theme_override_font_sizes/font_size = 30
+text = "LVL 8"
+
+[node name="lvl8" type="Button" parent="LEVEL 8"]
+offset_left = 1380.0
+offset_top = 500.0
+offset_right = 1560.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
+script = SubResource("GDScript_skkmn")
+
+[node name="Stars lvl 8" type="HBoxContainer" parent="LEVEL 8"]
+offset_left = 1380.0
+offset_top = 700.0
+offset_right = 1740.0
+offset_bottom = 770.0
+alignment = 1
+
+[node name="star" type="TextureRect" parent="LEVEL 8/Stars lvl 8"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star2" type="TextureRect" parent="LEVEL 8/Stars lvl 8"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="star3" type="TextureRect" parent="LEVEL 8/Stars lvl 8"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("8_0fx3x")
+expand_mode = 2
+
+[node name="BOSS" type="Node" parent="."]
+
+[node name="BOSS" type="TextureRect" parent="BOSS"]
+z_as_relative = false
+texture_filter = 1
+offset_left = 780.0
+offset_top = 850.0
+offset_right = 960.0
+offset_bottom = 950.0
+scale = Vector2(2, 2)
+texture = ExtResource("10_mxdkc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="BOSS"]
+offset_left = 880.0
+offset_top = 780.0
+offset_right = 970.0
+offset_bottom = 820.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_g471l")
+theme_override_font_sizes/font_size = 30
+text = "BOSS"
+
+[node name="BOSS_button" type="Button" parent="BOSS"]
+offset_left = 780.0
+offset_top = 850.0
+offset_right = 960.0
+offset_bottom = 950.0
+scale = Vector2(2, 2)
+script = SubResource("GDScript_skkmn")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_de4s6")
 volume_db = -23.424
@@ -562,3 +728,6 @@ bus = &"Music"
 [connection signal="pressed" from="LEVEL 4/lvl4" to="." method="_on_lvl_4_pressed"]
 [connection signal="pressed" from="LEVEL 5/lvl5" to="." method="_on_lvl_5_pressed"]
 [connection signal="pressed" from="LEVEL 6/lvl6" to="." method="_on_lvl_6_pressed"]
+[connection signal="pressed" from="LEVEL 7/lvl7" to="." method="_on_lvl_7_pressed"]
+[connection signal="pressed" from="LEVEL 8/lvl8" to="." method="_on_lvl_7_pressed"]
+[connection signal="pressed" from="BOSS/BOSS_button" to="." method="_on_lvl_7_pressed"]
