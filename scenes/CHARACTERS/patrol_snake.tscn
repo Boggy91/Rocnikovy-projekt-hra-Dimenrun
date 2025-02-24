@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8w20lnx2dt7j"]
+[gd_scene load_steps=16 format=3 uid="uid://c8w20lnx2dt7j"]
 
 [ext_resource type="Script" path="res://scripts/patrol_snake.gd" id="1_tchrl"]
 [ext_resource type="Texture2D" uid="uid://bt8o150de256p" path="res://enemy/Desappearing (96x96).png" id="1_x10ly"]
 [ext_resource type="Texture2D" uid="uid://bisksos3sxonx" path="res://enemy/walk.png" id="2_l0x6n"]
+[ext_resource type="AudioStream" uid="uid://v76gnkus4rxj" path="res://audio/SFX/hurt_1.wav" id="4_fln57"]
+[ext_resource type="AudioStream" uid="uid://ccu53ktaug6i8" path="res://audio/SFX/boom_1.wav" id="5_opdgl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6fpp"]
 atlas = ExtResource("1_x10ly")
@@ -84,6 +86,7 @@ sprite_frames = SubResource("SpriteFrames_efvn6")
 animation = &"running"
 autoplay = "running"
 frame_progress = 0.997229
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i1sa1")
@@ -99,3 +102,16 @@ target_position = Vector2(0, 17)
 
 [node name="killed_timer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="SFX_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fln57")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="SFX_kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_opdgl")
+volume_db = -20.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="killed_timer" to="." method="_on_killed_timer_timeout"]

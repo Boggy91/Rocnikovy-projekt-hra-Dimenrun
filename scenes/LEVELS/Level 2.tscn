@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bdh1cksmiq7rg" path="res://map/LEVEL3/background2.png" id="3_vqelv"]
 [ext_resource type="Texture2D" uid="uid://cv0cgc3tuclp5" path="res://map/LEVEL3/background3.png" id="3_xnbt0"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="4_2nu7k"]
-[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="6_k0i41"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_xcss3"]
+[ext_resource type="PackedScene" uid="uid://c8w20lnx2dt7j" path="res://scenes/CHARACTERS/patrol_snake.tscn" id="8_1tg43"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_k7o5s"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="9_22s5y"]
 [ext_resource type="Texture2D" uid="uid://b1vs6b6ts2506" path="res://map/GENERAL/LavaTile set.png" id="9_bequ1"]
@@ -950,44 +950,44 @@ layer_0/tile_data = PackedInt32Array(2555866, 65536, 8, 2555867, 65536, 8, 25558
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="patrol2" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(479, 748)
+[node name="patrol_snake" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(-506, 746)
 
-[node name="patrol11" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(628, 746)
+[node name="patrol_snake2" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(-438, 749)
 
-[node name="patrol12" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(769, 750)
+[node name="patrol_snake3" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(-253, 749)
 
-[node name="patrol13" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(872, 747)
+[node name="patrol_snake4" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(-177, 749)
 
-[node name="patrol14" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(1010, 744)
+[node name="patrol_snake5" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(-55, 749)
 
-[node name="patrol3" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(252, 745)
+[node name="patrol_snake6" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(138, 750)
 
-[node name="patrol10" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(322, 750)
+[node name="patrol_snake7" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(205, 750)
 
-[node name="patrol4" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-136, 746)
+[node name="patrol_snake8" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(385, 751)
 
-[node name="patrol8" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-14, 744)
+[node name="patrol_snake9" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(522, 752)
 
-[node name="patrol9" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(91, 746)
+[node name="patrol_snake10" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(589, 749)
 
-[node name="patrol5" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-548, 745)
+[node name="patrol_snake11" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(726, 752)
 
-[node name="patrol6" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-392, 747)
+[node name="patrol_snake12" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(911, 746)
 
-[node name="patrol7" parent="Scene Objects/Enemies" instance=ExtResource("6_k0i41")]
-position = Vector2(-304, 747)
+[node name="patrol_snake13" parent="Scene Objects/Enemies" instance=ExtResource("8_1tg43")]
+position = Vector2(1048, 747)
 
 [node name="collectables" type="Node" parent="Scene Objects"]
 
