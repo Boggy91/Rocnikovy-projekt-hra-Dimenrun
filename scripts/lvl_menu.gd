@@ -6,6 +6,8 @@ extends Node
 @export var STARSLVL4: Array[Node]
 @export var STARSLVL5: Array[Node]
 @export var STARSLVL6: Array[Node]
+@export var STARSLVL7: Array[Node]
+@export var STARSLVL8: Array[Node]
 @onready var game_saved_reseted: Label = $"Game Saved_Reseted"
 
 func _ready() -> void:
@@ -17,6 +19,8 @@ func _ready() -> void:
 	display_level_stars(3, STARSLVL4)
 	display_level_stars(4, STARSLVL5)
 	display_level_stars(5, STARSLVL6)
+	display_level_stars(6, STARSLVL7)
+	display_level_stars(7, STARSLVL8)
 
 func _on_reset_game_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/GAME/reset_game.tscn")
@@ -54,6 +58,9 @@ func _on_lvl_5_pressed()-> void:
 
 func _on_lvl_6_pressed() -> void:
 	access_level(5, "res://scenes/LEVELS/Level 6.tscn")
+	
+func _on_lvl_7_pressed() -> void:
+	access_level(5, "res://scenes/LEVELS/Level 7.tscn")
 	
 func access_level(level_index: int, level_path: String) -> void:
 	# Check if the level is unlocked and the player can access it

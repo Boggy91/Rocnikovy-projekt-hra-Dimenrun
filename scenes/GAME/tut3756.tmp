@@ -486,10 +486,9 @@ position = Vector2(2750, -674)
 
 [node name="reset" type="Node" parent="procesy"]
 
-[node name="game manager" type="Node" parent="procesy" node_paths=PackedStringArray("hearts")]
+[node name="game manager" type="Node" parent="procesy"]
 unique_name_in_owner = true
 script = ExtResource("6_uwk5v")
-hearts = [NodePath("../../UI/Hearts/HBoxContainer/Heart"), NodePath("../../UI/Hearts/HBoxContainer/Heart2"), NodePath("../../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="dialogy" type="Node" parent="."]
 

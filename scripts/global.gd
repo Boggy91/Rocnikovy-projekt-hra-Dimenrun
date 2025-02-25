@@ -5,6 +5,7 @@ var level_time: float = 0.0
 var is_timer_active: bool = false
 var point: int = 0
 var total_points: int = 0
+var difficulty: String = "Normal"  # Default difficulty
 var levels = [
 	"res://scenes/LEVELS/Level 1.tscn",
 	"res://scenes/LEVELS/Level 2.tscn",
@@ -118,6 +119,7 @@ func reset_game():
 	best_scores.clear()
 	level_star_ratings.clear()
 	var save_data = {
+		"difficulty": difficulty,
 		"total_time": total_time,
 		"level_time": level_time,
 		"is_timer_active": is_timer_active,
@@ -132,6 +134,7 @@ func reset_game():
 
 func save_game():
 	var save_data = {
+		"difficulty": difficulty,
 		"total_time": total_time,
 		"level_time": level_time,
 		"is_timer_active": is_timer_active,
@@ -147,6 +150,7 @@ func save_game():
 func load_game():
 	var save_data = SaveManager.load_data()
 	if save_data:
+		difficulty = save_data.get("difficulty", "Normal")
 		total_time = save_data.get("total_time", 0.0)
 		level_time = save_data.get("level_time", 0.0)
 		is_timer_active = save_data.get("is_timer_active", false)
@@ -156,3 +160,7 @@ func load_game():
 		highest_unlocked_level = save_data.get("highest_unlocked_level", 0)
 		best_scores = save_data.get("best_scores", [])
 		level_star_ratings = save_data.get("level_star_ratings", [])
+
+func has_saved_game() -> bool:
+	var save_data = SaveManager.load_data()
+	return save_data and save_data.has("current_level_index")

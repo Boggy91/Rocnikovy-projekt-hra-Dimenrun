@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvsvjtji7kktb"]
+
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="1_5tipo"]
+[ext_resource type="Script" path="res://scripts/difficulty_menu.gd" id="1_ginyj"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="2_4fuoi"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="3_rjjtl"]
+
+[node name="ChooseDificulty" type="Node"]
+script = ExtResource("1_ginyj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_5tipo")
+expand_mode = 1
+
+[node name="Panel14" type="Panel" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="TextureRect/Panel14"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 1921.0
+offset_bottom = 326.0
+theme_override_colors/font_color = Color(1, 1, 0.909804, 1)
+theme_override_fonts/font = ExtResource("2_4fuoi")
+theme_override_font_sizes/font_size = 45
+text = "Firstly choose the difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="Button" parent="."]
+modulate = Color(0.113725, 1, 1, 1)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -140.0
+offset_right = 139.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_4fuoi")
+theme_override_font_sizes/font_size = 37
+text = "Level Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rjjtl")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="EASY" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -190.0
+offset_right = 250.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4fuoi")
+theme_override_font_sizes/font_size = 60
+text = "EASY"
+
+[node name="NORMAL" type="Button" parent="."]
+modulate = Color(0, 1, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -40.0
+offset_right = 250.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4fuoi")
+theme_override_font_sizes/font_size = 60
+text = "NORMAL"
+
+[node name="HARD" type="Button" parent="."]
+modulate = Color(1, 0, 1, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 110.0
+offset_right = 250.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4fuoi")
+theme_override_font_sizes/font_size = 60
+text = "HARD"
+
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="EASY" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="NORMAL" to="." method="_on_normal_pressed"]
+[connection signal="pressed" from="HARD" to="." method="_on_hard_pressed"]
