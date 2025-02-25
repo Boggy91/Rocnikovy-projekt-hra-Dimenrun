@@ -14,7 +14,7 @@ func _ready() -> void:
 	time_level_completed.text = "Your Time: " + Global.get_level_time_formatted()
 
 	# Calculate and display the star rating
-	var star_count = calculate_star_rating(Global.get_point(), Global.get_level_time())
+	var star_count = calculate_star_rating(Global.get_point(), Global.get_level_time(), Global.current_level_index)
 	display_stars(star_count)
 
 	# Save the current level stats to the scoreboard (including star count)
@@ -24,10 +24,24 @@ func _ready() -> void:
 	Global.reset_points()
 	Global.save_game()
 
-func calculate_star_rating(points: int, time: float) -> int:
-	if points > 30 and time < 60:
+func calculate_star_rating(points: int, time: float, level_index: int) -> int:
+	# Define custom conditions per level
+	var star_requirements = {
+		0: { "points": 42, "time": 60 },  # Level 1
+		1: { "points": 40, "time": 50 },  # Level 2
+		2: { "points": 50, "time": 45 },  # Level 3
+		3: { "points": 60, "time": 40 },  # Level 4
+		4: { "points": 70, "time": 35 },  # Level 5
+		5: { "points": 80, "time": 30 },  # Level 6
+		6: { "points": 90, "time": 25 },  # Level 7
+		7: { "points": 100, "time": 20 }  # Level 8
+	}
+
+	var level_criteria = star_requirements.get(level_index, { "points": 30, "time": 60 })  # Default if not found
+
+	if points >= level_criteria["points"] and time <= level_criteria["time"]:
 		return 3  # 3 stars
-	elif points > 15 and time < 90:
+	elif points >= level_criteria["points"] * 0.5 and time <= level_criteria["time"] * 1.5:
 		return 2  # 2 stars
 	else:
 		return 1  # 1 star
