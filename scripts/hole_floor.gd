@@ -14,11 +14,10 @@ extends StaticBody2D
 @onready var green_box: RigidBody2D = $"../../Boxes/Green_box"
 @onready var orange_box: RigidBody2D = $"../../Boxes/Orange_box"
 
-@onready var block_red: CollisionShape2D = $"../../Floors/White Floor/BLOCK_RED"
-
 
 @onready var finish: Area2D = $"../../../finish"
 
+@onready var block_red: CollisionShape2D = $BLOCK_RED
 
 
 # Hole area detection functions
@@ -26,7 +25,6 @@ func _on_area_white(body: RigidBody2D) -> void:
 	if body == white_box:
 		white_hole.position = Vector2(1729, 802.3)
 		block_red.position = Vector2(100000, 100000)
-
 func _on_area_red(body: RigidBody2D) -> void:
 	if body == red_box:
 		red_hole.position = Vector2(1863, 802.3)
