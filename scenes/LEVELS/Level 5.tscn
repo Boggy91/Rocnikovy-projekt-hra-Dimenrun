@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bvym3nhetgct2"]
+[gd_scene load_steps=52 format=3 uid="uid://bvym3nhetgct2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_3xruc"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="1_sy85j"]
@@ -10,8 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cc3yx5kadlmj1" path="res://map/LEVEL5/cloud_lonely.png" id="5_6oopo"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="5_q7cmb"]
 [ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="5_t5a5b"]
-[ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/OBJECTS/spikes.tscn" id="5_x6s27"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="6_iptyq"]
 [ext_resource type="PackedScene" uid="uid://kd306nm1y02x" path="res://scenes/OBJECTS/mooving_saw.tscn" id="6_m0i28"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_rm8et"]
 [ext_resource type="Texture2D" uid="uid://wxuyskm1sfi8" path="res://map/GENERAL/tileset.png" id="10_tqati"]
@@ -873,9 +871,6 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 
 [node name="Spikes" type="Node" parent="Scene Objects/Traps"]
 
-[node name="Spikes2" parent="Scene Objects/Traps/Spikes" instance=ExtResource("5_x6s27")]
-position = Vector2(-3437, -115)
-
 [node name="Saws" type="Node" parent="Scene Objects/Traps"]
 
 [node name="Saw" parent="Scene Objects/Traps/Saws" instance=ExtResource("5_t5a5b")]
@@ -1035,9 +1030,6 @@ position = Vector2(6761, 881)
 position = Vector2(11344, 720)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
-
-[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("6_iptyq")]
-position = Vector2(-3270, -119)
 
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
 z_index = 2
