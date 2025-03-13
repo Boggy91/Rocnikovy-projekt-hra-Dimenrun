@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bvym3nhetgct2"]
+[gd_scene load_steps=55 format=3 uid="uid://bvym3nhetgct2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_3xruc"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="1_sy85j"]
@@ -23,6 +23,7 @@
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_xkiyr"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="16_ydghk"]
 [ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="19_upjp7"]
+[ext_resource type="AudioStream" uid="uid://eu6d7kcvnmgn" path="res://audio/music/Level TRAIN.mp3" id="24_hdsd0"]
 
 [sub_resource type="Curve2D" id="Curve2D_xx6bw"]
 _data = {
@@ -871,6 +872,30 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 
 [node name="FallingSpikes" type="Node" parent="Scene Objects/Traps"]
 
+[node name="FallingSpikesLong" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8144, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong2" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8221, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong3" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8300, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong4" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8376, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong5" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8448, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong6" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8520, 620)
+speed = 800.0
+
 [node name="Spikes" type="Node" parent="Scene Objects/Traps"]
 
 [node name="Spikes2" parent="Scene Objects/Traps/Spikes" instance=ExtResource("5_x6s27")]
@@ -1245,33 +1270,10 @@ vertical_alignment = 1
 script = ExtResource("16_ydghk")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_hdsd0")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"
-
-[node name="FallingSpikesLong" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8144, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong2" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8221, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong3" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8300, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong4" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8376, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong5" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8448, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong6" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8520, 620)
-speed = 800.0
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
