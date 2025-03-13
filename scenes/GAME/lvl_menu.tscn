@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=30 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_fh3fb"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="9_t8edb"]
 [ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="10_mxdkc"]
 [ext_resource type="Texture2D" uid="uid://c5lsmrg4aku6b" path="res://pictures/Captura de pantalla 2025-02-25 104505.png" id="16_0xk8g"]
+[ext_resource type="Texture2D" uid="uid://blw0vl4riqt1y" path="res://pictures/Captura de pantalla 2025-03-02 180720.jpg" id="16_ul6na"]
 
 [sub_resource type="FontVariation" id="FontVariation_hl0uu"]
 base_font = ExtResource("2_g471l")
@@ -574,7 +575,7 @@ offset_top = 500.0
 offset_right = 1160.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-texture = ExtResource("10_mxdkc")
+texture = ExtResource("16_ul6na")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="LEVEL 7"]
