@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://cuxyrur3kcvjt"]
 
-[ext_resource type="Script" path="res://jetpack_character.gd" id="1_yx1jy"]
+[ext_resource type="Script" path="res://scripts/jetpack_character.gd" id="1_yx1jy"]
 [ext_resource type="Texture2D" uid="uid://txso5idsc1ow" path="res://character/Appearing (96x96).png" id="2_ajrh1"]
 [ext_resource type="Texture2D" uid="uid://c3bjgs6bpc6os" path="res://character/Hit (32x32).png" id="3_e0kr5"]
 [ext_resource type="Texture2D" uid="uid://dehyht22ffjuc" path="res://character/jetpack-idle.png" id="4_aenoq"]
