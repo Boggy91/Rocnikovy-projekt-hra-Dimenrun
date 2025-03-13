@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://eu6d7kcvnmgn"
+path="res://.godot/imported/Level TRAIN.mp3-5791356b7a68305841ec500742037e0a.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Level TRAIN.mp3"
+dest_files=["res://.godot/imported/Level TRAIN.mp3-5791356b7a68305841ec500742037e0a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

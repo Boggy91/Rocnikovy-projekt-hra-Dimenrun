@@ -1742,6 +1742,7 @@ script = ExtResource("13_badce")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
+autoplay = true
 bus = &"Music"
 
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_1/Question" to="Scene Objects/Lifts/Lift_question_1" method="_question_entered"]
