@@ -1,9 +1,13 @@
-[gd_scene load_steps=50 format=3 uid="uid://bvym3nhetgct2"]
+[gd_scene load_steps=54 format=3 uid="uid://bvym3nhetgct2"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_3xruc"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="1_sy85j"]
+[ext_resource type="Texture2D" uid="uid://ct7p7ruth5jvd" path="res://map/LEVEL5/sky.png" id="2_4x2iw"]
+[ext_resource type="Texture2D" uid="uid://da75io4vmpmlh" path="res://map/LEVEL5/glacial_mountains_lightened.png" id="3_47817"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="3_omapb"]
+[ext_resource type="Texture2D" uid="uid://h5nsdsuugrk6" path="res://map/LEVEL5/clouds_bg.png" id="3_v1308"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="4_yjfrh"]
+[ext_resource type="Texture2D" uid="uid://cc3yx5kadlmj1" path="res://map/LEVEL5/cloud_lonely.png" id="5_6oopo"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="5_q7cmb"]
 [ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="5_t5a5b"]
 [ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/OBJECTS/spikes.tscn" id="5_x6s27"]
@@ -732,6 +736,7 @@ corner_radius_bottom_left = 10
 [node name="Background" type="Node" parent="."]
 
 [node name="TextureRect2" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -746,6 +751,7 @@ texture = ExtResource("1_sy85j")
 expand_mode = 3
 
 [node name="TextureRect5" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -761,6 +767,7 @@ expand_mode = 3
 flip_h = true
 
 [node name="TextureRect3" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -776,6 +783,7 @@ expand_mode = 3
 flip_h = true
 
 [node name="TextureRect4" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -790,6 +798,7 @@ texture = ExtResource("1_sy85j")
 expand_mode = 3
 
 [node name="TextureRect6" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -803,6 +812,53 @@ grow_vertical = 2
 texture = ExtResource("1_sy85j")
 expand_mode = 3
 flip_h = true
+
+[node name="Background" type="Node" parent="Background"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background/Background"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_4x2iw")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("3_v1308")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect2" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("3_47817")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect2" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("5_6oopo")
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
@@ -1171,14 +1227,14 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Level Menu"
 
-[node name="Clock" type="Node2D" parent="UI"]
+[node name="Clock" type="Node" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 960.0
-offset_right = 1093.0
+offset_left = -66.5
+offset_right = 66.5
 offset_bottom = 59.0
 grow_horizontal = 2
 size_flags_horizontal = 4

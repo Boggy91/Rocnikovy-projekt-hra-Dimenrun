@@ -2810,7 +2810,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("17_nk7ee")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/background"]
-motion_scale = Vector2(0.6, 0.5)
+motion_scale = Vector2(0.48, 0.4)
 motion_mirroring = Vector2(2400, 0)
 
 [node name="TextureRect" type="Sprite2D" parent="Background/background/ParallaxLayer4"]
@@ -2982,14 +2982,14 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_timid")
 text = "Level Menu"
 
-[node name="Clock" type="Node2D" parent="UI"]
+[node name="Clock" type="Node" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 922.0
-offset_right = 1269.0
+offset_left = -173.5
+offset_right = 173.5
 offset_bottom = 59.0
 grow_horizontal = 2
 size_flags_horizontal = 4

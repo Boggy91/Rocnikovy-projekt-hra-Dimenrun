@@ -1894,6 +1894,8 @@ volume_db = -20.0
 autoplay = true
 bus = &"Music"
 
+[node name="Node" type="Node" parent="."]
+
 [connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/dash_timer" to="Scene Objects/CharacterBody2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/dash_again_timer" to="Scene Objects/CharacterBody2D" method="_on_dash_again_timer_timeout"]
 [connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/djump" to="Scene Objects/CharacterBody2D" method="_on_djump_timeout"]
