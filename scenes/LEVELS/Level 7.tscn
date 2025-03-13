@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://dn4hkh32wp4y7"]
+[gd_scene load_steps=104 format=3 uid="uid://dn4hkh32wp4y7"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_dk6k2"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_keg6q"]
@@ -47,7 +47,6 @@
 [ext_resource type="Texture2D" uid="uid://cd6tr86ll2juh" path="res://map/LEVEL7/Flag_of_the_Falkland_Islands.svg.png" id="38_pcm8g"]
 [ext_resource type="Texture2D" uid="uid://d0yc7loior5y8" path="res://map/LEVEL7/Flag_of_Tristan_da_Cunha.svg.png" id="39_jvoxi"]
 [ext_resource type="Script" path="res://scripts/answer_reset.gd" id="40_7at82"]
-[ext_resource type="Texture2D" uid="uid://dpmwc7asxvlxy" path="res://map/LEVEL7/Firefly pixel stars space background 16256.jpg" id="41_hwkrc"]
 [ext_resource type="Texture2D" uid="uid://idmbi2k0rt5k" path="res://map/GENERAL/snow.png" id="44_cvdn8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
@@ -1690,17 +1689,6 @@ position = Vector2(13, -1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Answer_reset/VOID/Area2D"]
 position = Vector2(5909.5, 0)
 shape = SubResource("RectangleShape2D_dosy6")
-
-[node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
-z_index = -4
-scale = Vector2(1.25213, 1.2034)
-
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
-texture_filter = 1
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(1.23507, 1.20772)
-texture = ExtResource("41_hwkrc")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
