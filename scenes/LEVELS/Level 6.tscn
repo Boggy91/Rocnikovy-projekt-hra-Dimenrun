@@ -1,10 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://db1p7103tx1nh"]
+[gd_scene load_steps=26 format=3 uid="uid://db1p7103tx1nh"]
 
+[ext_resource type="Texture2D" uid="uid://01b2v5nmgcpp" path="res://map/LEVEL5/sky_lightened.png" id="1_8tyr8"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_cg8dq"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_n4w6a"]
+[ext_resource type="Texture2D" uid="uid://h5nsdsuugrk6" path="res://map/LEVEL5/clouds_bg.png" id="2_qcdag"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="3_ml4ap"]
+[ext_resource type="Texture2D" uid="uid://p4a2m4bsq27n" path="res://map/LEVEL5/clouds_mg_1.png" id="3_vadvw"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="4_m2r5r"]
-[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="5_iyvps"]
+[ext_resource type="Texture2D" uid="uid://cc3yx5kadlmj1" path="res://map/LEVEL5/cloud_lonely.png" id="4_s21pa"]
 [ext_resource type="PackedScene" uid="uid://dnjpo6rq7e8w1" path="res://scenes/OBJECTS/cloud.tscn" id="6_r66qg"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="7_aohn2"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="8_1vvft"]
@@ -230,6 +233,67 @@ sources/2 = SubResource("TileSetAtlasSource_8x33w")
 
 [node name="Level 6 - SKY" type="Node"]
 
+[node name="Background" type="Node" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.01, 0.01)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("1_8tyr8")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_qcdag")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+offset_top = -752.0
+offset_right = 384.0
+offset_bottom = -386.0
+scale = Vector2(5, 5)
+texture = ExtResource("3_vadvw")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("4_s21pa")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+offset_top = -190.0
+offset_right = 384.0
+offset_bottom = 64.0
+scale = Vector2(5, 5)
+texture = ExtResource("4_s21pa")
+flip_h = true
+
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_cg8dq")
@@ -276,25 +340,6 @@ position = Vector2(4192, 257)
 position = Vector2(4088, 257)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
-
-[node name="Parallax2D" type="Parallax2D" parent="Scene Objects"]
-z_index = -2
-scroll_scale = Vector2(0.1, 0.1)
-
-[node name="TextureRect" type="TextureRect" parent="Scene Objects/Parallax2D"]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -883.0
-offset_top = -1026.0
-offset_right = 2572.0
-offset_bottom = 948.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_iyvps")
-expand_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="Clouds" type="Node" parent="Scene Objects"]
 
@@ -509,14 +554,14 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Main Menu"
 
-[node name="Clock" type="Node2D" parent="UI"]
+[node name="Clock" type="Node" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 960.0
-offset_right = 1093.0
+offset_left = -66.5
+offset_right = 66.5
 offset_bottom = 59.0
 grow_horizontal = 2
 size_flags_horizontal = 4

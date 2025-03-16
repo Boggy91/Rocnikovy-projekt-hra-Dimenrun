@@ -1,13 +1,19 @@
-[gd_scene load_steps=50 format=3 uid="uid://bvym3nhetgct2"]
+<<<<<<< HEAD
+[gd_scene load_steps=52 format=3 uid="uid://bvym3nhetgct2"]
+=======
+[gd_scene load_steps=55 format=3 uid="uid://bvym3nhetgct2"]
+>>>>>>> 363fd80757bf39c5307ff8790db433ccf7411df7
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_3xruc"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="1_sy85j"]
+[ext_resource type="Texture2D" uid="uid://ct7p7ruth5jvd" path="res://map/LEVEL5/sky.png" id="2_4x2iw"]
+[ext_resource type="Texture2D" uid="uid://da75io4vmpmlh" path="res://map/LEVEL5/glacial_mountains_lightened.png" id="3_47817"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="3_omapb"]
+[ext_resource type="Texture2D" uid="uid://h5nsdsuugrk6" path="res://map/LEVEL5/clouds_bg.png" id="3_v1308"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="4_yjfrh"]
+[ext_resource type="Texture2D" uid="uid://cc3yx5kadlmj1" path="res://map/LEVEL5/cloud_lonely.png" id="5_6oopo"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="5_q7cmb"]
 [ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="5_t5a5b"]
-[ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/OBJECTS/spikes.tscn" id="5_x6s27"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="6_iptyq"]
 [ext_resource type="PackedScene" uid="uid://kd306nm1y02x" path="res://scenes/OBJECTS/mooving_saw.tscn" id="6_m0i28"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_rm8et"]
 [ext_resource type="Texture2D" uid="uid://wxuyskm1sfi8" path="res://map/GENERAL/tileset.png" id="10_tqati"]
@@ -19,6 +25,7 @@
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_xkiyr"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="16_ydghk"]
 [ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="19_upjp7"]
+[ext_resource type="AudioStream" uid="uid://eu6d7kcvnmgn" path="res://audio/music/Level TRAIN.mp3" id="24_hdsd0"]
 
 [sub_resource type="Curve2D" id="Curve2D_xx6bw"]
 _data = {
@@ -732,6 +739,7 @@ corner_radius_bottom_left = 10
 [node name="Background" type="Node" parent="."]
 
 [node name="TextureRect2" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -746,6 +754,7 @@ texture = ExtResource("1_sy85j")
 expand_mode = 3
 
 [node name="TextureRect5" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -761,6 +770,7 @@ expand_mode = 3
 flip_h = true
 
 [node name="TextureRect3" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -776,6 +786,7 @@ expand_mode = 3
 flip_h = true
 
 [node name="TextureRect4" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -790,6 +801,7 @@ texture = ExtResource("1_sy85j")
 expand_mode = 3
 
 [node name="TextureRect6" type="TextureRect" parent="Background"]
+visible = false
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -804,6 +816,53 @@ texture = ExtResource("1_sy85j")
 expand_mode = 3
 flip_h = true
 
+[node name="Background" type="Node" parent="Background"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background/Background"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_4x2iw")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("3_v1308")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect2" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("3_47817")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Background/Background/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="TextureRect2" type="TextureRect" parent="Background/Background/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+offset_right = 384.0
+offset_bottom = 216.0
+scale = Vector2(5, 5)
+texture = ExtResource("5_6oopo")
+
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_3xruc")
@@ -815,10 +874,31 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 
 [node name="FallingSpikes" type="Node" parent="Scene Objects/Traps"]
 
-[node name="Spikes" type="Node" parent="Scene Objects/Traps"]
+[node name="FallingSpikesLong" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8144, 620)
+speed = 800.0
 
-[node name="Spikes2" parent="Scene Objects/Traps/Spikes" instance=ExtResource("5_x6s27")]
-position = Vector2(-3437, -115)
+[node name="FallingSpikesLong2" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8221, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong3" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8300, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong4" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8376, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong5" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8448, 620)
+speed = 800.0
+
+[node name="FallingSpikesLong6" parent="Scene Objects/Traps/FallingSpikes" instance=ExtResource("19_upjp7")]
+position = Vector2(8520, 620)
+speed = 800.0
+
+[node name="Spikes" type="Node" parent="Scene Objects/Traps"]
 
 [node name="Saws" type="Node" parent="Scene Objects/Traps"]
 
@@ -979,9 +1059,6 @@ position = Vector2(6761, 881)
 position = Vector2(11344, 720)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
-
-[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("6_iptyq")]
-position = Vector2(-3270, -119)
 
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
 z_index = 2
@@ -1171,14 +1248,14 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Level Menu"
 
-[node name="Clock" type="Node2D" parent="UI"]
+[node name="Clock" type="Node" parent="UI"]
 
 [node name="Label" type="Label" parent="UI/Clock"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 960.0
-offset_right = 1093.0
+offset_left = -66.5
+offset_right = 66.5
 offset_bottom = 59.0
 grow_horizontal = 2
 size_flags_horizontal = 4
@@ -1189,33 +1266,10 @@ vertical_alignment = 1
 script = ExtResource("16_ydghk")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_hdsd0")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"
-
-[node name="FallingSpikesLong" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8144, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong2" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8221, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong3" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8300, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong4" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8376, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong5" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8448, 620)
-speed = 800.0
-
-[node name="FallingSpikesLong6" parent="." instance=ExtResource("19_upjp7")]
-position = Vector2(8520, 620)
-speed = 800.0
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]

@@ -31,7 +31,6 @@ texture = ExtResource("2_hbb3t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1.5, 11)
 shape = SubResource("RectangleShape2D_briub")
-disabled = true
 
 [node name="Player detect" type="Area2D" parent="."]
 
