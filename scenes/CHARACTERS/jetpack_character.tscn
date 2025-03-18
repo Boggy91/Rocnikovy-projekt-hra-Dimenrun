@@ -282,15 +282,12 @@ script = ExtResource("1_yx1jy")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(0, -16)
+position = Vector2(112, 422)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_wvhpt")
+animation = &"falling off"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(112, 426)
 shape = SubResource("CapsuleShape2D_ooik1")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.6, 1.6)
-position_smoothing_enabled = true

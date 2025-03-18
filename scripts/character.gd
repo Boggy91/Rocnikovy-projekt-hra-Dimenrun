@@ -26,9 +26,6 @@ var is_godmode = false  # Godmode toggle
 @onready var sfx_dash: AudioStreamPlayer = $SFX_dash
 
 
-func _ready() -> void:
-	add_to_group("player")
-
 func jump():
 	velocity.y = JUMP_VELOCITY
 	

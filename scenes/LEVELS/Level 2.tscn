@@ -895,6 +895,11 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 [node name="CharacterBody2D" parent="Scene Objects" groups=["Player"] instance=ExtResource("2_qt1qg")]
 position = Vector2(-1101, 220)
 
+[node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
+position = Vector2(90, 286)
+zoom = Vector2(1.6, 1.6)
+position_smoothing_enabled = true
+
 [node name="Background" type="Node" parent="Scene Objects"]
 
 [node name="bg" type="Node" parent="Scene Objects/Background"]

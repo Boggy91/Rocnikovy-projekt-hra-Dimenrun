@@ -392,7 +392,12 @@ flip_h = true
 [node name="Character" type="Node" parent="Scene Objects"]
 
 [node name="JETPACK Character" parent="Scene Objects/Character" instance=ExtResource("2_rxxqu")]
-position = Vector2(68, 570)
+position = Vector2(20, 156)
+
+[node name="Camera2D" type="Camera2D" parent="Scene Objects/Character/JETPACK Character"]
+position = Vector2(90, 286)
+zoom = Vector2(1.6, 1.6)
+position_smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
 tile_set = SubResource("TileSet_bn3aa")

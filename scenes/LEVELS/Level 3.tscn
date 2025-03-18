@@ -1937,6 +1937,12 @@ position = Vector2(1785, -175)
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("6_2dncf")]
 position = Vector2(-20, 340)
 
+[node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
+position = Vector2(90, 286)
+scale = Vector2(2, 2)
+zoom = Vector2(1.6, 1.6)
+position_smoothing_enabled = true
+
 [node name="collectables" type="Node" parent="Scene Objects"]
 
 [node name="Area2D" parent="Scene Objects/collectables" instance=ExtResource("7_jk38k")]
