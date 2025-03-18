@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=30 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_fh3fb"]
@@ -14,10 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="8_0fx3x"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="8_hot5b"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="9_de4s6"]
+[ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="9_t8edb"]
 [ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="10_mxdkc"]
-[ext_resource type="Texture2D" uid="uid://dd4sadu7maak8" path="res://map/GENERAL/Captura de pantalla 2025-03-04 125954.png" id="14_nciwx"]
-[ext_resource type="Texture2D" uid="uid://df65txlptghuc" path="res://map/GENERAL/Captura de pantalla 2025-03-04 125713.png" id="15_bnos0"]
 [ext_resource type="Texture2D" uid="uid://c5lsmrg4aku6b" path="res://pictures/Captura de pantalla 2025-02-25 104505.png" id="16_0xk8g"]
+[ext_resource type="Texture2D" uid="uid://blw0vl4riqt1y" path="res://pictures/Captura de pantalla 2025-03-02 180720.jpg" id="16_ul6na"]
 
 [sub_resource type="FontVariation" id="FontVariation_hl0uu"]
 base_font = ExtResource("2_g471l")
@@ -70,8 +70,6 @@ animations = [{
 
 [sub_resource type="FontVariation" id="FontVariation_kllfe"]
 base_font = ExtResource("2_g471l")
-
-[sub_resource type="Theme" id="Theme_b4ta5"]
 
 [sub_resource type="FontVariation" id="FontVariation_i57og"]
 base_font = ExtResource("2_g471l")
@@ -235,8 +233,6 @@ offset_top = 150.0
 offset_right = 360.0
 offset_bottom = 250.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 
 [node name="Label" type="Label" parent="LEVEL 1"]
 offset_left = 260.0
@@ -304,8 +300,6 @@ offset_top = 150.0
 offset_right = 760.0
 offset_bottom = 250.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 2" type="HBoxContainer" parent="LEVEL 2"]
@@ -364,8 +358,6 @@ offset_top = 150.0
 offset_right = 1160.0
 offset_bottom = 250.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 3" type="HBoxContainer" parent="LEVEL 3"]
@@ -425,8 +417,6 @@ offset_top = 150.0
 offset_right = 1560.0
 offset_bottom = 250.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 4" type="HBoxContainer" parent="LEVEL 4"]
@@ -467,7 +457,7 @@ offset_top = 500.0
 offset_right = 360.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-texture = ExtResource("14_nciwx")
+texture = ExtResource("9_t8edb")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="LEVEL 5"]
@@ -486,8 +476,6 @@ offset_top = 500.0
 offset_right = 360.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 5" type="HBoxContainer" parent="LEVEL 5"]
@@ -528,7 +516,7 @@ offset_top = 500.0
 offset_right = 760.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-texture = ExtResource("15_bnos0")
+texture = ExtResource("10_mxdkc")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="LEVEL 6"]
@@ -547,8 +535,6 @@ offset_top = 500.0
 offset_right = 760.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 6" type="HBoxContainer" parent="LEVEL 6"]
@@ -589,7 +575,7 @@ offset_top = 500.0
 offset_right = 1160.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-texture = ExtResource("10_mxdkc")
+texture = ExtResource("16_ul6na")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="LEVEL 7"]
@@ -608,8 +594,6 @@ offset_top = 500.0
 offset_right = 1160.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 7" type="HBoxContainer" parent="LEVEL 7"]
@@ -669,8 +653,6 @@ offset_top = 500.0
 offset_right = 1560.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="Stars lvl 8" type="HBoxContainer" parent="LEVEL 8"]
@@ -730,8 +712,6 @@ offset_top = 850.0
 offset_right = 960.0
 offset_bottom = 950.0
 scale = Vector2(2, 2)
-theme = SubResource("Theme_b4ta5")
-theme_type_variation = &"FlatButton"
 script = SubResource("GDScript_skkmn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
