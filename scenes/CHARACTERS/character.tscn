@@ -258,14 +258,14 @@ script = ExtResource("1_ciblw")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(112, 422)
+position = Vector2(3.8147e-06, -2)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_mb6hq")
 animation = &"running"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(112, 426)
+position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_h50kp")
 
 [node name="Timers" type="Node" parent="."]
@@ -293,6 +293,10 @@ bus = &"SFX"
 [node name="SFX_dash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_nx068")
 volume_db = -20.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)
+position_smoothing_enabled = true
 
 [connection signal="timeout" from="Timers/dash_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timers/dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
