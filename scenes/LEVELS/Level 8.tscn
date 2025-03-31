@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bttctudr1n0kj"]
+[gd_scene load_steps=23 format=3 uid="uid://bttctudr1n0kj"]
 
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="1_ay8j6"]
 [ext_resource type="Texture2D" uid="uid://yo78ln1s0ui3" path="res://map/GENERAL/T_PurpleBackground_Version3_Layer1.png" id="1_t2lo0"]
@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://cuxyrur3kcvjt" path="res://scenes/CHARACTERS/jetpack_character.tscn" id="2_rxxqu"]
 [ext_resource type="Texture2D" uid="uid://d2o7toi87xs2j" path="res://map/GENERAL/T_PurpleBackground_Version1_Layer3.png" id="3_tvmjg"]
 [ext_resource type="Texture2D" uid="uid://s2y6eukwvans" path="res://map/GENERAL/T_PurpleBackground_Version1_Layer4.png" id="4_aen1p"]
+[ext_resource type="PackedScene" uid="uid://c5mjximc61maw" path="res://enemy/asteroid/asteroid_spawner.tscn" id="5_rn7vt"]
+[ext_resource type="PackedScene" uid="uid://bauu67wgvxe8w" path="res://enemy/asteroid/asteroid_spawner_inverted.tscn" id="6_qu8xj"]
+[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="9_33c8d"]
+[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="10_lf85f"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="11_wmv6m"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_ju3wr"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_uxfay"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kp8s"]
 texture = ExtResource("1_ay8j6")
@@ -301,6 +308,56 @@ texture = ExtResource("1_ay8j6")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0kp8s")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
+atlas = ExtResource("9_33c8d")
+region = Rect2(0, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
+atlas = ExtResource("9_33c8d")
+region = Rect2(15, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
+atlas = ExtResource("9_33c8d")
+region = Rect2(30, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
+atlas = ExtResource("9_33c8d")
+region = Rect2(45, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
+atlas = ExtResource("9_33c8d")
+region = Rect2(60, 0, 15, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxv4f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjg1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2yox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw3jx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jc7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbl86")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xehw5"]
+bg_color = Color(0.514089, 0.105049, 0.564005, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Level 8 - JETPACK" type="Node"]
 
 [node name="Background" type="Node" parent="."]
@@ -389,6 +446,34 @@ flip_h = true
 
 [node name="Asteroids" type="Node" parent="Scene Objects"]
 
+[node name="AsteroidSpawnerInverted" parent="Scene Objects/Asteroids" instance=ExtResource("6_qu8xj")]
+position = Vector2(-1046, 1690)
+scale = Vector2(2.5, 2.5)
+
+[node name="AsteroidSpawnerInverted2" parent="Scene Objects/Asteroids" instance=ExtResource("6_qu8xj")]
+position = Vector2(3776, 1698)
+scale = Vector2(2.5, 2.5)
+
+[node name="AsteroidSpawnerInverted3" parent="Scene Objects/Asteroids" instance=ExtResource("6_qu8xj")]
+position = Vector2(7384, 1698)
+scale = Vector2(2.5, 2.5)
+
+[node name="AsteroidSpawnerInverted4" parent="Scene Objects/Asteroids" instance=ExtResource("6_qu8xj")]
+position = Vector2(10871, 1678)
+scale = Vector2(2.5, 2.5)
+
+[node name="AsteroidSpawner" parent="Scene Objects/Asteroids" instance=ExtResource("5_rn7vt")]
+position = Vector2(-1079, -1531)
+scale = Vector2(2.5, 2.5)
+
+[node name="AsteroidSpawner2" parent="Scene Objects/Asteroids" instance=ExtResource("5_rn7vt")]
+position = Vector2(3731, -1525)
+scale = Vector2(2.5, 2.5)
+
+[node name="AsteroidSpawner3" parent="Scene Objects/Asteroids" instance=ExtResource("5_rn7vt")]
+position = Vector2(8519, -1545)
+scale = Vector2(2.5, 2.5)
+
 [node name="Character" type="Node" parent="Scene Objects"]
 
 [node name="JETPACK Character" parent="Scene Objects/Character" instance=ExtResource("2_rxxqu")]
@@ -398,3 +483,181 @@ position = Vector2(68, 570)
 tile_set = SubResource("TileSet_bn3aa")
 format = 2
 layer_0/tile_data = PackedInt32Array(2621440, 393216, 4, 2686976, 393216, 5, 2621441, 458752, 4, 2686977, 458752, 5, 2621442, 524288, 4, 2686978, 524288, 5, 2621443, 393216, 4, 2686979, 393216, 5, 2621444, 458752, 4, 2686980, 458752, 5, 2621445, 524288, 4, 2686981, 524288, 5, 2621446, 393216, 4, 2686982, 393216, 5, 2621447, 458752, 4, 2686983, 458752, 5, 2621448, 524288, 4, 2686984, 524288, 5, 2621449, 393216, 4, 2686985, 393216, 5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_bottom = 63.0
+grow_horizontal = 0
+
+[node name="Points Label" type="Label" parent="UI/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -20.5
+offset_right = 30.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "     0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 56.0
+offset_bottom = 54.0
+expand_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Panel/TextureRect"]
+texture_filter = 1
+position = Vector2(21, 19)
+scale = Vector2(2.55, 2.59615)
+sprite_frames = SubResource("SpriteFrames_nxv4f")
+autoplay = "default"
+
+[node name="Hearts" type="Panel" parent="UI"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 11.0
+offset_top = 2.0
+offset_right = 229.0
+offset_bottom = 62.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -23.0
+offset_right = 76.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("10_lf85f")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("10_lf85f")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("10_lf85f")
+expand_mode = 2
+
+[node name="Heart4" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("10_lf85f")
+expand_mode = 2
+
+[node name="Pause" type="Node" parent="UI"]
+script = ExtResource("11_wmv6m")
+
+[node name="PausePanel" type="Panel" parent="UI/Pause"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.353
+anchor_right = 0.653
+anchor_bottom = 0.459
+offset_left = 0.908997
+offset_top = 0.196991
+offset_right = 0.0909424
+offset_bottom = 0.190979
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "GAME PAUSED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.358
+anchor_top = 0.444
+anchor_right = 0.642
+anchor_bottom = 0.556
+offset_left = -4.77402
+offset_top = 42.956
+offset_right = -5.22601
+offset_bottom = 90.044
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xehw5")
+text = "Resume"
+
+[node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xehw5")
+text = "Restart level"
+
+[node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xehw5")
+text = "Main Menu"
+
+[node name="Clock" type="Node2D" parent="UI"]
+position = Vector2(0, 9)
+
+[node name="Label" type="Label" parent="UI/Clock"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 960.0
+offset_right = 1093.0
+offset_bottom = 59.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("12_ju3wr")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_uxfay")
+
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

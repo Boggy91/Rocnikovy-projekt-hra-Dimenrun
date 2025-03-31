@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5mjximc61maw"]
+
+[ext_resource type="Script" path="res://scripts/asteroid_spawner.gd" id="1_2gfkh"]
+[ext_resource type="PackedScene" uid="uid://8i5c6rugvsfx" path="res://scenes/CHARACTERS/asteroid.tscn" id="2_0hhei"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2srv6"]
+b = Vector2(1922, 2)
+
+[node name="AsteroidSpawner" type="Node2D"]
+script = ExtResource("1_2gfkh")
+asteroid_scene = ExtResource("2_0hhei")
+
+[node name="spawn_line" type="StaticBody2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spawn_line"]
+shape = SubResource("SegmentShape2D_2srv6")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.25
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
