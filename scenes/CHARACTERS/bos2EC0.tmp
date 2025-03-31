@@ -1,10 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://bhqkf8quynuea"]
+[gd_scene load_steps=27 format=3 uid="uid://bhqkf8quynuea"]
 
 [ext_resource type="Texture2D" uid="uid://c5jqa43fjf4pu" path="res://enemy/Boss/Character_sheet.png" id="1_lkswc"]
 [ext_resource type="Script" path="res://scripts/boss.gd" id="1_tb7vh"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_o7ujx"]
-radius = 20.756
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka02o"]
 atlas = ExtResource("1_lkswc")
@@ -168,8 +165,8 @@ animations = [{
 size = Vector2(11, 6)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltamy"]
-radius = 22.0
-height = 44.5
+radius = 19.0
+height = 44.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iyonx"]
 radius = 328.524
@@ -177,9 +174,9 @@ radius = 328.524
 [node name="BOSS" type="CharacterBody2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_tb7vh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_o7ujx")
+speed = null
+max_health = null
+fall_speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -191,29 +188,27 @@ frame_progress = 0.270146
 [node name="HeadArea" type="Area2D" parent="."]
 
 [node name="hitzone" type="CollisionShape2D" parent="HeadArea"]
-position = Vector2(0.25, -24)
+position = Vector2(0.5, -23)
 shape = SubResource("RectangleShape2D_2si7i")
 
-[node name="hit" type="Area2D" parent="."]
+[node name="Collision" type="Area2D" parent="."]
 
-[node name="collision" type="CollisionShape2D" parent="hit"]
+[node name="collision" type="CollisionShape2D" parent="Collision"]
 shape = SubResource("CapsuleShape2D_ltamy")
 
 [node name="DetectionZone" type="Area2D" parent="."]
 position = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
-position = Vector2(0, 0.75)
 shape = SubResource("CircleShape2D_iyonx")
 
 [node name="hit_timer" type="Timer" parent="."]
-wait_time = 2.0
 
 [node name="dead_timer" type="Timer" parent="."]
 wait_time = 2.0
 
 [connection signal="body_entered" from="HeadArea" to="." method="_on_head_area_body_entered"]
-[connection signal="body_entered" from="hit" to="." method="_on_hit_body_entered"]
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
 [connection signal="body_exited" from="DetectionZone" to="." method="_on_detection_zone_body_exited"]
 [connection signal="timeout" from="hit_timer" to="." method="_on_hit_timer_timeout"]

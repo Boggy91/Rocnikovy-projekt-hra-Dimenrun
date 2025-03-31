@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://da5t83ys3gjlx"]
+[gd_scene load_steps=32 format=3 uid="uid://da5t83ys3gjlx"]
 
 [ext_resource type="Script" path="res://scripts/lvl_menu.gd" id="1_d3p8g"]
 [ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_fh3fb"]
@@ -14,10 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://c5gscfpyi07fx" path="res://pictures/descargar (2).png" id="8_0fx3x"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="8_hot5b"]
 [ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="9_de4s6"]
-[ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="9_t8edb"]
-[ext_resource type="Texture2D" uid="uid://b1071c3pbh3jq" path="res://map/LEVEL6/sky_backgroundjpg.jpg" id="10_mxdkc"]
+[ext_resource type="Texture2D" uid="uid://cktqtc84tbu82" path="res://map/LEVEL5/Captura de pantalla 2025-03-22 224000.jpg" id="14_03x0m"]
+[ext_resource type="Texture2D" uid="uid://ceaeaski3i2w0" path="res://map/LEVEL6/Captura de pantalla 2025-03-22 224228.jpg" id="15_womfe"]
 [ext_resource type="Texture2D" uid="uid://c5lsmrg4aku6b" path="res://pictures/Captura de pantalla 2025-02-25 104505.png" id="16_0xk8g"]
 [ext_resource type="Texture2D" uid="uid://blw0vl4riqt1y" path="res://pictures/Captura de pantalla 2025-03-02 180720.jpg" id="16_ul6na"]
+[ext_resource type="Texture2D" uid="uid://bybuixdagvecu" path="res://map/LEVEL8/descargar (5).png" id="18_b7kce"]
+[ext_resource type="Texture2D" uid="uid://brb25r2c7jjli" path="res://pictures/Captura de pantalla 2025-03-16 193845.jpg" id="19_wqihl"]
 
 [sub_resource type="FontVariation" id="FontVariation_hl0uu"]
 base_font = ExtResource("2_g471l")
@@ -457,7 +459,7 @@ offset_top = 500.0
 offset_right = 360.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-texture = ExtResource("9_t8edb")
+texture = ExtResource("14_03x0m")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="LEVEL 5"]
@@ -516,7 +518,7 @@ offset_top = 500.0
 offset_right = 760.0
 offset_bottom = 600.0
 scale = Vector2(2, 2)
-texture = ExtResource("10_mxdkc")
+texture = ExtResource("15_womfe")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="LEVEL 6"]
@@ -637,6 +639,17 @@ scale = Vector2(2, 2)
 texture = ExtResource("16_0xk8g")
 expand_mode = 1
 
+[node name="TextureRect" type="TextureRect" parent="LEVEL 8"]
+z_as_relative = false
+texture_filter = 1
+offset_left = 1496.0
+offset_top = 549.0
+offset_right = 1556.0
+offset_bottom = 609.0
+scale = Vector2(2, 2)
+texture = ExtResource("18_b7kce")
+expand_mode = 1
+
 [node name="Label" type="Label" parent="LEVEL 8"]
 offset_left = 1460.0
 offset_top = 430.0
@@ -693,7 +706,7 @@ offset_top = 850.0
 offset_right = 960.0
 offset_bottom = 950.0
 scale = Vector2(2, 2)
-texture = ExtResource("10_mxdkc")
+texture = ExtResource("19_wqihl")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="BOSS"]

@@ -285,6 +285,7 @@ texture_filter = 1
 position = Vector2(0, -16)
 scale = Vector2(3.28125, 3.15625)
 sprite_frames = SubResource("SpriteFrames_wvhpt")
+animation = &"jumping"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
