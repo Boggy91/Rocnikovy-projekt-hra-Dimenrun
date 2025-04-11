@@ -397,7 +397,7 @@ hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/H
 [node name="Scene Objects" type="Node" parent="."]
 
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("4_wxe12")]
-position = Vector2(7, 292)
+position = Vector2(49, 530)
 
 [node name="collectables" type="Node" parent="Scene Objects"]
 
@@ -539,7 +539,7 @@ position = Vector2(601, 351)
 position = Vector2(845, 366)
 
 [node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
-position = Vector2(1459, 387)
+position = Vector2(1453, 398)
 
 [node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("7_j3rnp")]
 position = Vector2(397, 255)

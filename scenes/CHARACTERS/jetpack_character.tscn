@@ -275,7 +275,7 @@ animations = [{
 radius = 40.0
 height = 92.0
 
-[node name="JETPACK Character" type="CharacterBody2D"]
+[node name="JETPACK Character" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_yx1jy")
 

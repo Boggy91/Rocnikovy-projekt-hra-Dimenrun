@@ -14,6 +14,7 @@ var is_godmode = false  # Godmode toggle
 @onready var sfx_jump: AudioStreamPlayer = $SFX_jump
 @onready var sfx_hit: AudioStreamPlayer = $SFX_hit
 
+
 func jump():
 	velocity.y = JUMP_VELOCITY
 	'sfx_jump.play()'

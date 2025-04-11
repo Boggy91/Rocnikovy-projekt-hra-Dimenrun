@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwqtgj77ikuay"]
+[gd_scene load_steps=14 format=3 uid="uid://dwqtgj77ikuay"]
 
 [ext_resource type="Script" path="res://scripts/asteroid_inverted.gd" id="1_tuoh2"]
 [ext_resource type="Texture2D" uid="uid://bhkvowoe3nc8b" path="res://enemy/asteroid/Asteroid 01 - Explode.png" id="2_mm0rc"]
 [ext_resource type="Texture2D" uid="uid://b18eu3t3rh11p" path="res://enemy/asteroid/Asteroid 01 - Base.png" id="3_40n8i"]
+[ext_resource type="AudioStream" uid="uid://v76gnkus4rxj" path="res://audio/SFX/hurt_1.wav" id="4_rvfyh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knjgc"]
 atlas = ExtResource("2_mm0rc")
@@ -53,7 +54,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vjfen")
 }],
-"loop": true,
+"loop": false,
 "name": &"explode",
 "speed": 20.0
 }, {
@@ -86,5 +87,9 @@ shape = SubResource("CircleShape2D_irhps")
 
 [node name="explosion_timer" type="Timer" parent="."]
 
-[node name="kill_timer" type="Timer" parent="."]
-wait_time = 0.1
+[node name="SFX_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rvfyh")
+volume_db = -20.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="collision" to="." method="_on_collision_body_entered"]

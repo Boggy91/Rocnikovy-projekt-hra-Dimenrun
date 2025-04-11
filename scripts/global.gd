@@ -6,6 +6,7 @@ var is_timer_active: bool = false
 var point: int = 0
 var total_points: int = 0
 var difficulty: String = "Normal"  # Default difficulty
+var difficulty_sel = false
 var levels = [
 	"res://scenes/LEVELS/Level 1.tscn",
 	"res://scenes/LEVELS/Level 2.tscn",
@@ -15,12 +16,19 @@ var levels = [
 	"res://scenes/LEVELS/Level 6.tscn",
 	"res://scenes/LEVELS/Level 7.tscn",
 	"res://scenes/LEVELS/Level 8.tscn",
+	"res://scenes/LEVELS/boss_fight.tscn",
 ]
 
 var current_level_index = 0
 var highest_unlocked_level: int = 0  
 var best_scores: Array = []
 var level_star_ratings: Array = []
+
+func difficulty_selected():
+	difficulty_sel = true
+
+func get_difficulty_sel():
+	return difficulty_sel
 
 func reset_points():
 	point = 0
@@ -109,6 +117,7 @@ func get_level_star_rating(level_index: int) -> int:
 	return 0
 
 func reset_game():
+	difficulty_sel = false
 	total_time = 0.0
 	level_time = 0.0
 	is_timer_active = false

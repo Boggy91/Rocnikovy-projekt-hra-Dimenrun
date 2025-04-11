@@ -67,6 +67,7 @@ func _on_next_level_pressed() -> void:
 		else:
 			print("No more levels available!")
 	else:
+		var next_level_path = Global.get_next_level()
 		# Show the locked level message
 		get_tree().change_scene_to_file("res://scenes/GAME/locket_level_stars.tscn")
 

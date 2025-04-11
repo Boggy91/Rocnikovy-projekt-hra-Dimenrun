@@ -1,18 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmwmbre4cbvoq"]
+[gd_scene load_steps=19 format=3 uid="uid://dx6w1vfn7bc5y"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_0wgjj"]
-[ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="1_2ik8i"]
-[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_0k8ce"]
-[ext_resource type="PackedScene" uid="uid://bhqkf8quynuea" path="res://scenes/CHARACTERS/boss.tscn" id="3_jb113"]
-[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="4_8w7p5"]
-[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="5_7jtqm"]
-[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="6_y4spr"]
-[ext_resource type="Script" path="res://scripts/pause.gd" id="7_p27o7"]
-[ext_resource type="Script" path="res://scripts/label_clock.gd" id="8_0u0ol"]
-[ext_resource type="PackedScene" uid="uid://c5mjximc61maw" path="res://enemy/asteroid/asteroid_spawner.tscn" id="10_3xgch"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_sqlbt"]
+[ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qkpvj"]
+[ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="3_j1ylp"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="4_oeafj"]
+[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="5_58fgj"]
+[ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="6_03o81"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="7_16hr6"]
+[ext_resource type="PackedScene" uid="uid://chmx1t37p04md" path="res://scenes/CHARACTERS/patrol_demon.tscn" id="7_wm8mb"]
+[ext_resource type="Script" path="res://scripts/label_clock.gd" id="8_upwab"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58dvx"]
-texture = ExtResource("1_2ik8i")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31oq6"]
+texture = ExtResource("3_j1ylp")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -161,31 +160,31 @@ texture = ExtResource("1_2ik8i")
 19:10/0 = 0
 20:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_77ktv"]
+[sub_resource type="TileSet" id="TileSet_ruowi"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_58dvx")
+sources/0 = SubResource("TileSetAtlasSource_31oq6")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
-atlas = ExtResource("5_7jtqm")
+atlas = ExtResource("5_58fgj")
 region = Rect2(0, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
-atlas = ExtResource("5_7jtqm")
+atlas = ExtResource("5_58fgj")
 region = Rect2(15, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
-atlas = ExtResource("5_7jtqm")
+atlas = ExtResource("5_58fgj")
 region = Rect2(30, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
-atlas = ExtResource("5_7jtqm")
+atlas = ExtResource("5_58fgj")
 region = Rect2(45, 0, 15, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
-atlas = ExtResource("5_7jtqm")
+atlas = ExtResource("5_58fgj")
 region = Rect2(60, 0, 15, 13)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_54gqk"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mktxc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -208,31 +207,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abu53"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bne5q"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="BOSS Fight" type="Node"]
+[node name="Node" type="Node"]
+
+[node name="patrol-demon" parent="." instance=ExtResource("7_wm8mb")]
+position = Vector2(815, 769)
 
 [node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
-script = ExtResource("1_0wgjj")
+script = ExtResource("1_sqlbt")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3"), NodePath("../UI/Hearts/HBoxContainer/Heart4")]
 
-[node name="AsteroidSpawner" parent="." instance=ExtResource("10_3xgch")]
-position = Vector2(-535, -392)
-
-[node name="Character" parent="." instance=ExtResource("2_0k8ce")]
-position = Vector2(407, 447)
-
-[node name="BOSS" parent="." instance=ExtResource("3_jb113")]
-position = Vector2(2270, 234)
+[node name="Character" parent="." instance=ExtResource("2_qkpvj")]
+position = Vector2(367, 713)
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_77ktv")
+tile_set = SubResource("TileSet_ruowi")
 format = 2
 layer_0/tile_data = PackedInt32Array(3342336, 786432, 4, 3342337, 851968, 4, 3342338, 917504, 4, 3342339, 786432, 4, 3342340, 851968, 4, 3342341, 917504, 4, 3342342, 786432, 4, 3342344, 917504, 4, 3342345, 786432, 4, 3342346, 851968, 4, 3342347, 917504, 4, 3342348, 786432, 4, 3342349, 851968, 4, 3342350, 917504, 4, 3342351, 786432, 4, 3342352, 851968, 4, 3342353, 917504, 4, 3342354, 786432, 4, 3342355, 851968, 4, 3342356, 917504, 4, 3342357, 786432, 4, 3342358, 851968, 4, 3342359, 917504, 4, 3342360, 786432, 4, 3342361, 851968, 4, 3342362, 917504, 4, 3342363, 786432, 4, 3342364, 851968, 4, 3342365, 917504, 4, 3342366, 786432, 4, 3342367, 851968, 4, 3342368, 917504, 4, 3342369, 786432, 4, 3342370, 851968, 4, 3342371, 917504, 4, 3342372, 786432, 4, 3342373, 851968, 4, 3342374, 917504, 4, 3342375, 786432, 4, 3342376, 851968, 4, 3342377, 917504, 4, 3342378, 786432, 4, 3342379, 851968, 4, 3342380, 917504, 4, 3342381, 786432, 4, 3342382, 851968, 4, 3342383, 917504, 4, 3342384, 786432, 4, 3342385, 851968, 4, 3342386, 917504, 4, 3342387, 786432, 4, 3342388, 851968, 4, 3342389, 917504, 4, 3342390, 786432, 4, 3342391, 851968, 4, 3342392, 917504, 4, 3342393, 786432, 4, 3342394, 851968, 4, 3342395, 917504, 4, 3342396, 786432, 4, 3342397, 851968, 4, 3342398, 917504, 4, 3342399, 786432, 4, 3342400, 851968, 4, 3342401, 917504, 4, 3342420, 786432, 4, 3342421, 851968, 4, 3342422, 917504, 4, 3342423, 786432, 4, 3342424, 851968, 4, 3342425, 917504, 4, 3342426, 786432, 4, 3342427, 851968, 4, 3342428, 917504, 4, 3342429, 786432, 4, 3342430, 851968, 4, 3342431, 917504, 4, 3342432, 786432, 4, 3342433, 851968, 4, 3342434, 917504, 4, 3342435, 786432, 4, 3342436, 851968, 4, 3342437, 917504, 4, 3342438, 786432, 4, 3342439, 851968, 4, 3342440, 917504, 4, 3342441, 786432, 4, 3342442, 851968, 4, 3342443, 917504, 4, 3342444, 786432, 4, 3342445, 851968, 4, 3342446, 917504, 4, 3342447, 786432, 4, 3342448, 851968, 4, 3342449, 917504, 4, 3342450, 786432, 4, 3342451, 851968, 4, 3342452, 917504, 4, 3342453, 786432, 4, 3342454, 851968, 4, 3342455, 917504, 4, 3342402, 786432, 4, 3342403, 851968, 4, 3342404, 917504, 4, 3342405, 786432, 4, 3342406, 851968, 4, 3342407, 917504, 4, 3342408, 786432, 4, 3342409, 851968, 4, 3342410, 917504, 4, 3342411, 786432, 4, 3342412, 851968, 4, 3342413, 917504, 4, 3342414, 786432, 4, 3342415, 851968, 4, 3342416, 917504, 4, 3342417, 786432, 4, 3342418, 851968, 4, 3342419, 917504, 4, 3342343, 786432, 4)
 
@@ -261,7 +257,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_fonts/font = ExtResource("4_oeafj")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -279,7 +275,7 @@ expand_mode = 2
 texture_filter = 1
 position = Vector2(21, 19)
 scale = Vector2(2.55, 2.59615)
-sprite_frames = SubResource("SpriteFrames_54gqk")
+sprite_frames = SubResource("SpriteFrames_mktxc")
 autoplay = "default"
 
 [node name="Hearts" type="Panel" parent="UI"]
@@ -306,29 +302,29 @@ grow_vertical = 2
 [node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_y4spr")
+texture = ExtResource("6_03o81")
 expand_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_y4spr")
+texture = ExtResource("6_03o81")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_y4spr")
+texture = ExtResource("6_03o81")
 expand_mode = 2
 
 [node name="Heart4" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_y4spr")
+texture = ExtResource("6_03o81")
 expand_mode = 2
 
 [node name="Pause" type="Node" parent="UI"]
-script = ExtResource("7_p27o7")
+script = ExtResource("7_16hr6")
 
 [node name="PausePanel" type="Panel" parent="UI/Pause"]
 unique_name_in_owner = true
@@ -354,7 +350,7 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_fonts/font = ExtResource("4_oeafj")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
 horizontal_alignment = 1
@@ -378,25 +374,25 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_fonts/font = ExtResource("4_oeafj")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_abu53")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bne5q")
 text = "Resume"
 
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_fonts/font = ExtResource("4_oeafj")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_abu53")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bne5q")
 text = "Restart level"
 
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_fonts/font = ExtResource("4_oeafj")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_abu53")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bne5q")
 text = "Level Menu"
 
 [node name="Clock" type="Node" parent="UI"]
@@ -410,11 +406,11 @@ offset_right = 66.5
 offset_bottom = 59.0
 grow_horizontal = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_fonts/font = ExtResource("4_oeafj")
 theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("8_0u0ol")
+script = ExtResource("8_upwab")
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]

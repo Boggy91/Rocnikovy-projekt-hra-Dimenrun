@@ -744,5 +744,5 @@ bus = &"Music"
 [connection signal="pressed" from="LEVEL 5/lvl5" to="." method="_on_lvl_5_pressed"]
 [connection signal="pressed" from="LEVEL 6/lvl6" to="." method="_on_lvl_6_pressed"]
 [connection signal="pressed" from="LEVEL 7/lvl7" to="." method="_on_lvl_7_pressed"]
-[connection signal="pressed" from="LEVEL 8/lvl8" to="." method="_on_lvl_7_pressed"]
-[connection signal="pressed" from="BOSS/BOSS_button" to="." method="_on_lvl_7_pressed"]
+[connection signal="pressed" from="LEVEL 8/lvl8" to="." method="_on_lvl_8_pressed"]
+[connection signal="pressed" from="BOSS/BOSS_button" to="." method="_on_boss_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bttctudr1n0kj"]
+[gd_scene load_steps=25 format=3 uid="uid://bttctudr1n0kj"]
 
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="1_ay8j6"]
 [ext_resource type="Texture2D" uid="uid://yo78ln1s0ui3" path="res://map/GENERAL/T_PurpleBackground_Version3_Layer1.png" id="1_t2lo0"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://scripts/pause.gd" id="11_wmv6m"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_ju3wr"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_uxfay"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="14_c3fcn"]
+[ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="15_g55ro"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kp8s"]
 texture = ExtResource("1_ay8j6")
@@ -359,6 +361,103 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Level 8 - JETPACK" type="Node"]
+
+[node name="Collectables" type="Node" parent="."]
+
+[node name="Collectable" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(904.951, 656.456)
+
+[node name="Collectable2" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(396, 559)
+
+[node name="Collectable3" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(1188, 504)
+
+[node name="Collectable4" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(1472, 555)
+
+[node name="Collectable5" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(1682, 339)
+
+[node name="Collectable6" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(1892, 621)
+
+[node name="Collectable7" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(2182, 401)
+
+[node name="Collectable8" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(2257, 668)
+
+[node name="Collectable9" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(2547, 375)
+
+[node name="Collectable10" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(2901, 663)
+
+[node name="Collectable11" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(3033, 218)
+
+[node name="Collectable12" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(3452, 694)
+
+[node name="Collectable14" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(3999, 342)
+
+[node name="Collectable15" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(4383, 579)
+
+[node name="Collectable17" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(5186, 541)
+
+[node name="Collectable18" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(5237, 136)
+
+[node name="Collectable19" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(5616, 356)
+
+[node name="Collectable20" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(5728, -55)
+
+[node name="Collectable21" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(6230, 555)
+
+[node name="Collectable22" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(6686, -11)
+
+[node name="Collectable23" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(7315, 646)
+
+[node name="Collectable24" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(7616, -32)
+
+[node name="Collectable25" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(8387, 341)
+
+[node name="Collectable26" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(8692, -57)
+
+[node name="Collectable27" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(9201, 248)
+
+[node name="Collectable28" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(9794, -218)
+
+[node name="Collectable29" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(10197, 263)
+
+[node name="Collectable30" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(10443, -203)
+
+[node name="Collectable16" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(4603, 217)
+
+[node name="Collectable13" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(3490, 253)
+
+[node name="game manager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
+unique_name_in_owner = true
+script = ExtResource("14_c3fcn")
+hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3"), NodePath("../UI/Hearts/HBoxContainer/Heart4")]
 
 [node name="Background" type="Node" parent="."]
 

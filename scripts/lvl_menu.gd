@@ -60,7 +60,14 @@ func _on_lvl_6_pressed() -> void:
 	access_level(5, "res://scenes/LEVELS/Level 6.tscn")
 	
 func _on_lvl_7_pressed() -> void:
-	access_level(5, "res://scenes/LEVELS/Level 7.tscn")
+	access_level(6, "res://scenes/LEVELS/Level 7.tscn")
+	
+func _on_lvl_8_pressed() -> void:
+	access_level(7, "res://scenes/LEVELS/Level 8.tscn")
+
+func _on_boss_button_pressed() -> void:
+	access_level(8, "res://scenes/LEVELS/boss_fight.tscn")
+
 	
 func access_level(level_index: int, level_path: String) -> void:
 	# Check if the level is unlocked and the player can access it

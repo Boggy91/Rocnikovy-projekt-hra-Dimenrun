@@ -758,13 +758,7 @@ text = "Main Menu"
 position = Vector2(2375, 24)
 
 [node name="CharacterBody2D" parent="postavy" instance=ExtResource("1_j1jdx")]
-position = Vector2(-8, 25)
-
-[node name="Camera2D2" type="Camera2D" parent="postavy/CharacterBody2D"]
-position = Vector2(90, 286)
-scale = Vector2(2, 2)
-zoom = Vector2(1.6, 1.6)
-position_smoothing_enabled = true
+position = Vector2(37, 184)
 
 [connection signal="body_entered" from="dialogy/fight/Area2D" to="dialogy/fight" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="dialogy/fight/Timer" to="dialogy/fight" method="_on_timer_timeout"]

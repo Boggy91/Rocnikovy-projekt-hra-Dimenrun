@@ -35,7 +35,7 @@ func _on_hitbox_body_entered(body):
 		var y_delta = position.y - body.position.y
 		var x_delta = body.position.x - position.x
 		print(y_delta)
-		if (y_delta > 225):
+		if (y_delta > 20):
 			print("Destroy enemy")
 			killed= true
 			if killed:

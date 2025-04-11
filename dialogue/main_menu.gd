@@ -32,7 +32,11 @@ func apply_settings():
 func _on_play_pressed():
 	if Global.current_level_index == 0:
 		# New game, choose difficulty
-		get_tree().change_scene_to_file("res://scenes/GAME/difficulty_menu.tscn")
+		if not Global.get_difficulty_sel():
+			get_tree().change_scene_to_file("res://scenes/GAME/difficulty_menu.tscn")
+		else:
+			print("Loading saved game...")
+			get_tree().change_scene_to_file("res://scenes/GAME/lvl_menu.tscn")
 	else:
 		# Continue previous game
 		print("Loading saved game...")
