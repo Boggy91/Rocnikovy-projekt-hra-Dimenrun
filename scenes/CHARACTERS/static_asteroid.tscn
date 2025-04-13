@@ -1,39 +1,40 @@
-[gd_scene load_steps=14 format=3 uid="uid://8i5c6rugvsfx"]
+[gd_scene load_steps=15 format=3 uid="uid://c1yg6s1nvvx6t"]
 
-[ext_resource type="Script" path="res://scripts/asteroid.gd" id="1_5cv16"]
-[ext_resource type="Texture2D" uid="uid://bhkvowoe3nc8b" path="res://enemy/asteroid/Asteroid 01 - Explode.png" id="2_rxmkw"]
-[ext_resource type="Texture2D" uid="uid://b18eu3t3rh11p" path="res://enemy/asteroid/Asteroid 01 - Base.png" id="3_8in17"]
-[ext_resource type="AudioStream" uid="uid://v76gnkus4rxj" path="res://audio/SFX/hurt_1.wav" id="4_8okta"]
+[ext_resource type="Script" path="res://scripts/static_asteroid.gd" id="1_tbbf1"]
+[ext_resource type="Texture2D" uid="uid://bhkvowoe3nc8b" path="res://enemy/asteroid/Asteroid 01 - Explode.png" id="2_kqwno"]
+[ext_resource type="Texture2D" uid="uid://b18eu3t3rh11p" path="res://enemy/asteroid/Asteroid 01 - Base.png" id="3_yeqvu"]
+[ext_resource type="AudioStream" uid="uid://v76gnkus4rxj" path="res://audio/SFX/hurt_1.wav" id="4_7tdpg"]
+[ext_resource type="AudioStream" uid="uid://ccu53ktaug6i8" path="res://audio/SFX/boom_1.wav" id="5_pkxcb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knjgc"]
-atlas = ExtResource("2_rxmkw")
+atlas = ExtResource("2_kqwno")
 region = Rect2(96, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w72yc"]
-atlas = ExtResource("2_rxmkw")
+atlas = ExtResource("2_kqwno")
 region = Rect2(192, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j1y58"]
-atlas = ExtResource("2_rxmkw")
+atlas = ExtResource("2_kqwno")
 region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxr0a"]
-atlas = ExtResource("2_rxmkw")
+atlas = ExtResource("2_kqwno")
 region = Rect2(384, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_126bf"]
-atlas = ExtResource("2_rxmkw")
+atlas = ExtResource("2_kqwno")
 region = Rect2(480, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjfen"]
-atlas = ExtResource("2_rxmkw")
+atlas = ExtResource("2_kqwno")
 region = Rect2(576, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxut2"]
-atlas = ExtResource("3_8in17")
+atlas = ExtResource("3_yeqvu")
 region = Rect2(0, 0, 96, 96)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fnr60"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_nphhd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -67,34 +68,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gmaeq"]
-radius = 19.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2seaq"]
+radius = 17.5
+height = 36.0
 
-[node name="Asteroid" type="RigidBody2D"]
-script = ExtResource("1_5cv16")
+[node name="StaticAsteroid" type="StaticBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_tbbf1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_fnr60")
+sprite_frames = SubResource("SpriteFrames_nphhd")
 animation = &"explode"
 autoplay = "idle"
 
 [node name="collision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collision"]
-position = Vector2(1, 0)
-shape = SubResource("CircleShape2D_gmaeq")
-
-[node name="explosion_timer" type="Timer" parent="."]
-
-[node name="kill_timer" type="Timer" parent="."]
-wait_time = 0.1
+position = Vector2(-1, 0.5)
+shape = SubResource("CapsuleShape2D_2seaq")
 
 [node name="SFX_hit" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_8okta")
+stream = ExtResource("4_7tdpg")
 volume_db = -20.0
 bus = &"SFX"
 
+[node name="SFX_kill" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pkxcb")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="killed_timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="collision" to="." method="_on_collision_body_entered"]
-[connection signal="timeout" from="explosion_timer" to="." method="_on_explosion_timer_timeout"]
-[connection signal="timeout" from="kill_timer" to="." method="_on_kill_timer_timeout"]
+[connection signal="timeout" from="killed_timer" to="." method="_on_killed_timer_timeout"]

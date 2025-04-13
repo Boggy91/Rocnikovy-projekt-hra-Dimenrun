@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bttctudr1n0kj"]
+[gd_scene load_steps=27 format=3 uid="uid://bttctudr1n0kj"]
 
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="1_ay8j6"]
 [ext_resource type="Texture2D" uid="uid://yo78ln1s0ui3" path="res://map/GENERAL/T_PurpleBackground_Version3_Layer1.png" id="1_t2lo0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://s2y6eukwvans" path="res://map/GENERAL/T_PurpleBackground_Version1_Layer4.png" id="4_aen1p"]
 [ext_resource type="PackedScene" uid="uid://c5mjximc61maw" path="res://enemy/asteroid/asteroid_spawner.tscn" id="5_rn7vt"]
 [ext_resource type="PackedScene" uid="uid://bauu67wgvxe8w" path="res://enemy/asteroid/asteroid_spawner_inverted.tscn" id="6_qu8xj"]
+[ext_resource type="PackedScene" uid="uid://c1yg6s1nvvx6t" path="res://scenes/CHARACTERS/static_asteroid.tscn" id="7_6ycdg"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="9_33c8d"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="10_lf85f"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="11_wmv6m"]
@@ -15,6 +16,7 @@
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_uxfay"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="14_c3fcn"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="15_g55ro"]
+[ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="17_8w8iy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kp8s"]
 texture = ExtResource("1_ay8j6")
@@ -448,6 +450,39 @@ position = Vector2(10197, 263)
 [node name="Collectable30" parent="Collectables" instance=ExtResource("15_g55ro")]
 position = Vector2(10443, -203)
 
+[node name="Collectable31" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(11062, 80)
+
+[node name="Collectable32" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(11600, -229)
+
+[node name="Collectable33" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(11896, 188)
+
+[node name="Collectable34" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(12448, -189)
+
+[node name="Collectable35" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(13013, 242)
+
+[node name="Collectable36" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(13242, -175)
+
+[node name="Collectable37" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(13753, 188)
+
+[node name="Collectable38" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(14332, -269)
+
+[node name="Collectable39" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(14816, 215)
+
+[node name="Collectable40" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(15125, -296)
+
+[node name="Collectable41" parent="Collectables" instance=ExtResource("15_g55ro")]
+position = Vector2(15529, 242)
+
 [node name="Collectable16" parent="Collectables" instance=ExtResource("15_g55ro")]
 position = Vector2(4603, 217)
 
@@ -543,6 +578,92 @@ flip_h = true
 
 [node name="Scene Objects" type="Node" parent="."]
 
+[node name="static_asteroids" type="Node" parent="Scene Objects"]
+
+[node name="StaticAsteroid" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(1396, 336)
+
+[node name="StaticAsteroid2" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(1728, 502)
+
+[node name="StaticAsteroid3" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(2375, 306)
+
+[node name="StaticAsteroid4" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(2788, 544)
+
+[node name="StaticAsteroid5" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(3145, 372)
+
+[node name="StaticAsteroid6" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(3456, 534)
+
+[node name="StaticAsteroid7" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(3752, 323)
+
+[node name="StaticAsteroid8" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(4313, 376)
+
+[node name="StaticAsteroid9" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(4836, 538)
+
+[node name="StaticAsteroid10" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(5421, 213)
+
+[node name="StaticAsteroid11" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(5872, 591)
+
+[node name="StaticAsteroid12" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(6257, 304)
+
+[node name="StaticAsteroid13" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(6857, 349)
+
+[node name="StaticAsteroid14" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(7606, 513)
+
+[node name="StaticAsteroid15" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(7821, 196)
+
+[node name="StaticAsteroid16" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(8710, 426)
+
+[node name="StaticAsteroid17" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(8976, 64)
+
+[node name="StaticAsteroid18" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(9582, 340)
+
+[node name="StaticAsteroid19" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(10005, 389)
+
+[node name="StaticAsteroid20" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(10107, -41)
+
+[node name="StaticAsteroid21" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(10787, 253)
+
+[node name="StaticAsteroid22" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(11106, -113)
+
+[node name="StaticAsteroid23" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(12033, 4)
+
+[node name="StaticAsteroid24" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(12460, 159)
+
+[node name="StaticAsteroid25" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(13379, 0)
+
+[node name="StaticAsteroid26" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(14442, -102)
+
+[node name="StaticAsteroid27" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(15208, 202)
+
+[node name="StaticAsteroid28" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(15336, -149)
+
 [node name="Asteroids" type="Node" parent="Scene Objects"]
 
 [node name="AsteroidSpawnerInverted" parent="Scene Objects/Asteroids" instance=ExtResource("6_qu8xj")]
@@ -579,9 +700,10 @@ scale = Vector2(2.5, 2.5)
 position = Vector2(68, 570)
 
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
+texture_filter = 1
 tile_set = SubResource("TileSet_bn3aa")
 format = 2
-layer_0/tile_data = PackedInt32Array(2621440, 393216, 4, 2686976, 393216, 5, 2621441, 458752, 4, 2686977, 458752, 5, 2621442, 524288, 4, 2686978, 524288, 5, 2621443, 393216, 4, 2686979, 393216, 5, 2621444, 458752, 4, 2686980, 458752, 5, 2621445, 524288, 4, 2686981, 524288, 5, 2621446, 393216, 4, 2686982, 393216, 5, 2621447, 458752, 4, 2686983, 458752, 5, 2621448, 524288, 4, 2686984, 524288, 5, 2621449, 393216, 4, 2686985, 393216, 5)
+layer_0/tile_data = PackedInt32Array(2621441, 458752, 8, 2621442, 393216, 8, 2621443, 458752, 8, 2621444, 393216, 8, 2621445, 458752, 8, 2621446, 393216, 8, 2621447, 393216, 8, 2621448, 458752, 8, 263138, 393216, 8, 263139, 458752, 8, 263140, 393216, 8, 263141, 458752, 8, 263142, 524288, 8)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -756,6 +878,9 @@ theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("13_uxfay")
+
+[node name="finish" parent="." instance=ExtResource("17_8w8iy")]
+position = Vector2(15943, 31)
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]

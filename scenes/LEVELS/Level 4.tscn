@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bcslq"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="1_duvpk"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="3_6g6r6"]
+[ext_resource type="PackedScene" uid="uid://daualgspc8ab8" path="res://scenes/CHARACTERS/slime.tscn" id="3_66tlq"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL3/background4a.png" id="3_dkm5t"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="4_qroup"]
 [ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/OBJECTS/FallingSpikes.tscn" id="5_gp2g4"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="5_m21ua"]
-[ext_resource type="PackedScene" uid="uid://dvwu74mu3if8y" path="res://scenes/CHARACTERS/demon.tscn" id="6_aahif"]
 [ext_resource type="PackedScene" uid="uid://bku3sq4cgvjpt" path="res://scenes/OBJECTS/spikes.tscn" id="6_ywaeq"]
 [ext_resource type="Texture2D" uid="uid://wxuyskm1sfi8" path="res://map/GENERAL/tileset.png" id="7_jpwy3"]
 [ext_resource type="Texture2D" uid="uid://c2jr4ybvqjl1i" path="res://map/GENERAL/all-props.png" id="8_24cxv"]
@@ -481,13 +481,7 @@ position = Vector2(-1289, 774)
 position = Vector2(-759, 775)
 
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("3_6g6r6")]
-position = Vector2(-147, 339)
-
-[node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
-position = Vector2(90, 286)
-scale = Vector2(2, 2)
-zoom = Vector2(1.6, 1.6)
-position_smoothing_enabled = true
+position = Vector2(-206, 506)
 
 [node name="collectables" type="Node" parent="Scene Objects"]
 
@@ -575,6 +569,12 @@ position = Vector2(334, 477)
 [node name="Area2D6" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
 position = Vector2(732, 316)
 
+[node name="Area2D36" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
+position = Vector2(2835, 428)
+
+[node name="Area2D37" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
+position = Vector2(2700, 430)
+
 [node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("4_qroup")]
 position = Vector2(1957, 108)
 
@@ -601,20 +601,23 @@ position = Vector2(3024, 398)
 
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
-[node name="enemy2" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(860, 350)
+[node name="Slime" parent="Scene Objects/Enemies" instance=ExtResource("3_66tlq")]
+position = Vector2(411, 257)
 
-[node name="enemy3" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(1460, 372)
+[node name="Slime6" parent="Scene Objects/Enemies" instance=ExtResource("3_66tlq")]
+position = Vector2(-1320, 370)
 
-[node name="enemy4" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(2283, 162)
+[node name="Slime2" parent="Scene Objects/Enemies" instance=ExtResource("3_66tlq")]
+position = Vector2(858, 368)
 
-[node name="enemy5" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(2759, 403)
+[node name="Slime3" parent="Scene Objects/Enemies" instance=ExtResource("3_66tlq")]
+position = Vector2(1485, 386)
 
-[node name="enemy6" parent="Scene Objects/Enemies" instance=ExtResource("6_aahif")]
-position = Vector2(406, 241)
+[node name="Slime4" parent="Scene Objects/Enemies" instance=ExtResource("3_66tlq")]
+position = Vector2(2281, 176)
+
+[node name="Slime5" parent="Scene Objects/Enemies" instance=ExtResource("3_66tlq")]
+position = Vector2(2758, 417)
 
 [node name="TileMap" type="TileMap" parent="Scene Objects"]
 texture_filter = 1

@@ -865,6 +865,34 @@ position = Vector2(-158, 1192)
 z_index = 1
 position = Vector2(6551, 2553)
 
+[node name="Area2D7" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(5307, 2558)
+
+[node name="Area2D8" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(4134, 2555)
+
+[node name="Area2D9" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(2671, 2557)
+
+[node name="Area2D10" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(2720, 2554)
+
+[node name="Area2D11" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(2774, 2554)
+
+[node name="Area2D12" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(2831, 2554)
+
+[node name="Area2D13" parent="Scene Objects/collectables" instance=ExtResource("3_qy5fv")]
+z_index = 1
+position = Vector2(2892, 2552)
+
 [node name="Enemies" type="Node" parent="Scene Objects"]
 
 [node name="Clouds" type="Node" parent="Scene Objects"]
