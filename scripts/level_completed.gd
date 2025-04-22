@@ -34,7 +34,7 @@ func calculate_star_rating(points: int, time: float, level_index: int) -> int:
 		4: { "points": 5, "time": 35 },  # Level 5
 		5: { "points": 16, "time": 30 },  # Level 6
 		6: { "points": 13, "time": 150 },  # Level 7
-		7: { "points": 100, "time": 20 }  # Level 8
+		7: { "points": 60, "time": 110 }  # Level 8
 	}
 
 	var level_criteria = star_requirements.get(level_index, { "points": 30, "time": 60 })  # Default if not found

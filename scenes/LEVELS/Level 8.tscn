@@ -583,11 +583,29 @@ flip_h = true
 [node name="StaticAsteroid" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(1396, 336)
 
+[node name="StaticAsteroid43" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(947, 168)
+
 [node name="StaticAsteroid2" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(1728, 502)
 
+[node name="StaticAsteroid44" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(1434, 1017)
+
+[node name="StaticAsteroid41" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(2094, -181)
+
+[node name="StaticAsteroid42" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(1453, -103)
+
+[node name="StaticAsteroid40" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(2118, 940)
+
 [node name="StaticAsteroid3" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(2375, 306)
+
+[node name="StaticAsteroid39" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(2723, 36)
 
 [node name="StaticAsteroid4" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(2788, 544)
@@ -598,6 +616,9 @@ position = Vector2(3145, 372)
 [node name="StaticAsteroid6" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(3456, 534)
 
+[node name="StaticAsteroid38" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(3048, 1079)
+
 [node name="StaticAsteroid7" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(3752, 323)
 
@@ -607,20 +628,59 @@ position = Vector2(4313, 376)
 [node name="StaticAsteroid9" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(4836, 538)
 
+[node name="StaticAsteroid35" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(4284, 893)
+
+[node name="StaticAsteroid36" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(4055, -95)
+
+[node name="StaticAsteroid37" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(3319, -162)
+
 [node name="StaticAsteroid10" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(5421, 213)
+
+[node name="StaticAsteroid33" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(4968, 60)
+
+[node name="StaticAsteroid45" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(5365, -206)
+
+[node name="StaticAsteroid34" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(5377, 873)
 
 [node name="StaticAsteroid11" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(5872, 591)
 
+[node name="StaticAsteroid46" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(6511, 927)
+
+[node name="StaticAsteroid32" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(6016, -132)
+
 [node name="StaticAsteroid12" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(6257, 304)
+
+[node name="StaticAsteroid31" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(6620, -26)
 
 [node name="StaticAsteroid13" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(6857, 349)
 
+[node name="StaticAsteroid47" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(7311, -119)
+
+[node name="StaticAsteroid30" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(6878, 742)
+
 [node name="StaticAsteroid14" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(7606, 513)
+
+[node name="StaticAsteroid48" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(7848, 880)
+
+[node name="StaticAsteroid29" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(8167, 614)
 
 [node name="StaticAsteroid15" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(7821, 196)
@@ -628,11 +688,20 @@ position = Vector2(7821, 196)
 [node name="StaticAsteroid16" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(8710, 426)
 
+[node name="StaticAsteroid49" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(9194, 803)
+
 [node name="StaticAsteroid17" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(8976, 64)
 
+[node name="StaticAsteroid50" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(9262, -215)
+
 [node name="StaticAsteroid18" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(9582, 340)
+
+[node name="StaticAsteroid51" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(10561, 700)
 
 [node name="StaticAsteroid19" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(10005, 389)
@@ -643,6 +712,9 @@ position = Vector2(10107, -41)
 [node name="StaticAsteroid21" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(10787, 253)
 
+[node name="StaticAsteroid52" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(11687, 298)
+
 [node name="StaticAsteroid22" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(11106, -113)
 
@@ -652,17 +724,29 @@ position = Vector2(12033, 4)
 [node name="StaticAsteroid24" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(12460, 159)
 
+[node name="StaticAsteroid53" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(13556, 454)
+
 [node name="StaticAsteroid25" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(13379, 0)
 
 [node name="StaticAsteroid26" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(14442, -102)
 
+[node name="StaticAsteroid54" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(13895, -460)
+
 [node name="StaticAsteroid27" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(15208, 202)
 
+[node name="StaticAsteroid55" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(14775, 525)
+
 [node name="StaticAsteroid28" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
 position = Vector2(15336, -149)
+
+[node name="StaticAsteroid56" parent="Scene Objects/static_asteroids" instance=ExtResource("7_6ycdg")]
+position = Vector2(15550, -464)
 
 [node name="Asteroids" type="Node" parent="Scene Objects"]
 
@@ -730,6 +814,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_ju3wr")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -822,8 +907,11 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_ju3wr")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
 layout_mode = 1
@@ -843,6 +931,7 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_ju3wr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_xehw5")
 text = "Resume"
@@ -850,6 +939,7 @@ text = "Resume"
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_ju3wr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_xehw5")
 text = "Restart level"
@@ -857,6 +947,7 @@ text = "Restart level"
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_ju3wr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_xehw5")
 text = "Main Menu"
@@ -865,13 +956,8 @@ text = "Main Menu"
 position = Vector2(0, 9)
 
 [node name="Label" type="Label" parent="UI/Clock"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 960.0
-offset_right = 1093.0
+offset_right = 1921.0
 offset_bottom = 59.0
-grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("12_ju3wr")
 theme_override_font_sizes/font_size = 40

@@ -94,7 +94,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_lhd75")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
-text = "Main Menu"
+text = "Level Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0njlb")

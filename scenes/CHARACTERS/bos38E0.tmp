@@ -1,14 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://bhqkf8quynuea"]
+[gd_scene load_steps=28 format=3 uid="uid://bhqkf8quynuea"]
 
 [ext_resource type="Texture2D" uid="uid://c5jqa43fjf4pu" path="res://enemy/Boss/Character_sheet.png" id="1_lkswc"]
 [ext_resource type="Script" path="res://scripts/boss.gd" id="1_tb7vh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o7ujx"]
 radius = 20.756
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cnd5a"]
-atlas = ExtResource("1_lkswc")
-region = Rect2(600, 500, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka02o"]
 atlas = ExtResource("1_lkswc")
@@ -92,14 +88,6 @@ region = Rect2(400, 100, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f83gr"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cnd5a")
-}],
-"loop": true,
-"name": &"dash",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ka02o")
@@ -196,8 +184,9 @@ shape = SubResource("CircleShape2D_o7ujx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_f83gr")
-animation = &"dash"
+animation = &"dead"
 autoplay = "default"
+frame_progress = 0.270146
 
 [node name="HeadArea" type="Area2D" parent="."]
 
@@ -224,12 +213,6 @@ wait_time = 2.0
 wait_time = 2.0
 
 [node name="dash_timer" type="Timer" parent="."]
-wait_time = 8.0
-one_shot = true
-
-[node name="dashing_timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
 
 [connection signal="body_entered" from="HeadArea" to="." method="_on_head_area_body_entered"]
 [connection signal="body_entered" from="hit" to="." method="_on_hit_body_entered"]
@@ -237,5 +220,3 @@ one_shot = true
 [connection signal="body_exited" from="DetectionZone" to="." method="_on_detection_zone_body_exited"]
 [connection signal="timeout" from="hit_timer" to="." method="_on_hit_timer_timeout"]
 [connection signal="timeout" from="dead_timer" to="." method="_on_dead_timer_timeout"]
-[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
-[connection signal="timeout" from="dashing_timer" to="." method="_on_dashing_timer_timeout"]

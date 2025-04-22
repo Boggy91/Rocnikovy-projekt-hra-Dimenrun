@@ -1782,6 +1782,7 @@ offset_right = 30.0
 offset_bottom = 21.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 30
 text = "     0"
 horizontal_alignment = 1
@@ -1875,8 +1876,11 @@ offset_right = 0.0909424
 offset_bottom = 0.190979
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
 layout_mode = 1
@@ -1896,6 +1900,7 @@ theme_override_constants/separation = 15
 [node name="Resume" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Resume"
@@ -1903,6 +1908,7 @@ text = "Resume"
 [node name="Restart lvl" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
 text = "Restart level"
@@ -1910,21 +1916,17 @@ text = "Restart level"
 [node name="Menu" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_w6el1")
-text = "Main Menu"
+text = "Level Menu"
 
 [node name="Clock" type="Node2D" parent="UI"]
 position = Vector2(0, 9)
 
 [node name="Label" type="Label" parent="UI/Clock"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 960.0
-offset_right = 1093.0
+offset_right = 1919.0
 offset_bottom = 59.0
-grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("9_nqfye")
 theme_override_font_sizes/font_size = 40
