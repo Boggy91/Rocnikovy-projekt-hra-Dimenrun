@@ -66,7 +66,10 @@ func _on_lvl_8_pressed() -> void:
 	access_level(7, "res://scenes/LEVELS/Level 8.tscn")
 
 func _on_boss_button_pressed() -> void:
-	access_level(8, "res://scenes/LEVELS/boss_fight.tscn")
+	if Global.get_total_points() > 1000:
+		access_level(8, "res://scenes/LEVELS/boss_fight.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/GAME/boss_level_locked.tscn")
 
 	
 func access_level(level_index: int, level_path: String) -> void:

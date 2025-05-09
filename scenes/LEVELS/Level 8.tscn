@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bttctudr1n0kj"]
+[gd_scene load_steps=28 format=3 uid="uid://bttctudr1n0kj"]
 
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="1_ay8j6"]
 [ext_resource type="Texture2D" uid="uid://yo78ln1s0ui3" path="res://map/GENERAL/T_PurpleBackground_Version3_Layer1.png" id="1_t2lo0"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="14_c3fcn"]
 [ext_resource type="PackedScene" uid="uid://c7t3uy4gfjvym" path="res://scenes/OBJECTS/collectable.tscn" id="15_g55ro"]
 [ext_resource type="PackedScene" uid="uid://gj5ew8632cl6" path="res://scenes/OBJECTS/finish.tscn" id="17_8w8iy"]
+[ext_resource type="AudioStream" uid="uid://c5ljesawwt4wk" path="res://audio/music/ambient-soundscapes-004-space-atmosphere-303243.mp3" id="18_o61ws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kp8s"]
 texture = ExtResource("1_ay8j6")
@@ -967,6 +968,12 @@ script = ExtResource("13_uxfay")
 
 [node name="finish" parent="." instance=ExtResource("17_8w8iy")]
 position = Vector2(15943, 31)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_o61ws")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]

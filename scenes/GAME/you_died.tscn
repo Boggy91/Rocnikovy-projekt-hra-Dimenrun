@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bynl5cyfpshoj" path="res://pictures/Firefly_2D_pixel_graveyard_with_purple_sky_1624.jpg" id="1_s2h6x"]
 [ext_resource type="Script" path="res://scripts/you_died_panel.gd" id="1_tood8"]
-[ext_resource type="AudioStream" uid="uid://dgi6buv1pmv14" path="res://audio/music/SEPAR - VYJEBALA RESPEKT feat. Matej Straka (prod. Infinit).mp3" id="3_0njlb"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_lhd75"]
+[ext_resource type="AudioStream" uid="uid://bcmgl44qd0vie" path="res://audio/dark-souls-_you-died_-sound-effect-from-youtube.mp3" id="4_nxbf8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu87m"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
@@ -97,8 +97,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vu87m")
 text = "Level Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_0njlb")
-volume_db = -20.0
+stream = ExtResource("4_nxbf8")
 autoplay = true
 
 [connection signal="pressed" from="You died panel/Control2/VBoxContainer/Restart Level" to="You died panel" method="_on_restart_level_pressed"]
