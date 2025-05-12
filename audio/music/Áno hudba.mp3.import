@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpugk3t0sndwk"
+path="res://.godot/imported/Áno hudba.mp3-8eafd35fb1dfbb2d67714529b6ee00a8.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Áno hudba.mp3"
+dest_files=["res://.godot/imported/Áno hudba.mp3-8eafd35fb1dfbb2d67714529b6ee00a8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

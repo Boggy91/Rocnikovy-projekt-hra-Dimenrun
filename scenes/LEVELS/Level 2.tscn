@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://4hb0jrpcp0gy"]
+[gd_scene load_steps=64 format=3 uid="uid://4hb0jrpcp0gy"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qt1qg"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="18_hkaa5"]
 [ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="19_cada0"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="21_xf35q"]
+[ext_resource type="AudioStream" uid="uid://cpugk3t0sndwk" path="res://audio/music/Áno hudba.mp3" id="25_0d1xo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m26gp"]
 texture = ExtResource("10_jpnfi")
@@ -1736,6 +1737,7 @@ theme_override_font_sizes/font_size = 40
 script = ExtResource("13_badce")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_0d1xo")
 volume_db = -20.0
 autoplay = true
 bus = &"Music"

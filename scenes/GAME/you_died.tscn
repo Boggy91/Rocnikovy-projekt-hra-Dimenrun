@@ -99,6 +99,7 @@ text = "Level Menu"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_nxbf8")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="You died panel/Control2/VBoxContainer/Restart Level" to="You died panel" method="_on_restart_level_pressed"]
 [connection signal="pressed" from="You died panel/Control2/VBoxContainer/Menu" to="You died panel" method="_on_menu_pressed"]

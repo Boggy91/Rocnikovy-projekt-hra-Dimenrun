@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://orywfxekxeu1"]
+[gd_scene load_steps=36 format=3 uid="uid://orywfxekxeu1"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kimpe"]
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="2_g56yk"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bf728uywur01q" path="res://map/LEVEL3/background4b.png" id="18_bb7g4"]
 [ext_resource type="Texture2D" uid="uid://cpe2j8lmnb68y" path="res://map/GENERAL/mainlev_build.png" id="19_idnf6"]
 [ext_resource type="PackedScene" uid="uid://bc6nebo2rg446" path="res://scenes/CHARACTERS/patrol_dog.tscn" id="20_mxxy5"]
+[ext_resource type="AudioStream" uid="uid://cv58q4yg1ju2s" path="res://audio/music/Bossko.mp3" id="21_t2hqa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i4ag"]
 size = Vector2(5076, 7)
@@ -3124,7 +3125,9 @@ theme_override_font_sizes/font_size = 40
 script = ExtResource("5_jt5nf")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_t2hqa")
 volume_db = -20.0
+autoplay = true
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Bridges/Bridge 1/StaticBody2D/Area2D" to="Scene Objects/Bridges/Bridge 1/StaticBody2D" method="_on_area_2d_body_entered"]
