@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var dash_speed: float = 400.0  # Speed during dash
 @export var max_health: int = 5
 @export var fall_speed: float = 200.0
+@export var boss_hearts: Array[Node]  # Hearts for the boss (drag in the hearts from the scene)
 
 var hit = false
 var health: int
@@ -24,6 +25,7 @@ func _ready():
 	health = max_health
 	animated_sprite_2d.animation = "default"
 	dash_timer.start()  # Start dash timer at the beginning
+	update_boss_hearts_display()  # Initialize the heart display when the boss is created
 
 func _physics_process(delta):
 	if dead:
@@ -50,6 +52,7 @@ func take_damage():
 	if not hit and not dead:
 		health -= 1
 		print("Boss Health: ", health)
+		update_boss_hearts_display()  # Update hearts display after taking damage
 		if health <= 0:
 			die()
 
@@ -99,3 +102,11 @@ func _on_dash_timer_timeout() -> void:
 func _on_dashing_timer_timeout() -> void:
 	dashing = false
 	dash_timer.start()  # Restart the cooldown for the next dash
+
+# Update the hearts display for the boss
+func update_boss_hearts_display():
+	for h in range(boss_hearts.size()):
+		if h < health:
+			boss_hearts[h].show()
+		else:
+			boss_hearts[h].hide()

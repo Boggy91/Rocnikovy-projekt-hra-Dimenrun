@@ -32,7 +32,7 @@ func calculate_star_rating(points: int, time: float, level_index: int) -> int:
 		2: { "points": 55, "time": 60 },  # Level 3
 		3: { "points": 35, "time": 60 },  # Level 4
 		4: { "points": 5, "time": 35 },  # Level 5
-		5: { "points": 16, "time": 30 },  # Level 6
+		5: { "points": 16, "time": 31 },  # Level 6
 		6: { "points": 13, "time": 150 },  # Level 7
 		7: { "points": 40, "time": 110 }  # Level 8
 	}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cmwmbre4cbvoq"]
+[gd_scene load_steps=19 format=3 uid="uid://cmwmbre4cbvoq"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_0wgjj"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_0k8ce"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bhqkf8quynuea" path="res://scenes/CHARACTERS/boss.tscn" id="3_jb113"]
 [ext_resource type="Texture2D" uid="uid://bug0fw63j4efq" path="res://map/LEVEL10/boss bg/Stars-Big_1_1_PC.png" id="4_5ka00"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="4_8w7p5"]
-[ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="5_7jtqm"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="6_y4spr"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="7_p27o7"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="8_0u0ol"]
@@ -1297,49 +1296,6 @@ texture = ExtResource("8_oc35a")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_jnc2i")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
-atlas = ExtResource("5_7jtqm")
-region = Rect2(0, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b2yox"]
-atlas = ExtResource("5_7jtqm")
-region = Rect2(15, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uw3jx"]
-atlas = ExtResource("5_7jtqm")
-region = Rect2(30, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8jc7r"]
-atlas = ExtResource("5_7jtqm")
-region = Rect2(45, 0, 15, 13)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tbl86"]
-atlas = ExtResource("5_7jtqm")
-region = Rect2(60, 0, 15, 13)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_54gqk"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tjg1s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b2yox")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uw3jx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8jc7r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tbl86")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abu53"]
 bg_color = Color(0.514089, 0.105049, 0.564005, 1)
 corner_radius_top_left = 10
@@ -1400,16 +1356,20 @@ stretch_mode = 1
 position = Vector2(-456, -901)
 
 [node name="AsteroidSpawner2" parent="." instance=ExtResource("10_3xgch")]
-position = Vector2(270, -1024)
+position = Vector2(92, -1024)
+
+[node name="AsteroidSpawner3" parent="." instance=ExtResource("10_3xgch")]
+position = Vector2(129, -1190)
 
 [node name="Character" parent="." instance=ExtResource("2_0k8ce")]
 position = Vector2(407, 447)
 collision_mask = 3
 
-[node name="BOSS" parent="." instance=ExtResource("3_jb113")]
+[node name="BOSS" parent="." node_paths=PackedStringArray("boss_hearts") instance=ExtResource("3_jb113")]
 position = Vector2(1692, 265)
 collision_layer = 2
 collision_mask = 2
+boss_hearts = [NodePath("../UI/Boss hearts/HBoxContainer/Heart"), NodePath("../UI/Boss hearts/HBoxContainer/Heart2"), NodePath("../UI/Boss hearts/HBoxContainer/Heart3"), NodePath("../UI/Boss hearts/HBoxContainer/Heart4"), NodePath("../UI/Boss hearts/HBoxContainer/Heart5")]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1427,41 +1387,6 @@ anchor_right = 1.0
 offset_left = -160.0
 offset_bottom = 63.0
 grow_horizontal = 0
-
-[node name="Points Label" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -26.0
-offset_top = -20.5
-offset_right = 30.0
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("4_8w7p5")
-theme_override_font_sizes/font_size = 30
-text = "     0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 14.0
-offset_right = 56.0
-offset_bottom = 54.0
-expand_mode = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Panel/TextureRect"]
-texture_filter = 1
-position = Vector2(21, 19)
-scale = Vector2(2.55, 2.59615)
-sprite_frames = SubResource("SpriteFrames_54gqk")
-autoplay = "default"
 
 [node name="Hearts" type="Panel" parent="UI"]
 self_modulate = Color(1, 1, 1, 0)
@@ -1596,6 +1521,68 @@ theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_0u0ol")
+
+[node name="Boss hearts" type="Panel" parent="UI"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1623.0
+offset_top = 2.0
+offset_right = 1923.0
+offset_bottom = 62.0
+
+[node name="Label" type="Label" parent="UI/Boss hearts"]
+layout_mode = 0
+offset_left = -94.0
+offset_right = 15.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("4_8w7p5")
+theme_override_font_sizes/font_size = 30
+text = "Boss"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Boss hearts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -23.0
+offset_right = 76.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart" type="TextureRect" parent="UI/Boss hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_y4spr")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="UI/Boss hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_y4spr")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="UI/Boss hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_y4spr")
+expand_mode = 2
+
+[node name="Heart4" type="TextureRect" parent="UI/Boss hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_y4spr")
+expand_mode = 2
+
+[node name="Heart5" type="TextureRect" parent="UI/Boss hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_y4spr")
+expand_mode = 2
 
 [node name="lava_reset" type="StaticBody2D" parent="."]
 position = Vector2(-5, 1044)

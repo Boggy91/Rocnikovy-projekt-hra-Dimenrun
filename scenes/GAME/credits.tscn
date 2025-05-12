@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0upjsq52v21"]
+[gd_scene load_steps=5 format=3 uid="uid://c0upjsq52v21"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_5g8t7"]
 [ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_0bna0"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_klp7k"]
+[ext_resource type="AudioStream" uid="uid://bln28t4immdd4" path="res://audio/SFX/success-music-moody-fanfare-gfx-sounds-1-00-06.mp3" id="4_xw6wc"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_5g8t7")
@@ -77,5 +78,11 @@ grow_vertical = 0
 scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("3_klp7k")
 text = "Main Menu"
+
+[node name="SFX_Finish" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xw6wc")
+volume_db = -20.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="pressed" from="main_menu" to="." method="_on_main_menu_pressed"]

@@ -158,9 +158,9 @@ horizontal_alignment = 1
 script = ExtResource("5_bwjxg")
 
 [node name="Total Points lvl menu" type="Label" parent="."]
-offset_left = 1100.0
+offset_left = 1112.0
 offset_top = 18.0
-offset_right = 1267.0
+offset_right = 1279.0
 offset_bottom = 59.0
 theme_override_fonts/font = ExtResource("2_g471l")
 theme_override_font_sizes/font_size = 29
