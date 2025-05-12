@@ -105,7 +105,16 @@ volume_db = -23.424
 autoplay = true
 bus = &"Music"
 
+[node name="Secret" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 455.0
+offset_top = 195.0
+offset_right = 492.0
+offset_bottom = 232.0
+
 [connection signal="pressed" from="Control2/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control2/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Control2/VBoxContainer/Settings" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="Control2/VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Secret" to="." method="_on_secret_pressed"]
