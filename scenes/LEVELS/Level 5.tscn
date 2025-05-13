@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://dqbb05w1tqsvw"]
+[gd_scene load_steps=94 format=3 uid="uid://dqbb05w1tqsvw"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_3xruc"]
 [ext_resource type="Texture2D" uid="uid://2y4pcqwirth2" path="res://map/LEVEL5/background.jpg" id="1_sy85j"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="19_upjp7"]
 [ext_resource type="AudioStream" uid="uid://dkfbbj3rbijlq" path="res://audio/SFX/SFX_dash.mp3" id="20_7xgoy"]
 [ext_resource type="AudioStream" uid="uid://eu6d7kcvnmgn" path="res://audio/music/Level TRAIN.mp3" id="24_hdsd0"]
+[ext_resource type="Script" path="res://scripts/lava_reset.gd" id="27_h0lsh"]
 
 [sub_resource type="Curve2D" id="Curve2D_xx6bw"]
 _data = {
@@ -927,6 +928,9 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pio5p"]
+size = Vector2(5076, 8)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("10_rm8et")
 region = Rect2(0, 0, 15, 13)
@@ -1371,6 +1375,25 @@ position = Vector2(306, 884)
 curve = SubResource("Curve2D_1t0nl")
 speed = 4.0
 
+[node name="lava_reset" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(559.542, 1405.87)
+script = ExtResource("27_h0lsh")
+
+[node name="Area2D" type="Area2D" parent="Scene Objects/lava_reset"]
+position = Vector2(-9, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/lava_reset/Area2D"]
+position = Vector2(1731.46, -204.871)
+shape = SubResource("RectangleShape2D_pio5p")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Scene Objects/lava_reset/Area2D"]
+position = Vector2(6816.46, -207.871)
+shape = SubResource("RectangleShape2D_pio5p")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Scene Objects/lava_reset/Area2D"]
+position = Vector2(10368.5, -205.871)
+shape = SubResource("RectangleShape2D_pio5p")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -1562,6 +1585,7 @@ bus = &"Music"
 [connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/dash_again_timer" to="Scene Objects/CharacterBody2D" method="_on_dash_again_timer_timeout"]
 [connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/djump" to="Scene Objects/CharacterBody2D" method="_on_djump_timeout"]
 [connection signal="timeout" from="Scene Objects/CharacterBody2D/Timers/hit_timer" to="Scene Objects/CharacterBody2D" method="_on_hit_timer_timeout"]
+[connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
