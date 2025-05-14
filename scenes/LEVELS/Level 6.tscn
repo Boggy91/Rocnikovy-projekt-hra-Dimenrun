@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://db1p7103tx1nh"]
+[gd_scene load_steps=30 format=3 uid="uid://db1p7103tx1nh"]
 
 [ext_resource type="Texture2D" uid="uid://01b2v5nmgcpp" path="res://map/LEVEL5/sky_lightened.png" id="1_8tyr8"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_cg8dq"]
@@ -16,10 +16,14 @@
 [ext_resource type="Script" path="res://scripts/lava_reset.gd" id="9_ywso6"]
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="10_fo7it"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="10_xc3bi"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_6.gd" id="10_ylt6a"]
 [ext_resource type="AudioStream" uid="uid://oipuxk8hikq5" path="res://audio/music/Level 5.mp3" id="11_hb8f5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5onf"]
 size = Vector2(5076, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68jgs"]
+size = Vector2(157, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("7_aohn2")
@@ -434,6 +438,16 @@ position = Vector2(611.201, 2.7085)
 position = Vector2(6319, -276)
 shape = SubResource("RectangleShape2D_s5onf")
 
+[node name="Intro_dialogue_6" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(-41.278, 567.728)
+script = ExtResource("10_ylt6a")
+
+[node name="start" type="Area2D" parent="Scene Objects/Intro_dialogue_6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Intro_dialogue_6/start"]
+position = Vector2(43.778, 15.272)
+shape = SubResource("RectangleShape2D_68jgs")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -634,6 +648,7 @@ bus = &"Music"
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D2" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Scene Objects/Intro_dialogue_6/start" to="Scene Objects/Intro_dialogue_6" method="_on_start_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

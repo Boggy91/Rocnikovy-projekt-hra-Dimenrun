@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://jpvxie3rgeso"
+path="res://.godot/imported/level_boss_intro.dialogue-a603f1e5fb6a9d14d0094cfba8aec56b.tres"
+
+[deps]
+
+source_file="res://dialogue/level_boss_intro.dialogue"
+dest_files=["res://.godot/imported/level_boss_intro.dialogue-a603f1e5fb6a9d14d0094cfba8aec56b.tres"]
+
+[params]
+
+defaults=true

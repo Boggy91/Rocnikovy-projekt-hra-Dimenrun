@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bbuwunnuyrh7i"]
+[gd_scene load_steps=45 format=3 uid="uid://bbuwunnuyrh7i"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ikuo0"]
 [ext_resource type="PackedScene" uid="uid://b20bnw6n020kr" path="res://scenes/OBJECTS/FallingSpikes.tscn" id="2_xyq1m"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bvssenegee40u" path="res://scenes/OBJECTS/mooving_platform.tscn" id="12_7ei8j"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="12_d4cv8"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="13_fmkl8"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_1.gd" id="13_qos3w"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="14_16m3n"]
 [ext_resource type="Texture2D" uid="uid://d20jhfhrg8ms3" path="res://map/LEVEL1/hell-background-eggq0xomzeclv9om.jpg" id="15_dtrq3"]
 [ext_resource type="Texture2D" uid="uid://8j2agy8t6iob" path="res://map/LEVEL3/background4a.png" id="16_5pp78"]
@@ -336,6 +337,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -400, 0)
 }
 point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw6bx"]
+size = Vector2(158, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("11_pt5no")
@@ -681,6 +685,17 @@ position = Vector2(3713, 270)
 curve = SubResource("Curve2D_mhpgd")
 loop = false
 
+[node name="Intro_dialogue" type="StaticBody2D" parent="Scene Objects"]
+z_index = 5
+position = Vector2(7, 530)
+script = ExtResource("13_qos3w")
+
+[node name="start" type="Area2D" parent="Scene Objects/Intro_dialogue"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Intro_dialogue/start"]
+position = Vector2(43, 64)
+shape = SubResource("RectangleShape2D_fw6bx")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -900,6 +915,7 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="body_entered" from="Scene Objects/lava_reset/Area2D" to="Scene Objects/lava_reset" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Scene Objects/Intro_dialogue/start" to="Scene Objects/Intro_dialogue" method="_on_start_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

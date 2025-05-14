@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://sniswpb2avoe"
+path="res://.godot/imported/level_7_intro.dialogue-807f319317079f57eac44278c9a7e780.tres"
+
+[deps]
+
+source_file="res://dialogue/level_7_intro.dialogue"
+dest_files=["res://.godot/imported/level_7_intro.dialogue-807f319317079f57eac44278c9a7e780.tres"]
+
+[params]
+
+defaults=true

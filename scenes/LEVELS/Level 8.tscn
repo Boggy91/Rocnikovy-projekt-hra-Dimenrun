@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bttctudr1n0kj"]
+[gd_scene load_steps=30 format=3 uid="uid://bttctudr1n0kj"]
 
 [ext_resource type="Texture2D" uid="uid://ckh20ll2rgh2a" path="res://map/GENERAL/Terrain (16x16).png" id="1_ay8j6"]
 [ext_resource type="Texture2D" uid="uid://yo78ln1s0ui3" path="res://map/GENERAL/T_PurpleBackground_Version3_Layer1.png" id="1_t2lo0"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="9_33c8d"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="10_lf85f"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="11_wmv6m"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_8.gd" id="12_7opwe"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_ju3wr"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="13_uxfay"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="14_c3fcn"]
@@ -312,6 +313,9 @@ texture = ExtResource("1_ay8j6")
 [sub_resource type="TileSet" id="TileSet_bn3aa"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0kp8s")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_252bn"]
+size = Vector2(125, 11.611)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("9_33c8d")
@@ -790,6 +794,16 @@ tile_set = SubResource("TileSet_bn3aa")
 format = 2
 layer_0/tile_data = PackedInt32Array(2621441, 458752, 8, 2621442, 393216, 8, 2621443, 458752, 8, 2621444, 393216, 8, 2621445, 458752, 8, 2621446, 393216, 8, 2621447, 393216, 8, 2621448, 458752, 8, 263138, 393216, 8, 263139, 458752, 8, 263140, 393216, 8, 263141, 458752, 8, 263142, 524288, 8)
 
+[node name="Intro_dialogue_8" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(66.9339, 629.222)
+script = ExtResource("12_7opwe")
+
+[node name="start" type="Area2D" parent="Scene Objects/Intro_dialogue_8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Intro_dialogue_8/start"]
+position = Vector2(13.0661, 9.5835)
+shape = SubResource("RectangleShape2D_252bn")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -975,6 +989,7 @@ volume_db = -20.0
 autoplay = true
 bus = &"Music"
 
+[connection signal="body_entered" from="Scene Objects/Intro_dialogue_8/start" to="Scene Objects/Intro_dialogue_8" method="_on_start_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

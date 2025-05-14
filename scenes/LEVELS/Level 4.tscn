@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://djw6i35aar6fi"]
+[gd_scene load_steps=34 format=3 uid="uid://djw6i35aar6fi"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bcslq"]
 [ext_resource type="Texture2D" uid="uid://8sufskxresfs" path="res://map/LEVEL4/mountains.png" id="1_duvpk"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://q0fd478plx2n" path="res://collectable/gem.png" id="10_lww3h"]
 [ext_resource type="Texture2D" uid="uid://b5ojs1q1ammye" path="res://collectable/heart.webp" id="11_o6osa"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="12_btnhr"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_4.gd" id="12_fu2hu"]
 [ext_resource type="Script" path="res://scripts/pause.gd" id="12_y1pc2"]
 [ext_resource type="Script" path="res://scripts/label_clock.gd" id="16_tjm3a"]
 [ext_resource type="AudioStream" uid="uid://bhicxf6ny4q68" path="res://audio/music/Level 6 (mp3cut.net).mp3" id="17_vqit1"]
@@ -286,6 +287,9 @@ size = Vector2(39.5, 847.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t88vu"]
 size = Vector2(20, 751)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0liy"]
+size = Vector2(184, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("10_lww3h")
@@ -652,6 +656,16 @@ position = Vector2(0, 1)
 position = Vector2(-2018, 216.5)
 shape = SubResource("RectangleShape2D_t88vu")
 
+[node name="Intro_dialogue_4" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(-212.863, 578.663)
+script = ExtResource("12_fu2hu")
+
+[node name="start" type="Area2D" parent="Scene Objects/Intro_dialogue_4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Intro_dialogue_4/start"]
+position = Vector2(8.86337, 11.3369)
+shape = SubResource("RectangleShape2D_t0liy")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -839,6 +853,7 @@ volume_db = -20.0
 autoplay = true
 bus = &"Music"
 
+[connection signal="body_entered" from="Scene Objects/Intro_dialogue_4/start" to="Scene Objects/Intro_dialogue_4" method="_on_start_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

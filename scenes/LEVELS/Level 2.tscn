@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://4hb0jrpcp0gy"]
+[gd_scene load_steps=66 format=3 uid="uid://4hb0jrpcp0gy"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_kgubg"]
 [ext_resource type="PackedScene" uid="uid://cg3bhudehfnxm" path="res://scenes/CHARACTERS/character.tscn" id="2_qt1qg"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://scripts/lift_question_3.gd" id="17_4dhtd"]
 [ext_resource type="PackedScene" uid="uid://dh2os3f4xh68f" path="res://scenes/OBJECTS/saw.tscn" id="18_hkaa5"]
 [ext_resource type="PackedScene" uid="uid://dexngxam5daj5" path="res://scenes/OBJECTS/falling_spikes_long.tscn" id="19_cada0"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_2.gd" id="20_4rmlm"]
 [ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="21_xf35q"]
 [ext_resource type="AudioStream" uid="uid://cpugk3t0sndwk" path="res://audio/music/Áno hudba.mp3" id="25_0d1xo"]
 
@@ -834,6 +835,9 @@ size = Vector2(48, 36)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33xqu"]
 size = Vector2(48, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0jfw"]
+size = Vector2(195, 20)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("7_xcss3")
 region = Rect2(0, 0, 15, 13)
@@ -1558,6 +1562,16 @@ position = Vector2(-426, 140)
 [node name="FallingSpikesLong4" parent="Scene Objects/Falling Spikes" instance=ExtResource("19_cada0")]
 position = Vector2(-502, 140)
 
+[node name="Intro_dialogue_2" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(-912.078, 437.183)
+script = ExtResource("20_4rmlm")
+
+[node name="start" type="Area2D" parent="Scene Objects/Intro_dialogue_2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Intro_dialogue_2/start"]
+position = Vector2(-69.4215, 25.8167)
+shape = SubResource("RectangleShape2D_v0jfw")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -1757,6 +1771,7 @@ bus = &"Music"
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_3/Answer_B" to="Scene Objects/Lifts/Lift_question_3" method="_on_answer_b"]
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_3/Answer_C" to="Scene Objects/Lifts/Lift_question_3" method="_on_answer_c"]
 [connection signal="body_entered" from="Scene Objects/Lifts/Lift_question_3/Answer_D" to="Scene Objects/Lifts/Lift_question_3" method="_on_answer_d"]
+[connection signal="body_entered" from="Scene Objects/Intro_dialogue_2/start" to="Scene Objects/Intro_dialogue_2" method="_on_start_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

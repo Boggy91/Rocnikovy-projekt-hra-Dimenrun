@@ -91,3 +91,7 @@ func display_level_stars(level_index: int, star_nodes: Array[Node]) -> void:
 	for i in range(star_nodes.size()):
 		star_nodes[i].visible = i < star_count
 		
+
+
+func _on_time_and_points_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/GAME/time_score.tscn")

@@ -1,0 +1,138 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1jitff0h4ymb"]
+
+[ext_resource type="Script" path="res://scripts/time_score.gd" id="1_swep6"]
+[ext_resource type="Texture2D" uid="uid://l74x5lppojjx" path="res://pictures/Firefly_2D_pixel_galaxy_88522.jpg" id="2_lxkck"]
+[ext_resource type="FontFile" uid="uid://cywa3is2xsm2x" path="res://fonts/Audex-Regular.ttf" id="3_mctfo"]
+[ext_resource type="AudioStream" uid="uid://klnab3fn8uqn" path="res://audio/music/Menu.mp3" id="4_83nh3"]
+
+[node name="Time and score" type="Node"]
+script = ExtResource("1_swep6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_lxkck")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2"]
+modulate = Color(0.0745098, 1, 1, 1)
+layout_mode = 2
+offset_top = 309.0
+offset_right = 1920.0
+offset_bottom = 694.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 1 :          POINTS:  40          TIME: 70   seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 2 :          POINTS:  21          TIME: 90   seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 3 :          POINTS:  55          TIME: 60   seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 4 :          POINTS:  35          TIME: 60   seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 5 :          POINTS:    5          TIME: 35   seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 6 :          POINTS:  16          TIME: 31   seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 7 :          POINTS:  13          TIME: 150 seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "LEVEL 8 :          POINTS:  40          TIME: 110 seconds 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.114815
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00130208
+anchor_top = -0.104839
+anchor_right = 1.0013
+anchor_bottom = 1.06452
+offset_left = 2.5
+offset_right = -2.50024
+offset_bottom = 6.10352e-05
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0.968627, 1)
+theme_override_fonts/font = ExtResource("3_mctfo")
+theme_override_font_sizes/font_size = 50
+text = "Required time and score for 3 stars"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelMenu" type="Button" parent="."]
+modulate = Color(0.113725, 1, 1, 1)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_mctfo")
+theme_override_font_sizes/font_size = 31
+text = "Level Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_83nh3")
+volume_db = -23.424
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="LevelMenu" to="." method="_on_level_menu_pressed"]

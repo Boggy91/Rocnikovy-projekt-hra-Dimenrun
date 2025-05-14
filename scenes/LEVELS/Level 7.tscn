@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://dn4hkh32wp4y7"]
+[gd_scene load_steps=108 format=3 uid="uid://dn4hkh32wp4y7"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_dk6k2"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_keg6q"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://d0yc7loior5y8" path="res://map/LEVEL7/Flag_of_Tristan_da_Cunha.svg.png" id="39_jvoxi"]
 [ext_resource type="Script" path="res://scripts/answer_reset.gd" id="40_7at82"]
 [ext_resource type="Texture2D" uid="uid://dpmwc7asxvlxy" path="res://map/LEVEL7/Firefly pixel stars space background 16256.jpg" id="41_hwkrc"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_7.gd" id="43_ljjuw"]
 [ext_resource type="Texture2D" uid="uid://idmbi2k0rt5k" path="res://map/GENERAL/snow.png" id="44_cvdn8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5auph"]
@@ -367,6 +368,9 @@ size = Vector2(52, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dosy6"]
 size = Vector2(11943, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0wst"]
+size = Vector2(122, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjg1s"]
 atlas = ExtResource("6_s2jkk")
@@ -1757,6 +1761,16 @@ position = Vector2(13, -1)
 position = Vector2(5909.5, 0)
 shape = SubResource("RectangleShape2D_dosy6")
 
+[node name="Intro_dialogue_7" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(727.833, 807.678)
+script = ExtResource("43_ljjuw")
+
+[node name="start" type="Area2D" parent="Scene Objects/Intro_dialogue_7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/Intro_dialogue_7/start"]
+position = Vector2(13.1674, 0)
+shape = SubResource("RectangleShape2D_m0wst")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -1984,6 +1998,7 @@ bus = &"Music"
 [connection signal="body_entered" from="Scene Objects/Answer_reset/StaticBody2D/Area2D8" to="Scene Objects/Answer_reset/StaticBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Answer_reset/StaticBody2D/Area2D4" to="Scene Objects/Answer_reset/StaticBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Scene Objects/Answer_reset/VOID/Area2D" to="Scene Objects/Answer_reset/StaticBody2D" method="_on_area_reset_entered"]
+[connection signal="body_entered" from="Scene Objects/Intro_dialogue_7/start" to="Scene Objects/Intro_dialogue_7" method="_on_start_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart lvl" to="UI/Pause" method="_on_restart_lvl_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]

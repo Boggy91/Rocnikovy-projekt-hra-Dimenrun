@@ -1380,7 +1380,7 @@ position = Vector2(559.542, 1405.87)
 script = ExtResource("27_h0lsh")
 
 [node name="Area2D" type="Area2D" parent="Scene Objects/lava_reset"]
-position = Vector2(-9, 3)
+position = Vector2(-14.542, -137.87)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scene Objects/lava_reset/Area2D"]
 position = Vector2(1731.46, -204.871)

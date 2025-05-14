@@ -131,6 +131,21 @@ grow_horizontal = 0
 theme_override_fonts/font = SubResource("FontVariation_hl0uu")
 text = "Scoreboard"
 
+[node name="Time and points" type="Button" parent="."]
+modulate = Color(1, 0.317647, 0.792157, 1)
+anchors_preset = -1
+anchor_left = 0.918
+anchor_top = 0.055
+anchor_right = 0.982
+anchor_bottom = 0.094
+offset_left = -0.559937
+offset_top = 50.6
+offset_right = 0.560059
+offset_bottom = 50.48
+grow_horizontal = 0
+theme_override_fonts/font = SubResource("FontVariation_hl0uu")
+text = "Time / Points"
+
 [node name="Total Time lvl menu" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
@@ -734,6 +749,7 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="pressed" from="Scoreboard" to="." method="_on_scoreboard_pressed"]
+[connection signal="pressed" from="Time and points" to="." method="_on_time_and_points_pressed"]
 [connection signal="timeout" from="Game Saved_Reseted/Game Saved Timer" to="." method="_on_game_saved_timer_timeout"]
 [connection signal="pressed" from="main_menu" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Reset Game" to="." method="_on_reset_game_pressed"]
